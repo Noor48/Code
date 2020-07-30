@@ -1,0 +1,9 @@
+<html>
+	<head>
+		<body>
+			<script>
+				document.write("Hello world");
+			</script>
+		</body>
+	</head>
+</html>
