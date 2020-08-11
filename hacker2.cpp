@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -10,7 +11,7 @@ int main()
     double tip = mealCost * tipPercent/100; 
     double tax =  mealCost * taxPercent/100;
 
-    int total = mealCost + tip + tax;
+    int total = round(mealCost + tip + tax);
 
     cout << total << endl;
 
