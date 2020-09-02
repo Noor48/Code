@@ -14,7 +14,10 @@ int main()
         r=n%10;
         n=n/10;
         sum += pow(r,3);
+        cout << r << "^3 + ";
     }
+
+    cout << "= " << sum << endl;
 
     if(m==sum)
     {
