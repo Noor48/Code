@@ -54,7 +54,8 @@ int main()
                 break;
             case 9 : cout << "nine ";
                 break;
-                
+            case 0 : cout << "zero ";
+                break;
         }
     }
 
