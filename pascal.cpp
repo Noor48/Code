@@ -24,8 +24,8 @@ int main()
     for(int i=0; i<=n; i++)
     {
         for(int j=0; j<=i; j++)
-        {
-            cout << (fact(i)/(fact(j)*fact(i-j))) << " "; // i represnt n which is power number. Calculating combination do rest of the job.
+        {   
+            cout << (fact(i)/(fact(j)*fact(i-j))) << " "; // i represnts n which is power number. Calculating combination do rest of the job.
         }
 
         cout << endl;
