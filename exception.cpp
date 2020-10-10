@@ -4,6 +4,22 @@
 #include <string>
 using namespace std;
 
+<<<<<<< HEAD
+try
+{
+    int mohterAge = 29;
+    int sonAge = 36;
+    if (sonAge > motherAge)
+    {
+        throw 99;
+    }
+}
+
+catch (int x)
+{
+    cout << "Wrong age values - Error" << endl;
+}
+=======
 int main()
 {
     try
@@ -33,3 +49,4 @@ int main()
     
     return 0;
 }
+>>>>>>> 0f675aaea5439f839a7d9285ef78307e915b9ca9
