@@ -46,7 +46,7 @@ int main()
 
     for(double x=-M_PI/3; x<=M_PI/3; x+=0.0001)
     {
-        fout << x << "  " << mytan(x,20) << endl; 
+        fout << x << "  " << mytan(x,20) << " " << tan(x) << endl; 
     }
 
     return 0;

@@ -41,7 +41,7 @@ void euler(double v0, double y0)
 
 int main()
 {
-    euler(1,0);
+    euler(0,1);
 
     return 0;
 }
