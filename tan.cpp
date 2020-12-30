@@ -21,8 +21,10 @@ double newton (double x)
     {
         x -= h;
         h = f(x)/d(x);
-        return x;
-    } 
+        
+    }
+
+    return x;
 }
 
 int main()
