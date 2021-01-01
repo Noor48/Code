@@ -52,7 +52,7 @@ double ff(double x, double q)
 
 double sim31(double q)
 {
-    double a=0, b=2*2*M_PI, N=100, I=0, J=0, K=0, A=0, h;
+    double a=0, b=2*2*M_PI*q, N=100, I=0, J=0, K=0, A=0, h;
     h = (b-a)/N;
 
     for(int i=1; i<N; i+=3)
@@ -83,6 +83,11 @@ int main()
     for(double x=0; x<=25; x+=0.001)
     {
         fout << x << "  " << sim3(x,0) << "  " << sim3(x,1) << "  " << sim3(x,2) << "  " << sim3(x,3) << endl;
+    }
+
+    for(double a=0; a<=20; a+=0.01)
+    {
+        file << a << "  " << sim31(a) << endl;
     }
 
     return 0;
