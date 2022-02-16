@@ -1,0 +1,10 @@
+p "test5.txt" u 1:2 w l title"dn=-0.08*N*dt" , "" u 1:3 w l title "N=N0*exp(-0.08*t)"
+set ylabel "Particle Number (N)" font "Courier 12" 
+set title "Radioactive Decay" font "Courier 20"
+set xlabel "Time (sec.)" font "Courier 12"
+set key box 
+p "test5.txt" u 1:2 w l title"dn=-0.08*N*dt" , "" u 1:3 w l title "N=N0*exp(-0.08*t)"
+set terminal png 
+set output "test5.png"
+replot
+set termianl qt
