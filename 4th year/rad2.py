@@ -18,8 +18,9 @@ x = []
 y = []
 z = []
 for i in range(0,1000000,1):
-    dn = -0.08*N*h
-    N += dn
+#    dn = -0.08*N*h
+#    N += dn
+    N -= 0.08*N*h
     t += h
     x.append(t)
     y.append(N)
@@ -35,7 +36,7 @@ with open("rad2.txt", "w") as f:
 plt.plot(x,y, label="dN=-0.08*n*dt")
 plt.plot(x,z, label="N=N0exp(-0.08*t)")
 plt.legend()
-plt.title('Radiactive Decay', fontsize=20)
+plt.title('Radioctive Decay', fontsize=30)
 plt.xlabel("t", fontsize=15)
 plt.ylabel("N0-dn", fontsize=15)
 plt.show()

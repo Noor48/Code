@@ -19,10 +19,11 @@ int main()
     double N=N0, t=t0, k1, k2, k3, k4, h=0.0001, dn=0;
     for(t=t0; t<=100; t+=h)
     {
-        fout << t << "  " << N << "  "  << f2(t,N0)<< endl;
+        fout << t << "  " << log(N) << "  "  << log(abs(dn)) << "  " <<  f2(t,N0)<< endl;
 
-        dn = -0.08*N*h;
-        N += dn;
+       dn = -0.08*N*h;
+       // N += dn;
+       N -= 0.08*N*h;
     }
 
     return 0;
