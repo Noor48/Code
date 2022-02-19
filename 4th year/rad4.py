@@ -25,14 +25,15 @@ for i in range(0,N):
             x-=1
     a.append(x)
 
-print(a)
+#print(a)
 
 for i in range(-n,n,1):
+    y = 0
     for j in range (0,N,1):
         if(i == a[j]):
             y+=1
     c.append(y)
-print(len(c))
+print(c)
 for i in range(0,2*n):
     z = c[i]/N
     p.append(z)
@@ -46,4 +47,11 @@ with open ("rad4.txt", "w") as f:
     np.savetxt(f,d)
 
 plt.plot(b,p)
+plt.xlabel("Numbers")
+plt.ylabel("Probability")
 plt.show()
+
+plt.plot(b,p)
+plt.xlabel("Numbers")
+plt.ylabel("Probability")
+plt.savefig("rad4.png")
