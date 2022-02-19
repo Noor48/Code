@@ -9,11 +9,13 @@ double r1(int N, int n)
 {
     ofstream fout("rand.dat");
     srand(time(NULL));
-    int a[N], x;
-    for(int i=0; i<N; i++)
+    int a[N], r, b[2*n+1], x;
+    /*double p[2*n+1];*/
+    for(int i=0; i<=N; i++)
     {   
         x=0;
-        for(int i=0; i<n; i++)
+        r=(rand()%n)+1;
+        for(int j=0; j<=r; j++)
         {
             double s = (double)rand()/(double)RAND_MAX;
             if(s>0.5)
@@ -28,43 +30,28 @@ double r1(int N, int n)
         a[i]=x;
         cout << a[i] << endl;
     }
-    
-/*    int y, z;
-    for(int x=0; x<N-1; x++)
-    {
-        int y = x;
-        for(z=x+1; z<N; z++)
-        {
-            if(a[z] < a[y])
-            {
-                y = z;
-            }
-        }
 
-        swap(a[x], a[y]);
-    }
-
-    for(int i=0; i<N; i++)
-    {
-        cout << a[i] << endl;
-    } */
-int b[N];
-for(long i=-1000; i<1000; i++)
+//int b[2*n+1];
+for(int i=-n; i<=n; i++)
 {
-    int y=0;
-    for(int j=0; j<N; j++)
+    for(int j=0; j<=N; j++)
     {
         if(i == a[j])
         {
-            y+=1;
+            b[i+n]++;
         }
     }
-    b[i]=y;
 }
 
-for(long i=0; i<1000; i++)
+double p[2*n+1];
+
+for(int i=0; i<=2*n+1; i++)
 {
-    fout << i-100 << "  " << b[i] << endl;
+    p[i] = (double)b[i]/(double)N;
+    if(p[i]!=0)
+    {
+        fout << i-n << "  " << p[i] << endl;
+    }
 }
 
     return n;
@@ -72,7 +59,7 @@ for(long i=0; i<1000; i++)
 
 int main()
 {
-    int N=5000, n=2000;
+    int N=50000, n=2000;
     r1(N,n);
 
     return 0;
