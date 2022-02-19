@@ -5,7 +5,8 @@
 #include<fstream>
 #include<algorithm>
 using namespace std;
-double r1(int N, int n)
+
+void r1(int N, int n)
 {
     ofstream fout("rand.dat");
     srand(time(NULL));
@@ -31,36 +32,46 @@ double r1(int N, int n)
         cout << a[i] << endl;
     }
 
-//int b[2*n+1];
-for(int i=-n; i<=n; i++)
-{
-    for(int j=0; j<=N; j++)
+    //int b[2*n+1];
+    for(int i=-n; i<=n; i++)
     {
-        if(i == a[j])
+        for(int j=0; j<=N; j++)
         {
-            b[i+n]++;
+            if(i == a[j])
+            {
+                b[i+n]++;
+            }
         }
     }
-}
 
-double p[2*n+1];
+    double p[2*n+1];
 
-for(int i=0; i<=2*n+1; i++)
-{
-    p[i] = (double)b[i]/(double)N;
-    if(p[i]!=0)
+    for(int i=0; i<=2*n+1; i++)
     {
-        fout << i-n << "  " << p[i] << endl;
+        p[i] = (double)b[i]/(double)N;
+        if(p[i]!=0)
+        {
+            fout << i-n << "  " << p[i] << endl;
+        }
     }
-}
 
-    return n;
 }
 
 int main()
 {
-    int N=50000, n=2000;
-    r1(N,n);
-
+    int N, n;
+    cout << "Enter iteratoin number: " << endl;
+    cin >> N;
+    cout << "Enter step number(need to smaller than iteratoin number): " << endl;
+    cin >> n;
+    
+    if(N<=n)
+    {
+        cout << N << "  " << n << endl;
+        N = N+n;
+        n = N-n;
+        N = N-n;
+        r1(N,n);  
+    }
     return 0;
 }
