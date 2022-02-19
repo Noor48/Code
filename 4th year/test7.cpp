@@ -58,5 +58,7 @@ int main()
         {
             fout << i-n << "  " << p[i] << endl; 
         }
-    }    
+    }
+
+    return 0;    
 }
