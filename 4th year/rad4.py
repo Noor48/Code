@@ -5,7 +5,11 @@ import random
 import time
 
 random.seed(time.time())
-N=100000
+#print("Enter trial number: ")
+#N=int(input())
+#print("Enter step number: ")
+#n=int(input())
+N=100000000
 n=100
 a = []
 c = []
@@ -33,13 +37,11 @@ for i in range(-n,n,1):
         if(i == a[j]):
             y+=1
     c.append(y)
-print(c)
 for i in range(0,2*n):
     z = c[i]/N
     p.append(z)
     t = i-n
     b.append(t)
-print(len(p))
 with open ("rad4.txt", "w") as f:
     n=np.array(p)
     m=np.array(b)

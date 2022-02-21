@@ -40,12 +40,12 @@ for i in range(0,1000000, 1):
     r.append(y[i]-5)
 #print(r)
 #print(q)
-with open("rad2.txt", "w") as f:
+with open("rad2.dat", "w") as f:
     a = np.array(x)
     b = np.array(y)
     c = np.array(z)
     d = np.column_stack([a,b,c])
-    np.savetxt(f,d)
+    np.savetxt(f,d, fmt='%1.4e')
 
 plt.plot(x,y, label="N(t)")
 plt.plot(x,z, label="dN(t)")

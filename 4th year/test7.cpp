@@ -8,16 +8,16 @@ using namespace std;
 int main()
 {
     ofstream fout("test7.txt");
-    int N=100000, n=100, a[N], b[N], x, c[2*n+1];
-    double s, p[2*n+1];
+    long long N=50000, n=20000, a[N], b[N], x, c[2*n+1];
+    double long s, p[2*n+1];
     srand(time(NULL));
 
-    for(int i=0; i<=N; i+=1)
+    for(long long i=1; i<=N; i+=1)
     {
         x=0;
-            int r = (rand()%n)+1;  
+            //long long r = (rand()%n)+1;  
         
-        for(int j=0; j<=r; j+=1)
+        for(long long j=1; j<=n; j+=1)
         {
             s = (double)rand()/(double)RAND_MAX;
             if(s>0.5)
@@ -30,12 +30,12 @@ int main()
             }
         }
         a[i]=x;
-        cout << a[i] << endl;
+        //cout << a[i] << endl;
     }
 
-    for(int i=-n; i<=n; i++)
+    for(long long i=-n; i<=n; i++)
     {
-        for(int j=0; j<=N; j++)
+        for(long long j=1; j<=N; j++)
         {
             if(i == a[j])
             {
@@ -44,14 +44,13 @@ int main()
         }
     }
 
-    for(int i=0; i<=2*n+1; i++)
+    for(long long i=1; i<=2*n+1; i++)
     {
         p[i] = (double)c[i]/(double)N;
-        //if(p[i]!=0)
+        if(p[i]!=0)
         {
             fout << i-n << "  " << p[i] << endl; 
         }
     }
-
-    return 0;    
+    return 0;
 }

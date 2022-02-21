@@ -33,7 +33,7 @@ int main()
     }*/
     for(i=0; i<=100000; i++)
     {
-        fout << t << "  " << log(N) << "  "  << log(abs(dn)) << "  " <<  f2(t,N0)<< endl;
+        fout << log(t) << "  " << log(N) << "  "  << log(abs(dn)) << "  " <<  f2(t,N0)<< endl;
 
         n[i] = log(N);
         ta[i] = t;
