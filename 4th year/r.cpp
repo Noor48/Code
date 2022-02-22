@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {   
     ofstream fout("r.dat");
-    int N=500000, n=2000, x, a[N]; 
+    int N=500000, n=2000, x,y, a[N]; 
     double t[2*n+1];
     srand(time(NULL));
 
@@ -31,22 +31,26 @@ int main()
         a[i]=x;
         cout << a[i] << endl;
     }
-
+    
+    /*
     for(int i=0; i<=2*n+1; i++)
     {
         t[i] = 0;
     }
-    
+    */
     for(int i=-n; i<=n; i++)
     {
+        y=0;
         for(int j=0; j<=N; j++)
         {
             if(i==a[j])
             {
-                t[i+n]++;
+                y+=1;
             }
+            t[i+n]=y;
         }
     }
+    
     double p[2*n+1];
     for(int i=0; i<=2*n+1; i++)
     {
