@@ -1,11 +1,7 @@
 /*
-A box is divided into two side with a barrier. There is N number of particles are held in the left side of the barrier of the box at beginning.
-Let a small hole is created in the the barrier and one particle can pass though the hole per unit time.
-
-1:-  Write down a code and draw a graph to determint the time for the particles to be in equilibrium position, 
-     hince both left and right side have N/2 number of particle.
-
-2:-  Solve dnl/dt= 1-(2*nl/N); and plot the graph. Compair your result with problem 1.
+Consider on walking in a 1-dimentional linear path. The walkers are starting from the 0 point and moving forward or backward by generating
+random numbers between 0 to 1. If the number is greater then 0.5 the person move right or else in left. Find the probability of landing at 
+a given spot after a given number of step with a given walk and also draw the position vs probability graph.
 */
 
 #include<iostream>
@@ -17,8 +13,8 @@ using namespace std;
 
 int main()
 {
-    ofstream fout("test7.txt");
-    long long N=50000, n=20000, a[N], b[N], x, c[2*n+1];
+    ofstream fout("ass1.dat");
+    long long N=100000, n=10000, a[N], x, y, c[2*n+1];
     double long s, p[2*n+1];
     srand(time(NULL));
 
@@ -27,7 +23,7 @@ int main()
         x=0;
             long long r = (rand()%n)+1;  
         
-        for(long long j=1; j<=n; j+=1)
+        for(long long j=0; j<=r; j+=1)
         {
             s = (double)rand()/(double)RAND_MAX;
             if(s>0.5)
@@ -40,18 +36,19 @@ int main()
             }
         }
         a[i]=x;
-        //cout << a[i] << endl;
     }
 
     for(long long i=-n; i<=n; i++)
-    {
+    {   
+        y=0;
         for(long long j=1; j<=N; j++)
         {
             if(i == a[j])
             {
-                c[i+n]++;
+                y+=1;
             }
         }
+        c[i+n]=y;
     }
 
     for(long long i=1; i<=2*n+1; i++)
