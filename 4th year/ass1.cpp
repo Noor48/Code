@@ -14,16 +14,16 @@ using namespace std;
 int main()
 {
     ofstream fout("ass1.dat");
-    long long N=100000, n=10000, a[N], x, y, c[2*n+1];
-    double long s, p[2*n+1];
+    int  N=1000, n=1000, a[N], x, y, c[2*n];
+    double  s, p[2*n], sum=0;
     srand(time(NULL));
 
-    for(long long i=1; i<=N; i+=1)
+    for(int i=0; i<=N; i+=1)
     {
         x=0;
-            long long r = (rand()%n)+1;  
+            int r = (rand()%n)+1;  
         
-        for(long long j=0; j<=r; j+=1)
+        for(int j=0; j<=r; j+=1)
         {
             s = (double)rand()/(double)RAND_MAX;
             if(s>0.5)
@@ -33,15 +33,15 @@ int main()
             else
             {
                 x-=1;
-            }
+            } 
         }
         a[i]=x;
     }
 
-    for(long long i=-n; i<=n; i++)
+    for(int i=-n; i<=n; i++)
     {   
         y=0;
-        for(long long j=1; j<=N; j++)
+        for(int j=0; j<=N; j++)
         {
             if(i == a[j])
             {
@@ -51,13 +51,16 @@ int main()
         c[i+n]=y;
     }
 
-    for(long long i=1; i<=2*n+1; i++)
+
+    for(int i=0; i<=2*n; i++)
     {
         p[i] = (double)c[i]/(double)N;
         if(p[i]!=0)
         {
             fout << i-n << "  " << p[i] << endl; 
         }
+
     }
+
     return 0;
 }

@@ -17,8 +17,8 @@ using namespace std;
 
 int main()
 {
-    ofstream fout("test7.txt");
-    long long N=50000, n=20000, a[N], b[N], x, c[2*n+1];
+    ofstream fout("test7.dat");
+    long long N=5000, n=2000, a[N], b[N], x, c[2*n+1];
     double long s, p[2*n+1];
     srand(time(NULL));
 
@@ -51,6 +51,7 @@ int main()
             {
                 c[i+n]++;
             }
+            //cout << c[i+n] << endl;
         }
     }
 

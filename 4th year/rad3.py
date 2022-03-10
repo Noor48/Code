@@ -8,10 +8,10 @@ def f1(t, N):
 
 def f2(t,N):
     return N*math.exp(-0.08*t)
-print("Enter initial particle number: ")
-N0 = float(input())
-print("Enter decay constant: ")
-lam = float(input())
+#print("Enter initial particle number: ")
+N0 = 10000 # float(input())
+#print("Enter decay constant: ")
+lam = 0.08 # float(input())
 h=0.0001
 t=0
 dn=0
@@ -27,7 +27,7 @@ for i in range(0,1000000,1):
 #    N += dn
     N -= lam*N*h
     t += h
-    x.append(t)
+    x.append(math.log(t))
     y.append(math.log(N))
     z.append(math.log(math.fabs(dn)))
     j.append(N)
@@ -35,9 +35,9 @@ for i in range(0,1000000,1):
 
 m = ((y[1000]-y[100])/(x[1000]-x[100]))
 print("Slope of the graph: ", m)
-r = []
-for i in range(0,1000000, 1):
-    r.append(y[i]-5)
+#r = []
+#for i in range(0,1000000, 1):
+#    r.append(y[i]-5)
 #print(r)
 #print(q)
 with open("rad2.dat", "w") as f:
