@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-%matplotlib inline
+
 
 # Define a few parameters for the integration
 n_0 = 1E6 # Initial number of Potassium-40 nuclei
@@ -104,3 +104,4 @@ K40_frac_bigstep = nt_bigstep / n_0
 plt.plot(timerange_bigstep, K40_frac_bigstep, '-')
 plt.xlabel('time (years)')
 plt.ylabel('fractional abundance')
+plt.show()
