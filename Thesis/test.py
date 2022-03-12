@@ -4,7 +4,7 @@ import numpy as np
 
 datas=np.loadtxt("ABSORPTION.dat",dtype=np.float64,skiprows=1) 
 
-fig, axs = plt.subplots(3,2,figsize=(10,8))
+fig, axs = plt.subplots(3,2,figsize=(10,8),sharex='col', sharey='row')
 axs[0,0].plot(datas[:,0], datas[:,1], label='xx', color='orange')
 axs[0,0].legend()
 axs[0,1].plot(datas[:,0], datas[:,2], label='yy', color='blue')
@@ -21,9 +21,12 @@ fig.suptitle('Absorption', fontsize=20)
 fig.supylabel('cm^-1')
 fig.supxlabel('Energy (eV)')
 fig.tight_layout()
+plt.subplots_adjust(hspace=.0)
+plt.subplots_adjust(wspace=.0)
+
 plt.show()
 
-fig, axs = plt.subplots(3,2,figsize=(10,8))
+fig, axs = plt.subplots(3,2,figsize=(10,8), sharex='col', sharey='row')
 axs[0,0].plot(datas[:,0], datas[:,1], label='xx', color='orange')
 axs[0,0].legend()
 axs[0,1].plot(datas[:,0], datas[:,2], label='yy', color='blue')

@@ -36,7 +36,7 @@ for i in lines:
 datas=np.loadtxt('REFORMATTED_BAND_UP.dat',dtype=np.float64)
 
 #--------------------- PLOTs ------------------------
-fig, axe = plt.subplots(figsize=(0,111))
+fig, axe = plt.subplots(figsize=(1,111))
 axe.axhline(y=0, xmin=0, xmax=1,linestyle= '--',linewidth=0.5,color='0.5')
 for i in xtick[1:-1]:
     axe.axvline(x=i, ymin=0, ymax=1,linestyle= '--',linewidth=0.5,color='0.5')
@@ -57,4 +57,62 @@ axe.set_xlim((xtick[0], xtick[-1]))
 plt.ylim(( -15,  10)) # set y limits manually
 fig = plt.gcf()
 fig.set_size_inches( 8, 6)
-plt.savefig('band_up.png',dpi= 300)
+plt.savefig('test.png',dpi= 300)
+
+
+datas1=np.loadtxt("TDOS.dat",dtype=np.float64,skiprows=1) 
+datas2=np.loadtxt("PDOS_USER.dat",dtype=np.float64,skiprows=1)
+
+fig, axs=plt.subplots(4, sharex='col', sharey='row', figsize=(10,8))
+
+axs[0].plot(datas1[:,0], datas1[:,1], label="up TDOS", color='darkgreen', linewidth=1)
+axs[0].axhline(0, c='black', alpha=0.3, linestyle='--')
+axs[0].plot(datas1[:,0], datas1[:,2], label="down TDOS", color='darkgreen', linewidth=1)
+axs[1].plot(datas2[:,0], datas2[:,1], label='up In all', color='purple', linewidth=1)
+axs[1].axhline(0, c='black', alpha=0.3, linestyle='--')
+axs[1].plot(datas2[:,0], datas2[:,2], label='up In all', color='purple', linewidth=1)
+axs[2].plot(datas2[:,0], datas2[:,3], label='up Fe all', color='cornflowerblue', linewidth=1)
+axs[2].axhline(0, c='black', alpha=0.3, linestyle='--')
+axs[2].plot(datas2[:,0], datas2[:,4], label='up Fe all', color='cornflowerblue', linewidth=1)
+axs[3].plot(datas2[:,0], datas2[:,5], label='up O all', color='orange', linewidth=1)
+axs[3].plot(datas2[:,0], datas2[:,6], label='up O all', color='orange', linewidth=1)
+axs[3].axhline(0, c='black', alpha=0.3, linestyle='--')
+axs[0].legend()
+axs[1].legend()
+axs[2].legend()
+axs[3].legend()
+fig.suptitle("Density of States", fontsize=40)
+fig.supxlabel("Energy (ev)", fontsize=20)
+fig.supylabel("arbitrary", fontsize=20)
+fig.tight_layout()
+plt.subplots_adjust(hspace=.0)
+plt.savefig("test1.png")
+
+
+
+
+
+'''
+x1 = [0, 0.02, 0.04, 0.08, 0.12, 0.16, 0.2]
+y1 = [0.0005, 0.052, 0.0905, 0.1675, 0.2485, 0.3225, 0.4035]
+
+fig,ax=plt.subplots(figsize=plt.rcParams["figure.figsize"][::-1])
+fig.subplots_adjust(left=0.1, right=0.875, top=0.9,bottom=0.125)
+
+ax.scatter(y1, x1)
+
+ax.set_ylabel("x", rotation=90)
+ax.yaxis.tick_right()
+ax.yaxis.set_label_position("right")
+ax.set_xlabel("y", rotation=180)
+ax.invert_xaxis()
+
+plt.setp(ax.get_xticklabels(), rotation=90, va="top", ha="center")
+plt.setp(ax.get_yticklabels(), rotation=90, va="center", ha="left")
+
+ax.text(-0.05,0.5,"y-x scatter", ha="center", va="center",
+        transform=ax.transAxes, rotation=90)
+
+
+plt.show()
+'''

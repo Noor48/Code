@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
 
 
 datas1=np.loadtxt("TDOS.dat",dtype=np.float64,skiprows=1) 
 datas2=np.loadtxt("PDOS_USER.dat",dtype=np.float64,skiprows=1)
 
-fig, axs=plt.subplots(4,figsize=(10,8))
+fig, axs=plt.subplots(4, sharex='col', sharey='row', figsize=(10,8))
 
 axs[0].plot(datas1[:,0], datas1[:,1], label="up TDOS", color='darkgreen', linewidth=1)
 axs[0].axhline(0, c='black', alpha=0.3, linestyle='--')
@@ -27,9 +28,10 @@ fig.suptitle("Density of States", fontsize=40)
 fig.supxlabel("Energy (ev)", fontsize=20)
 fig.supylabel("arbitrary", fontsize=20)
 fig.tight_layout()
+plt.subplots_adjust(hspace=.0)
 plt.show()
 
-fig, axs=plt.subplots(4,figsize=(10,8))
+fig, axs=plt.subplots(4, sharex='col', sharey='row', figsize=(10,8))
 
 axs[0].plot(datas1[:,0], datas1[:,1], label="up TDOS", color='darkgreen', linewidth=1)
 axs[0].axhline(0, c='black', alpha=0.3, linestyle='--')
@@ -51,4 +53,5 @@ fig.suptitle("Density of States", fontsize=40)
 fig.supxlabel("Energy (ev)", fontsize=20)
 fig.supylabel("arbitrary", fontsize=20)
 fig.tight_layout()
+plt.subplots_adjust(hspace=.0)
 plt.savefig("testdos.svg")

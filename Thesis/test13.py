@@ -41,7 +41,7 @@ axe.axhline(y=0, xmin=0, xmax=1,linestyle= '--',linewidth=0.5,color='0.5')
 for i in xtick[1:-1]:
     axe.axvline(x=i, ymin=0, ymax=1,linestyle= '--',linewidth=0.5,color='0.5')
 colormaps='blue'
-n=19
+n=28
 colors = plt.cm.viridis(np.linspace(0, 1, n))
 for i in range(1,n):
     axe.plot(datas[:,0], datas[:,i],lw=1, color=colors[i])
@@ -49,6 +49,7 @@ for i in range(1,n):
 #axe.plot(datas[:,0],datas[:,1:],linewidth=1.0,color=colormaps)
 axe.set_ylabel(r'$\mathrm{E}-\mathrm{E_F}$ (eV)',fontdict=font)
 axe.set_xticks(xtick)
+plt.title('Band Gap Down')
 plt.yticks(fontsize=font['size']-2,fontname=font['family'])
 axe.set_xticklabels(group_labels, rotation=0,fontsize=font['size']-2,fontname=font['family'])
 axe.set_xlim((xtick[0], xtick[-1]))
