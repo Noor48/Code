@@ -40,7 +40,9 @@ fig, axe = plt.subplots(figsize=(0,111))
 axe.axhline(y=0, xmin=0, xmax=1,linestyle= '--',linewidth=0.5,color='0.5')
 for i in xtick[1:-1]:
     axe.axvline(x=i, ymin=0, ymax=1,linestyle= '--',linewidth=0.5,color='0.5')
-n=28
+a=np.shape(datas)[1]
+print(a)
+n=a
 colors = plt.cm.plasma(np.linspace(0, 1, n))
 normalize = mpl.colors.Normalize(vmin=-1, vmax=1)
 for i in range(1,n):
