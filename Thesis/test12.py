@@ -34,6 +34,7 @@ for i in lines:
         group_labels.append(klabel)
         xtick.append(float(s.split()[1]))
 datas=np.loadtxt('REFORMATTED_BAND_UP.dat',dtype=np.float64)
+datas1=np.loadtxt('REFORMATTED_BAND_DW.dat',dtype=np.float64)
 
 #--------------------- PLOTs ------------------------
 fig, axe = plt.subplots(figsize=(0,111))
@@ -47,6 +48,13 @@ colors = plt.cm.plasma(np.linspace(0, 1, n))
 normalize = mpl.colors.Normalize(vmin=-1, vmax=1)
 for i in range(1,n):
     t=axe.plot(datas[:,0], datas[:,i],lw=1, color=colors[i])
+b=np.shape(datas)[1]
+print(b)
+n1=b
+colors = plt.cm.viridis(np.linspace(0, 1, n1))
+normalize = mpl.colors.Normalize(vmin=-1, vmax=1)
+for i in range(1,n1):
+    t=axe.plot(datas1[:,0], datas1[:,i],lw=1, color=colors[i])
     #fig.colorbar(cm.ScalarMappable(norm=normalize, cmap=colors), ax=ax)
 #axe.plot(datas[:,0],datas[:,1:],linewidth=1.0,color=colormaps)
 axe.set_ylabel(r'$\mathrm{E}-\mathrm{E_F}$ (eV)',fontdict=font)
