@@ -1,0 +1,89 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\usepackage{graphics}
+\usepackage{grffile}
+\graphicspath{ {/home/noor/Project/}}
+\newcommand*{\1}{\hspace{1pt}}
+\author{Noor E Mustafa Ferdous}
+
+\title{}
+
+\date{}
+\begin{document}
+\section*{Assignment}
+    \begin{equation}
+        \mathcal{L} = \psi ^{\ast} (i \frac{\partial \psi}{\partial t} - \mathcal{H} \psi) 
+    \end{equation}
+
+    Or equivalent Lagrangian density
+    \begin{equation}
+        \mathcal{L} = \frac{i}{2}(\psi ^{\ast} \dot{\psi} - \dot{\psi ^{\ast}} \psi ) - \frac{1}{2m}\nabla \psi ^{\ast} \nabla \psi - \psi ^{\ast} V \psi
+    \end{equation}
+
+    Show that equation (1) and (2) differ by a divergent and lead to the same Euler Lagrangian equation.
+\newpage
+\section*{Ans}
+
+    Given 
+    
+    \begin{equation}
+        \mathcal{L} = \psi ^{\ast} (i \frac{\partial \psi}{\partial t} - \mathcal{H} \psi) 
+    \end{equation}
+
+    \begin{equation}
+        \mathcal{L} = \frac{i}{2}(\psi ^{\ast} \dot{\psi} - \dot{\psi ^{\ast}} \psi ) - \frac{1}{2m}\nabla \psi ^{\ast} \nabla \psi - \psi ^{\ast} V \psi
+    \end{equation}
+
+    here from equation (3)
+    \begin{align*}
+        \mathcal{L} & = \psi ^{\ast} (i \frac{\partial \psi}{\partial t} - \mathcal{H} \psi) \\
+            & = \psi ^{\ast} i \frac{\partial \psi}{\partial t} - \frac{1}{2m}\psi ^{\ast} \nabla ^{2} \psi - \psi ^{\ast} V \psi \\ 
+            & = i (\frac{\partial}{\partial t}(\psi ^{\ast} \psi) - \frac{\partial \psi}{\partial t}\psi) + \frac{1}{2m}\nabla \cdot (\psi ^{\ast} \nabla \psi) -\frac{1}{2m}(\nabla \psi ^{\ast}) \cdot (\nabla \psi)  - \psi^{\ast}V\psi\\ 
+    \end{align*}    
+
+
+    Comparing with equation (4) only 2nd term differs.
+
+    Again taking equation (3)
+
+    \begin{align*}
+        \frac{\partial \mathcal{L}}{\partial \psi^{\ast}} = i\frac{\partial \psi}{\partial t} -\mathcal{H}\psi
+    \end{align*}
+
+    \begin{align*}
+        \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\psi^{\ast})} = 0
+    \end{align*}
+
+    Euler Lagrangian equation 
+    \begin{align*}
+        & \frac{\partial \mathcal{L}}{\partial \psi^{\ast}}  - \partial _{\mu}\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\psi^{\ast})} = 0 \\
+        & \implies i\frac{\partial \psi}{\partial t} -\mathcal{H}\psi = 0
+    \end{align*}
+
+    and from equation (4)
+    \begin{align*}
+        \frac{\partial \mathcal{L}}{\partial \psi^{\ast}} = i\frac{\partial \psi}{\partial t} -V\psi
+    \end{align*}
+
+    \begin{align*}
+        \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\psi^{\ast})} = -\frac{i}{2}\psi + \frac{\hbar}{2m}\nabla^{2} \psi
+    \end{align*}
+
+    Now 
+
+    \begin{align*}
+         & \frac{\partial \mathcal{L}}{\partial \psi^{\ast}}  - \partial _{\mu}\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\psi^{\ast})} = 0 \\
+         & \implies  \frac{i}{2}\frac{\partial \psi}{\partial t} -V\psi +\frac{i}{2}\frac{\partial \psi}{\partial t} - \frac{\hbar}{2m}\nabla^{2} \psi = 0 \\ 
+         & \implies i\frac{\partial \psi}{\partial t} - \frac{\hbar}{2m}\nabla^{2} \psi - V\psi = 0 \\ 
+         & \implies i\frac{\partial \psi}{\partial t} -\mathcal{H}\psi = 0
+    \end{align*}
+    
+    Equation (3) and (4) show us same Euler Lagrangian equation.
+\end{document}
