@@ -1,0 +1,397 @@
+\documentclass[final12pt]{elsarticle}
+\usepackage{latexsym}
+
+\usepackage{amsmath,amssymb} 
+\usepackage[figuresright]{rotating}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{multirow,bigstrut,bigdelim}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\newcommand{\f}{\footnote}
+\newcommand{\comm}[1]{}
+
+\journal{Journal of Molecular Liquids}
+
+\renewcommand{\figurename}{Fig.}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\begin{document}
+
+
+\begin{frontmatter}
+
+\title{Calculaton of Electrical Resistivity of Na-based Liquid Binary Alkali Alloys}
+
+\author{M. A. Mohaiminul Islam}
+
+\author{R.C. Gosh\footnote{Corresponding author: \\E-mail address: ratan@du.ac.bd (R.C. Gosh)}}
+
+\address{Department of Physics, University of Dhaka, Dhaka-1000, Bangladesh}
+
+\author{G.M. Bhuiyan}
+%\ead{gbhuiyan@univdhaka.edu}
+\address{Department of Theoretical Physics, University of Dhaka, Dhaka-1000, Bangladesh}
+
+\date{today}
+
+
+
+%\maketitle
+
+\begin{abstract}
+Electrical resistivity, $\rho$ of Na-based liquid alkali binary alloys namely Na$_x$K$_{1-x}$, Na$_x$Rb$_{1-x}$, Na$_x$Cs$_{1-x}$ and Na$_x$Li$_{1-x}$ are calculated using extended Ziman's formula developed by Faber and Ziman. In this calculation, Bretonnet-Silbert (BS) pseudo-potential for inter-ionic interaction and LWCA (Linearised Weeks-Chandler-Anderson) perturbation theory for liquid structure have been used for the first time. To see the effect of dielectric function in the potential Ichimaru \& Utsumi (IU) and Vashishta \& Singwi (VS) screening functions have been used. Applying form factor $V_{ij}(q)$ (Fourier transform of potential $V_{ij}(r)$) and partial structure factor $S_{ij}(q)$, our resistivity data is compared with available experimental and other theoretical data which shows good qualitative consistency with experimental data except for Na$_x$Li$_{1-x}$ alloys. We observe that VS screening function with LWCA theory provides much better results than IU. We also observe that this combination works well for alloys near melting point. To explain calculation at far from melting, more sophisticated theory is required.
+
+\end{abstract}
+
+\begin{keyword}
+Electrical resistivity \sep Alloys \sep Alkali metals \sep Transport properties \sep Pair correlation function \sep Static structure factor \sep Hard sphere diameter \sep Liquid alloys
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+
+Metals have a wide range of applications in science and technology for their thermal, electrical, mechanical and optical properties. Liquid metals at or near room temperature have attracted scientists, metallurgists and technologists due to their softness and fluidity readily in response to stress. They can be stretchable, deformable, injectable or shape-reconfigurable. These physical properties have a number of applications in soft sensors, electrical or optical components in microfluidic channels and conductors in stretchable or reconfigurable electronics. Metals that melt at elevated temperature are used for forming metal parts and transforming heat in nuclear reactors like NaK~\cite{Dickey2014}. Among other metals, alkali metals are highly conductive and highly resistive to corrosion which are important factors in technology. Their melting temperatures are also in the above described range.
+
+Upon considering the wide application of liquid metals and to understand their stucture, Scientists studied structural~\cite{Bhuiyan1996}, thermodynamic~\cite{Bhuiyan2000,Zahid1999}, electron transport properties~\cite{Sharmin2002} and  atomic transport properties~\cite{Bhuiyan2003,Gosh2013,Bhuiyan2008} of liquid simple metals and alloys. There are significant number of studies on liquid simple metals but studies on alloys are in scarce, especially, on alkali alloys.
+
+Usually the calculation of electron transport properties are sensitive to the static structure factor~\cite{Leavens1981,Nardi1996}. In order to describe the liquid structure, various methods~\cite{Hansen1976} have been proposed i.e. Perturbation theories~\cite{Week1971,Ishihara1968,Barkar1967}, integral equation theories~\cite{Bhuiyan1993} and computer simulation method~\cite{McGreevey1991}. There are many theoretical and experimental evidences~\cite{Waseda,Shimoji39} that the HS model can describe the structure of simple and less simple liquid metals and their binary alloys reasonably well. In particular, a recent work~\cite{Khaleque2002} showed nicely that the mixture of two HS liquids with different effective diameters described the structure of liquid alloys adequately. Prompted by the above results of success we employ the HS theory within the Percus-Yevick approximation 'HSPY' as the reference system in the present work without trying other reference systems{name}~\cite{Ross40,Hafner41}. We note here that the knowledge of the effective HS diameter 'HSD' is required to describe the HSPY liquid system and we determined it from the linearized Week-Chandler-Andersen 'LWCA' theory. The base of the LWCA theory is the WCA theory~\cite{Mayer1980}, which was first applied by Kumaravadivel and Evans~\cite{Kumar23} to the elemental simple metallic systems.This theory have been successfully applied at our previous works~\cite{Gosh2007,Bhuiyan2003} to study the different properties of materials.
+%transport
+
+Electron-ion pair potential is the key to study electron transport theory for metals~\cite{Rossiter1991}. So, a suitable potential is needed to describe the interaction between atoms adequately for the concerned systems for investigating the electronic transport properties. Pseudo-potential is a popular method among physicists. It has been successfully implemented for studying different properties of liquid metals~\cite{Fiolhais1996,Fiolhais1995,Sinclair1984,Daw1984,Walter1966,Hohenberg1964,Kohn1965,Mermin1965}. Bretonnet and Silbert(BS) model~\cite{Bret1992} potential is a promising candidate in this regard. BS model potential is special because of its ability to incorporate both sp and d-band contributions separately within the pseudo-potential formalism. the BS model has already proved to be effective in describing liquid structure~\cite{Zahid1999,Khaleque2002}, electrical resistivity~\cite{Sharmin2002} and atomic transport properties~\cite{Bhuiyan2003} for the liquid metals and their alloys. Recently, we have successfully used BS pseudo-potential in the study of atomic transport properties for the alkali metals~\cite{MSU2018}. For precise quantitative analysis, pseudo-potential has to take into account of the exchange and correlation effect. Ichimaru-Utsumi (IU)~\cite{ichimaru} and Vashishta-Shingwi (VS)~\cite{Vashishta1972} are two advanced local field correction function which satisfy the self consistency in the compressibility sum rules. These two has been successfully implemented in different studies of liquid metals~\cite{Gosh2007,MSU2018,Mishra1990,Vora2007}.
+
+Ziman's theory~\cite{ziman1961} is a well established theory for calculation of electrical resistivity under the picture of nearly free electron (NFE) theory. The starting point of Ziman's formula lies on first-order time-dependent perturbation theory~\cite{Baym1964}.
+Long Mean Free Path (MFP) approximation is the basis of this theory. So, weak scattering picture comes into play and Born approximation would be valid. The mean free path of alkali metals are of hundred times their respective inter-atomic distance. So, this theory perfectly fits in the resistivity calculation. It proves to be successful for liquid metals and their alloys~\cite{Korkmaz2013, Ziman1963,Mishra1990, Wang1980, Vora2007}. Later, Faber and Ziman~\cite{Faberziman1965} have extended the Ziman's formula for liquid alloys.
+
+Electrical resistivity of liquid alkali alloys have been determined experimentally~\cite{Lugt1978,feitsma1975,Hallers1974}, theoretically~\cite{Korkmaz2013, Mishra1990, Wang1980, Vora2007,Singh1991,Malan2018} and with computer simulation~\cite{Thakur2005}. Alkali metals are highly reactive~\cite{feitsma1975}. So, experimentation is difficult. Computer simulation takes a lot of time. So, theoretical technique is the best among those. In experiment, thomson bridge method is used to calculate electrical resistivity of Na$_x$K$_{1-x}$, Na$_x$Rb$_{1-x}$, Na$_x$Cs$_{1-x}$~\cite{Lugt1978,Hallers1974} and for Na$_x$Li$_{1-x}$, four point technique is used~\cite{feitsma1975}.
+
+Previously, Mishra et al.~\cite{Mishra1990}, Wang et. al.~\cite{Wang1980}, Vora~\cite{Vora2007}, Korkmaz et. al.~\cite{Korkmaz2013} have studied electrical resistivity of alkali alloys using different types of potential incorporating different local field correction functions and different technique for liquid structure. There results are consistent for some alloys but differs for other alkali alloys~\cite{Mishra1990}. So, a wholesome/holistic approach is needed to calculate the electrical resistivity of all alkali alloys. We meant by the term 'wholesome/holistic' is the perfect combination of potential and liquid structure for alkali alloys. In this paper, we are trying to do so by using BS pseudo-potential and LWCA perturbative method for liquid structure. for betterment of result, we have also used two different local field correcion functions i.e IU and VS. Recently, Sharmin et. al.~\cite{Sharmin2002} used BS pseudo-potential with Ziman formula for liquid less simple metals. Their result is in agreement with the experiment. These motivates us to calculate electrical resistivity of alkali metal alloys using for electron-ion interaction, Bretonnet-Silbert pseudo-potential and for liquid structure, LWCA perturebation theory.
+
+In this paper, we have measured concentration dependent electrical resistivity quantitatively for Na-based alloys. Faber-Ziman~\cite{Faberziman1965} formula is used to calculate electrical resistivity of alloys. To best of our knowledge, BS pseudo-potential is used for the first time to calculate the electrical resistivity of alkali alloys.
+
+\section{Theories}
+\label{theory}
+\subsection{Bretonnet and Silbert model potential}
+
+The local electron-ion pseudo-potential for i-th component of the metallic alloy systems may be modeled by the superposition of the sp and d-band contributions as
+\bea
+W(r) = \left\{ \begin{array}{ll}
+\sum_{m=1}^{2}B_{m}\exp(-\frac{r}{ma}) & \mbox{for $r < R_{c}$} \\
+-\frac{Z_{s}e^{2}}{r} & \mbox {for $r > R_{c}$}\end{array}\right.
+\eea
+where $a$, $R_{c}$ and $Z_{s}$ are the softness parameter, core radius
+and effective $s$-electron occupancy number, respectively. The coefficients $B_1$ and $B_2$ depend on $a$, $R_{c}$ and $Z_{s}$~\cite{Bhuiyan1992}. 
+The term outside the core is just the bare electron-ion interaction and the coefficients in the core are determined by setting the continuity condition at the core surface that is, at $r$=$R_{c}$, which yields
+\bea
+B_{1}=\frac{Z_{s}e^{2}}{R_{c}}(1-\frac{2a}{R_{c}})exp(\frac{R_{c}}{a}) \nonumber\\
+B_{2}=\frac{2Z_{s}e^{2}}{R_{c}}(\frac{a}{R_{c}}-1)exp(\frac{R_{c}}{2a})
+\eea
+The analytic form of unscreened form factor is
+\be
+W(q)=4\pi na^{3}\Bigg[\frac{B_{1}J_{1}}{(1+a^{2}q^{2})^{2}}+\frac{8B_{2}J_{2}}{(1+4a^{2}q^{2})^{2}}\Bigg]-\frac{4\pi n Z_{s}e^{2}\cos(qR_{c})}{q^{2}}
+\ee
+where $n$ is the average electron number density and $J_1$ denotes
+\bea
+J_{m}=2-\exp\bigg(-\frac{R_{c}}{ma}\bigg)\bigg[\frac{R_{c}}{ma}(1+m^{2}a^{2}q^{2})+(1-m^{2}a^{2}q^{2})\bigg]\frac{\sin(qR_{c})}{maq}\\ \nonumber
++[2+\frac{R_{c}}{ma}(1+m^{2}a^{2}q^{2})]\cos(qR_{c})
+\eea
+Finally, the partial interionic interaction within the pseudo-potential formalism has the form
+\be
+\label{pseu}
+V_{ij}(r)=\frac{Z_{i}Z_{j}}{r}\bigg(1-\frac{2}{\pi}\int F^{N}_{ij}(q)\frac{sin(qr)}{q}dq\bigg)
+\ee
+where $i$ and $j$ denote ionic components. In equation ~\ref{pseu}, $F_{ij}^{N}(q)$ is the normalized energy wave number characteristic
+\be
+F^{N}_{ij}(q)=\bigg(\frac{q^{2}}{4\pi n \sqrt{Z_{i}Z_{j}}e^{2}}\bigg)^{2}W_{i}(q)W_{j}(q)[1-\frac{1}{\epsilon(q)}][1-G(q)]^{-1}
+\ee
+where $W_i(q)$ denotes the unscreened form factor of the i-th component, $\epsilon(q)$ and $G(q$) are the dielectric function and the local field correction in the momentum space respectively. The dielectric screening function $\epsilon(q)$ is given by
+\be
+\epsilon(q)=1-\Bigg(\frac{4\pi e^{2}}{q^{2}}\Bigg)\chi(q)\Big[1-G(q)\Big].
+\ee
+Here $\chi(q)$ is the Lindhard function and $G(q)$ is the local-field correction. The screened form factor is, $V(q)$ = $W(q)$/$\chi(q)$. We have used two different local field correction functions. One is Ichimaru and Utsumi (IU) and other is Vashistha
+and Singwi (VS). (both theories satisfy the compressibility sum rule and the short
+range correlation condition).
+
+\subsection{LWCA Perturbation theory}
+the WCA theory~\cite{Week1971} is the starting point for the LWCA thermodynamic perturbation method as proposed by Meyer et al.~\cite{Mayer1980}. The blip function in WCA theory~\cite{Week1971} is given as
+\be
+\label{blip}
+B(r)=Y_{\sigma}(r)[\exp(-\beta u_{ij}(r))-\exp(-\beta u_{\sigma_i\sigma_j}(r))]
+\ee
+where $u_{ij}(r)$ and $u_{\sigma_i\sigma_j}(r)$ are the soft and the hard sphere potentials, respectively. $\beta$ denotes the inverse temperature times Boltzmann constant. In Eqn.~(\ref{blip}), $Y_{\sigma}(r)$ is the cavity function associated with HS distribution function and continuous at $r$ = $\sigma$. Within the linearised WCA approximation, thermodynamic condition that for an effective hard sphere diameter (HSD), $B(q = 0)$ vanishes leads to the transcendental equation
+\be
+\label{trans}
+\beta u_{ij}(\sigma)=\ln\Bigg(\frac{-2\beta\sigma_{ij} u'_{ij}(\sigma_{ij})+Y+2}{-\beta\sigma_{ij} u'(\sigma_{ij})+Y+2}\Bigg)
+\ee
+Where $u'_{ij}$ denotes the first derivative of the partial pair potentials at $r$ = $\sigma_{ij}$.
+Eq.~\ref{trans} is solved graphically to obtain effective hard sphere diameters $\sigma_{11}$ and $\sigma_{22}$.
+
+\section{Static structure factor}
+The Ashcroft and Langreth (AL) partial structure factors Sij are calculated with their original work~\cite{LAshcroft1967} 
+\be
+S_{ij}(q)=1+n {(c_i c_j)}^{1/2} \int[g_{ij}(r)-1]\exp [i\bar q.\bar r]d^{3}r
+\ee
+where $S_{ij}(q)$ is the hard-sphere momentum-space solutions of the Percus-Yevick (PY) equation appropriate to binary alloys. In terms of the Ornstein-Zernike correlation functions, Cij(q) we may represent $S_{ij}(q)$ as
+\be
+S_{11}(q) = [1 - n_2C_{22}(q)]/D(q)\\
+\ee
+\be
+S_{22}(q) = [1 - n_1C_{11}(q)]/D(q) \\
+\ee
+\be
+S_{12}(q) = (n_1n_2)^{1/2}C_{12}(q)/D(q)\\ 
+\ee
+\be
+D(q) = [1 - n_1C_{11}(q)][1 - n_2C_{22}(q)] - n_1n_2C_{12}(q)
+\ee
+where the $n_i$ are number densities of the i-th component. $C_{ij}(q)$ can be represented using the PY approximation by the parameters $\alpha$=$\sigma_{11}$/$\sigma_{22}$ ($\alpha\leq$1), $x$: concentration of larger component and the packing fraction, $\eta$.
+The necessary ingredients in calculating the structure factors are the concentrations of the two spheres in the mixture and HSD. The value of the HSD are determined by using linearized Weeks-Chandler-Anderson (LWCA) perturbation theory. The total packing fraction $\eta$ of the mixture is taken as, 
+\be
+\eta = \eta_1 + \eta_2 = \frac{\pi}{6}(c_1n_1\sigma_{11}^3+c_2n_2\sigma_{22}^3)
+\ee
+Where $c_i$ represents the concentration of the i-th component.
+
+We can calculate mean structure factor, $\overline{S(q)}$ from partial structure factor $S_{ij}(q)$,
+\be
+\overline{S(q)}=\frac{c_1f_{1}^2(q)S_{11}(q)+2\sqrt{c_1 c_2}f_{1}(q)f_{2}(q)S_{12}(q)+c_2f_{2}^2(q)S_{22}(q)}{c_1f_{1}^2(q)+c_2f_{2}^2(q)}
+\ee
+where $f_{1}(q)$ and $f_{2}(q)$ are the scattering factors and taken from ref~\cite{Doyle1968} for Na, K and Cs, and $c_i$'s are the concentration of the components of the alloy.
+
+\section{Electrical resistivity of liquid metals and alloys}
+The famous Ziman's formula for electrical resistivity of simple metals:
+\be
+\label{zn}
+\rho=\frac{3\pi m^2}{4Ze^2\hbar^3 n k^6_{\rm F}} \int_{0}^{\infty} q^3S(q){\lvert{V(q)}\rvert}^{2} dq
+\ee
+Where $S(q)$, $V(q)$,$q$,$Z$,$n$,$e$,$m$ represent the static structure factor, screened form factor in q-space, the momentum transfer, effective s-electron occupancy number, conduction electron density, electron charge and effective mass, respectively. At high temperature, the effective mass approaches to the free electron mass~\cite{Baym1964}. So, in this work we approximated the effective mass is equal to the free electron mass. We have also truncated the integrand at $q$ = 2$k_{\rm F}$ resulting a perfect sharp fermisurface. It is considered that the wave vectors q of electrons lying on the fermi surface are responsible for the scattering. The conduction electron density can be represented as a function of wave vector $k_F$ , $n$= 3$\pi^2$/$k_{\rm F}^3$ . Eq.~\ref{zn} is extended for alloys by Faber and Ziman~\cite{Faberziman1965}.
+\bea
+\label{zf}
+\rho=\frac{3\pi m^2}{4Ze^2\hbar^3 n k^6_{F}}\bigg [\int_{0}^{\color{blue}{2k_{\rm F}}}q^3\bigg\{c_{i}S_{ii}(q){\lvert{V_{ii}(q)}\rvert}^{2}%\nonumber\\
+ + c_{j}S_{jj}(q){\lvert{V_{jj}(q)}\rvert}^{2}\bigg\} dq \nonumber\\
+ + \int_{0}^{\color{blue}{2k_{\rm F}}} q^3[2 (c_{i}c_{j})^\frac{1}{2}S_{ij}(q)V_{ii}(q)V_{jj}(q)] dq \bigg]
+\eea
+Where $Z$ = $c_iz_i$ +$c_jz_j$ is the effective valence for alloys, i, j denote constituents of an alloy, $S_{ij}(q)$ is partial structure factor, $V_i(q)$ is form factor, $c_i$ is concentration of a constituent. The conduction electron density for an alloy is determined by, $1/n$ = $c_i/n_i$+$c_j/n_j$. Eq.~\ref{zf} is the required equation to calculate the electrical resistivity of simple liquid metal binary alloys.
+
+\section{Results and Discussion}
+\label{res}
+In this section, firstly we have presented theoretical calulation of resistivity of Na-based alkali alloys, then, we have discussed the obtained results. As said earlier, the form factor, $V_{ij}(q)$ and structure factor $S_{ij}(q)$ are the main ingredients of this calculation. Both form factor and static structure factor are directly connected to BS pseudo-potential. For BS pseudo-potential, we need to fix three parameters, $R_c$, $a$ and $Z$ in the following way: values of $R_c$ are generally determined by fitting to the physical properties of the system of interest. The values of $R_c$ and $a$ are determined by the procedure of Bhuiyan et. al.~\cite{Bhuiyan1993} by fitting to the structure factor with experimental value of Waseda et. al.~\cite{Waseda} for our concerned systems as shown in Fig.\ref{pfig1}. The Z values represent $sp$-$d$ hybridization effect. For Alkali metals Z values are taken as Z = 1.0 considering there is no $sp$-$d$ hybridization. Number densities are calculated using formula from ref~\cite{Smithells}. The values of the input parameters are listed in Table~\ref{t1}. 
+
+In order to evaluate partial inter-ionic interaction, we calculate effective partial pair potential $V_{ij}(r)$ from the BS model potential. $V_{ij}(r)$ is quite sensitive to the choice of dielectric function of the electron gas. So, we incorporate two different local field correction funcions, Ichimaru and Utsumi (IU)~\cite{ichimaru} and Vashishta and Singwi (VS)~\cite{Vashishta1972}. The obtained partial pair potentials $V_{ij}(r)$ and screened form factor, $V_{ii}(q)$ using IU for concentraion, $x$ = 0.5 of Na$_x$K$_{1-x}$ alloy are shown in Fig.~\ref{pfig2} as a representative one. It is evident from the Fig.~\ref{pfig2} that the depth of the potential well is minimum for $V_{11}(r)$ where as it is maximum for $V_{22}(r)$; $V_{12}(r)$ lies in between them. This is because the depth of the potential well and the position of principal minima are the outcome of the delicate balance between the repulsive and attractive interaction in metals. In the pseudo-potential formalism, these interactions happen because of the direct interaction between different ion-cores and the indirect interaction via conduction electrons. The dielectric function plays an important role in this context. Fig.~\ref{pfig2} also shows that the depth of the potential well of partial potential is getting shallower with increasing Na concentration, $x$ and the position of the principal minima slightly shifts towards increasing $r$ in higher concentration. Similar trends are found in other alloys of our concerned systems. Incorporating VS replacing IU, we have seen the depth of the potential well is increased and the position of the principal minima slighly shifts towards increasing $r$ otherwise all alloys of our concerned systems follows similar trends as IU. 
+
+Resistivity values are usually sensitive to static structure factor, specially, small angle scattering is important for alkali metal alloys~\cite{Faber2010}. Calculation of static structure factor, $S_{ij}(q)$ using AL theory for alloys needs hard sphere diameter (HSD) values which are calculated using LWCA perturbative theory. Thus obtained $S_{ij}(q)$ for concentration, $x$ = 0.1, 0.5 and 0.9 of Na$_x$K$_{1-x}$ alloys are shown in Fig.~\ref{pfig3} as a representative one. From Fig.~\ref{pfig3}(a) it is seen for $x$ = 0.1 that $S_{22}(q)$ has the largest peak and $S_{11}(q)$ has the smallest while for $x$ = 0.9, this situation becomes opposite. For concentration, $x$ = 0.5, there is a competition between $S_{11}(q)$ and $S_{22}(q)$, but as component 2 has larger HSD, partial structure factor $S_{22}(q)$ dominates. It implies that, both concentration and HSD of components determine the probability of finding ions near another ions. This also can be explained as the occurrence of the transfer of charge from atoms of one component to another component in the alloys~\cite{Hoshino}. These trends are similar for all alloys of our concerned systems.
+  
+Using screened form factor $V_{ij}(q)$ and structure factor $S_{ij}(q)$, we have calculated resistivity of alloys for different concentration are shown in Fig.~\ref{pfig5}.
+
+Na$_{x}$K$_{1-x}$ alloys: [Fig.~\ref{pfig5}(a)] we have compared our calculated resistivity with experimental~\cite{Lugt1978} and other theoretical data ~\cite{Korkmaz2013,Vora2007,Mishra1990,Wang1980,Singh1991,Malan2018,Thakur2005}. We found that our calculated data using VS screening function is better than that of IU. Both of the obtained results are much better than those obtained by ~\cite{Vora2007} with Hartee~\cite{Harrison1999}(H) and Farid~\cite{Farid1993}(F) Screening functions, ~\cite{Mishra1990}, ~\cite{Malan2018} with VS and IU screening function, ~\cite{Singh1991} and ~\cite{Wang1980}. Using VS the obtained results are better than any other theory except for Na$_{0.1}$K$_{0.9}$, Na$_{0.2}$K$_{0.8}$ and Na$_{0.3}$K$_{0.7}$ alloys. The resistivity values of ~\cite{Vora2007} with Sarkar~\cite{Sarkar1998}(S) screening function, ~\cite{Korkmaz2013} and computer simulation data of ~\cite{Thakur2005} is comparable to our VS resistivity values. Our resistivity values overestimates the experiment in the K-rich region.
+
+Na$_{x}$Rb$_{1-x}$ alloys: [Fig.~\ref{pfig5}(b)] The calculated resistivity data is compared with experimental~\cite{Lugt1978} and other theoretical data ~\cite{Vora2007,Mishra1990}. Our resistivity values overestimates, whereas ~\cite{Vora2007}(H) resistivity underestimates the experimental data. The obtained results are largely deviated from experiment but still better than ~\cite{Vora2007}(H). Local-field correction function, VS improves resistivity results over IU in our calculation. Results of ~\cite{Mishra1990} is better than us. The reason might be in the use of potential. They have used Harrison~\cite{Walter1966} pseudo-potential for their calculation. 
+
+Na$_{x}$Cs$_{1-x}$ alloys: [Fig.~\ref{pfig5}(c)] our calculated resistivity for Na$_{x}$Cs$_{1-x}$ has been compared with experimental~\cite{Hallers1974} and other theoretical values~\cite{Vora2007,Mishra1990,Wang1980,Singh1991,Malan2018}. The obtained results are better than any other theoretical results for both IU and VS. Between them, results of VS is better than that of IU. Our calculated values using VS are almost exactly predict the experiment but Cs-end values are more deviated from experiment than Na-end.
+ 
+Na$_{x}$Li$_{1-x}$ alloys: There are few experimental data for Na$_{x}$Li$_{1-x}$ alloys because of its experimental complexities. Theoretical studies are also scarce. Li is itself different from others in this group because it has large miscibility gap between Li and Na, higher conduction electron number density and high melting temperature~\cite{feitsma1975}. [Fig.~\ref{pfig5}(d)] we have compared our calculated resistivity with other theoretical values~\cite{Vora2007, Mishra1990,Malan2018}. Resistivity results greatly deviated from experiment in the Li-rich region. 
+
+We have taken 373K as melting temperature for Na$_x$K$_{1-x}$, Na$_x$Rb$_{1-x}$ and Na$_x$Cs$_{1-x}$ whereas 583K for Na$_x$Li$_{1-x}$ alloys~\cite{Bale} in order to incorporate all the compositions in the liquid state. Analyzing the obtained resistivity data, we have observed that the considered concentrations in this study whose melting points are much smaller than the calculated temperature provides deviated results than the experimental ones. Therefore, we can infer that the applied theories work well at the near melting temperature. We have also compared the calculated mean structure factor with experiment~\cite{Alblas1,Alblas2,Alblas3,Hujiben1979} for Na$_x$K$_{1-x}$ and Na$_x$Cs$_{1-x}$ as representation shown in Fig.~\ref{pfig4}. We have found that mean structure factor data is consistent with experiment except at the end concentrations. So, LWCA can not give accurate data for the temperature which is far from melting for liquid alloys. Otherwise our results are consistent with the experimental result.
+
+There are other things to consider regarding this deviation. Firstly, small angle scattering i.e. ($q$ from 0 to 1 $\AA^{-1}$) is very important to get better theoretical results for alkali alloys~\cite{Faber2010}. For the concerned systems, static structure factor for Na is very good but other metals namely, K, Rb, Cs and Li results are deviated in this region. This also can affect our result. Secondly, it is also noted that our static structure factor data which we have compared with the experimental data from Waseda et. al.~\cite{Waseda} in order to get the potential parameters at the above stated temperature are calculated at slightly different temperatures from ours like for Na, K, Rb and Cs it is 378K and for Li, it is 453K which might also responsible for this deviation.
+
+Specially for Na$_x$Li$_{1-x}$ alloys, we observe that the results at the Na-end is consistent with the experiment but those value at the Li-end are inconsistent. The probable reason behind this lies in the electronic structure of Li. Li has only s-state electron, no p-state electron which rises to non-locality of potential in contrast to the used BS pseudo-potential in this paper which is a local potential.
+
+In every case, IU overestimates the experimental data. VS is close to the experiment. So, Vs can predict better result than IU in this study. 
+
+
+\section{Conclusions}
+\label{conclu}
+In this paper, we have calculated the resistivity of alloys using BS pseudo-potential and LWCA perturbative theory for liquid alkali alloys which proves to be successful. Choice of local field corrections are important to get better resistivity results for alloys. In our case, VS gives better results than IU. Regarding the case for small angle scattering, LWCA can not provide accurate static structure factor data that's why our results faces discrepancy. Among this four studied alloys, namely Na$_x$K$_{1-x}$, Na$_x$Rb$_{1-x}$ and Na$_x$Cs$_{1-x}$ and Na$_x$Li$_{1-x}$, resistivity results of Na$_x$Cs$_{1-x}$ alloys are better than any other exiting theories for both local field correction functions, Na$_x$K$_{1-x}$ alloys using VS gives tough competition with other theories, Na$_x$Rb$_{1-x}$ alloys gets most deviated. For Na$_x$Li$_{1-x}$ alloys, Li needs different treatment than other alkali metals in the context of potentials.
+\newpage
+\begin{thebibliography}{thesis}
+
+\bibitem{Dickey2014}M. D. Dickey, Emerging Applications of Liquid Metals Featuring Surface Oxides, ACS Appl. Mater. Interfaces, 6 (2014), pp. 18369-18379; https://dx.doi.org/10.1021/am5043017. 
+\bibitem{Bhuiyan1996}G. M. Bhuiyan, M. Silbert, and M. J. Stott, Structure and thermodynamic properties of liquid transition metals: An embedded-atom-method approach, Phys. Rev. B 53, (1996), pp. 636; https://doi.org/10.1103/PhysRevB.53.636.
+\bibitem{Bhuiyan2000}G. M. Bhuiyan , A. Rahman , M. A. Khaleque , R. I. M. A. Rashid and S. M. Mujibur Rahman, Structural, Thermodynamic and Transport Troperties of Liquid Noble and Transition Metals, Phys. and Chem. of Liq., 38, 1 (2000),pp. 1-16,https://doi.org/10.1080/00319100008045292.
+\bibitem{Zahid1999}F.Zahid, G.M. Bhuiyan, S.Sultana, M.A. Khaleque, R.I.M.A. Rashid and S.M.M. Rahman, Investigations of the Static and Dynamic Properties of Liquid Less Simple Metals, Phys. Stat. Sol. B 215, 2 (1999), pp.987-998;https://doi.org/10.1002/(SICI)1521-3951(199910)215:2<987::AID-PSSB987>3.0.CO;2-E.
+\bibitem{Sharmin2002}S. Sharmin, G.M. Bhuiyana, M.A. Khaleque, R.I.M.A. Rashid, S.M.M. Rahman, Electronic transport properties of liquid less-simple metals, physica status solidi (b) 232 (2), (2002), pp. 243–253, https://doi.org/10.1002/1521-3951(200208)232:2<243::AID-PSSB243>3.0.CO;2-W.
+\bibitem{Bhuiyan2003}G.M. Bhuiyan, I. Ali and S.M.M. Rahman, Atomic transport properties of AgIn liquid binary alloys, Physica B: Condensed Matter, 334(1-2) (2003), pp. 147-159; https://doi.org/10.1016/s0921-4526(03)00040-1.
+\bibitem{Gosh2013}R.C. Gosh, M.R. Amin, G.M. Bhuiyan, Atomic transport for liquid noble and transition metals using scaling laws, Journal of Molecular Liquids, 188, (2013), pp. 148-154, https://doi.org/10.1016/j.molliq.2013.09.034.
+\bibitem{Bhuiyan2008}E.H. Bhuiyan,A.Z. Ziauddin Ahmed,G.M. Bhuiyan and M. Shahjahan, Atomic transport properties of Ag$_x$Sn$_{1-x}$ liquid binary alloys, Physica B: Condensed Matter, 403, 10-11 (2008), pp. 1695-1703, https://doi.org/10.1016/j.physb.2007.09.090.
+\bibitem{Leavens1981}C.R. Leavens, A.H. Mackdonald, R. Taylor, A. Ferraz and N.H.March, Finite Mean-Free-Paths and the Electrical Resistivity of Liquid Simple Metals, Phys. Chem. Liq. 11, 2 (1981) pp.115-128; https://doi.org/10.1080/00319108108079103.
+\bibitem{Nardi1996}E. Nardi, Plasma and liquid-metal resistivity calculations using the Ziman theory, Phys. Rev. E 54, 2 (1996)pp. 1899-1905;https://doi.org/10.1103/PhysRevE.54.1899
+\bibitem{Hansen1976}J.P. Hansen and J. R. McDonald, Theory of Simple Liquids, Academic Press, (1976).
+\bibitem{Week1971}J. D. Weeks, D. Chandler and H. C. Andersen,Role of Repulsive Forces in Determining the Equilibrium Structure of Simple Liquids, The Journal of Chemical Physics 54, (1971) 5237; https://doi.org/10.1063/1.1674820.
+\bibitem{Ishihara1968}A. Ishihara, The Gibbs-Bogoliubov inequality, J. Phys. , A1, (1968) 539.
+\bibitem{Barkar1967}J. A. Barker and D. Henderson, Perturbation Theory and Equation of State for Fluids. II. A Successful Theory of Liquids,The Journal of Chemical Physics 47, 4714 (1967); https://doi.org/10.1063/1.170168.
+\bibitem{Bhuiyan1993}G.M. Bhuiyan, J.L. Bretonnet and M. Silbert, Liquid structure of the 3d transition metals, J. Non-Cryst. Sol. 156-158 (1993), pp. 145-148; https://doi.org/10.1016/0022-3093(93)90149-R.
+\bibitem{McGreevey1991}R. L. McGreevy, Understanding liquid structures, Journal of Physics: Condensed Matter, 3(42), (1991) F9-F22; https://doi.org/10.1088/0953-8984/3/42/002.
+\bibitem{Waseda}Y. Waseda, The Structure of Non-crystalline Materials, McGraw Hill, Newyork, 55, 264 (1980).
+\bibitem{Shimoji39} M. Shimoji, Liquid Metals: An Introduction to the Physics and Chemistry of Metals in the Liquid States Academic, London, 1977, pp. 104-105.
+\bibitem{Khaleque2002}M. A. Khaleque, G. M. Bhuiyan, S. Sharmin, R. I. M. A. Rashid, and S. M. Mujibur Rahman, Calculation of partial structure factors of a less-simple binary alloy. The European Physical Journal B, 26(3) (2002), pp. 319-322; https://doi.org/10.1140/epjb/e20020095.
+\bibitem{Ross40}M. Ross, H. E. DeWitt, and W. B. Hubbard, Monte Carlo and perturbation-theory calculations for liquid metals, Phys. Rev. A 24 (1981), pp. 1016-1020; https://doi.org/10.1103/PhysRevA.24.1016.
+\bibitem{Hafner41}J. Hafner, A. Pasturel, and P. Hicter, Simple model for the structure and thermodynamics of liquid alloys with strong chemical interactions. II. Chemical order and packing constraints. Journal of Physics F: Metal Physics, 14(10) (1984), pp. 2279-2295; https://doi.org/10.1088/0305-4608/14/10/007.
+\bibitem{Mayer1980}A. Mayer, M. Silbert and W.H. Young, Chem. Phys. 49 (1980), pp. 147.
+\bibitem{Kumar23}R. Kumaravadivel and R. Evans, The entropies and structure factors of liquid simple metals, Journal of Physics C: Solid State Physics, 9(21) (1976), pp. 3877-3903; https//doi.org/10.1088/0022-3719/9/21/008.
+\bibitem{Gosh2007}R.C. Gosh, A.Z. Ziauddin Ahmed and G.M. Bhuiyan, Investigation of surface entropy for liquid less simple metals, The European Physical Journal B, 56(3) (2007), 177-181; https://doi.org/10.1140/epjb/e2007-00104-9.
+\bibitem{Rossiter1991}P.L. Rossiter, The Electrical Resistivity of Metals and Alloys, Cambridge University Press, Cambridge (1991).
+\bibitem{Fiolhais1996}C. Fiolhais, J.P. Perdew, S.Q. Armster, J.M. Maclaren and M. Brajczewska, Dominant density parameters and local pseudopotentials for simple metals, Physical Review B, 51(20) (1995), pp. 14001-14011; https://doi.org/10.1103/physrevb.51.14001.
+\bibitem{Fiolhais1995}C. Fiolhais, J.P. Perdew, S.Q. Armster, J.M. Maclaren and M. Brajczewska, Erratum: Dominant density parameters and local pseudopotentials for simple metals, Physical Review B, 53(19) (1995), pp. 13193-13193; https://doi.org/10.1103/physrevb.53.13193.
+\bibitem{Sinclair1984}M.W. Finnis and J.E. Sinclair, A simple empirical N-body potential for transition metals, Philosophical Magazine A, 50(1) (1984), pp. 45-55; https://doi.org/10.1080/01418618408244210.
+\bibitem{Daw1984}M.S. Dsw and M.I. Baskes, Embedded-atom method: Derivation and application to impurities, surfaces, and other defects in metals, Physical Review B, 29(12) (1984), pp. 6443-6453; https://doi.org/10.1103/physrevb.29.6443.
+\bibitem{Walter1966}Walter A. Harrison, Pseodopotentials in the theory of metals, W. A. Benjamin, Inc. (1966).
+\bibitem{Hohenberg1964}P. Hohenberg and W. Kohn, Inhomogeneous Electron Gas, Physical Review, 136(3B) (1964), pp. B864-B871; https://doi.org/10.1103/physrev.136.b864.
+\bibitem{Kohn1965}W. Kohn and L. J. Sham, Self-Consistent Equations Including Exchange and Correlation Effects, Physical Review, 140(4A) (1965), pp. A1133-A1138; https://doi.org/10.1103/physrev.140.a1133.
+\bibitem{Mermin1965}N. D. Mermin, Thermal Properties of the Inhomogeneous Electron Gas, Physical Review, 137(5A) (1965), pp. A1441-A1443; https://doi.org/10.1103/physrev.137.a1441.
+\bibitem{Bret1992}J.L. Bretonnet, G.M. Bhuiyan and M. Silbert, Gibbs-Bogoliubov variational scheme calculations for the liquid structure of 3d transition metals. Journal of Physics: Condensed Matter, 4(24) (1992), pp. 5359-5370; https://doi.org10.1088/0953-8984/4/24/005.
+\bibitem{MSU2018}Md Salah Uddin, R.C. Gosh, G.M. Bhuiyan, Investigation of surface tension, viscosity and diffusion coefficients for liquid simple metals, Journal of Non-Crystalline Solids, 499 (2018), pp. 426-433, https://doi.org/10.1016/j.jnoncrysol.2018.07.014.
+\bibitem{ichimaru}Ichimaru and K. Utsumi, Analytic expression for the dielectric screening function of strongly coupled electron liquids at metallic and lower densities, Physical Review B, 24(12) (1981), pp.  7385-7388; https://doi.org/10.1103/physrevb.24.7385.
+\bibitem{Vashishta1972}P. Vashishta and K.S. Singwi, Electron Correlations at Metallic Densities. V., Physical Review B, 6(3) (1972), pp. 875-887; https://doi.org/10.1103/physrevb.6.875.
+\bibitem{Mishra1990}A.K. Mishra, B.B. Sahay and K.K. Mukherjee, Structure and Electrical Resistivity of Alkali–Alkali and Lithium-Based Liquid Binary Alloys, Physica Status Solidi (b), 157(1) (1990), pp. 85-92; https://doi.org/10.1002/pssb.2221570106.
+\bibitem{Vora2007}A. M. Vora, Electrical Resistivity of Liquid Alkali Na-based Binary
+Alloys, turk J Phys 31 (2007), pp. 341-346.
+\bibitem{ziman1961}J.M. Ziman, A theory of the electrical properties of liquid metals. I: The monovalent metals, Philosophical Magazine, 6(68) (1961), pp. 1013-1034; https://doi.org/10.1080/14786436108243361.
+\bibitem{Baym1964}G. Baym, Direct Calculation of Electronic Properties of Metals from Neutron Scattering Data, Physical Review, 135(6A) (1964), pp. A1691-A1692; https://doi.org/10.1103/physrev.135.a1691.
+\bibitem{Korkmaz2013}S.D. Korkmaz and S. korkmaz, Electronic transport properties of liquid Na$_{1−x}$K$x$ alloys, Journal of Molecular Liquids, 186 (2013), pp. 85-89; https://doi.org/10.1016/j.molliq.2013.05.005.
+\bibitem{Ziman1963} J.M. Ziman, Electrons and phonons, Oxford University Press, New York (1963); Models of disorder, Cambridge University Press, Cambridge (1979).
+\bibitem{Wang1980}S. Wang and S.K. Lai, A self-consistent pseudopotential applied to transport coefficients of liquid binary alloys of alkali metals, Journal of Physics F: Metal Physics, 10(3) (1980), pp. 445-449; https://doi.org/10.1088/0305-4608/10/3/015.
+\bibitem{Faberziman1965}T.E. Faber and J.M. Ziman, A theory of the electrical properties of liquid metals, Philosophical Magazine, 11(109) (1965), pp. 153-173; https://doi.org/10.1080/14786436508211931.
+\bibitem{Lugt1978}J. Hennephof, C. van der Marel and W. van der Lugt, The electrical resistivity of liquid potassium-rubidium, rubidium-caesium and sodium-potassium alloys, Physica B+C, 94(1) (1978), pp. 101-104; https://doi.org/10.1016/0378-4363(78)90080-3.
+\bibitem{feitsma1975}P.D. Feitsma, J.J. Hallers, F.V.D. Werff and W. Van Der Lugt, Electrical resistivities and phase separation of liquid lithium-sodium alloys, Physica B+C, 79(1) (1975), pp. 35-52; https://doi.org/10.1016/0378-4363(75)90105-9.
+\bibitem{Hallers1974}J.J. Hallers, T. Martien and W. van der Lugt, Resistivity calculations for liquid Na-Cs and K-Cs alloy systems, Physica, 78(2) (1974), pp. 259-272; https://doi.org/10.1016/0031-8914(74)90069-x.
+\bibitem{Singh1991}B. P. Singh, V. N. Choudhary and R. N. Singh, Structure and Electrical Resistivity of Liquid Alkali Alloys, Phys. Chem. Liq., 23(4) (1991), pp. 211-223, http://dx.doi.org/10.1080/00319109108027258.
+\bibitem{Malan2018}R. C. Malan and A. M. Vora, Electrical Resistivity of Liquid Na-Alkali Alloys, AIP Conference Proceedings 1953, (2018) pp. 140014 ; https://doi.org/10.1063/1.5033189.
+\bibitem{Thakur2005}A. Thakur and P. K. Ahluwalia, Electrical Resistivity of Na-K Binary Liquid Alloy Using Ab-Initio Pseudopotentials, Chinese Phys. Lett., 22(10) (2005), pp. 2611-2614; https://doi.org/10.1088/0256-307X/22/10/043.
+\bibitem{Bhuiyan1992}G.M. Bhuiyan, J.L. Bretonnet, L.E. Gonzalez and M. Silbert, Liquid structure of titanium and vanadium; VMHNC calculations, Journal of Physics: Condensed Matter, 4(38) (1992), pp. 7651-7660; https://doi.org/10.1088/0953-8984/4/38/002.
+\bibitem{LAshcroft1967}N.W. Ashcroft and David C. Langreth, Structure of Binary Liquid Mixtures. II. Resistivity of Alloys and the Ion-Ion Interaction, Physical Review, 159(3) (1967), pp. 500-510; https://doi.org/10.1103/physrev.159.500.
+\bibitem{Doyle1968}P.A. Doyle, P.S. Turner, Relativistic Hartree Fock X-ray and electron scattering factors, Acta Crystallographica, A 24 (1968), pp. 390-397;https://doi.org/10.1107/S0567739468000756.
+\bibitem{Smithells}C.J. Smithells, Metals Reference Book, 7th ed., Betterworth Heinemann, 14.2, (1992).
+\bibitem{Faber2010}An Introduction to the Theory of Liquid Metals by Faber and Ziman, Cambridge University Press, Chapter-5, Edition (2010).
+\bibitem{Hoshino}K. Hoshino and W. H. Young, Entropy of mixing of compound forming liquid binary alloys, Journal of Physics F: Metal Physics, 10(7) (1980), pp. 1365-1374; https://doi.org/10.1088/0305-4608/10/7/006.
+\bibitem{Harrison1999}W. A. Harrison, Elementary electronic structure, World Scientific, Singapore, (1999).
+\bibitem{Farid1993}B. Farid, V. Heine, G. E. Engel, and I. J. Robertson, Extremal properties of the Harris-Foulkes functional and an improved screening calculation for the electron gas, Phys. Rev. B, 48(16) (1993),pp. 11602-11621;https://doi.org/10.1103/PhysRevB.48.11602. 
+\bibitem{Sarkar1998}A. Sarkar, D. Sen, S. Haldar and D. Roy, Static Local Field Factor for Dielectric Screening Function of Electron Gas at Metallic and Lower Densities, Modern Physics Letters , 12(16) (1998), pp. 639–648. doi:10.1142/s0217984998000755.
+\bibitem{Bale}C.W. Bale, Bulletin of Alloy Phase Diagrams 3, (1982) 312.
+\bibitem{Alblas1}B.P. Alblas, W. Vanderlugt, Small-angle X-ray scattering from sodium-potassium alloys, Journal of Physics F: Metal Physics 10 (1980), pp. 531-539; https://doi.org/10.1088/0305-4608/10/4/004.
+\bibitem{Alblas2}B.P. Alblas, W. Vanderlugt, O. Mensies, C. Vandijk, Structure of liquid potassium-cesium alloys, Physica B+C, 106(1) (1981), pp. 22-32; https://doi.org/10.1016/0378-4363(81)90009-7.
+\bibitem{Alblas3}B.P. Alblas, W. Vanderlugt, E.G. Visser, J.T.M. Dehosson, Thermodynamic calculations for the liquid systems Na-K, K-Cs and Li-Pb, Physica B+C, 114(1) (1982), pp. 59-66; https://doi.org/10.1016/0378-4363(82)90007-9.
+\bibitem{Hujiben1979}M.J. Hujiben, W. VanDer Lugt, W.A.M. Reitmert, J.Th.M. DEHosson, C. Van Dijk,Investigations on the structure of liquid Na-Cs alloys, Physica B+C, 97(4) (1979), pp. 338-364; https://doi.org/10.1016/0378-4363(79)90086-X.
+
+\end{thebibliography}
+
+\newpage
+\begin{table}[htp]
+\vskip -0.0cm
+\begin{center}
+%\tabcolsep=0.05cm
+\caption{Values of the input parameters}
+\label{t1}
+\vspace{7mm}
+\begin{tabular}{cccccc}\hline
+Metal & $T_{0}$(K)  & $n$(\AA$^{-3}$)   &  $R_{c}$ ($a.u.$)  &   $a$ ($a.u.$) & $Z_{s}$  \\ \cline{1-6}
+Li   & 583      &  0.0435           &   1.29   & 0.265      &  1.0       \\
+Na   &          & 0.0230            &   1.71   & 0.362      &  1.0       \\ \cline{1-6}
+Na   &          & 0.0242            &   1.71   & 0.362      &  1.0       \\
+K    & 373      & 0.0126            &   2.51   & 0.575      &  1.0          \\
+Rb   &         & 0.0102             &   2.75    & 0.620      &  1.0        \\
+Cs   &         & 0.00813            &   3.28    & 0.788     &  1.0        \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[htp]
+\begin{center}
+\begin{tabular}{llll}
+\vspace{-2.7cm}
+ \\(a)& (b) \\
+\includegraphics[width=7.4cm,angle=-90]{NaSTRUC.eps}&
+\includegraphics[width=7.4cm,angle=-90]{KSTRUC.eps}\\&\\&\\
+\vspace{-3.0cm}
+\\(c) & (d) \\
+\includegraphics[width=7.4cm,angle=-90]{RbSTRUC.eps}&
+\includegraphics[width=7.4cm,angle=-90]{CsSTRUC.eps}\\&\\&\\
+
+\end{tabular}
+\caption{Comparison of structure factor using LWCA theory with experiment. Line and open circle represent Expt and LWCA respectively. Structure of (a) Na, (b) K, (c) Rb, and (d) Cs.}
+\label{pfig1}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\begin{tabular}{lll}
+\vspace{-2.7cm}
+ \\(a)& (b) \\
+\includegraphics[width=7.4cm,angle=-90]{ptNa5K5.eps}&
+\includegraphics[width=7.4cm,angle=-90]{FFNaK.eps}
+\end{tabular}
+\caption{Line, dash and dot represent $V_{11}$, $V_{22}$ and $V_{12}$ respectively for representative (a) effective partial potential, $V_{ij}(r)$ and (b) screened form factor, $V_{ii}(q)$ of Na$_{0.5}$K$_{0.}$ alloy.}
+\label{pfig2}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\begin{tabular}{lll}
+\vspace{-2.7cm}
+ \\(a)& (b) \\
+\includegraphics[width=7.4cm,angle=-90]{SQNa1K9.eps}&
+\includegraphics[width=7.4cm,angle=-90]{SQNa5K5.eps}\\&\\&\\
+\vspace{-3.0cm}
+\\(c)\\
+\includegraphics[width=7.4cm,angle=-90]{SQNa9K1.eps}
+
+\end{tabular}
+\caption{Representative partial static structure factor ($S_{11}(q)$ and $S_{22}(q)$) of (a) Na$_{0.1}$K$_{0.9}$, (b) Na$_{0.5}$K$_{0.}$, and (c) Na$_{0.9}$K$_{0.1}$ alloys.}
+\label{pfig3}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\begin{tabular}{lll}
+\vspace{-2.7cm}
+ \\(a)& (b) \\
+\includegraphics[width=7.4cm,angle=-90]{MSQFNa3K7.eps}&
+\includegraphics[width=7.4cm,angle=-90]{MSQFNa7K3.eps}\\&\\&\\
+\vspace{-3.0cm}
+\\(c)&(d)\\
+\includegraphics[width=7.4cm,angle=-90]{MSQFNa3Cs7.eps}&
+\includegraphics[width=7.4cm,angle=-90]{MSQFNa5Cs5.eps}\\&\\&\\
+
+\end{tabular}
+\caption{Comparison of mean static structure factor with experiment of (a) Na$_{0.3}$K$_{0.7}$, (b) Na$_{0.7}$K$_{0.3}$, (c) Na$_{0.3}$Cs$_{0.7}$ and (d) Na$_{0.5}$Cs$_{0.5}$  alloys.  Open circle and line represent calc. and exp. values respectively.}
+\label{pfig4}
+\end{center}
+\end{figure}
+
+
+\begin{center}
+\begin{figure}
+\begin{tabular}{llll}
+\vspace{-1.7cm}
+\\(a)& (b) \\
+\includegraphics[width=7.4cm,angle=-90]{NaKres.eps}&
+\includegraphics[width=7.4cm,angle=-90]{NaRbres.eps}\\&\\&\\
+\\(c)&(d)\\
+\includegraphics[width=7.4cm,angle=-90]{NaCsres.eps}&
+\includegraphics[width=7.4cm,angle=-90]{NaLires.eps}\\&\\&\\
+
+\end{tabular}
+\caption{Variation of resistivity of Na-based (a) Na$_{x}$K$_{1-x}$, (b) Na$_{x}$Rb$_{1-x}$, (c) Na$_{x}$Cs$_{1-x}$ and (d) Na$_{x}$Li$_{1-x}$ alloys with concentration of Na. Solid, dot, open circle, dashed-dot, filled circle, up-triangle, asterisk, filled square and dashed represent Calc.[VS], Calc. [IU], Expt.~\cite{Lugt1978,Hallers1974,feitsma1975}, [H]~\cite{Vora2007},[F]~\cite{Vora2007}, [S]~\cite{Vora2007}, ~\cite{Mishra1990}, ~\cite{Wang1980}, and ~\cite{Korkmaz2013} respectively.}
+\label{pfig5}
+\end{figure}
+\end{center}
+
+
+\end{document}
+
+
+
+
