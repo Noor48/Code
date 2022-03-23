@@ -1,0 +1,854 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{breqn}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{changepage}
+\usepackage{array,multirow,graphicx}
+\newcommand*{\1}{\hspace{1pt}}
+\graphicspath{/home/susmita/Documents/project/amar project}
+
+\title{\color{blue} \Huge{ SEGREGATION OF BINARY ALLOYS}}
+
+\author{ COURSE TITLE : HONOURS PROJECT \\ COURSE CODE : TP-407 \\ [20PT] \textbf{SUBMITTED BY}
+ \\ [5PT] \Large SUSMITA SARKER \\ \Large CLASS ROLL : SN-098-032 \\ \Large EXAM ROLL: 30219 \\
+  \Large REGISTRATION NUMBER : 2016-014-718 \\ \Large  ACADEMIC YEAR :  2019-20 \\
+   \Large  SESSION : 2016-17
+\\ [10pt] 
+\includegraphics[width=0.5\textheight]{DU.jpg} \\ [10pt] \Large DEPARTMENT OF THEORETICAL PHYSICS \\ UNIVERSITY OF DHAKA 
+}
+
+
+\date{March 24,2022}
+
+\begin{document}
+	%\maketitle
+	
+	
+\pagebreak
+
+\rule{\textwidth}{0.5pt}
+\begin{abstract}
+Content
+\end{abstract}
+
+\rule{\textwidth}{0.5pt}
+\newpage
+
+    \section*{1. Introduction}
+    Theoreticians have briefed the significance of the mixing properties of binary liquid alloys 
+    from both the scientific and the technological points of view. A precise understanding of 
+    the mixing properties and phase diagrams of the alloy system is elementary to establish a 
+    good arrangement between the experimental results, theoretical approaches, and empirical 
+    models for liquid alloys with a miscibility gap.
+    All liquid binary alloys can be grouped into two distinct classes that either exhibit 
+    positive deviation(usually called segregating systems) or negative deviation (i.e. 
+    short-ranged ordered alloys) from Raoult's law or the additive rule of mixing. If the 
+    deviations are considerably large, they may conduct either phase separation or compound 
+    formation in the binary system. \\
+
+        There are liquid alloys, however, which do not belong exclusively to any of the above 
+    two classes. For instance, the excess Gibbs energy of mixing $(G ^{xs} _{M} )$ for Cd–Na, and 
+    Ag–Ge is negative at certain compositions, while positive at other compositions. In 
+    liquid alloys such as Au–Bi, Bi–Cd, and Bi–Sb, the enthalpy of mixing $H_{M}$ is a 
+    positive quantity but $G^{xs} _{M}$  is negative. Bi–Pb has positive $H_{M}$ and $G^{xs}_{M} $ in the 
+    solid phase as against the negative values of $H_{M}$ and $G^{xs} _{M}$ in the liquid phase. 
+    Systems such as Au–Ni and Cr–Mo exhibit immiscibility in the solid phase which is not 
+    visible in the interrelated liquid phase. Systems such as Ag–Te show intermetallic 
+    phases and large negative $H_{M}$ values in the liquid phase concurrently with a liquid 
+    miscibility gap. \\
+
+    
+        Systems such as Al–Bi, Al–In, Al–Pb, Bi–Ga, Bi–Zn, Cd–Ga, Ga–Pb, Ga–Hg, Pb–Zn, Pb–Si 
+    and Cu–Pb, etc, are represented by liquid miscibility gaps and exhibit enormous positive 
+    $H_{M}$. Their properties in the liquid phase tend to vary markedly as a role of composition (c),
+    temperature (T ), and pressure (p). The long-wavelength limit (q→0)of the 
+    composition–composition structure factors, $S_{cc}$ (0) diverges as the composition and 
+    temperature approach the critical values c → $c_{c}$, and T → $T_{c}$. $S_{cc}$ (0), which can instantly
+    be obtained from thermodynamic functions (either acquired by taking the first composition 
+    derivative of the activity or through the second derivative of the Gibbs function), is 
+    very useful for establishing the immiscibility and the degree of segregation in binary 
+    liquid alloys. Additional thermodynamic, structural, and transport properties are also 
+    found to alter anomalously in the area of $c_{c}$ and $T_{c}$. \\ 
+
+
+        A provided unary system is expressed by two pairs of independent variables, namely 
+    the mechanical degrees of freedom (pressure (p) or volume ($\Omega$)) and the thermal 
+    degrees of freedom (temperature (T) or entropy (S)). The preference of independent 
+    variables is mostly a concern of free option; yet, there are four possibilities for 
+    creating such pairs have one mechanical and one thermal variable, say (S,$\Omega$ ), 
+    (S, p), (T, $\Omega$) and (T, p). These pairs guide to thermodynamic functions such as 
+    internal energy E(S,$\Omega$), enthalpy H (S, p), Helmholtz energy F (T, $\Omega$), and 
+    Gibbs energy G(T, p), respectively.\\
+
+    The enthalpy, H, merging the internal energy E to the mechanical degrees of freedom
+    (p, $\Omega$) is\\
+                    
+                 \begin{equation}
+                    H = E + p\Omega
+                \end{equation}
+
+    or in differential form,
+                
+                \begin{equation}
+                    dH = \delta Q + \Omega dp
+                \end{equation}
+
+    where       \begin{equation*}
+                    \delta Q = dE + pd \Omega
+                \end{equation*}
+
+    The Helmholtz energy, F, relates E to the thermal degrees of freedom (S,T), i.e.\\
+
+                \begin{equation}
+                    F = E - TS
+                \end{equation}
+
+    or,
+
+                \begin{equation}
+                    dF = -SdT - pd \Omega
+                \end{equation}
+
+    In the case of reversible isothermal and isochoric processes (T , $\Omega$ = constant),
+    dF = 0, i.e.
+    F remains invariant.
+        Similarly, the Gibbs function establishes a relation between H and the thermal degrees
+    of freedom, i.e.\\
+
+                \begin{equation}
+                G = H - TS
+                \end{equation}
+
+or
+
+                \begin{equation}
+                dG = -S dT + \Omega dp
+                \end{equation}
+
+    In the case of a reversible isothermal reaction at constant pressure (T , p = constant),
+    dG = 0, i.e. G remains invariant.\\
+
+        Also, H , F and G can readily be used to obtain the heat capacity C ($C_{p}$ or $C_{\Omega}$ ),
+    entropy, isothermal ($\chi _{T}$ ) and adiabatic ($\chi _{S}$) compressibilities, the volume and the volume
+    expansivity ($\alpha  _{p}$):\\
+
+    \begin{align}
+    &  C_{p} = \left(\frac{\partial H }{ \partial T}\right)_{p} = T \left(\frac{\partial S}{\partial T} \right) _{p} = -T \left(\frac{\partial ^2 G }{ \partial T^2}\right) _p \\
+    & C_{\Omega} = \left(\frac{\partial E }{ \partial T}\right)_{\Omega} = T \left(\frac{\partial S}{\partial T} \right) _{\Omega} = -T \left(\frac{\partial ^2 F }{ \partial T^2}\right) _\Omega \\
+    & S = \left(\frac{\partial G }{ \partial T}\right)_{p} =  \left(\frac{\partial F}{\partial T} \right) _{\Omega} \\
+    & \Omega  = \left(\frac{\partial G }{ \partial p}\right)_{T} \\
+    & \chi _T  \equiv  - \frac{1}{ \Omega} \left(\frac{\partial  \Omega }{ \partial p}\right)_{T} \\ 
+    & \chi _S  \equiv  - \frac{1}{ \Omega} \left(\frac{\partial  \Omega }{ \partial p}\right)_{S} \\
+    & \alpha  _p  \equiv  \frac{1}{ \Omega} \left(\frac{\partial  \Omega }{ \partial T}\right)_{p}  
+    \end{align}\\
+
+    At indicator, we furthermore have some important effects from isotherms of liquid–vapor phases which at the critical point must fulfill
+    \begin{align}
+    & \left(\frac{\partial p}{\partial \Omega} \right) _{T_{c}} = \left(\frac{\partial ^2 p}{\partial \Omega ^2} \right) _{T_{c}} =0
+    \end{align}\\
+
+    At T = $T_c$ , the following physical properties become infinite, i.e.\\
+
+
+    \begin{align}
+    & C_p = T \left(\frac{\partial S}{\partial T} \right) _p = \infty \\
+    & \alpha _p = \frac{1}{\Omega} \left(\frac{\partial \Omega}{\partial T} \right) _p = \infty \\
+    & \chi _T = -\left(\frac{\partial \Omega}{\partial p} \right) _T = \infty 
+    \end{align}\\
+
+    For a binary mixture, such as an A–B alloy consisting of $c_A$ moles of component A and $c_B$
+    moles of component B, rather than guiding to the fundamental values of their function, 
+    we define the function of mixing. For example, the Gibbs energy of mixing, $G_M$ , is represented as
+
+    \begin{equation}
+        G_M = G(alloy) - c_A G^{0}_{A} - c_B G^{0}_{B}
+    \end{equation}
+
+where $G ^{0}_{A}$ and $G ^{0}_{B}$ are the Gibbs free energy of the two pure components. Equivalent
+definitions also exist for HM , SM and other functions.The integral quantities can also be divided 
+into the partial quantities, i.e.
+
+    \begin{equation}
+        G_M = c_A \overline{G} _{M,A} + c_B \overline{G} _{M,B}
+    \end{equation}
+with
+    \begin{equation}
+        \overline{G} _{M,i} = RT ln a_i                \tag*{( i= A,B )}
+    \end{equation}
+where  $\overline{G} _{M,i} $ are the partial Gibbs energies and $a _{i}$ are the thermodynamic 
+activities of the component i.
+$G _M$ defines the stability of the phases in a binary mixture. The curves describing
+$G _M$ against c deviation can, in general, have a shape like either curve a or curve b as displayed
+in figure 1. For $G _M$ as in curve a, the homogeneous solution is stable at all values of c at
+$T _1$ ; if not other phases (i.e. intermediate phases) in the system display more negative $G _M$
+values.
+
+
+    
+\begin{adjustbox}{center,caption={A schematic diagram symbolizing the Gibbs energy of mixing at constant T plotted against concentration. 
+    Curve a, complete mixing ($ T _1 < T _c $). 
+    Curve b, incomplete mixing ($ T _2 < T _c $), 
+    $\Delta c$ represents the miscibility gap at $ T _2$ .},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fi 1}
+\end{adjustbox}
+    
+
+    For curve b, the homogeneous solution is varying in the composition range $\Delta c$, because
+$G _M$ can be reduced if the mixture separates into two phases. The composition of these phases
+is provided by the points of contact P and Q of the common tangent line to the $G _M$(c) curve.
+The reduced $G _M$  values of these two phases are given by this line. Within the composition
+range $\Delta c$ only the portions of the two phases change if the total composition of the alloy
+modifications. At P($c _1$) and Q($c _2$) the partial Gibbs energies of the components of both diverged
+phases are equivalent,
+
+    \begin{equation}
+        \overline{G} _{M,i}(c _{1}) =  \overline{G} _{M,i}(c _{2})          \tag*{( i= A,B )}
+    \end{equation}
+
+    Hence P and Q indicate the limit of thermodynamic equilibrium. $G _M$ diverts as a function of
+temperature from a concave to a convex surface for $\Delta c $ at the spinodal. The points of
+inflection in the curves define the spinodal line. The critical composition and the critical
+temperature are determined from the conditions at T = $T _c$\\
+
+    \begin{align}
+        \left(\frac{d^2 {G _M}}{d c^2} \right) _{c = c_c} = 0 \\
+        \left(\frac{d^3 {G _M}}{d c^3} \right) _{c = c_c} = 0 
+    \end{align}
+
+
+    At this step, it should be pointed out that the long-wavelength limit (q → 0) of
+the structure factor $S _{cc} $(q) which is well known as the
+concentration fluctuation, $S _{cc} $(0), is also correlated to the thermodynamic function, i.e
+
+    \begin{equation}
+        S_{cc}(0) =  RT \left(\frac{d^2 G _M}{d c^2} \right) ^ {-1}_ {T,P}
+    \end{equation}
+As $ c\to c _c$ and $ T\to T_c $ ,one sees that
+
+    \begin{equation}
+        S_{cc}(0) \to \infty
+    \end{equation}  
+Thus, a phase separation in a binary mixture is signaled by a strong enhancement of the
+concentration fluctuations. 
+The ideal solution behavior (HM = 0) of a binary mixture is presented by
+    \begin{equation}
+        G ^ {id} _M = RT (c_A \ ln c_A + c_B \ ln c_B).
+    \end{equation}
+
+The distinctions in the thermodynamic behavior of a real binary solution and an ideal solution 
+are represented by the excess quantities, i.e.
+    \begin{equation}
+        G ^ {xs} _M = G _M - G ^{id} _M
+    \end{equation}
+
+or using equation (5)
+
+    \begin{equation}
+        G ^ {xs} _M = H _M - T S ^{xs} _M
+    \end{equation}
+with
+    \begin{equation}
+        S ^{xs} _M = S _M + R (c _A \ ln c_A + c _B \ ln c _B)
+    \end{equation}\\
+
+
+
+\section*{2. Observable indicators}
+
+
+\subsection*{(a) Segregating liquid alloys}
+
+    From the point of view of interatomic interactions, a binary alloy is either (i) an ordered
+alloy, where unlike atoms are chosen as nearest neighbors over like atoms, or (ii) a
+segregated alloy, where like atoms are chosen to pairs as nearest neighbors over unlike
+atoms. Unfortunately, there is no direct way to distinguish the constituent atoms and
+hence the identification of a nearest-neighbor pair of atoms is challenging. In this case
+either the structural data or the experimental thermodynamic functions (such as activity, the heat of
+mixing, excess Gibbs energy of mixing, excess heat capacity, etc) or other thermophysical
+data (such as viscosity, diffusivity, density, surface tension, electrical resistivity, etc) are
+supposed to extract information associated with interatomic interactions. Some of the
+empirical criteria as well as microscopic parameters which are used to identify segregated
+alloys are summarized below.\\
+(a) Alloys displaying positive deviations from Raoult’s law.\\
+(b) The heat of formation and the excess Gibbs energy of mixing are positive.\\
+(c) The concentration fluctuation in the long-wavelength limit ($ S _{cc}(0) $) is greater than
+    the ideal value.
+
+
+    Table 1 provides a list of $G^{xs} _{M}$ , $H _M$ and $S^{xs} _{M}$ at the equiatomic composition 
+of segregating liquid alloys which are arranged according to the type of their phase equilibria. Of these Bi–
+Zn, Pb–Zn, Cu–Pb, Cd–Ga, Al–Bi, Al–In, Al–Pb, etc, exhibit liquid immiscibility. $G^{xs} _{M}$ and
+$ H _M $ are comparatively large positive quantities. For these alloys only a few experimental
+heat capacity data are available . The data, in general, show a decrease in Cp with increasing temperature. The energetic and structural effects in the
+solution phase can be more directly seen by the excess heat capacity $\Delta  C _p $values:
+
+    \begin{equation}
+        \Delta  C _p = C_p(c) - c_A \ C_{p,A} - c_B \ C_{p,B} 
+    \end{equation}
+    \\
+    \\
+    \\
+    \\
+$\Delta  C _p $ are positive and indicate maximum values near to $ T _c$ and $c _c$ . \\
+
+
+ 
+\begin{table}[t!]
+\centering
+\caption{Thermodynamic properties of liquid binary alloys at equiatomic composition displaying
+segregation. The values are from Ref. [(i) Hultgren et al 1973, (iii) Yu 1994]}
+ \begin{tabular}{|c c c c c c|} 
+ \hline
+ Alloys & Ref. & T (K) & $G ^ {xs} _ {M}$/RT & $H _M/RT$ & $S ^ {xs} _ {M}$/R \\ [0.5ex] 
+ \hline\hline
+ Al–Bi & (i) & 900 & 0.814 & 0.823 & 0.09 \\ 
+ Al–In &     & 1150 & 0.54 & 0.49 & -0.05 \\
+ Al–Pb &     & 1700 & 0.527 & 0.847 & 0.32 \\
+ Bi–Ga & (ii) & 550 & 0.493 & 0.433 & -0.06 \\
+ Bi–Zn &     & 880 & 0.36 & 0.60 & 0.24 \\ [1ex] 
+ \hline
+ \end{tabular}
+\end{table}
+
+    Since the pioneering work by Hume-Rothery and his coworkers (see, for example, Hume-
+Rothery and Raynor 1954), a substantial effort has been assembled to identify the factors
+impacting the alloying behavior of liquid metallic mixtures, such as the difference in atomic
+sizes, valence differences, electronegativity differences, etc. For the sake of a brief perusal, 
+we enroll the basic physical, thermochemical and structural properties of pure liquid metals
+(near the melting points) in table 2 which are the components of the binary mixture of
+table 1. These properties are also useful for further discussions. At this step, it is not
+possible to single out any individual elemental properties which might be held reliable
+for demixing of liquid alloys. Yet, the practical analyses recommend
+that quantities such as atomic size, the heat of vaporization, and electronegativity together hold
+the key to the knowledge  of the segregation or order in a liquid alloy.
+
+
+\subsection*{(b) Thermodynamic properties }
+
+
+    Some of the thermodynamic properties of equiatomic segregating liquid alloys are tabulated
+in table 1. Here we intend to discuss briefly the salient features of the various experimental
+techniques and the specific results that exist as a function of concentration and temperature.
+The experimental methods used to obtain reliable thermodynamic data at constant pressure
+as a function of composition and temperature are briefly summarized.The entropy of formation $S _M$ 
+of an alloy can only be defined directly from $C _p$(c, T ) data 
+    \begin{equation}
+        S _M(c,T) = \int_{0}^{T}  \,\frac{\Delta {C _p(c,T)}}{T} dT 
+    \end{equation}                    
+    \\
+    \\
+
+
+    \begin{figure}
+        \begin{adjustwidth}{-1cm}{}
+        \centering
+        \caption*{Some physical, chemical and structural properties of liquid metals (near melting
+         temperature) are associated with the formation of segregating type metallic
+        mixtures. m, atomic weight (1u = $1.66 \times 10^{-27} \ kg $ ); $T _m$ , melting point;
+        $ \Omega $, volume; $ \Delta H _m $ , enthalpy of melting; $ \Delta H _v $ , enthalpy of 
+        evaporation; $ \Delta S _m $ , entropy of
+        melting; $ \Delta S _v $ , entropy of vaporization; $r _1$ nearest-neighbour distance; Z, 
+        first shell coordination; $\Gamma $, surface tension; x, Pauling electronegativity value.
+        (i) After Iida and Guthrie (1988), (ii) after Waseda (1980); (iii) after Pauling (1960) }
+         \begin{tabular}{|l | l | l | l | l | l | l | l | l | l | l | l|} 
+         \hline
+         \multirow{4}{*}{\rotatebox{90}{Metals}}  &  \multirow{4}{*}{\rotatebox{90}{$m ^{(i)} \ (u)$}}  &  \multirow{4}{*}{\rotatebox{90}{$ T _m ^{(i)} \ (K)$}}  &  \multirow{4}{*}{\rotatebox{90}{$ \Omega ^{(i)} \ (10^{-6}m^3)gmol^{-1}$}}  & 
+         \multirow{4}{*}{\rotatebox{90}{$\Delta H _m ^{(i)} \ (kJmol^{-1})  $}}  &  \multirow{4}{*}{\rotatebox{90}{$\Delta H _v ^{(i)} \ (kJmol^{-1}) $}}  &  \multirow{4}{*}{\rotatebox{90}{$\Delta S _m ^{(i)}   $}} 
+         &  \multirow{4}{*}{\rotatebox{90}{$\Delta S _v ^{(i)}   $}}  &  \multirow{4}{*}{\rotatebox{90}{$r ^ {(ii)} _{1} $}}  &  \multirow{4}{*}{\rotatebox{90}{$ Z ^ {(ii)}  $}}  &
+         \multirow{4}{*}{\rotatebox{90}{$ \Gamma ^ {(i)} $}}  &  \multirow{4}{*}{\rotatebox{90}{$ (x) ^ {(iii)} $}} \\ [0.5ex]
+            & & & & & & & & & & & \\
+            & & & & & & & & & & & \\
+            & & & & & & & & & & & \\
+            & & & & & & & & & & & \\
+            & & & & & & & & & & & \\
+            & & & & & & & & & & & \\
+            
+            
+         \hline\hline
+         Al & 26.98154 & 933.35           & 11.6  & 10.46 & 291 & 11.2 & 104  & 2.82 & 11.5 & 914 & 1.5 \\ 
+         Bi & 208.9804 & 544.1$\pm 0.05$  & 20.80 & 10.88 & 179 & 20.0 & 97.4 & 3.38 & 8.8  & 378 & 1.9 \\
+         Cd & 112.41   & 594.05           & 14.00 & 6.40  & 100 & 10.8 & 96.2 & 3.11 & 10.3 & 570 & 1.7 \\
+         Ga & 69.72    & 302.93$\pm 0.005$& 11.40 & 5.59  & 270 & 18.4 & 100  & 2.82 & 10.4 & 718 & 1.6 \\
+         In & 114.82   & 429.55           & 16.3  & 3.26  & 232 & 7.58 & 98.9 & 3.23 & 11.6 & 556 & 1.7 \\
+         Pb & 207.2    & 600.55           & 19.42 & 4.81  & 178 & 8.02 & 88.0 & 3.33 & 10.9 & 458 & 1.8 \\
+         Zn & 65.38    & 692.62           & 9.94  & 7.28  & 114 & 10.5 & 96.6 & 2.68 & 10.5 & 782 & 1.6 \\ [1ex] 
+         \hline
+         \end{tabular}
+        \end{adjustwidth}
+    \end{figure}
+
+
+To obtain $S _M$ according to equations (28) and (29) the $C _p$ values of the components and the
+alloy have to be known down to 0 K as well as the entropy of transformations that take
+place below T . There are several problems. At first, the differences between the Cp valuesof the mechanical mixture and the alloy are small and one has to know the $ C _p$ values to 
+high accuracy to get reliable results for $S _M$ . Equation (29) uses likewise to ordered
+crystalline substances in the solid-state only. Alloys are occasionally disordered at room
+temperature and remain so down to 0 K. $S _M$ values of a liquid alloy cannot be acquired from
+equation (29) because the $C _p $  values of the undercooled liquid state for the components and
+the alloys have to be verified specifically. Since for multicomponent systems, the reference 
+state is the mechanical mixture of the pure components in the same state as the solution,
+the entropy of formation of solid and liquid alloys are, hence, typically confined from
+experimentally obtained $ G _M$(c, T) and $ H _M $(c, T) values according to equation (5).
+
+
+\subsection*{(c) Calometric measurements}
+
+
+The enthalpy of formation $ H _M $, their partial values  $ \overline{H} _{M,i} $
+and the heat capacity of liquid alloys can be directly specified by calorimetric methods.
+An isoperibolic type of calorimeter which operates at constant T is particularly appropriate for
+calculating $H _M $ and $ \overline{H} _{M,i} $ of a liquid alloy as a function of composition 
+at constant T directly.The $ H _M $ values acquired for liquid In–Cd alloys at 628 K are
+shown in figure 2 as an example.
+\begin{adjustbox}{center,caption={Enthalpy of mixing of liquid Cd–In alloys.},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig-3.jpg}
+\end{adjustbox}
+
+If the modification in concentration $ \Delta c _A $ is small for each successive step (i.e. $ <  1 \ at.\% $),
+$ dH _M (c)/dc $ can be confined in a suitable approximation by
+
+
+    \begin{equation}
+       \frac{ dH _M (c)}{dc _A} \left(c _A + \frac{\Delta c _A}{2} \right) = \frac{H _M 
+       (c _A + \Delta c _A )-H _M (c _A)}{\Delta c _A } 
+    \end{equation} 
+
+The partial values of a multi-component system are obtained by
+
+    \begin{equation}
+        \overline{H} _{M,i} = H _M + \sum_{j = 2}^{r} (\delta _{ij} - c _j)\frac{\partial H _M{(c)}}{\partial c _j}   
+    \end{equation} 
+
+with $ \delta  _{ij} =0 $ for $i \neq  j$ and $ \delta  _{ij} =1 $ for $i = j$ . r is the 
+number of components. Figure 3 shows the experimentally determined slope $ d H _M / dc _{C _d} $ 
+of liquid In–Cd alloys at 628 K. These results undoubtedly show that small deviations from a standard solution behaviour $ (H _M (c) = Ac _Ac _B) $
+exist.
+
+The heat capacity of liquid alloys can be specified directly by adiabatic calorimetry.
+Adiabatic calorimetry applies to calculate the heat input $ \Delta Q $ to a sample and the 
+associated temperature increase $ \Delta T $.
+Heat losses have to be minimized by proper surroundings to approximate an adiabatic
+chamber for the sample. The specific heat over the temperature increase is given by 
+
+
+    \begin{equation}
+        C _p = \frac{\Delta Q}{m\Delta T} 
+    \end{equation}   
+where m is the mass of the sample.\\
+
+\begin{adjustbox}{center,caption={Calorimetrically determined slope of the enthalpy of mixing of liquid Cd–In alloy at
+    628 K (after Predel and Oehme 1977). },label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 4.jpg}
+\end{adjustbox}
+
+
+\section*{3. Optimization of thermodynamic data}  
+
+Thermodynamic calculations of phase equilibria are widely used to check the consistency
+of data got from different experimental measurements (phase diagram data, results of
+calorimetry ). Model descriptions using statistical
+thermodynamics or polynomial expressions are used to represent the thermodynamic
+properties of all phases applied.The adjustable coefficients are determined by a weighted
+least-squares method (e.g. Lukas and Fries 1992). The essential feature of this procedure
+is to obtain a uniform set of model parameters in an analytical representation. This helps
+one to gather into temperature and concentration regions where the direct experimental
+determination is difficult. It also allows one to estimate safely the thermodynamic data of
+metastable phases. Finally, the thermodynamic description of multicomponent systems can
+be gathered from those already calculated for their subsystems. The strategy of such a
+critical assessment will be demonstrated for the demixing Al–In, Al–Pb, Cd–Ga, and Bi–Zn
+systems. \\
+
+
+\subsection*{(a) The Al–In System }
+
+The $ H _M $ values near the equiatomic composition received by Predel and 
+Sandig (1969a) are about 50\% more enormous than the values determined by 
+Girard (1985) and Sommer et al (1993).The alloy samples, each of about 0.5 
+g, were included in a closed graphite crucible which was encapsulated under 
+argon in a quartz glass ampule. The quartz glass ampules were mechanically 
+vibrated at about 1200 K to ensure a homogeneous liquid alloy before the DTA 
+experiment on cooling was formed to obtain the binodal. The critical temperature 
+amounted to 1112 K. \\
+    In the background of this information, the optimization 
+is performed. The major task is to characterize the thermodynamic properties 
+as a power-series law whose coefficients
+(say, A, B, C, D, . . .) are determined by the least-squares method. The 
+heat capacity can be expressed as
+
+    \begin{equation}
+        C _p = -C - 2DT -2ET^{-2} - ....
+    \end{equation}
+The enthalpy and energy is given by\\
+
+    \begin{equation}
+        H = H(T _0) + \int_{0}^{T}  \,C _pdT
+    \end{equation}
+or\\
+     \  $ H = A - CT -DT^{2} + 2ET^{-1} - .... $ \\
+and
+    \begin{equation}
+        S = S(T_0) + \int_{0}^{T}  \,\frac{C _p}{T} dT 
+    \end{equation}
+
+or\\
+\   $ S = -B -C(1 + lnT) - 2DT +ET^{-2} - ... $\\
+
+Using equation (5), the T dependence of the Gibbs energy may be written as\\
+
+    \begin{equation}
+        G = A + BT + CT ln T +DT^2 + ET^{-1} + ... 
+    \end{equation}
+
+The composition dependency of the excess Gibbs energy of mixing 
+is given by a polynomial such as the Redlich–Kister polynomial 
+(Redlich and Kister 1948):
+
+    \begin{equation}
+        G^{xs}_M{(c, T)} = c _Ac _B\sum_{l = 0}^{m} K _l{(T)}(c_A - c _B)^l   
+    \end{equation}
+with $ K_l (T ) = A _l + B_l T + C_l T ln T + D_l T^{2} + ...$ The coefficients Kl have the same
+temperature dependence as G in equation (37). The partial
+ quantities are given by \\
+
+    \begin{equation}
+        \overline{G}^{xs}_A{(c, T)} = c _B^{2}\sum_{l = 0}^{m} K _l{(T)}[(1 + 2l)c_A - c _B](c_A - c _B)^{l-1}  
+    \end{equation}
+    \begin{equation}
+        \overline{G}^{xs}_B{(c, T)} = c _A^{2}\sum_{l = 0}
+        ^{m} K _l{(T)}[c_A - (1 + 2l)c _B](c_A - c _B)^{l-1}  
+    \end{equation}
+
+The pure solid elements Al and In in their stable form at 298.15 K 
+and 1bar were chosen as the reference state of the system. 
+The Gibbs energies of the elements as functions of the \\
+
+\begin{adjustbox}{center,caption={calculated phase diagram 
+    (continuous curve) using the coefficient set given in 
+    table 2.
+    },label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 7.jpg}
+\end{adjustbox}
+\begin{table}[t!]
+    \centering
+    \caption{Optimized coefficient set of $G ^ {xs} _ {M}$ 
+    (equation (37)) for liquid Al–In alloys}
+     \begin{tabular}{|c c c|} 
+     \hline
+     l & $A_l \ (J mol^{-1})$ & $B_l \ (J mol^{-1}K^{-1})$ \\ [0.5ex] 
+     \hline\hline
+     0 & 18641.14 & 1.74886  \\ 
+     1 & 558.36 & 1.14350  \\
+     2 & 10692.88 & 7.47862  \\
+     3 & 1346.56 & 0 \\ [1ex] 
+     \hline
+     \end{tabular}
+    \end{table}
+\begin{adjustbox}{center,caption={Calculated enthalpy of mixing 
+    (continuous curve) using the coefficient set given in
+    table 2.},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 8.jpg}
+\end{adjustbox}
+
+temperature were compiled by Dinsdale (1991) and no solid 
+solubility was considered. The excess Gibbs energy of the 
+liquid alloy is represented by equation (37). The optimized 
+coefficients are given in table (3) and the phase diagram in 
+figure (4).\\
+
+
+
+\subsection*{(b) The Al–Pb system.}
+
+The experimental results on Al–Pb imply a vast liquid
+miscibility gap due to the strong segregation tendency of the components. The solubility of
+lead in solid aluminum is less than 0.025 at.\% Pb at the monotectic temperature of around
+932 K. The solubility of Al in Pb is basically negligible. A lot of phase diagram data are
+available at temperatures below 1200 K in narrow terminal sides below 3 at.\% Pb and above 90 
+at.\% Pb. These data are in acceptable agreement as the evaluation of McAlister (1984) has 
+shown. McAlister has evaluated a critical temperature of 1839 K at 44.8 at.\% Pb. This $T _c$
+value is considerably higher than the value specified by Predel and Sandig (1969b) operating
+DTA. Yu et al (1996) have redetermined the binodal using a new isopiestic method (Wang et al 
+1993). There are only a few thermodynamic data available, due to the experimental
+difficulties associated with the small solubility of liquid aluminum and lead, and the high
+vapor pressure of lead at high temperatures.\\ 
+\begin{table}[t!]
+    \centering
+    \caption{Optimized coefficient set of $G ^ {xs} _ {M}$ 
+    (equation (37)) for liquid Al–Pb alloys}
+     \begin{tabular}{|c | c | c|} 
+     \hline
+     l & $A_l \ (J mol^{-1})$ & $B_l \ (J mol^{-1}K^{-1})$ \\ [0.5ex] 
+     \hline\hline
+     0 & 47993.6 & -10.71995  \\ 
+     1 & 14407.33 & -6.65287  \\
+     2 & 4742.36 & -0.72034  \\ [1ex] 
+     \hline
+     \end{tabular}
+    \end{table}
+
+The phase equilibria are calculated by choosing the pure elements in their stable state at 
+298.15 K and 1 bar as the reference state of the system. Their Gibbs energies are given by 
+Dinsdale (1991). The excess Gibbs energy of the liquid alloy is represented by equation (37). 
+The calculation carried out by Yu et al (1996) takes into account the elemental thermodynamic 
+data due to Dinsdale (1991), the phase diagram data at
+temperatures above 1500 K that are obtained with the isopiestic method, and the data of Predel 
+and Sandig (1969b) on the Pb-rich side below 1600 K. The resulting optimized set of parameters 
+are given in table (4). The entire phase diagram is given in figure (6). 
+
+\begin{adjustbox}{center,caption={Calculated phase diagram (continuous curve) using the 
+    coefficient set given in table 3.},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 9.jpg}
+\end{adjustbox}
+
+
+\subsection*{(c) The Cd–Ga system.}
+
+The Cd–Ga system shows a flat liquid miscibility gap with $T _c$ = 568 K and $c^{c}_{Ga}$ = 39.9 at.\% (see figure 12). 
+The pure solid elements in their stable state at 298.15 K and 1 bar were chosen as
+the reference state of the system and no solid solubility of the components was considered. The
+Gibbs energies of the pure elements were taken from Dinsdale (1991). The excess Gibbs
+energy of the liquid alloy was expressed with equation (37) and the resulting coefficient
+set of the optimization is given in table 4. 
+\begin{table}[t!]
+    \centering
+    \caption{Optimized coefficient set of $G ^ {xs} _ {M}$ 
+    (equation (37)) for liquid Cd–Ga alloys}
+     \begin{tabular}{|c | c | c | c | c |} 
+     \hline
+     l & $A_l \ (J mol^{-1})$ & $B_l \ (J mol^{-1}K^{-1})$ & $C_l \ (J mol^{-1}K^{-1})$ & $D_l \ (J mol^{-1}K^{-2})$\\ [0.5ex] 
+     \hline\hline
+     0 & -18447.76 & 483.09573 & -71.723197 & 0.041784  \\ 
+     1 & -3189.49 & 38.38390 & -5.153091 & 0 \\
+     2 & 3054.07 & -2.49129 & 0 & 0  \\ [1ex] 
+     \hline
+     \end{tabular}
+    \end{table}
+
+The calculated phase equilibria are shown in
+figure 7. The experimentally determined temperature dependence of HM (see figure 8)
+and the cadmium activity data of the liquid alloy (see figure 9) are consistent with the calculation.
+
+\begin{adjustbox}{center,caption={Calculated phase diagram (continuous curve) using the coefficient set given in
+    table 4.},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 12.jpg}
+\end{adjustbox}
+\begin{adjustbox}{center,caption={Calculated (continuous curve) enthalpy of mixing at different temperatures (1, 609 K;
+    2, 656 K; 3,695 K) using the coefficient set given in table 4.},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 13.jpg}
+\end{adjustbox}
+\begin{adjustbox}{center,caption={Calculated (continuous curve) activities at 742 K using the coefficient set given in
+    table 4.},label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 14.jpg}
+\end{adjustbox}
+
+\subsection*{(d) The Bi–Zn system.}
+
+The liquid zinc-rich Bi–Zn alloys exhibit a comprehensive miscibility
+gap with $T _c$ = 863.8 K,  $c^{c}_{Zn}$  = 87 at.\% (see figure 10). At the monotectic temperature
+of 688.5 K hcp zinc and two liquid alloys with the composition 38.6 and 99.1 at.\% Zn, 
+respectively, are in equilibrium. These results are obtained from an optimization calculation
+by the least-squares method (Lukas et al 1977). Preliminary results are given by Wang et al
+(1993). No solid solubility of the components was assumed. The thermodynamic data for the
+elements were assumed from Dinsdale (1991). The resulting set of coefficients describing $G^{xs}_M$
+(equation (37)) of the liquid alloys is given in table 5.
+\begin{table}[t!]
+    \centering
+    \caption{Optimized coefficient set of $G ^ {xs} _ {M}$ 
+    (equation (37)) for liquid Cd–Ga alloys}
+     \begin{tabular}{|c | c | c | c | c |} 
+     \hline
+     l & $A_l \ (J mol^{-1})$ & $B_l \ (J mol^{-1}K^{-1})$ \\ [0.5ex] 
+     \hline\hline
+     0 & 17633.89 & -7.91451  \\ 
+     1 & -6607.32 & 1.34247 \\
+     2 & 3873.47 & -1.08723 \\
+     3 & 0 & 0\\
+     4 & 7975.68 & -9.81903 \\
+     5 & -4553.59 & 0 \\ [1ex] 
+     \hline
+     \end{tabular}
+    \end{table}
+A comparison between calculated $H _M$ and activity values and the experimental data are shown 
+in figures 11 and 12.
+\begin{adjustbox}{center,caption={Calculated (continuous curve) phase diagram using the coefficient set given in
+    table 5. },label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 17.jpg}
+\end{adjustbox}
+\begin{adjustbox}{center,caption={Calculated (continuous curve) enthalpy of mixing of liquid 
+    Bi–Zn alloys using the
+    coefficient set given in table 5. },label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 18.jpg}
+\end{adjustbox}
+\begin{adjustbox}{center,caption={Calculated (continuous curve) activity of liquid Bi–Zn alloy at 873 K using the
+    coefficient set given in table 5.  },label={somelabel},nofloat=figure,vspace=\bigskipamount}
+    %\includegraphics[width=0.7\textwidth]{fig 19.jpg}
+\end{adjustbox}
+
+\section*{4. Electronic theory of mixing }
+
+    The electronic theory in a major way provides a platform where the energies and structure of
+a liquid metallic system can be merged (Harrison 1966, Heine 1970, Stroud and Ashcroft
+1972) to remove absorbing physical properties of the system. 
+There is no exact difference between nearly-free-electron (NFE) and non-NFE alloys. Yet, the 
+physical properties of the two classes of alloys that are dependent on the number of valence 
+electrons (electrical resistivity, thermoelectric power, Hall coefficient, magnetic 
+susceptibility, knight shift) are usually extremely distinguishable. Also, the valence and 
+the electronegativity differences are smaller in NFE and larger for the non-NFE systems.
+The work on phase-separating liquid alloys based on electronic theory is insufficient,
+although safe to apply to simple segregating liquid alloys without incurring noticeable error. 
+The value of the theory stands from the fact that it is free from any assumptions
+and, as such, there should not be an adaptable parameter. One can, at least, gather some
+first-hand information on the basic interatomic forces ($\varphi  _{ij}$ ) which are directly related to the
+energy parameter ($\omega $) occurring in previous sections. In addition, it helps to identify 
+the volume and the structure-dependent contributions to the energy of the process of mixing.\\
+
+\subsection*{(a) Pseudopotential perturbation scheme}
+
+The NFE binary alloys can be considered to consist of a system of ions and valence electrons.
+The fundamental Hamiltonian which explains the system is of the form\\
+
+    \begin{equation}
+        H = H_e + H_i + H_{ei}
+    \end{equation}
+with
+    \begin{equation}
+        H_e = T _{elec} + \frac{1}{2}\sum_{i = j}^{} \frac{e^2}{|\overline{r_i} - \overline{r_j}|} - H^{\prime }  
+    \end{equation}
+    \begin{equation}
+        H_i = T_{ions} +\frac{1}{2}\sum_{i = j}^{} \frac{z_{i}z_{j}e^2}{|{R_i} - {R_j}|} - H^{\prime }  
+    \end{equation}
+    \begin{equation}
+        H_{ei} = \sum_{i , j}^{} {V(\overline{r_i} - \overline{R_j})} + 2H^{\prime }  
+    \end{equation}
+
+(e, electron; i, ion; and ei, electron-ion). T stands for kinetic energy,$\overline{r}$and $\overline{}$are 
+electronic and atomic positions and z is the valency. It is assumed that electrons and ions 
+always interact among themselves Coulombically. The electron-ion interaction V will be accepted 
+as a pseudopotential. Within an acceptable uncertainty, the ions are likely to drive much more 
+slowly than the electrons, and, hence, the various contributions thus deriving from (40) can 
+be treated individually. $H^{\prime}$  is the self-energy of a uniform charge distribution that is 
+inserted to maintain the net potential energy expressions finitely. Referring to Hamiltonian 
+(40), the internal energy, E, can be described in atomic units (for a detailed description
+see Ashcroft and Stroud (1978)),
+
+    \begin{equation}
+       E = E_e + E_i + (E^{I} _{ei} + E^{II} _{ei})
+    \end{equation}
+with
+
+\begin{align}
+    &  E_e =  \overline{z}\left[\frac{3}{10} K^{2} _F - \frac{3}{4\pi} K_F - 0.0474 - 0.0155 
+        ln {K_F} - \frac{1}{2}\left(\frac{\pi k_B}{K_F} \right)^{2} T^2 \right] \\
+    &  E_i =  \frac{3}{2}k_{B}T + \frac{1}{\pi}\sum_{i , j}^{A , B} z_{i}z_{j}\left(c_{i}c_{j}\right)^{\frac{1}{2}}
+        \int_{0}^{\infty}  \,\left(S_{ij}(q) - \delta _{ij}\right) dq \\   
+    & E^{II}_{ei} = \lim_{q \to 0} \overline{z}\varrho 
+       \left[\sum_{i}^{} c_{i}V_{i}(q) + \frac{4\pi \overline{z}}{q^2} \right]  \\ 
+    &  E^{II}_{ei} = \frac{1}{16{\pi}^3}\int_{0}^{\infty}  \,q^{4}dq \sum_{ij}^{} V_{i}(q)V_{j}(q) 
+        \left(c_{i}c_{j}\right)^{\frac{1}{2}}S_{ij}(q)\left(\frac{1}{\epsilon^{ \ast}(q)} - 1 \right) 
+    \end{align}\\
+
+where $K_F = \left( 3\pi ^{2}\overline{z}\varrho\right)^{\frac{1}{3}}$ , $\overline{z}\varrho = z_{A}\varrho_{A} + z_{B}\varrho_{B}$ and $\overline{z} = c_{A}z_{A} + c_{B}z_{B}$
+; $z_A$ and $z_B$ are valencies, $\varrho _A$ and $\varrho _B$ are the number densities of the ion 
+species and $\varrho = \varrho _A + \varrho _B $ . $E^{I}_{ei}$ and $E^{II}_{ei}$ are due to
+the electron-ion interaction specified through first and second-order pseudopotential 
+perturbation
+theory, respectively. $V(q)$ is the Fourier transform of the bare ion pseudopotential and is
+named the form factor. $\epsilon ^{\ast}(q)$ is the altered Hartree dielectric function which brings into 
+account the interaction of the conduction electrons.\\
+
+    $S_{ij}$ are the partial structure factors that take care of the arrangement of ions in the
+system. For a hard-sphere system,  $S_{ij}$ can readily be calculated following the work by
+Ashcroft and Langreth (1967). The necessary inputs are the diameters of the hard spheres ($\sigma $)
+whose preference has always been a matter of interest (see, for example, Faber 1972, Shimoji
+1977). However, to make the present scheme internally consistent, we suggest that $\sigma$ should be 
+specified in the variational thermodynamic purpose equipping minimum free
+energy for the system, i.e.
+    \begin{equation}
+       \left(\frac{\partial F}{\partial \sigma }\right) _{\Omega ,T} = 0
+    \end{equation}
+with\\
+    \begin{equation}
+        F = E - TS_{hs}
+    \end{equation}
+where $S_{hs}$ is the entropy of the hard sphere mixture which consists of \\
+    \begin{equation}
+        S_{hs} = S_{id} + S_{gas} + S_{\eta} + S_{\sigma}
+    \end{equation}
+where $S_{id}$ is the ideal entropy of mixing, $S_{gas}$ is the ideal gas entropy, $S_{\eta}$ 
+is the contribution
+which depends only on packing density and $S_{\sigma}$ denotes the entropy contribution due to
+mismatch of the hard sphere diameters $\sigma_1$ and $\sigma_2$ .\\
+    The operating expressions for these quantities may be described as (Mansoori et al 1971,
+Umar et al 1974): 
+   
+
+\begin{align}
+    &  S_{id} = -k_B \sum_{i = 1}^{2} c_{i} lnc_{i} \\
+    &  S_{gas} = \frac{5}{2}k_{B} + k_{B}ln\left[\frac{1}{\varrho}\left(\frac{m^{c_{A}}_{A}m^{c_{B}}_{B}k_{B}T}{{2\pi \hbar ^{2}}}\right)^{\frac{3}{2}} \right] \\
+    &  S_{\eta} = k_B lnb + 1.5k_{B}(1 - b^2)\\
+    & S_{\sigma} = \frac{\pi c_{A}c_{B}\varrho(\sigma_{A} - \sigma_{B})^{2}b^{2}}{24}[12(\sigma_{A} + \sigma_{B}) -
+     \pi \varrho (c_{A}\sigma^{4}_{A} + c_{B}\sigma^{4}_{B})]     
+    \end{align}\\
+
+with $b = (1 - \eta)^{-1}$ . The first two terms in equation (51) are structure-independent terms and 
+depend only on concentration c, atomic mass m, and atomic volume $\Omega $. The last two terms are 
+structure-dependent contributions due to the existence of the packing
+fraction, $\eta (= (\pi \varrho/6)(c_A\sigma^3_A + c_B\sigma^3_{B})) $ and the hard-sphere diameter $\sigma _{i}$ .\\
+    The present method helps to specify the energy contributions from the constituent
+species such as electrons and ions. Also, it helps us to separate the energies of the formation
+of a binary alloy due to just volume-dependent and structure-dependent contributions,
+respectively.\\
+The Hamiltonian as expressed in equation (40) allows (see, for example, Ashcroft and Stroud 1978, Young
+1992) one to estimate the effective interatomic potentials as,
+    \begin{equation}
+        \phi _{ij}(r) = \frac{z_{i}z_{j}e^2}{r} + \frac{1}{(2\pi)^3}\int_{}^{}  \,\frac{q^2}{4\pi e^2}V_{i}(q)V_{j}(q)
+        \left[\frac{1}{\epsilon ^{\ast}(q) } - 1\right]\frac{\sin qr}{qr} 4\pi q^2 dq 
+    \end{equation}
+$\phi _{ij}(r)$ can readily be coupled to the radial distribution function, $g_{ij}(r)$.\\
+
+\section*{5. Hard-sphere like theory for segregation}
+
+\subsection*{(a) Hard sphere mixture under the Percus–Yevick approximation}
+
+The stability of binary alloys by treating them as a mixture of hard spheres, i.e.
+
+\begin{equation}
+    \phi (r) = \infty    %\tag*{for r < \sigma      \phi (r) = 0    r > \sigma}
+\end{equation}
+
+Although the potential (equation (57)) is devoid of an attractive interaction, it equips a 
+useful insight into which forms the effective short-range repulsive interaction governs the 
+geometrical packing at metallic densities. The quantity of major significance is the direct
+correlation function, $C_{ij}(r)$ , which is connected to $g_{ij}(r)$ and $\phi_{ij}(r)$ via the Percus–Yevick
+(PY) equation (Percus and Yevick 1958):
+    \begin{equation}
+        C_{ij}(r) = g_{ij}(r)\left(1 - exp\frac{\phi_{ij}}{k_{B}T}\right)          \tag*{(i , j = A , B)}
+    \end{equation}
+The analytical solution of the PY equation for a mixture of hard spheres was obtained by 
+Lebowitz (see Lebowitz 1964, Lebowitz and Rowlinson 1964). As regards the hard-core 
+interactions in the mixture, these authors considered additive hard-sphere mixtures, i.e
+    \begin{equation}
+        \sigma_{AB} = \frac{\sigma_{AA} + \sigma_{BB} }{2}
+    \end{equation}
+The free energy per particle of the mixture can be written as
+\begin{align}
+    &  F_{hs} = c_{A}\mu_{A} + c_{B}\mu_{B} - P _{hs}\Omega \\
+    &  G_{hs} = c_{A}\mu_{A} + c_{B}\mu_{B}
+    \end{align}
+Here the $\mu_i$ are the chemical potentials of the components and $P _{hs}$ is the pressure:
+
+    \begin{equation}
+        \frac{\mu_i}{k_{B}T} = ln \left[\Omega ^{-1}_{i}\left(\frac{2\pi \overline{h}^2}
+        {m_{i}k_{B}T}\right)^(3/2)\right] - ln (1 - \eta) + \frac{3X\sigma_{ij}}{(1 - 
+        \eta)} + \frac{3}{2}\left[\frac{3X^2}{(1 - \eta )^2} + \frac{2Y}{(1 - \eta)}\right] 
+        \sigma^2_{ii} + \frac{\pi P _{hs}\sigma^3_{ii}}{6k_{B}T}
+    \end{equation}
+
+
+\end{document}
