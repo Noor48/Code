@@ -37,19 +37,25 @@
 
 \begin{document}
     \maketitle
+    \newpage
+    \tableofcontents
+    \listoffigures
+    %\listoftables
+    \bibliographystyle{unsrt}
     %\section*{Magnetic and Optical Properies of  LiNbO3 Type InCoO3 and InFeO3 perovskite materials.}
-    \subsection*{Abstract}
+    \newpage
+    \section{Abstract}
     Metal oxide perovskites are increasingly popular for magnetic and optoelectronic applications in industrial purposes. In this study, structural magnetic and 
     optical properties of InCoO3, and InFeO3 were unearthed using the first principles of density functional theory. These materials exhibit semiconducting behavior 
     with indirect bandgap energy. The high absorption coefficient, low reflectivity, and high optical conductivity make them suitable for photovoltaic and other 
-    optoelectronic and memory device applications. Among them, InFeO3 is more favorable for magnetic and optical applications\cite{r4}.
-
-    \subsection*{Introduction}
+    optoelectronic and memory device applications. Among them, InFeO3 is more favorable for magnetic and optical applications.
+     
+    \section{Introduction}
     The use of solar energy to catalyze photo-driven operations has 
     attracted enormous engagement from the scientific society because of 
     its great potential to handle energy and environmental issues. In this 
     regard, several attempts have been made by researchers to design and 
-    develop different materials with enhanced photocatalytic efficiencies.\cite{r12}\\
+    develop different materials with enhanced photocatalytic efficiencies.\cite{r1}\\
     In a quest for nanoparticles, solar cells, and enhanced optical and magnetic properties, perovskite materials suit flawlessly in that range~\cite{r1}. Perovskite materials 
     contain properties like tunable bandgap, long charge diffusion length, good charge carrier mobility, low carrier recombination rate, high dielectric constant. 
     They have high efficiency in photoconductor-based X-ray detectors, spectroscopy, acoustic wave signal processing, and image storage device. These materials are 
@@ -69,7 +75,7 @@
     cations give (+6) valence ion combined. Perovskite material family has numerous types of oxide form like transition metal oxides with the general formula of ABO3\cite{r2}.
     One perovskite material is LiNbO3. For that, we took LiNbO3-like material InCoO3, InFeO3 and sampled magnetic and optical properties with DFT calculations\cite{r3}. 
     
-    \subsection*{Computaion Method}
+    \section{Computaion Method}
     During the past decade, computer simulations based on a quantum-mechanical description of the interactions between electrons 
     and between electrons and atomic nuclei have developed an increasingly important impact on solid-state physics and chemistry 
     and on materials science—promoting not only a deeper understanding, but also the possibility to contribute significantly to 
@@ -135,7 +141,13 @@
     efficiently to more considerable, more complex techniques.
     separable. Here DFT supplies an adorable alternative, being vastly more universal, 
     as it supplies a way to systematically map the many-body issue, with $\hat{U}$, onto a single-
-    body problem without $\hat{U}$
+    body problem without $\hat{U}$, onto a single-body problem without $\hat{U}$. In DFT the key variable
+    is the electron density n(r), which for a normalized $\Psi$ is given by 
+
+    \begin{equation}
+        n(r) = N \int d^{3}r_{2} ..... \int d^{3}r_{N}\Psi^{*}(r_{1},r_{2},....,r_{n})\Psi(r_{1},r_{2},....,r_{n})
+    \end{equation}
+
     In this review, I discuss the implementation of various DFT functionals [local-density approximation (LDA), generalized gradient approximation (GGA), 
     meta-GGA, hybrid functional mixing DFT, and exact (Hartree-Fock) exchange] and post-DFT approaches 
     [DFT + U for strong electronic correlations in narrow bands, many-body perturbation theory (GW) for quasiparticle spectra, 
@@ -169,7 +181,7 @@
         \includegraphics[width=0.7\textwidth]{bandFe}
     \end{adjustbox}
 
-    \subsection*{Results}
+    \section{Results}
     InFeO3 and InCoO3 are cubic structures under the space group of Pm3m (no. 221). We visualize the structures in VESTA (3D Visualization for Electronic and 
     Structural Analysis). The unit cell of InCoO3 and InFeO3 constitutes five atoms (shown in Fig. 1). Fe or Co atoms hold the corner positions of the cubes (Wyckoff 
     site (0,0,0)), In situated in the crystal's body-centered positions (Wyckoff site(0.5,0.5,0.5)). O occupies face-centered positions (Wyckoff site (0.5,0.5,0)). 
@@ -231,7 +243,7 @@
         \includegraphics[width=0.7\textwidth]{enloss}
     \end{adjustbox}
 
-    \subsection*{Conclusion}
+    \section{Conclusion}
     We performed a study on  InCoO3 and InFeO3\cite{r2} perovskite cubic materials using  DFT simulations for their structural, optical, and dielectric properties. InCoO3
     and InFeO3 structures show identical indirect bandgap while InFeo3 shows more magnetic than InCoO3. Fe is a better contender than Co for optical absorption 
     and optical conductivity. Both the material can be an excellent choice for various photovoltaic applications, memory devices, and more. InCoO3 give band-gap Of

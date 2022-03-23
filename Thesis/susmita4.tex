@@ -807,8 +807,10 @@ respectively.\\
 The Hamiltonian as expressed in equation (40) allows (see, for example, Ashcroft and Stroud 1978, Young
 1992) one to estimate the effective interatomic potentials as,
     \begin{equation}
-        \phi _{ij}(r) = \frac{z_{i}z_{j}e^2}{r} + \frac{1}{(2\pi)^3}\int_{}^{}  \,\frac{q^2}{4\pi e^2}V_{i}(q)V_{j}(q)
+        \begin{split}
+        \phi _{ij}(r) = \frac{z_{i}z_{j}e^2}{r} + \frac{1}{(2\pi)^3}\int_{}^{}  ,\frac{q^2}{4\pi e^2}V_{i}(q)V_{j}(q) \\ 
         \left[\frac{1}{\epsilon ^{\ast}(q) } - 1\right]\frac{\sin qr}{qr} 4\pi q^2 dq 
+        \end{split}
     \end{equation}
 $\phi _{ij}(r)$ can readily be coupled to the radial distribution function, $g_{ij}(r)$.\\
 
@@ -819,9 +821,11 @@ $\phi _{ij}(r)$ can readily be coupled to the radial distribution function, $g_{
 The stability of binary alloys by treating them as a mixture of hard spheres, i.e.
 
 \begin{align}
-        \phi & = \infty \tag*{($r<0$)}\\
-        \phi & = 0  \tag*{($r>0$)}\\       
+    \phi (r)& = \infty \tag{for $r<0$} \\
+    \phi (r)& = 0  \tag{for $r>0$} \\
 \end{align}
+
+
 Although the potential (equation (57)) is devoid of an attractive interaction, it equips a 
 useful insight into which forms the effective short-range repulsive interaction governs the 
 geometrical packing at metallic densities. The quantity of major significance is the direct
@@ -849,6 +853,40 @@ Here the $\mu_i$ are the chemical potentials of the components and $P _{hs}$ is 
         \eta)} + \frac{3}{2}\left[\frac{3X^2}{(1 - \eta )^2} + \frac{2Y}{(1 - \eta)}\right] 
         \sigma^2_{ii} + \frac{\pi P _{hs}\sigma^3_{ii}}{6k_{B}T}
     \end{equation}
+and
 
-
+    \begin{equation}
+        \begin{split}
+        \frac{P _{hs}}{k_{B}T} = \frac{\Omega ^{-1}(1 + \eta + \eta^2) - \(1/2)\pi \\
+        & \Omega ^{-1}_{A}\Omega ^{-1}_{B}\\
+        &(\sigma_{AA} - \sigma_{BB})^{2} \\
+        &  (\sigma_{AA} + \sigma_{BB} + \\
+        &\sigma_{AA}\sigma_{BB}X)}{(1 - \eta)^3} \\
+        \end{split}
+    \end{equation}
+where
+\begin{align}
+    &  X = \frac{\pi}{6\Omega } \sum_{i}^{}c_{i}\sigma^{2}_{ii}  \\
+    &  Y = \frac{\pi}{6\Omega } \sum_{i}^{}c_{i}\sigma_{ii} \\
+    &  \eta = \frac{\pi}{6\Omega } \sum_{i}^{}c_{i}\sigma^{3}_{ii} 
+    \end{align}
+$m_i$ indicate the masses of the spheres. The entropy \\
+($S = -\left(\partial F/\partial T\right)_\Omega $) 
+of the hard sphere
+mixture, as in equation (51), can readily be derived from equation (59). Equation (60)
+can be used to obtain an expression for the concentration fluctuations, $S_{cc}(0)$, for binary
+hard sphere mixtures, i.e.
+\\
+\begin{equation}
+    S_{cc}(0) = RT \left(\frac{\partial^{2}G_{hs}}{\partial c^2}\right) ^{-1}_{T,p}
+\end{equation} \\ 
+Substitution of equations (60)-(65) in (66) gives (see Osman and Singh 1993, 1995):
+    \begin{equation}
+        \begin{split}
+        {S^{hs}_{cc}(0)}^{-1} = &\frac{1}{c_{A}c_{B}} + \frac{\pi}{2\Omega }\left[\frac{9X^{3}d^{2}_{3}}{(1 - \eta)^4} + \\
+        &\frac{18X^{2}d_{2}d_{3} + 4XYd^{2}_{3}} \\
+        &{(1 - \eta)^3} + \frac{9Xd^{2}_{2} + 4Yd_{1}d_{2} + 4Xd_{1}d_{3} + (\pi / 18\Omega)d^{2}_{3}}\\
+        &{(1 - \eta)^2} + \frac{4d_{1}d_{2}}{(1 - \eta)}\right] 
+    \end{split}
+    \end{equation}
 \end{document}

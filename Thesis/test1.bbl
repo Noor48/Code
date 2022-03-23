@@ -1,19 +1,10 @@
 \begin{thebibliography}{10}
 
-\bibitem{r10}
-James~E Bear, Tatyana~M Svitkina, Matthias Krause, Dorothy~A Schafer, Joseph~J
-  Loureiro, Geraldine~A Strasser, Ivan~V Maly, Oleg~Y Chaga, John~A Cooper,
-  Gary~G Borisy, et~al.
-\newblock Antagonism between ena/vasp proteins and actin filament capping
-  regulates fibroblast motility.
-\newblock {\em Cell}, 109(4):509--521, 2002.
-
-\bibitem{r7}
-Michel Bockstedte, Alexander Kley, J{\"o}rg Neugebauer, and Matthias Scheffler.
-\newblock Density-functional theory calculations for poly-atomic systems:
-  electronic structure, static and elastic properties and ab initio molecular
-  dynamics.
-\newblock {\em Computer physics communications}, 107(1-3):187--222, 1997.
+\bibitem{r1}
+Ashish Kumar, Ajay Kumar, and Venkata Krishnan.
+\newblock Perovskite oxide based materials for energy and environment-oriented
+  photocatalysis.
+\newblock {\em Acs Catalysis}, 10(17):10253--10315, 2020.
 
 \bibitem{r2}
 Anton~R Chakhmouradian and Patrick~M Woodward.
@@ -21,11 +12,18 @@ Anton~R Chakhmouradian and Patrick~M Woodward.
   mitchell.
 \newblock {\em Physics and Chemistry of Minerals}, 41(6):387--391, 2014.
 
-\bibitem{r4}
-Xiaoyun Chen, Jun Xu, Yueshan Xu, Feng Luo, and Yaping Du.
-\newblock Rare earth double perovskites: a fertile soil in the field of
-  perovskite oxides.
-\newblock {\em Inorganic Chemistry Frontiers}, 6(9):2226--2238, 2019.
+\bibitem{r13}
+Stephen~J Skinner.
+\newblock Recent advances in perovskite-type materials for solid oxide fuel
+  cell cathodes.
+\newblock {\em International Journal of Inorganic Materials}, 3(2):113--121,
+  2001.
+
+\bibitem{r14}
+K-I Kobayashi, T~Kimura, H~Sawada, K~Terakura, and Y~Tokura.
+\newblock Room-temperature magnetoresistance in an oxide material with an
+  ordered double-perovskite structure.
+\newblock {\em Nature}, 395(6703):677--680, 1998.
 
 \bibitem{r3}
 Koji Fujita, Takahiro Kawamoto, Ikuya Yamada, Olivier Hernandez, Naoaki
@@ -35,43 +33,12 @@ Koji Fujita, Takahiro Kawamoto, Ikuya Yamada, Olivier Hernandez, Naoaki
   second-order jahn--teller active ions.
 \newblock {\em Chemistry of Materials}, 28(18):6644--6655, 2016.
 
-\bibitem{r9}
-J{\"u}rgen Hafner.
-\newblock Ab-initio simulations of materials using vasp: Density-functional
-  theory and beyond.
-\newblock {\em Journal of computational chemistry}, 29(13):2044--2078, 2008.
-
 \bibitem{r5}
 Anubhav Jain, Geoffroy Hautier, Charles~J Moore, Shyue~Ping Ong, Christopher~C
   Fischer, Tim Mueller, Kristin~A Persson, and Gerbrand Ceder.
 \newblock A high-throughput infrastructure for density functional theory
   calculations.
 \newblock {\em Computational Materials Science}, 50(8):2295--2310, 2011.
-
-\bibitem{r14}
-K-I Kobayashi, T~Kimura, H~Sawada, K~Terakura, and Y~Tokura.
-\newblock Room-temperature magnetoresistance in an oxide material with an
-  ordered double-perovskite structure.
-\newblock {\em Nature}, 395(6703):677--680, 1998.
-
-\bibitem{r12}
-Ashish Kumar, Ajay Kumar, and Venkata Krishnan.
-\newblock Perovskite oxide based materials for energy and environment-oriented
-  photocatalysis.
-\newblock {\em Acs Catalysis}, 10(17):10253--10315, 2020.
-
-\bibitem{r1}
-Ashish Kumar, Ajay Kumar, and Venkata Krishnan.
-\newblock Perovskite oxide based materials for energy and environment-oriented
-  photocatalysis.
-\newblock {\em Acs Catalysis}, 10(17):10253--10315, 2020.
-
-\bibitem{r8}
-Kurt Lejaeghere, Gustav Bihlmayer, Torbj{\"o}rn Bj{\"o}rkman, Peter Blaha,
-  Stefan Bl{\"u}gel, Volker Blum, Damien Caliste, Ivano~E Castelli, Stewart~J
-  Clark, Andrea Dal~Corso, et~al.
-\newblock Reproducibility in density functional theory calculations of solids.
-\newblock {\em Science}, 351(6280):aad3000, 2016.
 
 \bibitem{r6}
 Ann~E Mattsson, Peter~A Schultz, Michael~P Desjarlais, Thomas~R Mattsson, and
@@ -81,18 +48,39 @@ Ann~E Mattsson, Peter~A Schultz, Michael~P Desjarlais, Thomas~R Mattsson, and
 \newblock {\em Modelling and Simulation in Materials Science and Engineering},
   13(1):R1, 2004.
 
+\bibitem{r7}
+Michel Bockstedte, Alexander Kley, J{\"o}rg Neugebauer, and Matthias Scheffler.
+\newblock Density-functional theory calculations for poly-atomic systems:
+  electronic structure, static and elastic properties and ab initio molecular
+  dynamics.
+\newblock {\em Computer physics communications}, 107(1-3):187--222, 1997.
+
+\bibitem{r8}
+Kurt Lejaeghere, Gustav Bihlmayer, Torbj{\"o}rn Bj{\"o}rkman, Peter Blaha,
+  Stefan Bl{\"u}gel, Volker Blum, Damien Caliste, Ivano~E Castelli, Stewart~J
+  Clark, Andrea Dal~Corso, et~al.
+\newblock Reproducibility in density functional theory calculations of solids.
+\newblock {\em Science}, 351(6280):aad3000, 2016.
+
+\bibitem{r9}
+J{\"u}rgen Hafner.
+\newblock Ab-initio simulations of materials using vasp: Density-functional
+  theory and beyond.
+\newblock {\em Journal of computational chemistry}, 29(13):2044--2078, 2008.
+
+\bibitem{r10}
+James~E Bear, Tatyana~M Svitkina, Matthias Krause, Dorothy~A Schafer, Joseph~J
+  Loureiro, Geraldine~A Strasser, Ivan~V Maly, Oleg~Y Chaga, John~A Cooper,
+  Gary~G Borisy, et~al.
+\newblock Antagonism between ena/vasp proteins and actin filament capping
+  regulates fibroblast motility.
+\newblock {\em Cell}, 109(4):509--521, 2002.
+
 \bibitem{r11}
 M~Reinhard, K~Giehl, K~Abel, C~Haffner, T~Jarchau, V~Hoppe, BM~Jockusch, and
   U~Walter.
 \newblock The proline-rich focal adhesion and microfilament protein vasp is a
   ligand for profilins.
 \newblock {\em The EMBO journal}, 14(8):1583--1589, 1995.
-
-\bibitem{r13}
-Stephen~J Skinner.
-\newblock Recent advances in perovskite-type materials for solid oxide fuel
-  cell cathodes.
-\newblock {\em International Journal of Inorganic Materials}, 3(2):113--121,
-  2001.
 
 \end{thebibliography}
