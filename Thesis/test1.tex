@@ -118,10 +118,24 @@
     wavefunction $\psi (r1, …, rN)$ satisfying the many-electron time-independent Schrödinger equation. 
     \begin{equation}
         \begin{split}
-        \mathcal{H} \Psi & = \left[\hat{T} + \hat{V} + \hat{U} \right] \\
+        \hat{H} \Psi & = \left[\hat{T} + \hat{V} + \hat{U} \right] \\
         & =\left[\sum ^{N} _{i=1}\left(-\frac{\hbar}{2m_{i}}\Delta ^{2}_{i}\right)+ \sum^{N}_{i=1}V(r_{i})+\sum^{N}_{i<j}U(r_{i},r_{j})\right]\Psi = E\Psi
         \end{split}
     \end{equation}
+
+    where, for the N-electron system, $\hat{H}$ is the Hamiltonian, E is the total energy, $\hat{T}$ is the kinetic energy, $\hat{V}$
+    is the potential energy from the external field due to positively charged nuclei, and $\hat{U}$ is the electron-
+    electron interaction energy. As $\hat{T} \hat{U}$ is equal for any N-electron system, they are called universal operator.
+    Only $\hat{V}$ is system-dependent. This complicated many-particle equation is not detachable
+    into simpler single-particle equations beacuse of the interaction term $\hat{U}$.
+    There are numerous cultivated processes for translating the many-body 
+    Schrödinger equation based on the development of the wavefunction in Slater determinants While the easiest one is the Hartree–Fock method, more cultivated techniques are usually tagged as post-Hartree–Fock
+    methods. Nevertheless, the problem with these scenarios is the huge 
+    computational effort, which renders it practically incomprehensible to apply them 
+    efficiently to more considerable, more complex techniques.
+    separable. Here DFT supplies an adorable alternative, being vastly more universal, 
+    as it supplies a way to systematically map the many-body issue, with $\hat{U}$, onto a single-
+    body problem without $\hat{U}$
     In this review, I discuss the implementation of various DFT functionals [local-density approximation (LDA), generalized gradient approximation (GGA), 
     meta-GGA, hybrid functional mixing DFT, and exact (Hartree-Fock) exchange] and post-DFT approaches 
     [DFT + U for strong electronic correlations in narrow bands, many-body perturbation theory (GW) for quasiparticle spectra, 
