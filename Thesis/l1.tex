@@ -1,0 +1,132 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\newcommand*{\1}{\hspace{1pt}}
+\author{Noor E Mustafa Ferdous}
+
+\title{Assignment}
+
+\date{1st September, 2021}
+
+\begin{document}
+    \maketitle
+    
+    \section*{Ans for (a)}
+
+    The Partiton fucntion is 
+
+    \begin{equation}
+        Z[J] = \mathcal{N}_{0} e^{V[\frac{\partial}{\partial J_{i}}]} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}
+    \end{equation}
+
+    Taylor expanding  $e^{V[{\frac{\partial}{\partial J_{i}}}]}$ to 2nd order of $\lambda$ 
+
+    \begin{equation}
+    \begin{split}
+        Z[J] = [1 + \frac{\lambda}{4!}(\frac{\partial}{\partial J_{i}})^{4} + {\frac{\lambda}{4!}}^{2}(\frac{\partial}{\partial J_{i}})^{4}(\frac{\partial}{\partial J_{i}})^{4}] \mathcal{N}_{0} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}
+    \end{split}
+    \end{equation}
+
+    \newpage
+
+    \section*{Ans for (b)}
+
+    Partition functionn for two points is
+    \begin{equation}
+        \langle \phi_{i} \phi_{j} \rangle = \frac{1}{Z[J]} \frac{\partial ^{2} Z[J]}{{\partial J_{i} \partial J_{j}}} 
+    \end{equation}
+
+    expanding to first order of lambda
+
+    \begin{equation}
+    \begin{split}
+        Z[J] = [1 + \frac{\lambda}{4!}(\frac{\partial}{\partial J_{i}})^{4} ] \mathcal{N}_{0} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}
+    \end{split}
+    \end{equation}
+
+    Then
+
+    \begin{equation}
+    \begin{split}
+        \frac{\partial ^{2} Z[J]}{\partial J_{i} \partial J_{j}} =\frac{\partial ^{2}}{\partial J_{i} \partial J_{j}} [e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}} + \frac{\lambda}{4!}(\frac{\partial}{\partial J_{i}})^{4} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}} ] \mathcal{N}_{0} \Biggr|_{J=0}
+    \end{split}
+    \end{equation}
+
+    First term of RHS of eqn(5)
+    \begin{align}
+        \frac{\partial ^{2}}{\partial J_{i} \partial J_{j}} [e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}] &  \ = \  \frac{\partial}{\partial J_{j}} \Delta_{im} J_{m} e^{\frac{1}{2}J_{m}\Delta_{mn} J_{n}} \\
+         & = \ \Delta_{ij} e^{\frac{1}{2} J_{m} \Delta_{mn} J_{n}} + \Delta_{im} \delta_{jm} \Delta_{ik} J_{ik} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}} \\
+         & \ \ \  + \Delta_{im} J_{m}\Delta_{ik} \delta_{jk} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}} \\
+    \end{align}
+    
+    Therefore
+    \begin{equation}
+        \frac{\partial ^{2}}{\partial J_{i} \partial J_{j}} [e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}]  \Biggr|_{J=0} = \Delta_{ij} \\
+    \end{equation}
+
+    Second term of RHS of eqn(5) [taking $e^{\frac{1}{2}J_{m}\Delta_{mn} J_{n}} = U$]
+    \begin{equation}
+    \begin{split}
+        \frac{\partial ^{2}}{\partial J_{i} \partial J_{j}}(\frac{\partial}{\partial J_{i}})^{4} [e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}] =   \frac{\partial ^{2}}{\partial J_{i} \partial J_{j}} \Delta_{ii} [\frac{\partial ^{2} U}{{\partial J_{i}^2}}] + 2\Delta_{im}\Delta{ii}\frac{\partial}{\partial J_{i}}(J_{m} U) \\
+         + \Delta_{im}\Delta_{ik}\frac{\partial}{\partial J_{i}}(J_{m}J_{k}\frac{\partial U}{\partial J_{i}}) \\ 
+    \end{split}
+    \end{equation}
+    
+    First term of eqn(8)
+    \begin{align*}
+        \frac{\partial ^2}{\partial J_{i} \partial J_{j}} \Delta _{ii} [\frac{\partial ^2 U}{{\partial J_{i}}^2}]  & \ = \ \frac{\partial }{\partial J_{j}} \Delta _{ii} [\frac{\partial^3 U}{{\partial J_{i}}^3}] \\
+         &  =  \ \Delta_{ii} (\Delta_{ii} \frac{\partial U}{\partial J_{i}} + 2\Delta_{im}J_{m}\Delta_{ii}U + \Delta_{im}\Delta_{ik}J_{k}J_{m}\frac{\partial U}{\partial J_{i}}) \\
+         & =  \ \frac{\partial}{\partial J_{j}}\Delta_{ii} (\Delta_{ii}\Delta_{im}J_{m}U + 2\Delta_{im}J_{m}\Delta_{ii}U) \\
+          & \ \ +  \Delta_{im}\Delta_{ik}J_{k}J_{m}\Delta_{im}J_{m}U \\
+         & =  \ \Delta_{ii}(\Delta_{im}\delta_{mj}\Delta_{ii} + 2\Delta_{im}\Delta_{ii}\delta_{mj})  \tag*{[putting J=0]} \\
+         & =  \ 3\Delta_{ii}\Delta_{im}\delta_{mj\Delta{ii}} \\
+        \therefore \frac{\partial ^2}{\partial J_{i} \partial J_{j}} \Delta _{ii} [\frac{\partial ^2 U}{{\partial J_{i}}^2}] = & 3\Delta_{ii}\Delta_{im}\delta_{mj}\Delta{ii} \\
+    \end{align*}
+
+    Second term of eqn(8)
+    \begin{align*}
+        \frac{\partial}{\partial J_{j}} 2\Delta_{im}\Delta_{ii}\frac{\partial ^2}{{\partial J_{i}}^2}(J_{m}U) & = \frac{\partial}{\partial J_{j}} 2\Delta_{im}\Delta_{ii} \frac{\partial}{\partial J_{i}}(\delta_{mi} U + J_{m}\frac{\partial U}{\partial J_{i}}) \\
+         & = \ \frac{\partial}{\partial J_{j}}2\Delta_{im}\Delta_{ii}(2\delta_{im}\frac{\partial U}{\partial J_{i}} + J_{m}\frac{\partial ^2 U}{{\partial J_{i}}^2}) \\
+         & = \ \frac{\partial}{\partial J_{j}}2\Delta_{im}\Delta_{ii}(2\delta_{im}\Delta_{im}J_{m}U +J_{m} (\Delta_{ii}U + \Delta_{im}J_{m}\Delta_{ik}J_{k}U)) \\ 
+         & = \ 2\Delta_{im}\Delta_{ii}(2\delta_{im}\Delta{im}\delta_{mj} + \delta_{mj}\Delta_{ii}) \tag*{[putting J=0]} \\ 
+         & = \ 4\delta_{im}\delta_{mj}\Delta_{im}\Delta_{ii}\Delta_{im} + 2\Delta_{im}\Delta_{ii}\Delta_{ii}\delta_{mj} \\
+         & = \ 4\Delta_{ii}\Delta_{ii}\Delta_{ij} + 2\Delta_{ii}\Delta_{ii}\Delta_{ij} \\
+        \therefore \frac{\partial}{\partial J_{j}} 2\Delta_{im}\Delta_{ii}\frac{\partial ^2}{{\partial J_{i}}^2}(J_{m}U) & = \ 6\Delta_{ii}\Delta_{ii}\Delta_{ij} \\
+    \end{align*}
+
+    Third term of eqn(8)
+    \begin{align*}
+        \frac{\partial}{\partial J_{j}}\Delta_{im}\Delta_{ik}\frac{\partial ^2}{{\partial J_{i}^2}}(J_{m}J_{k}\frac{\partial}{\partial J_{i}}) \ & = \ \frac{\partial}{\partial J_{j}}\Delta_{im}\Delta_{ik}\frac{\partial }{\partial J_{i}} (\delta_{im}J_{k}\frac{\partial U}{\partial J_{i}} + J_{m}\delta_{ik}\frac{\partial U}{\partial J_{i}} +J_{m}J_{k}\frac{\partial ^2 U}{{\partial J_{i}}^2}) \\
+        & = \ \frac{\partial}{\partial J_{j}}\Delta_{im}\Delta_{ik}(\delta_{im}\delta_{ik}\frac{\partial U}{\partial J_{i}} + \delta_{im}J_{k}\frac{\partial ^2 U}{{\partial J_{i}}^2} + \delta_{im}\delta_{ik}\frac{\partial U}{\partial J_{i}}  \\
+        & \ \ \ \ + J_{m}\delta_{ik}\frac{\partial ^2 U }{{\partial J_{i}}^2} + \delta_{im} J_{k}\frac{\partial ^2 U}{{\partial J_{i}}^2} + J_{m}\delta_{ik}\frac{\partial ^2 U}{{\partial J_{i}}^2} + J_{m}J_{k}\frac{\partial ^3 U}{{\partial J_{i}}^3}) \\
+        & = \ \frac{\partial}{\partial J_{j}}\Delta_{im}\Delta_{ik}(\delta_{im}\delta_{ik}J_{m}\Delta_{im}U + 2\delta_{im}J_{k}(\Delta_{ii}U + \Delta_{im}J_{m}\Delta_{ik}J_{k}U) \\
+        & \ \ \ \ + \delta_{im}\delta_{ik}\Delta_{im}J_{m}U + 2J_{m}\delta_{ik}(\Delta_{ii}U + \Delta{im}J_{m}\Delta{ik}J_{k}U) \\ 
+        & \ \ \ \ + J_{m}J_{k}(\Delta_{ii}J_{m}\Delta_{im}U + 2\Delta_{im}\Delta_{ii}J_{m}U + \Delta_{im}\Delta_{ik}J_{k}J_{m}J_{m}\Delta_{im}U)) \\ 
+        & = \ \Delta_{im}\Delta_{ik}\delta_{im}\delta_{ik}\delta_{mj}\Delta_{im} + 2\Delta_{im}\Delta_{ik}\delta_{im}\delta_{kj}\Delta_{ii} \\ 
+        & \ \ \ \ + \Delta_{im}\Delta_{ik}\Delta_{im}\delta_{im}\delta_{ik}\delta_{mj} + 2\Delta_{im}\Delta_{ik}\delta_{mj}\delta_{ik}\Delta_{ii} \\ \tag*{[putting J=0]}
+        & = \ \Delta_{ij}\Delta_{ii}\Delta_{ii} + 2\Delta_{ii}\Delta_{ii}\Delta_{ij} + \Delta_{ii}\Delta_{ii}\Delta_{ij} + 2\Delta_{ii}\Delta_{ij}\Delta_{ii} \\
+        & = \ 6\Delta_{ii}\Delta_{ii}\Delta_{ij}\\ 
+    \end{align*}
+
+    Eqn(8) becomes
+    \begin{equation}
+       \frac{\partial ^{2}}{\partial J_{i} \partial J_{j}}(\frac{\partial}{\partial J_{i}})^{4} [e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}] = 15\Delta_{ii}\Delta_{ii}\Delta_{ij}\\ 
+    \end{equation}
+
+    Eqn(5) will be
+    \begin{align}
+        \frac{\partial ^{2} Z[J]}{\partial J_{i} \partial J_{j}} \ &  = \ \frac{\partial ^{2}}{\partial J_{i} \partial J_{j}} [e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}} + \frac{\lambda}{4!}(\frac{\partial}{\partial J_{i}})^{4} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}} ] \mathcal{N}_{0} \Biggr|_{J=0} \\
+        & =  \ \Delta_{ij} + 15\Delta_{ii}\Delta_{ii}\Delta_{ij}\mathcal{N_{0}}\\ 
+    \end{align}
+
+    \begin{align}
+        \langle \phi_{i}\phi_{j} \rangle = \frac{(\Delta_{ij} + 15\Delta_{ii}\Delta_{ii}\Delta_{ij}\frac{\lambda^4}{4!})\mathcal{N_{0}}}{(1+\frac{\lambda^4}{4!}3\Delta_{ii}\Delta_{ii})\mathcal{N_{0}}}
+    \end{align}
+
+\end{document}

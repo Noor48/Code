@@ -1,0 +1,70 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\usepackage{graphics}
+\usepackage{grffile}
+\graphicspath{ {/home/noor/Project/}}
+\newcommand*{\1}{\hspace{1pt}}
+\author{Noor E Mustafa Ferdous}
+
+\title{}
+
+\date{}
+
+\begin{document}
+
+
+    4 point function 
+    
+    \begin{equation}
+    \begin{split}
+        \langle \phi_{x}\phi_{y}\phi_{z}\phi_{a} \rangle & = \frac{1}{Z[0]}\frac{\partial ^{4}}{{\partial J_{x}\partial J_{y}\partial J_{z}\partial J_{a}}}\Biggr|_{J=0} \\
+        & =\frac{1}{Z[0]}\frac{\partial ^{4}}{{\partial J_{x}\partial J_{y}\partial J_{z}\partial J_{a}}} [1+\frac{\lambda}{4!}[3\Delta_{ii}\Delta_{ii}U + (J_{m}\Delta_{im})^{4} U \\
+        & \ \ \  + 6(J_{m}\Delta_{im})^{2}\Delta_{ii} U]]\mathcal{N}_{0} e^{\frac{1}{2} J_{m} \Delta _{mn} J_{n}}\Biggr|_{J=0}
+    \end{split}
+    \end{equation}
+    
+    First term of eqn
+    \begin{align*}
+        \frac{\partial ^{4}}{\partial J_{x}\partial J_{y}\partial J_{z} \partial J_{a}}U & =\frac{\partial ^{3}}{{\partial J_{y}\partial J_{z}\partial J_{a}}} \Delta_{xm}J_{m}U \\
+         & = \frac{\partial ^{2}}{\partial J_{z}\partial J_{a}}[\Delta_{xy}U + \Delta_{xm}J_{m}\Delta_{ym}J_{m}U] \\ 
+         & = \frac{\partial}{\partial J_{a}}[\Delta_{xz}\Delta_{ym}J_{m}U + \Delta_{xm}J_{m}\Delta_{yz}U + \\ 
+         & \ \ \ \Delta_{xm}J_{m}\Delta_{ym}J_{m}\Delta_{zm}J_{m}U  + \Delta_{xy}\Delta_{zm}J_{m}U] \\ 
+         & = \Delta_{xy}\Delta_{za} + \Delta_{xz}\Delta_{ya} + \Delta_{xa}\Delta_{yz} \tag*{putting J=0} \\ 
+         & = 3 \Delta_{xy}\Delta_{za}
+    \end{align*}
+    
+    Second term of equation 
+    \begin{align*}
+        \frac{\partial ^{4}}{{\partial J_{x}\partial J_{y}\partial J_{z}\partial J_{a}}}3\Delta_{ii}\Delta_{ii}U & = \frac{\partial ^{3}}{{\partial J_{y}\partial J_{z}\partial J_{a}}} 3\Delta_{ii}\Delta_{ii}\Delta_{xm}J_{m}U \\ 
+        & =\frac{\partial ^{2}}{\partial J_{z}\partial J_{a}} 3\Delta_{ii}^{2}\Delta_{xy}U + 3\Delta_{ii}^{2}\Delta_{xm}J_{m}\Delta_{ym}J_{m}U \\
+        & = \frac{\partial}{\partial J_{a}}3\Delta_{ii}^{2}\Delta_{xy}\Delta_{zm}J_{m}U   \\ 
+        & \ \ + 3\Delta_{ii}^{2}\Delta_{xz}\Delta_{ym}J_{m}U + 3\Delta_{ii}^{2}\Delta_{xm}J_{m}\Delta_{yz}U \\ 
+        & \ \ \ + 3\Delta_{ii}^{2}\Delta_{xm}J_{m}\Delta_{ym}J_{m}\Delta_{zm}J_{m}U \\ 
+        & = 9\Delta_{ii}^{2}\Delta_{xy}\Delta_{za}
+    \end{align*}
+    
+    \newpage
+
+    Third term of equation 
+    \begin{align*}
+        \frac{\partial ^{4}}{\partial J_{x} \partial J_{y} \partial J_{z}\partial J_{a}}  (J_{m}\Delta_{im})^{4} U & \\
+        & \ \  = \frac{\partial ^{3}}{{\partial J_{y}\partial J_{z}\partial J_{a}}} [4(\Delta_{im}J_{m})^{3}\Delta_{ix}U + (J_{m}\Delta_{im})^{4}\Delta_{xm}J_{m}U] \\ 
+        & = 12(J_{m}\Delta_im)^{2}\Delta_{iy}\Delta_{ix}U + 4(J_{m}\Delta_{im})^{3}\Delta_{ix}\Delta_{ym}J_{m}U + 4(J_{m}\Delta_{im})^{3}\Delta_{iy}\Delta_{xm}J_{m}U \\ 
+        & \ \ \  + (J_{m}\Delta_{im})^{4}\Delta_{xy}U + (J_{m}\Delta_{im})^{4}\Delta_{ym}J_{m}\Delta_{xm}J_{m}U \\ 
+        & = 24J_{m}\Delta_{im}\Delta_{zi}\Delta_{iy}\Delta_{xm}J_{m}U + 12(J_{m}\Delta_{im})^{2}\Delta_{zi}\Delta_{ix}\Delta_{ym}J_{m}U + 12(J_{m}\Delta_{im})^{2}\Delta_{iy}\Delta_{ix}\Delta_{zm}J_{m}U \\ 
+        & \ \ \  + 4(J_{m}\Delta_{im})^{3}\Delta_{ix}\Delta_{yz}U + 4({J_{m}\Detla_{im})^{3}\Delta_{ix}\Delta_{ym}J_{m}\Delta_{zm}J_{m}U \\ 
+        & \ \ \ +  4(J_{m}\Delta_{im})^{3}\Delta_{iy}\Delta_{xz}U + 12(J_{m}\Delta_{im})^{3}\Delta_{iy}\Delta_{iz}\Delta_{im}J_{m}U + 4(J_{m}\Delta_{im})^{3}\Delta_{iy}\Delta_{xm}J_{m}\Delta_{zm}J_{m}U \\ 
+        & \ \ \  + 4J_{m}\Delta_{im}\Delta_{zi}\Delta_{xy}U + (J_{m}\Delta_{im})^{4}\Delta_{xy} \Delta_{zm}J_{m}U + (J_{m}\Delta_{im})^{4}\Delta_{yz}U  \\ 
+        & \ \ \ +  4(J_{m}\Delta_{im})^{3}\Delta_{zi}\Delta_{yx}U + (J_{m}\Delta_{im})^{4}\Delta_{yz}\Delta_{zm}J_{m}U \\
+        & = 24\Delta_{ai}\Delta_{zi}\Delta_{yi}\Delta_{xi}
+    \end{align*}
+
+
+\end{document}

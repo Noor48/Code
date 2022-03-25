@@ -1,0 +1,178 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\newcommand*{\1}{\hspace{1pt}}
+\author{Noor E Mustafa Ferdous}
+
+
+
+\title {A Course on Quantum Field Theory}
+
+\date{8th June, 2021}
+
+\begin{document}
+    \maketitle
+
+    \section*{Time Ordered Product}
+
+    Purpose of a picture is initial condition of a system 
+    From scalar quantization 
+
+    \begin{equation}
+        [\ \tensor \phi{_i}, \, \pi{_j} \, ] = \, i\hbar \delta{_{ij}}
+    \end{equation}
+    
+     $\phi (x)$ in 3D
+    
+    \begin{equation}
+        \implies    [\ \phi(x), \, \pi(x ^{\prime}) \, ] = \, i \delta ^{3}(x-x ^{\prime})
+    \end{equation}
+
+    which is more fundamental apporach for quantization. But in 1958, R. Haggs gave us a theorem that "Interaction
+    picture does not exists in QFT".
+
+    In Dyson picture, the wave function will be
+    \begin{equation}
+        \ket{\psi (t)} _{I} = U(t,t_{0})\ket{\psi (t_{0})}
+    \end{equation}
+    
+    The expression of U is 
+
+    \begin{equation*}
+        U(t,t_{0})  = 
+            \begin{cases}
+            e^{iH(t-t_{0})}, & \text {if H is time independent} \\
+            Te^{-i\int_{t{_0}}^{t} H(t^{\prime}) \,dt^{\prime} }, & \text {if H is time dependent}
+            \end{cases}
+    \end{equation*}
+
+    if H is time dependent, We need time ordered products
+    
+    \begin{equation}
+        \begin{split}
+            T[A(t)B(t^{\prime})] & =
+            \begin{cases}
+                A(t)B(t^{\prime}), & \text{if } t > t^{\prime} \\
+                B(t^{\prime})A(t), & \text{if } t^{\prime} > t
+            \end{cases} \\
+            \implies T[A(t)B(t)^{\prime}] & = \theta (t-t^{\prime})A(t)B(t^{\prime}) + \theta B(t^{\prime})A(t)
+        \end{split}
+    \end{equation}
+
+    For a real scalar field:
+    \begin{equation*}
+        \pi(t) = \dot{\phi(t)}
+    \end{equation*}
+
+    \begin{equation}
+        \begin{split}
+            \frac{d^2 }{d t^2}T[\phi (t) \phi (t^{\prime})] & = \frac{d^2 }{d t^2}[\theta (t-t^{\prime})\phi (t) \phi (t^{\prime}) + \theta (t^{\prime} -t) \phi(t^{\prime}) \phi (t)] \\
+            & =  \frac{d}{d t}[\frac{d \theta}{d t}\phi (t) \phi (t^{\prime}) + \theta (t-t^{\prime})\frac{d \phi (t)}{dt}\phi (t^{\prime}) \\
+            & \ \ \ \ + \frac{d\theta (t^{\prime} -t)}{dt}\phi (t) \phi (t^{\prime}) + \theta (t^{\prime} -t) \frac{d\phi(t)}{dt} \phi(t^{\prime})] \\
+            & =  \frac{d}{d t}[\delta(t-t^{\prime})\phi (t) \phi (t^{\prime}) + \theta (t-t^{\prime})\dot{\phi} (t)\phi (t^{\prime}) \\
+            & \ \ \ \ - \delta (t^{\prime} -t) \phi (t) \phi (t^{\prime})  +\theta (t^{\prime} -t) \dot{\phi}(t) \phi(t^{\prime})] \\
+            & =  [\delta ^{\prime}(t-t^{\prime})\phi (t) \phi (t^{\prime}) + \delta (t-t^{\prime})\dot{\phi} (t)\phi (t^{\prime}) \\
+            & \ \ \ \ + \delta (t^{\prime} -t) \dot{\phi} (t) \phi (t^{\prime}) + \theta (t^{\prime} -t) \ddot{\phi}(t) \phi(t^{\prime})] \\
+            & \ \ \ \ + \delta ^{\prime} (t^{\prime} -t) \phi (t) \phi (t^{\prime}) - \delta (t^{\prime} -t) \dot{\phi}(t) \phi(t^{\prime})] \\
+            & \ \ \ \ - \delta (t^{\prime} -t) \dot{\phi} (t) \phi (t^{\prime}) - \theta (t^{\prime} -t) \ddot{\phi}(t) \phi(t^{\prime})] \\
+            & = \delta (t-t^{\prime})[\dot{\phi} (t), \phi (t)] \\
+            & = i \delta ^{4} (t-t^{\prime})
+        \end{split}
+    \end{equation}
+
+    Consider a real scalar field whose Lagrangian is
+    \begin{equation}
+        \mathcal{L}  = \frac{1}{2} (\partial \phi \partial \phi - m^{2} \phi ^{2})
+    \end{equation}
+
+    Equation of motion will be 
+    \begin{equation}`
+        (\Box + m^{2}) = 0
+    \end{equation}
+
+    The time ordered product 
+    \begin{equation}
+        \begin{split}
+            \bra 0  T[\phi _{1}, \phi _{2}]  \ket 0 =  &  \ \theta (t_{1}-t_{2}) \bra  \phi(x_{1},t_{1}) \phi (x_{2}, t{_2})  \ket 0 \\
+            & + \theta (t_{2}-t_{1}) \bra  \phi(x_{2},t_{2}) \phi (x_{1}, t{_1})  \ket 0
+        \end{split}
+    \end{equation}
+
+    Assigment 1: Show that 
+    \begin{equation}
+        (\Box + m^{2}) \bra {0} T(\phi _{1}, \phi _{2}) \ket {0} = -i \delta^{4} (x_{1}-x_{2})
+    \end{equation}
+
+    defination of Green's function from a linear operator $\hat L$
+    \begin{equation}
+        \begin{split}
+            \hat {L} \psi & = 0 \\
+            \implies \hat L G_{ij} & = \delta_{ij} \\
+            \implies \hat L G(x-y) & = iG(x-y) \\
+            \therefore \bra {0} T(\phi_{1}, \phi_{2}) \ket {0} & = iG(x-y)  
+        \end{split}  
+    \end{equation}
+
+    Assignment 2:
+
+    \begin{equation}
+        (\Box + m^{2})\bra {0} T[\phi_{1}, \phi _{2}, \phi _{3}] \ket {0} = 
+    \end{equation}
+
+    Find the RHS
+
+    \begin{equation}
+    \begin{split}
+        T[ABC] = &  \ \theta(t_{2} - t_{3})\theta (t_{1} - t_{2})A(t_{1})B(t_{2})C(t_{3}) + \theta(t_{3} - t_{1})\theta (t_{2} - t_{3})B(t_{2})C(t_{3})A(t_{1}) \\
+        & \ \  + \theta(t_{1} - t_{3})\theta (t_{1} - t_{2})C(t_{3})A(t_{1})B(t_{2}) - \theta(t_{3} - t_{2})\theta (t_{1} - t_{3})A(t_{1})C(t_{3})B(t_{2}) \\
+        & \ \  - \theta(t_{2} - t_{1})\theta (t_{3} - t_{2})C(t_{3})B(t_{2})A(t_{1}) - \theta(t_{1} - t_{3})\theta (t_{2} - t_{1})B(t_{2})A(t_{1})C(t_{3}) \\ 
+    \end{split}
+    \end{equation}
+
+    From Electrodynamics, there are two types of Green's funtion,
+    \begin{equation}
+        \begin{cases}
+            G_{ret} = 0 & \text {if} x_{0} < y_{0} \\
+            G_{ret} = 0 & \text {if} x_{0} > y_{0}
+        \end{cases}
+    \end{equation}
+    
+    $y_{0}$ is the location of cause, and $x_{0}$ is the obervers' position
+
+    Lightcone picture:
+
+    For free system
+    \begin{equation}
+        (\Box + m^{2}) \phi = 0
+    \end{equation}
+
+    For non free system
+    \begin{equation}
+        (\Box + m^{2}) \phi = J
+    \end{equation}
+
+    Where the Lagrangian will be
+    \begin{equation}
+        \mathcal{L}  = \mathcal{L} _{0} +J\phi
+    \end{equation}
+    
+    Where
+    \begin{equation}
+        \mathcal{L} _{int}  = -\mathcal{H} _{int} 
+    \end{equation}
+
+    \begin{equation}
+        \ket {out} = S \ket{in}
+    \end{equation}
+
+    \begin{equation}
+        S = \lim_{t \to \infty \ t_{0} \to \infty} U(t,t_{0})  
+    \end{equation}
+    
+\end{document}
