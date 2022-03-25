@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{4}%
+\contentsline {subsection}{\numberline {1.1}Classical Properties of Ideal Gas}{6}%
+\contentsline {subsubsection}{\numberline {1.1.1}thermodynamic properties}{6}%
+\contentsline {subsection}{\numberline {1.2}\textbf {Partition Function}}{6}%
+\contentsline {section}{\numberline {2}Quantum properties of ideal gas}{10}%
+\contentsline {subsubsection}{\numberline {2.0.1}Einstein model of specific heat}{10}%
+\contentsline {subsubsection}{\numberline {2.0.2}\textbf {Debye theory of specific heat}}{11}%
+\contentsline {subsection}{\numberline {2.1}\textbf {Thermodynamics properties of ideal Fermi gas}}{14}%
+\contentsline {subsection}{\numberline {2.2}Thermodynamics properties of ideal Bose gas }{17}%
+\contentsline {subsection}{\numberline {2.3}Summary}{22}%
