@@ -1,0 +1,68 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\usepackage{graphics}
+\usepackage{grffile}
+\usepackage[export]{adjustbox}
+\usepackage{svg}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{setspace}
+\newcommand*{\1}{\hspace{1pt}}
+
+\title {General Relativity and Cosmology}
+
+\author{}
+
+\date{28 May, 2022}
+
+\begin{document}
+    
+    \subsection*{Exercise 1}
+
+    Show that,
+    \begin{equation*}
+        \left[ \mathcal{L} _{u}, \mathcal{L} _{v}\right] = \mathcal{L} _{[u,v]} 
+    \end{equation*}
+
+    L.H.S.
+    \begin{equation*}
+        \begin{split}
+        & \left[\mathcal{L} _{u}, \mathcal{L} _{v}\right] \\ 
+        = & \left[\mathcal{L} _{u}, \mathcal{L} _{v}\right] \phi \\ 
+        = & \left[ u^{a}\partial_{a}, v^{b}\partial_{b}\right] \\ 
+        = & u^{a}\partial_{a}\left\{v^{b}\left(\partial_{b}\phi\right)\right\} - v^{a}\partial_{a}\left\{u^{b}\left(\partial_{b}\phi\right)\right\} \\
+        = & u^{a}\left(\partial_{a}v^{b}\right)\left(\partial_{b}\phi\right) + u^{a}v^{b}\partial_{a}\partial_{b}\phi - v^{a}\left(\partial_{a}u^{b}\right)\left(\partial^{b}\phi\right) - v^{a}u^{b}\partial_{a}\partial_{b}\phi \\ 
+        = & u^{a}\left(\partial_{a}v^{b}\right)\left(\partial_{b}\phi\right) - v^{a}\left(\partial_{a}u^{b}\right)\left(\partial^{b}\phi\right) \\ 
+        = & u^{a}\partial_{a}\left(v^{b}\partial_{b}\phi\right) - v^{a}\partial_{a}\left(u^{b} \partial^{b}\phi\right) \\ 
+        = & \mathcal{L}_{u}\mathcal{L}_{v} - \mathcal{L}_{u}\mathcal{L}_{v} \\ 
+        = & \mathcal{L}_{[u,v]} \\
+        = & R.H.S.
+        \end{split}
+    \end{equation*}
+
+    \subsection*{Exercise 2}
+    Find the rule for 
+    \begin{equation*}
+        \mathcal{L}_{v}T^{a}_{c} = ?
+    \end{equation*}
+
+    \begin{equation*}
+        \begin{split}
+            &\mathcal{L}_{v}T^{a}_{c} \\ 
+            = & \mathcal{L}_{v}\left(\mathcal{L}_{v}u^{a}\right)\omega_{c} + u^{a}\left(\mathcal{L}_{v}\omega_{c}\right) \\ 
+            = & \left(v^{b}\partial_{b}u^{a} - u^{b}\partial_{b}v^{a}\right)\omega_{c} + u^{b}\left(v^{b}\partial_{b}\omega_{c}+\omega_{b}\partial_{c}v^{b}\right) \\
+            = & v^{b}\partial_{b}\left(u^{a}\omega_{c}\right) - u^{b}\partial_{b}\left(v^{a}\omega_{c}\right) + u^{a}v^{b}\partial_{b}\omega_{c} + u^{a}\omega_{b}\partial_{c}v^{b} \\ 
+            = & v^{b}\partial_{b}\left(u^{a}\omega_{c}\right) - u^{b}\partial_{b}\left(v^{a}\right)\omega_{c} - u^{b}v^{a}\left(\partial_{b}\omega_{c}\right) + u^{a}v^{b}\partial_{b}\omega_{c} + u^{a}\omega_{b}\partial_{c}v^{b} \\ 
+            = & v^{b}\partial_{b}\left(u^{a}\omega_{c}\right) - u^{b}\omega_{c}\partial_{b}\left(v^{a}\right) + u^{a}\omega_{b}\partial_{c}v^{b} \\
+            = & v^{b}\partial_{b}T^{a}_{c} - T^{b}_{c}\partial_{b}\left(v^{a}\right) + T^{a}_{b}\partial_{c}v^{b} \\
+        \end{split}
+    \end{equation*}
+\end{document}

@@ -1,0 +1,140 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\usepackage{graphics}
+\usepackage{grffile}
+\usepackage[export]{adjustbox}
+\usepackage{svg}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{setspace}
+\newcommand*{\1}{\hspace{1pt}}
+
+\title {General Relativity and Cosmology}
+
+\author{}
+
+\date{28 May, 2022}
+
+
+\begin{document}
+    \maketitle
+
+    \subsection*{Very Quick Recap of Relativity}
+    
+    Everywhere we see are events. Spacetime is a collection of events. We can refer events as a stage drama. Coordinates are used to described these events. 
+    Coordinates are local.  
+
+    \subsection*{Manifolds}
+    Manifold is a set endowed with a collection of subsets which 
+    But according to physicists, where we can do integration and differentiations on, are called manifolds.
+
+    \subsection*{World lines}
+    World lines $\longleftrightarrow$ observables.
+    
+    squared distance ds will be 
+
+    \begin{equation}
+        ds^{2} = -dt^{2} + d\underline{x} \cdot d\underline{x}  
+    \end{equation}
+
+    Signature of our spacetime will be (-, +, +, +) which is known as East Coast Convention. Where
+
+    \begin{align*} 
+            A \cdot A & > 0 \tag*{spacelike} \\ 
+            A \cdot A & < 0 \tag*{timelike} \\ 
+            A \cdot A & = 0 \tag*{null or lightlike} 
+    \end{align*}
+
+    \subsection*{Proper Time}
+    Time measured by the observer is called proper time. \\
+
+    Now we define scalar and vectors 
+
+    \subsection*{Scalar}
+    Quantities that are invariant under coordinate transformation are called scalars.
+
+    \begin{equation*}
+        P(x) = P(x^{'})
+    \end{equation*}
+
+    \subsection*{Vector}
+
+    Collection of tangent lines on a point at a time direct to everywhere are called tangent vector.
+    
+    $T_{p}$ is a vector space. If 
+
+    \begin{equation}
+        \begin{split}
+            U \in T_{p} \\
+            V \in T_{p} \\ 
+            \\ 
+            \alpha U + \beta V \in T_{p}
+        \end{split}
+    \end{equation}
+
+    \begin{align*}
+        \frac{df}{d \tau} = \frac{\partial f}{\partial x^{i}} \frac{\partial x^{i}}{\partial \tau} = (V^{i}(x) \frac{\partial}{\partial x_{i}})f \tag*{ $[dx^{i} = V^{i}]$} \\   
+    \end{align*}
+
+    Functionally, 
+    \begin{equation}
+        \frac{d}{d \tau} \equiv 
+         (V^{i}(x) \frac{\partial}{\partial x_{i}})
+    \end{equation}
+
+    here $\frac{\partial}{\partial x^{i}}$ is coordinate basis. However, the coordinates, $x^{i}$ are observer's contruct. The coordinate basis is independent. 
+
+    \begin{equation}
+        \left[ \frac{\partial}{\partial x^{i}}, \frac{\partial}{\partial x^{j}}\right] = 0 
+    \end{equation}
+
+    $\frac{d}{d \tau}$ causes a translation along the tangent of the curve. It is independent of the coordinates x's.
+
+    \subsection*{Lie Bracket}
+    \begin{equation}
+        \hat{V} \equiv  \frac{d}{d \tau} \equiv  (V^{i}(x) \frac{\partial}{\partial x_{i}})
+    \end{equation}
+
+    \begin{equation}
+        \begin{split}
+        \left[\hat{V}, \hat{W}\right] & = \hat{V}\hat{W} - \hat{W}\hat{V}  \\ 
+            & = \left(V^{j}\frac{\partial}{\partial x^{j}}\right)\left(W^{i}\frac{\partial}{\partial x^{i}}\right) - \left(W^{j}\frac{\partial}{\partial x^{j}}\right)\left(V^{i}\frac{\partial}{\partial x^{i}}\right)   \\
+            & = \left(V^{i}\frac{\partial W^{j}}{\partial x^{i}} - W^{i}\frac{\partial V^{j}}{\partial x^{i}}\right)\frac{\partial}{\partial x^{j}} \\ 
+            & = T^{j}\frac{\partial}{\partial x^{j}} 
+        \end{split}
+    \end{equation}
+
+    Where 
+    \begin{equation*}
+        T^{j} = \left[\hat{V}, \hat{W}\right]^{j} =  \left(V^{i}\frac{\partial W^{j}}{\partial x^{i}} - W^{i}\frac{\partial V^{j}}{\partial x^{i}}\right)\frac{\partial}{\partial x^{j}}
+    \end{equation*}
+
+    \begin{equation}
+        \hat{V} = \frac{d}{d \tau} = (V^{i}(x) \frac{\partial}{\partial x_{i}}) = V^{'a}({x^{'}})\frac{\partial}{\partial x^{'a}}
+    \end{equation}
+
+    \begin{equation*}
+        \begin{split}
+            x & = x(x^{'}) \\ 
+            x^{'} & = x^{'}(x) \\
+            \frac{\partial ?}{\partial x^{i}} & = \frac{\partial x^{'a}}{\partial x^{i}}\frac{\partial ?}{\partial x^{'a}} 
+        \end{split}
+    \end{equation*}
+
+    \begin{equation}
+        \begin{split}
+        \hat{V} = V^{'a}({x^{'}})\frac{\partial}{\partial x^{'a}} & = \left(V^{i}({x})\frac{\partial x^{'a}}{\partial x^{i}}\right)\frac{\partial}{\partial x^{'a}} \\ 
+        \implies V^{'a}{x^{'}}  & = V^{i}(x)\frac{\partial x^{'a}}{\partial x^{i}}
+        \end{split}
+    \end{equation}
+
+    Diffumorphism maps manifold to itself.
+\end{document}
