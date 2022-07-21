@@ -1,0 +1,62 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\usepackage{graphics}
+\usepackage{grffile}
+\usepackage[export]{adjustbox}
+\usepackage{svg}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{setspace}
+\newcommand*{\1}{\hspace{1pt}}
+
+\title {General Relativity and Cosmology}
+
+\author{}
+
+\date{28 May, 2022}
+
+\begin{document}
+    
+    \section{Road to Curvature}
+        Recall the covariant derivative
+        
+        \begin{equation}
+            \begin{split}
+                \nabla _{\mu} V^{\nu} & \equiv \partial _{\mu}V^{\nu} + \Gamma ^{\nu}_{\mu \lambda}V^{\lambda} \\ 
+                \nabla _{\mu} \phi &\equiv \partial _{\mu} \phi \\
+                \nabla _{\mu} W_{\nu} &\equiv \partial _{\mu}W_{\nu} -  \Gamma ^{\lambda} _{\mu \nu} W_{\lambda}
+            \end{split}
+        \end{equation}
+
+        $\nabla _{\mu}$ is made unique by demanding\\ 
+        (a) Torsion free\\
+        (b) Metric compatible
+
+    \subsection*{Point a)}
+        \begin{equation}
+            \left[\nabla _{\mu}, \nabla _{\nu}\right] \phi = 0  \tag*{As $\left[\partial _{\mu}, \partial _{\nu}\right] \phi = 0$}
+        \end{equation}
+
+        L.H.S
+        \begin{equation}
+            \begin{split}
+                 &\left[\nabla _{\mu}\nabla_{\nu} - \nabla _{\nu}\nabla_{\mu}\right] \phi \\
+                 & = \nabla _{\mu}\nabla_{\nu}\phi - \nabla _{\nu}\nabla_{\mu} \phi \\ 
+                 & = \nabla _{\mu}(\partial_{\nu}\phi) - \nabla _{\nu}(\partial_{\mu} \phi) \\
+                 & = \partial _{\mu}(\partial_{\nu}\phi) - \Gamma ^{\lambda} _{\mu \nu} \phi - \nabla _{\nu}(\partial_{\mu} \phi) \Gamma ^{\lambda} _{\nu \mu} \phi\\
+                 & = \partial _{\mu}(\partial_{\nu}\phi) - \Gamma ^{\lambda} _{\mu \nu} \partial _{\lambda} \phi - \nabla _{\nu}(\partial_{\mu} \phi) + \Gamma ^{\lambda} _{\nu \mu} \partial _{\lambda} \phi\\
+                 & = \left(\Gamma ^{\lambda} _{\mu \nu} - \Gamma ^{\lambda} _{\nu \mu}\right) \partial _{\lambda} \phi \\ 
+                 & \equiv T^{\lambda} _{\mu \nu} \partial _{\lambda} \phi
+            \end{split}
+        \end{equation}
+
+
+\end{document}
