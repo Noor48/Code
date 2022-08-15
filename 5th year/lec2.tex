@@ -25,13 +25,15 @@
 
 \begin{document}
     
-    \section{Road to Curvature}
+    \section*{Road to Curvature}
         Recall the covariant derivative
         
         \begin{equation}
-            \begin{split}
-                \nabla _{\mu} V^{\nu} & \equiv \partial _{\mu}V^{\nu} + \Gamma ^{\nu}_{\mu \lambda}V^{\lambda} \\ 
+            \begin{split} 
                 \nabla _{\mu} \phi &\equiv \partial _{\mu} \phi \\
+                \downarrow \\
+                \nabla _{\mu} V^{\nu} & \equiv \partial _{\mu}V^{\nu} + \Gamma ^{\nu}_{\mu \lambda}V^{\lambda} \\ 
+                \downarrow \\
                 \nabla _{\mu} W_{\nu} &\equiv \partial _{\mu}W_{\nu} -  \Gamma ^{\lambda} _{\mu \nu} W_{\lambda}
             \end{split}
         \end{equation}
@@ -40,23 +42,167 @@
         (a) Torsion free\\
         (b) Metric compatible
 
-    \subsection*{Point a)}
+    \subsection*{Point a: Torsion Free)}
         \begin{equation}
             \left[\nabla _{\mu}, \nabla _{\nu}\right] \phi = 0  \tag*{As $\left[\partial _{\mu}, \partial _{\nu}\right] \phi = 0$}
         \end{equation}
 
-        L.H.S
+        L.H.S.=
         \begin{equation}
             \begin{split}
                  &\left[\nabla _{\mu}\nabla_{\nu} - \nabla _{\nu}\nabla_{\mu}\right] \phi \\
                  & = \nabla _{\mu}\nabla_{\nu}\phi - \nabla _{\nu}\nabla_{\mu} \phi \\ 
                  & = \nabla _{\mu}(\partial_{\nu}\phi) - \nabla _{\nu}(\partial_{\mu} \phi) \\
-                 & = \partial _{\mu}(\partial_{\nu}\phi) - \Gamma ^{\lambda} _{\mu \nu} \phi - \nabla _{\nu}(\partial_{\mu} \phi) \Gamma ^{\lambda} _{\nu \mu} \phi\\
+                 & = \partial _{\mu}(\partial_{\nu}\phi) - \Gamma ^{\lambda} _{\mu \nu} \phi - \nabla _{\nu}(\partial_{\mu} \phi) + \Gamma ^{\lambda} _{\nu \mu} \phi\\
                  & = \partial _{\mu}(\partial_{\nu}\phi) - \Gamma ^{\lambda} _{\mu \nu} \partial _{\lambda} \phi - \nabla _{\nu}(\partial_{\mu} \phi) + \Gamma ^{\lambda} _{\nu \mu} \partial _{\lambda} \phi\\
-                 & = \left(\Gamma ^{\lambda} _{\mu \nu} - \Gamma ^{\lambda} _{\nu \mu}\right) \partial _{\lambda} \phi \\ 
-                 & \equiv T^{\lambda} _{\mu \nu} \partial _{\lambda} \phi
+                 & = \left(\Gamma ^{\lambda} _{\nu \mu} - \Gamma ^{\lambda} _{\mu \nu}\right) \partial _{\lambda} \phi \\ 
+                 & = T^{\lambda} _{\mu \nu} \partial _{\lambda} \phi
             \end{split}
         \end{equation}
 
+        where 
+        \begin{equation}
+            T ^{\lambda} _{\mu \nu} \equiv \left(\Gamma ^{\lambda} _{\mu \nu} - \Gamma ^{\lambda} _{\nu \mu}\right)
+        \end{equation}
 
+        is the Torsion tensor.\\    
+        \\
+        For Einstein theory, this torsion is required to be zero.\\
+        $\therefore$ In GR, Thus $\Gamma^{\lambda}_{\mu \nu} = \Gamma^{\lambda}_{\nu \mu}$ is symmetric.
+
+    \subsection*{Point b: Metricity)}
+
+        \begin{equation}
+            \nabla _{\mu} g_{\nu \lambda} = 0 \tag*{(Why?)}
+        \end{equation}
+
+        Let 
+
+        \begin{equation}
+            g_{\mu \nu} U^{\mu} V^{\nu} = X
+        \end{equation}
+
+        \begin{equation}
+            \begin{split}
+                \nabla _{\lambda} X & = \nabla _{\lambda}(g_{\mu \nu} U^{\mu} V^{\nu}) \\ 
+                 & = (\nabla _{\lambda}g_{\mu \nu}) U^{\mu} V^{\nu} + g_{\mu \nu}\nabla_{\lambda}[U^{\mu}V^{\nu}]
+            \end{split}
+        \end{equation}
+
+        To have a uniform rule for $g_{\mu \nu}$, it is consistant to have 
+
+        \begin{equation}
+            \nabla _{\lambda}g_{\mu \nu} = 0
+        \end{equation}
+
+        Consequence of a) +b) is that \\
+        $\Gamma$ is completely determined by $g_{\mu \nu}$ (rather it's derivative)
+
+        \subsection*{Comment:}
+        Unlike GR there is no analog of metricity condition in Yang-Mills's gauge theories.\\
+        Now, metriciry implies 
+
+
+            \begin{align}
+            \nabla _{\mu} g_{\nu \lambda} & = \partial_{\mu}g_{\nu \lambda} - \Gamma ^{k}_{\mu \nu}g_{k \lambda} - \Gamma ^{k}_{\mu \lambda}g_{\nu k} = 0 \\ 
+            \nabla _{\nu} g_{\lambda \mu} & = \partial_{\nu}g_{\lambda \mu} - \Gamma ^{k}_{\nu \lambda}g_{k \mu} - \Gamma ^{k}_{\nu \mu}g_{\lambda k} = 0 \\ 
+            \nabla _{\lambda} g_{\mu \nu} & = \partial_{\lambda}g_{\mu \nu} - \Gamma ^{k}_{\lambda \mu}g_{k \nu} - \Gamma ^{k}_{\lambda \nu}g_{\mu k} = 0
+            \end{align}
+
+        (7)+(8)-(9)
+
+        \begin{equation}
+            \begin{split}
+                0 = (\partial _{\mu}g_{\nu \lambda}  &+ \partial_{\nu}g_{\lambda \mu} - \partial_{\lambda}g_{\mu \nu}) - (\Gamma ^{k} _{\mu \nu} + \Gamma ^{k} _{\nu \mu}) g_{\lambda k} \\
+                 & g_{k \nu}(\Gamma ^{k} _{\mu \lambda} - \Gamma ^{k} _{\lambda \mu}) + g_{\mu k}(\Gamma ^{k} _{\lambda \nu} - \Gamma ^{k} _{\nu \lambda}) 
+            \end{split}
+        \end{equation}
+
+        If the torsion free condition is imposed third and fourth term will be zero.$\left(i.e. \ \  \Gamma ^{\lambda}_{\mu \nu}=\Gamma^{\lambda} _{\nu \mu}\Leftrightarrow T^{\lambda} _{\mu \nu} = 0\right)$ \\ 
+        \\
+        Then this equation simplifies to : 
+
+        \begin{equation}
+            \begin{split}
+                0 & = \left(\partial_{\mu} g_{\nu \lambda} + \partial_{\nu}g_{\mu \lambda} - \partial_{\lambda}g_{\mu \nu}\right) - 2 \Gamma^{k}_{\mu \nu}g_{\lambda k} \\ 
+                \Gamma^{k}_{\mu \nu}g_{\lambda k} & = \frac{1}{2}\left(\partial_{\mu} g_{\nu \lambda} + \partial_{\nu}g_{\mu \lambda} - \partial_{\lambda}g_{\mu \nu}\right) \\
+                g^{\lambda \rho} g_{\lambda k}\Gamma^{k}_{\mu \nu}  & = \frac{1}{2}g^{\lambda \rho}\left(\partial_{\mu} g_{\nu \lambda} + \partial_{\nu}g_{\mu \lambda} - \partial_{\lambda}g_{\mu \nu}\right) \\
+                \delta ^{\rho} _{k} \Gamma ^{k} _{\mu \nu} & = \frac{1}{2}g^{\lambda \rho}\left(\partial_{\mu} g_{\nu \lambda} + \partial_{\nu}g_{\mu \lambda} - \partial_{\lambda}g_{\mu \nu}\right) \\
+                \Gamma ^{\rho} _{\mu \nu} & = \frac{1}{2} g ^{\lambda \rho}\left(\partial_{\mu} g_{\nu \lambda} + \partial_{\nu}g_{\mu \lambda} - \partial_{\lambda}g_{\mu \nu}\right) 
+            \end{split}
+        \end{equation}
+            
+    \subsection*{Covariant Divergence}
+
+        \begin{equation}
+            \nabla _{\mu} V^{\mu} \equiv \partial _{\mu} V^{\mu} + \Gamma ^{\mu} _{\mu \rho} V^{\rho}
+        \end{equation}
+
+        Now 
+        \begin{equation}
+            \begin{split}
+            \Gamma ^{\mu} _{\mu \rho} & = \frac{1}{2} g^{\mu \lambda}(\partial _{\mu}g_{\lambda \rho} + \partial _{\rho}g_{\lambda \mu} - \partial_{\lambda}g_{\mu \rho}) \\ 
+             & = \frac{1}{2} g^{\mu \lambda} \partial _{\rho}g_{\lambda \rho} \\ 
+             & = \frac{1}{2} Tr (g ^{-1} \partial _{\rho}g)
+            \end{split}
+        \end{equation}
+
+        Recall for any non-singular finite matrix 
+
+        \begin{equation}
+            \begin{split}
+                ln(det \ A) & = Tr (ln \ A) \\ 
+                if \ \ \  A & = S \Lambda S ^{-1} \\ 
+                f(A) & = S f(\Lambda) S ^{-1} \\ 
+                ln f(A) & = S f(\Lambda) S ^{-1}\\ 
+                ln (det \ g) & = Tr (ln \ g) \\ 
+                \partial_{\rho} ln (det \ g) & = Tr (\partial_{\rho} ln \ g) \\ 
+                \partial_{\rho} ln (det \ g) & = Tr ( g ^{-1} ln \ g) 
+            \end{split}
+        \end{equation}
+
+        \begin{equation}
+            \begin{split}
+                \Gamma ^{\mu} _{\mu \rho} & = \frac{1}{2} Tr (g ^{-1} \partial _{\rho}g) \\
+                 & = \frac{1}{2} \partial _{\rho} ln  ( det \ g) \\ 
+                 & = \partial _{\rho} ln  \sqrt{( det \ g)}  \\
+                 & = \partial _{\rho} ln  \sqrt{g}  \\
+                 & = \frac{1}{\sqrt{g}} \partial _{\rho}\sqrt{g}
+            \end{split}
+        \end{equation}
+
+        \begin{equation}
+            \begin{split}
+             \therefore \nabla _{\mu} V^{\mu} = \partial _{\mu} V^{\mu} + \frac{1}{\sqrt{g}} \partial _{\rho}\sqrt{g} \\ 
+             \boxed{\nabla _{\mu} V^{\mu} = \frac{1}{\sqrt{g}} \partial _{\rho}\left(\sqrt{g} V^{\mu}\right)}
+            \end{split}
+        \end{equation}
+
+        Recall : 
+        
+        \begin{equation}
+            \begin{split}
+                g_{\mu \nu} \longrightarrow g^{'} _{\mu \nu}  & = \frac{\partial x^{a}}{\partial x^{' \mu}}\frac{\partial x^{b}}{\partial x^{' \nu}} g_{ab} \\ 
+                 & = \frac{\partial x^{a}}{\partial x^{' \mu}}g_{ab}\frac{\partial x^{b}}{\partial x^{' \nu}} \\ 
+                 & = MgM^{T}\\
+                \implies det  \ g^{'} & = \left(det \ M\right) ^{2} det \ g \\
+                Under \ \  X \longrightarrow X^{'} \\
+                g & \implies  g^{'} = \left(det \ M\right)^{2}g  \\
+                \sqrt{g^{'}} &= \left(det M\right) \sqrt(g) 
+            \end{split}
+        \end{equation}
+
+        Jacobi teaches us : $ x \rightarrow x^{'}$
+
+        \begin{equation}
+            d^{D}x \rightarrow d^{D}x^{'} = \left\lVert \frac{\partial x^{'}}{\partial x}\right\rVert d^{D}x = (det \ M) ^{-1} d^{D}x 
+        \end{equation}
+    
+        Hence, $\sqrt{g} \ d^{D}x$ is invariant.
+
+        We are thus immidiately led to the covarinat form of the Gauss's theorem.
+
+        \begin{equation}
+            \int_{}^{}  \,d^{D}x \sqrt{g}\frac{1}{\sqrt{g}}\partial _{\mu} \left(\sqrt{g} \ V^{\mu}\right) = \int d \Sigma _{\mu} V^{\mu} \sqrt{g} 
+        \end{equation}
 \end{document}
