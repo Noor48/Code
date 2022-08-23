@@ -22,7 +22,7 @@ double S(double x)
     return 0.5*pow(x,2);
 }
 
-double hamil(double x, double p)
+double ham(double x, double p)
 {
     double H = S(x) + 0.5*pow(p,2);
     return H;
@@ -39,7 +39,7 @@ double molecular(double& x, double& hi, double& hf)
     Box(r1,r2);
     p = r1;
 
-    hi = hamil(x,p);
+    hi = ham(x,p);
 
     x += 0.5*p*dt;
     
@@ -52,7 +52,7 @@ double molecular(double& x, double& hi, double& hf)
     p -= dh(x)*dt;
     x += 0.5*p*dt;
 
-    hf = hamil(x,p);
+    hf = ham(x,p);
 
     return 0;
 }
@@ -65,12 +65,14 @@ int main()
     double hi, hf, x0, x, n=10E5, r, c, sum2=0;
 
     x = 0;
-    r = (double)rand()/(double)RAND_MAX;
+    
 
     for(int i=0; i<n; i++)
     {
         x0 = x;
 
+        r = (double)rand()/(double)RAND_MAX;
+        
         molecular(x,hi,hf);
         if(exp(hi-hf)>r)
         {
