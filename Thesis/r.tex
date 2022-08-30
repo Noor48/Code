@@ -1,0 +1,32 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{braket}
+\usepackage{graphics}
+\usepackage{grffile}
+\usepackage[export]{adjustbox}
+\usepackage{svg}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{setspace}
+
+\begin{document}
+    \section*{AIMD Simulation Method}
+    AIMD simulations that make use of the Vienna ab initio simulation package's implementation of the density functional theory based on plane waves. It was cut 
+    off at 400 eV for the plane-wave basis set. The projected augmented-wave approach was used to represent the electron-ion interaction.
+    These simulation method is divided into 2 steps. Fisrt one is Standard relaxation. And second one is Molecular dynamics. \\ 
+     \\ 
+    For Standard relaxation we prepare the cell of a selected material using VESTA(visualization for electronic structural analysis)
+    The Nose-Hoover Thermostat
+    was used in the NVT ensemble to regulate temperature during all of the dynamic simulations. Verlet's approach was used to integrate Newton's equation of motion 
+    in the velocity domain with a time step of 3 fs and a total of 600 time steps. In simulations, every material was employed in a cubic cell containing 100 atoms. 
+    The supercell Brillioun zone was thought to be sampled via gamma point sampling. For a seamless refining of the structure, we first loosened the structures. To 
+    attain thermal equilibrium, the liquid samples of the chosen materials were first prepared at 2000K, which is much higher than their melting points. 200 steps of
+    MD were user to extract quantities for pair correlation function.
+\end{document}
