@@ -13,7 +13,7 @@ int main()
     complex <double> B[5][5] = {0};
     
     double p,q;
-
+    complex <double> sum=0, sum2=0;
     //Generating hermitian matrix
     for(int i=0; i<4; i++)
     {
@@ -34,6 +34,25 @@ int main()
         A[i][i] = p;
     }
 
+
+    for(int i=0; i<5; i++)
+    {
+        for(int j=0; j<5; j++)
+        {
+            for(int k=0; k<5; k++)
+            {
+                B[i][j] = A[i][k]*A[k][j];
+            }
+        }
+    }
+
+    //trace of A,  B=A^2
+    for(int i=0; i<5; i++)
+    {
+        sum += A[i][i];
+        sum2 += B[i][i];
+    }
+    
     // Output of the matrix
     for(int i=0; i<5; i++)
     {
@@ -51,6 +70,9 @@ int main()
         }
         cout << endl;
     }
+    
 
+    cout << sum << endl;
+    cout << sum2 << endl;
     return 0;
 }
