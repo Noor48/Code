@@ -45,12 +45,12 @@ int main()
         }
     }
 
-    for(int i=; i<5; i++)
+    for(int i=0; i<5; i++)
     {
         for(int j=0; j<5; j++)
         {
             Box(x,y);
-
+            B[i][j] = complex(p,q);
         }
     }
 }
