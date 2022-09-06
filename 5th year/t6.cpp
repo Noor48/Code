@@ -19,7 +19,7 @@ double Box(double& x, double& y)
     return 0;
 }
 
-double phi(double x)
+double phi(complex <double> A[5][5],complex <double> A2[5][5],complex <double> A3[5][5],complex <double> A4[5][5])
 {
     complex <double> A[5][5] ={0};
     complex <double> A2[5][5] = {0};
@@ -34,15 +34,26 @@ double phi(double x)
         {
             p = (double)rand()/(double)RAND_MAX;
             q = (double)rand()/(double)RAND_MAX;
-            A[i][j] = ;
+            A[i][j] = complex(p,q);
+            A[j][i] = complex(p,-q);
         }
     }
+
+    for(int i=0; i<5; i+=1)
+    {   
+        p = (double)rand()/(double)RAND_MAX;
+        A[i][i] = p;
+    }
+    
     
     for(int i=0; i<5; i+=1)
     {
         for(int j=0; j<5; j+=1)
         {
-            A2[i][j] = A[i][k]*A[k][j];
+            for(int k=0; k<5; k++)
+            {
+                A2[i][j] = A[i][k]*A[k][j];
+            }
         }
     }
 
@@ -50,6 +61,7 @@ double phi(double x)
     {
         for(int j=0; j<5; j+=1)
         {
+            for(int )
             A3[i][j] = A2[i][k]*A[k][j];
         }
     }
