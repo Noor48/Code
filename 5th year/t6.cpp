@@ -21,11 +21,7 @@ double Box(double& x, double& y)
 
 double phi(complex <double> A[5][5],complex <double> A2[5][5],complex <double> A3[5][5],complex <double> A4[5][5])
 {
-    complex <double> A[5][5] ={0};
-    complex <double> A2[5][5] = {0};
-    complex <double> A3[5][5] = {0};
-    complex <double> A4[5][5] = {0};
-    
+
     double r1,r2,p,q;
     Box(r1.r2);
     for(int i=0; i<5-1; i+=1)
@@ -61,8 +57,10 @@ double phi(complex <double> A[5][5],complex <double> A2[5][5],complex <double> A
     {
         for(int j=0; j<5; j+=1)
         {
-            for(int )
-            A3[i][j] = A2[i][k]*A[k][j];
+            for(int k=0; k<5; k+=1)
+            {
+                A3[i][j] = A2[i][k]*A[k][j];
+            }
         }
     }
     
@@ -70,7 +68,10 @@ double phi(complex <double> A[5][5],complex <double> A2[5][5],complex <double> A
     {
         for(int j=0; j<5; j+=1)
         {
-            A4[i][j] = A3[i][k]*A[k][j];
+            for(int k=0; k<5; k+=1)
+            {
+                A4[i][j] = A3[i][k]*A[k][j];
+            }
         }
     }
     
