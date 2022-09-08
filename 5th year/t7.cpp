@@ -6,15 +6,51 @@
 #include<complex>
 using namespace std;
 
-int main()
+tuple <complex <double>> phi;
+double Box(double& x, double& y)
 {
-    srand(time(NULL));
-    double p,q,a,b;
+    double p, q;
 
     p = (double)rand()/(double)RAND_MAX;
     q = (double)rand()/(double)RAND_MAX;
-    
-    a = sqrt(-2*log(p))*sin(2*M_PI*q);
-    b = sqrt(-2*log(p))*cos(2*M_PI*q);
-    
+
+    x = sqrt(-2*log(p))*sin(2*M_PI*q);
+    y = sqrt(-2*log(p))*cos(2*M_PI*q);
+
+    return 0;
+}
+
+double S(double x)
+{
+    return 0.5*pow(x,2);
+}
+double H(double x, double p)
+{
+    return 0.5*pow(p,2) + S(x);
+}
+
+double dh(double x)
+{
+    return x;
+}
+double molecular(double& x, double& hi, double& hf)
+{
+    double p, r1,r2,nt=40,dt=1;
+    Box(r1,r2);
+    p=r1;
+
+    hi = H(x,p);
+
+    x += 0.5*p*dt;
+
+    for(int i=0; i<nt; i+=1)
+    {
+        p -= dh(x)*dt;
+        x += p*dt;
+    }
+
+    p -= dh(x)*dt;
+    x += 0.5*p*dt;
+
+    return 0;
 }
