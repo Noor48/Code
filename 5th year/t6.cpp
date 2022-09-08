@@ -4,6 +4,7 @@
 #include<fstream>
 #include<ctime>
 #include<complex>
+#include<tuple>
 using namespace std;
 
 double Box(double& x, double& y)
@@ -19,11 +20,11 @@ double Box(double& x, double& y)
     return 0;
 }
 
-double phi(complex <double> A[5][5],complex <double> A2[5][5],complex <double> A3[5][5],complex <double> A4[5][5])
+//tuple <complex <double>, complex <double>, complex <double>, complex <double>> geek
+/*double phi (const complex <double>  &A[5][5],complex <double>  &A2[5][5],complex  <double> &A3[5][5],complex <double>  &A4[5][5])
 {
-
     double r1,r2,p,q;
-    Box(r1.r2);
+    Box(r1,r2);
     for(int i=0; i<5-1; i+=1)
     {
         for(int j=i+1; j<5; j+=1)
@@ -77,13 +78,82 @@ double phi(complex <double> A[5][5],complex <double> A2[5][5],complex <double> A
     
     return 0;
 }
+*/
 
-double S(double x)
+complex <double> S(double x)
 {
-    return 0.5*pow(x,2);
+    complex <double> A[5][5];
+    complex <double> A2[5][5];
+    complex <double> A3[5][5];
+    complex <double> A4[5][5];
+    
+    complex <double> sum=0,sum2=0;
+    double p,q;
+    for(int i=0; i<5-1; i+=1)
+    {
+        for(int j=i+1; j<5; j+=1)
+        {
+            p = (double)rand()/(double)RAND_MAX;
+            q = (double)rand()/(double)RAND_MAX;
+            A[i][j] = complex(p,q);
+            A[j][i] = complex(p,-q);
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {   
+        p = (double)rand()/(double)RAND_MAX;
+        A[i][i] = p;
+    }
+    
+    
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k++)
+            {
+                A2[i][j] = A[i][k]*A[k][j];
+            }
+        }
+    }
+    
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                A3[i][j] = A2[i][k]*A[k][j];
+            }
+        }
+    }
+    
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                A4[i][j] = A3[i][k]*A[k][j];
+            }
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        sum += A2[i][i];
+    }
+    
+    for(int i=0; i<5; i+=1)
+    {
+        sum2 += A4[i][i];
+    }
+    
+    return 0.5*(0.5*sum+0.25*sum2);
 }
 
-double H(double x, double p)
+complex <double> H(double x, double p)
 {
     return 0.5*pow(p,2) + S(x);
 }

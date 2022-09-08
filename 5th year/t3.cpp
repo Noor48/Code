@@ -62,7 +62,7 @@ int main()
     srand(unsigned(time(NULL)));
     ofstream fout("t3.dat");
 
-    double hi, hf, x0, x, n=10E5, r, c, sum2=0;
+    double hi, hf, x0, x, n=10E5, r, c, sum=0,sum2=0;
 
     x = 0;
     
@@ -83,10 +83,10 @@ int main()
         {
             x = x0;
         }
-
+        sum += x;
         sum2 += pow(x,2);
 
-        fout << i << "  "  << sum2/i << "  " << c/i << endl;
+        fout << i << "  "  << sum/i << "  "<<  sum2/i << "  " << c/i << endl;
     }
 
     return 0;
