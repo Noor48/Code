@@ -50,7 +50,15 @@ int main()
     {
         for(int j=0; j<5; j+=1)
         {
-            cout << A[i][j] << "  ";
+            if(j==i)
+            {
+                cout << noshowpos << A[i][i].real() << "  ";
+            }
+
+            else
+            {
+                cout << noshowpos << A[i][j].real() << showpos << A[i][j].imag() << "i" << "  ";
+            }
         }
 
         cout << endl;
