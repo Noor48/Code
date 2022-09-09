@@ -1,165 +1,61 @@
 #include<iostream>
 #include<cmath>
-#include<cstdlib>
 #include<fstream>
-#include<ctime>
+#include<cstdlib>
 #include<complex>
-#include<tuple>
+#include<ctime>
 using namespace std;
 
-double Box(double& x, double& y)
+double Box(double& p, double& q)
 {
-    double p,q;
+    double r,s;
+
+    r = (double)rand()/(double)RAND_MAX;
+    s = (double)rand()/(double)RAND_MAX;
     
-    p = (double)rand()/(double)RAND_MAX;
-    q = (double)rand()/(double)RAND_MAX;
+    p = sqrt(-2*log(r))*sin(2*M_PI*s);
+    q = sqrt(-2*log(r))*sin(2*M_PI*s);
     
-    x = sqrt(-2*log(p))*sin(2*M_PI*q);
-    y = sqrt(-2*log(p))*cos(2*M_PI*q);
-    
-    return 0;
-}
-
-
-void phi(complex <double>& sum,complex <double>& sum2,complex <double> & sum3,complex <double> & sum4)
-{
-    double r1,r2,p,q;
-    Box(r1,r2);
-
-    complex <double> A[5][5] = {0};
-    complex <double> A2[5][5] = {0};
-    complex <double> A3[5][5] = {0};
-    complex <double> A4[5][5] = {0};
-    
-    for(int i=0; i<5-1; i+=1)
-    {
-        for(int j=i+1; j<5; j+=1)
-        {
-            p = (double)rand()/(double)RAND_MAX;
-            q = (double)rand()/(double)RAND_MAX;
-            A[i][j] = complex(p,q);
-            A[j][i] = complex(p,-q);
-        }
-    }
-
-    for(int i=0; i<5; i+=1)
-    {   
-        p = (double)rand()/(double)RAND_MAX;
-        A[i][i] = p;
-    }
-    
-    
-    for(int i=0; i<5; i+=1)
-    {
-        for(int j=0; j<5; j+=1)
-        {
-            for(int k=0; k<5; k++)
-            {
-                A2[i][j] = A[i][k]*A[k][j];
-            }
-        }
-    }
-
-    for(int i=0; i<5; i+=1)
-    {
-        for(int j=0; j<5; j+=1)
-        {
-            for(int k=0; k<5; k+=1)
-            {
-                A3[i][j] = A2[i][k]*A[k][j];
-            }
-        }
-    }
-    
-    for(int i=0; i<5; i+=1)
-    {
-        for(int j=0; j<5; j+=1)
-        {
-            for(int k=0; k<5; k+=1)
-            {
-                A4[i][j] = A3[i][k]*A[k][j];
-            }
-        }
-    }
-
-    for(int i=0; i<5; i+=1)
-    {
-        sum += A[i][i];
-    }
-    
-}
-
-complex <double> S(complex <double> x)
-{
-    return 0.5*pow(x,2);
-}
-
-complex <double> H(complex <double> x,complex <double> p)
-{
-    return 0.5*pow(p,2) + S(x);
-}
-
-complex <double> dh(complex <double> x)
-{
-    return x;
-}
-
-complex <double> Molecular(complex <double>& x, complex <double>& hi,complex <double>& hf)
-{
-    double r1, r2, nt=40, dt=1;
-    Box(r1,r2);
-
-    complex <double> p = r1;
-
-    hi = H(x,p);
-    
-    x += 0.5*p*dt;
-
-    for(int i=1; i<nt; i+=1)
-    {
-        p -= dh(x)*dt;
-        x += p*dt;
-    }
-
-    p -= dh(x)*dt;
-    x += 0.5*p*dt;
-
-    hf = H(x,p);
-
     return 0;
 }
 
 int main()
 {
-    srand(time(NULL));
+    double r1,r2,x,p,q; 
+    complex <double> A[5][5] = {0};
+    complex <double> A2[5][5] = {0};
+    complex <double> A3[5][5] = {0};
+    complex <double> A4[5][5] = {0};
 
-    ofstream fout("t6.dat");
-
-    double x0, x, hi, hf,c=0, r, n=10E5, sum=0, sum2=0;
-
-    x=0;
-
-    for(int i=0; i<=n; i+=1)
+    for(int i=0; i<5-1; i+=1)
     {
-        x0 = x;
-        Molecular(x, hi, hf);
-        r = (double)rand()/(double)RAND_MAX;
-        
-        if(exp(hi-hf)>r)
+        for(int j=i+1; j<5; j+=1)
+        {   
+            Box(r1,r2);
+            p=r1;
+            q=r2;
+            A[i][j] = complex(p/sqrt(2),q/sqrt(2));
+            A[j][i] = complex(p/sqrt(2),-q/sqrt(2));
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        Box(r1,r2);
+        p=r1;
+        A[i][i] = p;
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
         {
-            c+=1;
+            cout << A[i][j] << "  ";
         }
 
-        else
-        {
-            x = x0;
-        }
-
-        sum += x;
-        sum2 += pow(x,2);
-
-        fout << i << "  " << sum/i << "  " << sum2/i << "  " << c/i << endl;
+        cout << endl;
     }
 
     return 0;
 }
+
