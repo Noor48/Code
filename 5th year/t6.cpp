@@ -21,7 +21,7 @@ double Box(double& p, double& q)
 
 int main()
 {
-    double r1,r2,x,p,q; 
+    double r1,r2,x,p,q,sum=0,sum2=0, S; 
     complex <double> A[5][5] = {0};
     complex <double> A2[5][5] = {0};
     complex <double> A3[5][5] = {0};
@@ -45,6 +45,53 @@ int main()
         p=r1;
         A[i][i] = p;
     }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                A2[i][j] += A[i][k]*A[k][j];
+            }
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                A3[i][j] += A2[i][k]*A[k][j];
+            }
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                A4[i][j] += A3[i][k]*A[k][j];
+            }
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        sum += A2[i][i].real();
+    }
+    
+    for(int i=0; i<5; i+=1)
+    {
+        sum2 += A4[i][i].real();
+    }
+    
+    S = 5*(0.5*sum + 0.25*sum2);
+
+    cout << S << endl;
 
     for(int i=0; i<5; i+=1)
     {
