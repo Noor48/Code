@@ -19,19 +19,14 @@ double Box(double& p, double& q)
     return 0;
 }
 
-int main()
+double phi(complex <double> A[5][5])
 {
     double r1,r2,x,p,q,sum=0,sum2=0, S; 
-    complex <double> A[5][5] = {0};
+    //complex <double> A[5][5] = {0};
     complex <double> A2[5][5] = {0};
     complex <double> A3[5][5] = {0};
     complex <double> A4[5][5] = {0};
-
-    complex <double> B[5][5] = {0};
-    complex <double> B2[5][5] = {0};
-    complex <double> B3[5][5] = {0};
-    complex <double> B4[5][5] = {0};
-
+    /*
     for(int i=0; i<5-1; i+=1)
     {
         for(int j=i+1; j<5; j+=1)
@@ -50,7 +45,7 @@ int main()
         p=r1;
         A[i][i] = p;
     }
-
+    */
     for(int i=0; i<5; i+=1)
     {
         for(int j=0; j<5; j+=1)
@@ -115,14 +110,81 @@ int main()
         cout << endl;
     }
 
+    return S;
+}
+
+double force()
+{
+    double r1,r2,p,q,sum=0, sum2=0,P;
+    complex <double> B[5][5] = {0};
+    complex <double> B2[5][5] = {0};
+    complex <double> B3[5][5] = {0};
+    complex <double> B4[5][5] = {0};
+
     for(int i=0; i<5-1; i+=1)
     {
         for(int j=i+1; j<5; j+=1)
         {
-
+            Box(r1,r2);
+            p=r1;
+            q=r2;
+            B[i][j] = complex(p/sqrt(2),q/sqrt(2));
+            B[j][i] = complex(p/sqrt(2),-q/sqrt(2)); 
         }
     }
 
-    return 0;
+    for(int i=0; i<5; i+=1)
+    {
+        Box(r1,r2);
+        p=r1;
+        B[i][i] = p; 
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                B2[5][5] += B[i][k]*B[k][j];
+            }
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                B3[5][5] += B2[i][k]*B[k][j];
+            }
+        }
+    }
+    
+    for(int i=0; i<5; i+=1)
+    {
+        sum += B[i][i].real();
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        sum2 += B3[i][i].real();
+    }
+
+    P = 0.5*sum;
+    return P;
 }
 
+double H(complex <double> A[5][5], complex <double> B[5][5])
+{
+    phi(A);
+
+    return 0;
+} 
+int main()
+{
+    complex <double> A[5][5] = {0};
+    phi(A);
+    return 0;
+}
