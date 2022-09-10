@@ -27,6 +27,11 @@ int main()
     complex <double> A3[5][5] = {0};
     complex <double> A4[5][5] = {0};
 
+    complex <double> B[5][5] = {0};
+    complex <double> B2[5][5] = {0};
+    complex <double> B3[5][5] = {0};
+    complex <double> B4[5][5] = {0};
+
     for(int i=0; i<5-1; i+=1)
     {
         for(int j=i+1; j<5; j+=1)
@@ -107,8 +112,15 @@ int main()
                 cout << noshowpos << A[i][j].real() << showpos << A[i][j].imag() << "i" << "  ";
             }
         }
-
         cout << endl;
+    }
+
+    for(int i=0; i<5-1; i+=1)
+    {
+        for(int j=i+1; j<5; j+=1)
+        {
+
+        }
     }
 
     return 0;
