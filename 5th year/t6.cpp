@@ -91,6 +91,7 @@ double phi(complex <double> A[5][5])
     
     S = 5*(0.5*sum + 0.25*sum2);
 
+/*
     cout << S << endl;
 
     for(int i=0; i<5; i+=1)
@@ -109,13 +110,40 @@ double phi(complex <double> A[5][5])
         }
         cout << endl;
     }
-
+*/
     return S;
 }
 
-double dh(complex <double> (&dh)[5][5], complex <double> phi[5][5])
+double delh(complex <double> (&dh)[5][5], complex <double> phi[5][5])
 {
-    
+    double r1,r2,p,q,sum=0, sum2=0;
+
+    complex <double> phi2[5][5] = {0}, phi3[5][5] = {0};
+
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                phi2[i][j] += phi[i][k]*phi[k][j];
+            }
+        }
+    }
+
+    for(int i=0; i<5; i+=1)
+    {
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                dh[i][j] += phi2[i][k]*phi[k][j];
+            }
+        }
+    }
+
+    return 0;
 }
 
 double P_phi(complex <double> B[5][5])
@@ -152,8 +180,8 @@ double H(complex <double> A[5][5], complex <double> B[5][5])
 
 double molecular(complex <double> (&phi)[5][5],double& hi, double& hf)
 {
-    double r1,r2,p,q,nt=40,dt=1, sum=0;
-    complex <double> P[5][5] = {0};
+    double r1,r2,p,q,nt=40, sum=0;
+    complex <double> P[5][5] = {0}, dt=1, dh[5][5];
 
     for(int i=0; i<5-1; i+=1)
     {
@@ -161,7 +189,7 @@ double molecular(complex <double> (&phi)[5][5],double& hi, double& hf)
         {   
             Box(r1,r2);
             p=r1;
-            q=r2
+            q=r2;
             P[i][j] = complex(p/sqrt(2),q/sqrt(2));
             P[j][i] = complex(p/sqrt(2),-q/sqrt(2));
         }
@@ -184,20 +212,75 @@ double molecular(complex <double> (&phi)[5][5],double& hi, double& hf)
         }
     }
 
+    
     for(int i=1; i<=nt; i+=1)
+    { 
+        delh(dh,phi);
+        for(int j=0; j<5; j+=1)
+        {
+            for(int k=0; k<5; k+=1)
+            {
+                P[j][k] -= dh[j][k]*dt;
+                phi[j][k] += P[j][k]*dt;
+            }
+        }
+
+    }
+
+    delh(dh,phi);
+    for(int j=0; j<5; j+=1)
+    {
+        for(int k=0; k<5; k+=1)
+        {
+            P[j][k] -= dh[j][k]*dt;
+            phi[j][k] += 0.5*P[j][k]*dt;
+        }
+    }
+
+    hf = H(phi,P);
+
+    return 0;
+}
+int main()
+{
+    srand(time(NULL));
+    ofstream fout("t6.dat");
+    double hi,hf,sum=0,sum2=0, r,c=0;
+    complex <double> A[5][5] = {0}, A0[5][5];
+    phi(A);
+ 
+    for(int i=0; i<10E3; i+=1)
     {
         for(int j=0; j<5; j+=1)
         {
             for(int k=0; k<5; k+=1)
             {
-                P[i][j] -= force
+                A0[j][k] = A[j][k];
             }
         }
+
+        molecular(A,hi,hf);
+        r=(double)rand()/(double)RAND_MAX;
+        if(exp(hi-hf)>r)
+        {
+            c+=1;
+        }
+
+        else
+        {
+            for(int j=0; j<5; j+=1)
+            {
+                for(int k=0; k<5; k+=1)
+                {
+                    A[j][k] = A0[j][k];
+                }
+            }
+        }
+
+        sum += phi(A);
+
+        fout << i << "  " << sum/i << "  " << endl; 
     }
-}
-int main()
-{
-    complex <double> A[5][5] = {0};
-    phi(A);
+
     return 0;
 }
