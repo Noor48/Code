@@ -188,9 +188,9 @@ double H(complex <double> A[10][10], complex <double> B[10][10])
     return phi(A) + P_phi(B);
 } 
 
-double molecular(complex <double> (&phi)[10][10],double& hi, double& hf)
+double molecular(complex <double> (&phi)[10][10],double& hi, double& hf, double nt)
 {
-    double r1,r2,p,q,nt=10, sum=0;
+    double r1,r2,p,q, sum=0;
     complex <double> P[10][10] = {0}, dt=0.01, dh[10][10];
 
     for(int i=0; i<10-1; i+=1)
@@ -223,7 +223,7 @@ double molecular(complex <double> (&phi)[10][10],double& hi, double& hf)
     }
 
     
-    for(int i=1; i<=nt; i+=1)
+    for(int i=1; i<nt-1; i+=1)
     { 
         delh(dh,phi);
         for(int j=0; j<10; j+=1)
@@ -258,39 +258,63 @@ int main()
     double hi,hf,sum=0,sum2=0, r,c=0;
     complex <double> A[10][10] = {0}, A0[10][10] = {0};
     phi(A);
- 
-    for(int i=0; i<10E4; i+=1)
+    double C[10000][8]= {0};
+    for(double nt=4; nt<=10; nt+=2)
     {
-        for(int j=0; j<10; j+=1)
-        {
-            for(int k=0; k<10; k+=1)
-            {
-                A0[j][k] = A[j][k];
-            }
-        }
-
-        molecular(A,hi,hf);
-        r=(double)rand()/(double)RAND_MAX;
-        if(exp(hi-hf)>r)
-        {
-            c+=1;
-        }
-
-        else
+        for(int i=1; i<10000; i+=1)
         {
             for(int j=0; j<10; j+=1)
             {
                 for(int k=0; k<10; k+=1)
                 {
-                    A[j][k] = A0[j][k];
+                    A0[j][k] = A[j][k];
                 }
+            }
+
+            molecular(A,hi,hf,nt);
+            r=(double)rand()/(double)RAND_MAX;
+            if(exp(hi-hf)>r)
+            {
+                c+=1;
+            }
+
+            else
+            {
+                for(int j=0; j<10; j+=1)
+                {
+                    for(int k=0; k<10; k+=1)
+                    {
+                        A[j][k] = A0[j][k];
+                    }
+                }
+            }
+
+            sum += phi(A);
+            
+            C[i][((int)nt-4)] =  nt*i;
+            C[i][((int)nt-4)+1] = (double)sum/(double)i/(double)100;
+           // fout << i << "  " << (double)sum/(double)i/(double)100 << "  " << endl; 
+        }
+        
+        for(int i=0; i<10; i+=1)
+        {
+            for(int j=0; j<10; j+=1)
+            {
+                A[i][j] = 0;
             }
         }
 
-        sum += phi(A);
-
-        fout << i << "  " << (double)sum/(double)i/(double)100 << "  " << endl; 
+        sum = 0;
     }
-
+    
+    for(int i=1; i<10000; i+=1)
+    {
+        for(int j=0; j<8; j+=1)
+        {
+            fout << C[i][j] << "  ";
+        }
+        fout << endl;
+    }
+    
     return 0;
 }
