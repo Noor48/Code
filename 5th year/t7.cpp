@@ -20,7 +20,7 @@ double Box(double& x, double& y)
     return 0;
 }
 
-double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<double> (&A3)[n][n], complex<double> (&A4)[n][n], double s, double s2, double s3, double s4)
+double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<double> (&A3)[n][n], complex<double> (&A4)[n][n], double& s, double& s2, double& s3, double& s4)
 {
     s=0, s2=0, s3=0, s4=0;
 
@@ -128,7 +128,7 @@ double hamiltonian(complex<double> A[n][n], complex<double> B[n][n])
     return action(A) + momentum(B);
 }
 
-double molecular(complex<double> (&phi)[n][n], double& hi, double& hf, double& nt)
+double molecular(complex<double> (&phi)[n][n], double& hi, double& hf, double nt)
 {
     double p, q, r1, r2; 
 
@@ -200,6 +200,8 @@ int main()
         for(int j=0; j<n; j+=1)
         {
             A[i][j] = 0;
+            A0[i][j] = 0;
+            
         }
     }
     action(A);
@@ -231,14 +233,14 @@ int main()
                 {
                     for(int k=0; k<n; k+=1)
                     {
-                        A[j][k] = A[j][k];
+                        A[j][k] = A0[j][k];
                     }
                 }
             }
 
             s += action(A);
-            C[i][((int)nt-4)] = i;
-            C[i][((int)nt-4)+1] = s;
+            C[i][((int)nt-4)] = nt*i;
+            C[i][((int)nt-4)+1] = (double)s/(double)(i*n*n);
         }
 
         s = 0;
