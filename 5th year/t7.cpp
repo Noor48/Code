@@ -83,28 +83,28 @@ double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<doub
 
 double action(complex<double> A[n][n])
 {
-    double p,q,r1,r2, S=0,s, s2, s3, s4;; 
+    double p,q,r1,r2, S=0,s, s2, s3, s4;
 
-    complex<double> A2[n][n], A3[n][n], A4[n][n];
+    complex<double> A2[n][n] , A3[n][n] , A4[n][n] ;
     matrix(A,A2,A3,A4,s,s2,s3,s4);
 
-    S = n*0.5*(0.5*s2 + 0.25*s4);
+    S = n*(0.5*s2 + 0.25*s4);
 
     return S;
 }
 
 double force(complex<double> A[n][n], complex<double> (&dh)[n][n])
 {
-    double p,q,r1,r2, s, s2, s3, s4;;
+    double p,q,r1,r2, s, s2, s3, s4;
 
-    complex <double> A2[n][n], A3[n][n], A4[n][n];
+    complex <double> A2[n][n] , A3[n][n] , A4[n][n] ;
     matrix(A,A2,A3,A4,s,s2,s3,s4);
 
     for(int i=0; i<n; i+=1)
     {
         for(int j=0; j<n; j+=1)
         {
-            dh[i][j] = A[i][j] + A3[i][j]; 
+            dh[i][j] = (A[i][j] + A3[i][j])*((double)n); 
         }
     }
 
@@ -115,7 +115,7 @@ double momentum(complex<double> A[n][n])
 {
     double p,q,r1,r2,P=0,s, s2, s3, s4;
 
-    complex<double> A2[n][n], A3[n][n], A4[n][n];
+    complex<double> A2[n][n] , A3[n][n] , A4[n][n] ;
     matrix(A,A2,A3,A4,s,s2,s3,s4);
 
     P = 0.5*s2;
@@ -132,13 +132,15 @@ double molecular(complex<double> (&phi)[n][n], double& hi, double& hf, double nt
 {
     double p, q, r1, r2; 
 
-    complex<double> P[n][n] = {0}, dt=0.01, dh[n][n];
+    complex<double> P[n][n] = {0}, dt=0.01, dh[n][n] = {};
 
     for(int i=0; i<n-1; i+=1)
     {
         for(int j=i+1; j<n; j+=1)
         {
-            Box(p,q);
+            Box(r1,r2);
+            p=r1;
+            q=r2;
             P[i][j] = complex(p/sqrt(2),q/sqrt(2));
             P[j][i] = complex(p/sqrt(2),-q/sqrt(2));
         }
@@ -160,9 +162,10 @@ double molecular(complex<double> (&phi)[n][n], double& hi, double& hf, double nt
         }
     }
 
-    force(phi,dh);
+    
     for(int i=1; i<=nt-1; i+=1)
     {
+        force(phi,dh);
         for(int j=0; j<n; j+=1)
         {
             for(int k=0; k<n; k+=1)
@@ -194,16 +197,6 @@ int main()
     ofstream fout("t7.dat");
     double hi, hf, s=0, s2=0, r, c=0;
     complex<double> A[n][n] = {0}, A0[n][n] = {0};
-
-    for(int i=0; i<n; i+=1)
-    {
-        for(int j=0; j<n; j+=1)
-        {
-            A[i][j] = 0;
-            A0[i][j] = 0;
-            
-        }
-    }
     action(A);
     double C[10000][8] = {0};
 
@@ -218,10 +211,9 @@ int main()
                     A0[j][k] = A[j][k];
                 }
             }
-        
 
             molecular(A,hi,hf,nt);
-            r = (double)rand()/(double)RAND_MAX;;
+            r = (double)rand()/(double)RAND_MAX;
             if(exp(hi-hf)>r)
             {
                 c+=1;
@@ -240,27 +232,21 @@ int main()
 
             s += action(A);
             C[i][((int)nt-4)] = nt*i;
-            C[i][((int)nt-4)+1] = (double)s/(double)(i*n*n);
+            C[i][((int)nt-4)+1] = (double)s/(double)i/(double)(n*n);
         }
 
         s = 0;
 
-        for(int i=0; i<n; i+=1)
-        {
-            for(int j=0; j<n; j+=1)
-            {
-                A[i][j] = 0;
-            }
-        }
+        A[n][n] = {};
+        
     }
 
-    for(int i=0; i<10000; i+=1)
+    for(int i=1; i<10000; i+=1)
     {
         for(int j=0; j<8; j+=1)
         {
             fout << C[i][j] << "  ";
         }
-
         fout << endl;
     }
 
