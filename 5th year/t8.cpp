@@ -5,12 +5,20 @@
 #include<complex>
 #include<ctime>
 using namespace std;
-const int n=10;
+const int n=10;         // square matrix size
 
+
+//  To generate random number between [0,1]
 double ran()
-{
-    return (double)rand()/(double)RAND_MAX;
+{   
+    return (double)rand()/(double)RAND_MAX; 
 }
+
+
+/* 
+    To generate random number using Box-Muller method
+
+*/
 double Box(double& x, double& y)
 {
     double p,q;
@@ -23,11 +31,14 @@ double Box(double& x, double& y)
     
     return 0;
 }
-
+/* 
+    Declaring a function for easily calling a matrix, it 2nd, 3rd, 4th order terms, and their traces.
+*/
 double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<double> (&A3)[n][n], complex<double> (&A4)[n][n], double& s, double& s2, double& s3, double& s4)
 {
     s=0, s2=0, s3=0, s4=0;
 
+    // 2nd Order matrix
     for(int i=0; i<n; i+=1)
     {
         for(int j=0; j<n; j+=1)
@@ -39,6 +50,7 @@ double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<doub
         }
     }
 
+    //  3rd order matrix
     for(int i=0; i<n; i+=1)
     {
         for(int j=0; j<n; j+=1)
@@ -50,6 +62,7 @@ double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<doub
         }
     }
     
+    // 4th order matrix
     for(int i=0; i<n; i+=1)
     {
         for(int j=0; j<n; j+=1)
@@ -61,22 +74,25 @@ double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<doub
         }
     }
 
+    //  Trace of A
     for(int i=0; i<n; i+=1)
     {
         s += A[i][i].real();
     }
 
-    
+    // Trace of A^2
     for(int i=0; i<n; i+=1)
     {
         s2 += A2[i][i].real();
     }
     
+    //  Trace of A^3
     for(int i=0; i<n; i+=1)
     {
         s3 += A3[i][i].real();
     }
     
+    //  Trace of A^4
     for(int i=0; i<n; i+=1)
     {
         s4 += A4[i][i].real();
@@ -85,25 +101,35 @@ double matrix(complex<double> A[n][n], complex<double> (&A2)[n][n], complex<doub
     return 0;
 }
 
-double action(complex<double> A[n][n])
+/* 
+    Calculating Action S = N*Tr(0.5*phi^2 + 0.25*phi^4)
+*/
+double action(complex<double> A[n][n]) //   for passing the value of phi[n][n]
 {
-    double p,q,r1,r2, S=0,s, s2, s3, s4;
+    // Initializing some parameter for referencing in matrix function 
+    double S=0,s, s2, s3, s4;
+    complex<double> A2[n][n] , A3[n][n] , A4[n][n];
 
-    complex<double> A2[n][n] , A3[n][n] , A4[n][n] ;
+    // calling the matrix function
     matrix(A,A2,A3,A4,s,s2,s3,s4);
 
+    // S = N*Tr(0.5*phi^2 + 0.25*phi^4)
     S = n*(0.5*s2 + 0.25*s4);
 
     return S;
 }
 
+/* 
+    Calculating force (dH/d phi = dS/d phi) term = N(phi + phi^3)
+*/
 double force(complex<double> A[n][n], complex<double> (&dh)[n][n])
 {
-    double p,q,r1,r2, s, s2, s3, s4;
-
-    complex <double> A2[n][n] , A3[n][n] , A4[n][n] ;
+    double  s, s2, s3, s4;
+    complex <double> A2[n][n] , A3[n][n] , A4[n][n];
+    //   passing and obtaining phi and phi^3 matrices
     matrix(A,A2,A3,A4,s,s2,s3,s4);
 
+    // calculating force matrix
     for(int i=0; i<n; i+=1)
     {
         for(int j=0; j<n; j+=1)
@@ -115,6 +141,9 @@ double force(complex<double> A[n][n], complex<double> (&dh)[n][n])
     return 0;
 }
 
+/* 
+    Calculating conjugate momentum part passed by molecular function
+*/
 double momentum(complex<double> A[n][n])
 {
     double p,q,r1,r2,P=0,s, s2, s3, s4;
