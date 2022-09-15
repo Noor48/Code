@@ -142,12 +142,11 @@ double force(complex<double> A[n][n], complex<double> (&dh)[n][n])
 }
 
 /* 
-    Calculating conjugate momentum part passed by molecular function
+    Calculating (1/2)Tr P^2
 */
 double momentum(complex<double> A[n][n])
 {
-    double p,q,r1,r2,P=0,s, s2, s3, s4;
-
+    double P=0,s, s2, s3, s4;
     complex<double> A2[n][n] , A3[n][n] , A4[n][n] ;
     matrix(A,A2,A3,A4,s,s2,s3,s4);
 
