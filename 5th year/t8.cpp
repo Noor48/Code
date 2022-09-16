@@ -244,7 +244,7 @@ double molecular(complex<double> (&phi)[n][n], double& hi, double& hf, double nt
 int main()
 {
     srand(time(NULL));
-    ofstream fout("t7.dat");
+    ofstream fout("t8.dat");
     double hi, hf, s=0, s2=0, r, c=0;
     //x=0;
     complex<double> A[n][n] = {0}, A0[n][n] = {0};
