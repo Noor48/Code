@@ -11,6 +11,7 @@ double ran()
 {
     return (double)rand()/(double)RAND_MAX;
 }
+
 double Box(double& x, double& y)
 {
     double p,q;
