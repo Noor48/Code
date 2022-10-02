@@ -24,7 +24,7 @@ double S(double x)
 
 double ham(double x, double p)
 {
-    double H = S(x) + 0.5*pow(p,2);
+    double H = 0.5*pow(p,2) + 0.5*pow(x,2);
     return H;
 }
 
@@ -61,8 +61,9 @@ int main()
 {
     srand(unsigned(time(NULL)));
     ofstream fout("t3.dat");
+    ofstream file("t3p.dat");
 
-    double hi, hf, x0, x, n=10E5, r, c, sum=0,sum2=0;
+    double hi, hf, x0, x, n=10000, r, c, sum=0,sum2=0, p,z=0;
 
     x = 0;
     
@@ -83,9 +84,12 @@ int main()
         {
             x = x0;
         }
-        sum += x;
+        sum = x;
         sum2 += pow(x,2);
 
+        p = hf;
+        z += exp(-i*p/(298*1.38E-23));
+        file << i << "  " << z << endl;
         fout << i << "  "  << sum/i << "  "<<  sum2/i << "  " << c/i << endl;
     }
 
