@@ -24,20 +24,20 @@ double S(double x)
 
 double ham(double x, double p)
 {
-    double H = 0.5*pow(p,2) + 0.5*pow(x,2);
+    double H = 0.5*(x*p+p*x);
     return H;
 }
 
-double dh(double x)
+double dh(double p)
 {
-    return x;
+    return p;
 }
 
 double molecular(double& x, double& hi, double& hf)
 {
     double p, r1, r2, nt=10,dt=1;
     Box(r1,r2);
-    p = r1;
+    //p = r1;
 
     hi = ham(x,p);
 
@@ -45,11 +45,11 @@ double molecular(double& x, double& hi, double& hf)
     
     for(int i=0; i<nt; i++)
     {
-        p -= dh(x)*dt;
+        p -= dh(p)*dt;
         x += p*dt;
     }
 
-    p -= dh(x)*dt;
+    p -= dh(p)*dt;
     x += 0.5*p*dt;
 
     hf = ham(x,p);
@@ -63,9 +63,12 @@ int main()
     ofstream fout("t3.dat");
     ofstream file("t3p.dat");
 
-    double hi, hf, x0, x, n=10000, r, c, sum=0,sum2=0, p,z=0;
+    double hi, hf, x0, x, n=10000, r, c, sum=0,sum2=0, p,z=0,f, r1,r2;
 
-    x = 0;
+    Box(r1,r2);
+
+    x = r1;
+    p=r2;
     
 
     for(int i=0; i<n; i++)
@@ -84,12 +87,13 @@ int main()
         {
             x = x0;
         }
-        sum = x;
-        sum2 += pow(x,2);
+        sum = ham(x,p);
+        sum2 += ham(x,p);
 
-        p = hf;
-        z += exp(-i*p/(298*1.38E-23));
-        file << i << "  " << z << endl;
+        //p = hf;
+        //z += exp(-i*p/(298*1.38E-23));
+        //f = -(1.38E-23)*298*log(x);
+        //file << i << "  " << z  << "  " << f<< endl;
         fout << i << "  "  << sum/i << "  "<<  sum2/i << "  " << c/i << endl;
     }
 
