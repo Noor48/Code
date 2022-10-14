@@ -16,7 +16,19 @@
 \usepackage{authblk} 
 \usepackage{blindtext}
 \usepackage{setspace}
-
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{MyFrame}{%
+    linecolor=black,
+    outerlinewidth=2pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=gray!50!white}
 \title{}
 
 \begin{document}
@@ -28,23 +40,26 @@
         \end{equation}
         \\
         
-        and Damped Harmonic oscillator 
-        \begin{equation}
-            H = \frac{p^2}{2m} + \frac{1}{2}m \omega ^{2} x^{2} - \frac{p}{m} 
-        \end{equation}
+    
 
-        We're using MCMC method to evaluate Hamiltonian and Thermalization of Berry-Keating and Damped harmonic oscillator. 
+        We're using MCMC method to evaluate Hamiltonian and Thermalization of Berry-Keating. 
     
     \subsection*{Methodology}
         Markov Chain Monte Carlo (MCMC) is a random sampling method to visit x with a probability proportional to some given
         distribution say, $\pi (x)$. To use MCMC in simulation we first simplify the Hamiltonian Monte Carlo code in a block
-        manner. Then we calculate and plot $<H>$ graphs of Berry-Keating and Damped harmonic oscillator Hamiltonian.
-        
-        \begin{adjustbox}{center,caption={Graph of Expectation value of Damped Harmonic Oscillator},nofloat=figure,label={somelabel}}
-            \includegraphics[width=0.8\textwidth]{dho.pdf}
-        \end{adjustbox}
+        manner. Then we calculate and plot $<H>$ graphs of Berry-Keating Hamiltonian. 
+        But first simplify code using header files. Those codes are giiven below
 
         \begin{adjustbox}{center,caption={Graph of Expectation value of Berry-Keating},nofloat=figure,label={somelabel}}
             \includegraphics[width=0.8\textwidth]{bk.pdf}
+        \end{adjustbox}
+
+        Again evaluating $<H>$ using probability function where
+
+        \begin{equation}
+            <H> = Tr (\frac{\hat{H}*exp(-\beta \hat{H})}{Tr (exp(-\beta \hat{H} ))})
+        \end{equation}
+        \begin{adjustbox}{center,caption={Graph of Expectation value of Berry-Keating},nofloat=figure,label={somelabel}}
+            \includegraphics[width=0.8\textwidth]{beta.pdf}
         \end{adjustbox}
 \end{document}
