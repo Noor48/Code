@@ -3,13 +3,17 @@
 #include<fstream>
 #include<cstdlib>
 #include<ctime>
+#include<random>
 using namespace std;
 
 double Box(double& x, double& y)
 {
+    random_device rd;
+    mt19937 mt(rd());
+    uniform_real_distribution<double> o1(0, 1); 
     double p,q;
-    p = (double)rand()/(double)RAND_MAX;
-    q = (double)rand()/(double)RAND_MAX;
+    p = o1(mt);
+    q = o1(mt);
 
     x = sqrt(-2*log(p))*sin(2*M_PI*q);
     y = sqrt(-2*log(p))*cos(2*M_PI*q);
@@ -33,17 +37,17 @@ double dh(double p)
     return p;
 }
 
-double molecular(double& x, double& hi, double& hf)
+double molecular(double& x, double& hi, double& hf, double& p)
 {
-    double p, r1, r2, nt=10,dt=1;
+    double r1, r2, nt=10,dt=0.001;
     Box(r1,r2);
-    //p = r1;
+    p = r1;
 
     hi = ham(x,p);
 
     x += 0.5*p*dt;
     
-    for(int i=0; i<nt; i++)
+    for(int i=1; i<nt; i++)
     {
         p -= dh(p)*dt;
         x += p*dt;
@@ -59,6 +63,9 @@ double molecular(double& x, double& hi, double& hf)
 
 int main()
 {
+    random_device rd;
+    mt19937 mt(rd());
+    uniform_real_distribution<double> o1(0, 1); 
     srand(unsigned(time(NULL)));
     ofstream fout("t3.dat");
     ofstream file("t3p.dat");
@@ -67,17 +74,17 @@ int main()
 
     Box(r1,r2);
 
-    x = r1;
-    p=r2;
+    x = o1(mt);
+    //p=r2;
     
 
-    for(int i=0; i<n; i++)
+    for(int i=1; i<n; i++)
     {
         x0 = x;
 
-        r = (double)rand()/(double)RAND_MAX;
+        r = o1(mt);
         
-        molecular(x,hi,hf);
+        molecular(x,hi,hf,p);
         if(exp(hi-hf)>r)
         {
             c+=1;
@@ -87,14 +94,11 @@ int main()
         {
             x = x0;
         }
-        sum = ham(x,p);
-        sum2 += ham(x,p);
 
-        //p = hf;
-        //z += exp(-i*p/(298*1.38E-23));
-        //f = -(1.38E-23)*298*log(x);
-        //file << i << "  " << z  << "  " << f<< endl;
-        fout << i << "  "  << sum/i << "  "<<  sum2/i << "  " << c/i << endl;
+        cout << x << "  " << p << endl;
+        sum = ham(x,p);
+        sum2 += sum;
+        fout << i << "  "  << (double)sum/(double)i << "  "<<  (double)sum2/(double)i << "  " << c/i << endl;
     }
 
     return 0;
