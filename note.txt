@@ -1,0 +1,3 @@
+# Diffusion coeeficients
+# Shear Viscosity
+# 
