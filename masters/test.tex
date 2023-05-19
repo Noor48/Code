@@ -1,4 +1,5 @@
 \documentclass[12pt, letterpaper]{article}
+\usepackage{bbold}
 \usepackage{indentfirst}
 \usepackage{amsmath, amssymb}
 \usepackage[T1]{fontenc}
@@ -14,8 +15,12 @@
 \usepackage{subcaption}
 \usepackage{authblk} 
 \usepackage{setspace}
+\newcommand*{\1}{\hspace{1pt}}
 
 \begin{document}
+    
+
+    \bibliographystyle{unsrt}
     \section{Out of Time Order Correlator of $H=xp$ model}
 
     The Riemann hypothesis states that non-trivial zeros of the classical zeta function have real part equal to 1/2. The classical zeta function defined by
@@ -35,7 +40,37 @@
 
     Zeros of Riemann zeta function are two different types. Trivial zeros of zeta / Riemann zeta function occurs at all negetive integers (for $s = -2, -4, -6, .......$). 
     For complex s (=$\sigma + it $) (with real part between zero and one) , zeta fucntion becomes nontrivial ones. And the Riemann hypothesis is for $s=\frac{1}{2}-iE$
-    zeta funtion becomes zero $\zeta(\frac{1}{2}-iE) = 0$. Hilbert-P$\acute{o}$lya
+    zeta funtion becomes zero $\zeta(\frac{1}{2}-it) = 0$. Hilbert-P$\acute{o}$lya conjecture suggests that the imaginary parts of the nontrivial zeros are the eiogenvalues 
+    of a self-adjoint hamiltonian operator $\hat{H}$. It is also one of the aprroach to proving the Riemann hypothesis. Berry-Keating conjectured that the hamiltonian operator
+    of the Hilbert-P$\acute{o}$lya  cinjecture should take the form\cite{s1} 
 
+    \begin{equation}
+        \hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})
+    \end{equation}
+
+    Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{r1} Berry proposed the Quantum Chaos conjecture, according to 
+    which the Riemann zeros are the spectrum of a Hamiltonian obstained by quantization of a classical chaotic hamiltonian, whose periodic orbits are labeled by the prime numbers.
+    Connes took the adelic approach to introduce $H = xp $ \cite{s2}. He showed that using different semiclassical regularization, Riemann zeros appear as missing spectral lines in a continuum.
+
+    Now we look into the Berry-Keating and Connes semiclassical approaches to $H=xp$
+
+    \section{Semiclassical approach}
+
+    The classical Berry-Keating-Connes (BKC) Hamiltonian is\cite{s1,s2}
+
+    \begin{equation}
+        H ^{cl} _{0} = xp
+    \end{equation}
+
+    which has hyperbolic trajectories 
     
+    \begin{equation}
+        x(t) = x_{0}e^{t}  \ \ \ \  p(t) = p_{0}e^{-t}
+    \end{equation}
+
+    So the dynamics is unbounded. There is a continuous spectrum as the quantum level. Berry-Keating and Connes introduced two different types of reularizations and counted
+    the semiclassical states. 
+
+    \bibliographystyle{plain}
+    \bibliography{ref.bib}
 \end{document}
