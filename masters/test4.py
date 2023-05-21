@@ -17,9 +17,16 @@ for t in np.arange(0,10,0.001):
     s2 = p*np.exp(-t)
     b.append(s1)
     c.append(s2)
+
+fig, ax = plt.subplots()
 plt.plot(b,c)
 #plt.plot([1,1], [0,1])
-plt.xlim(0,6)
+plt.xlim(0,5.1)
 plt.vlines(1,0,1)
-plt.fill_between(b,0,c, color="skyblue", alpha=0.5)
+plt.vlines(5,0,0.2)
+plt.hlines(0.2,0,5)
+plt.hlines(1,0,1)
+#plt.fill_between(b,c, color="skyblue", alpha=0.5)
+#plt.fill_between([0,1],[0,0],[1,1], color="skyblue", alpha=0.5)
+ax.
 plt.show()
