@@ -91,10 +91,22 @@
             &= \frac{1}{h}\left[E\ln \frac{E}{l_{x}l_{p}}  - E - l_{x}l_{p} \right]  \\
             &= \frac{1}{h}\left[E\ln \frac{E}{l_{x}l_{p}}  - E - h \right]  \\
             &= \frac{E}{h}\left[\ln \frac{E}{l_{x}l_{p}}  - 1 \right]  + 1 \\
+            &= \frac{E}{2 \pi \hbar}\left[\ln \frac{E}{2 \pi \hbar}  - 1 \right]  + 1 \\
         \end{split}
     \end{equation}
 
-    adding Maslov phase $(-\frac{1}{8})$, it becomes
+    adding Maslov phase $(-\frac{1}{8})$ and $\hbar = 1$, it becomes 
+    \begin{equation}
+        \mathcal {N}_{BK}(E) = \frac{E}{2 \pi}\left[\ln \frac{E}{2\pi}  - 1 \right]  + \frac{7}{8} + .......,  \ \ \ \ \ \ E>>1\\
+    \end{equation}
+
+    The exact formula for the Riemann zeros, $\mathcal{N}_{R} (E)$ contains a fluctuation term which depends on the zeta funcion.\cite{s3}  
+    \begin{equation}
+        \begin{split}
+            \mathcal{N}_{R} (E) &= \left\langle \mathcal{N}\right\rangle + \mathcal{N}_{fl} (E)
+            \left\langle\mathcal{N} \right\rangle
+        \end{split}
+    \end{equation}
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}

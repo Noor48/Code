@@ -2,51 +2,51 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: test.aux
 The style file: unsrt.bst
-Illegal, another \bibstyle command---line 7 of file test.aux
+Illegal, another \bibstyle command---line 13 of file test.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: ref.bib
 Warning--I didn't find a database entry for "r1"
-You've used 2 entries,
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            459 strings with 3776 characters,
-and the built_in function-call counts, 515 in all, are:
-= -- 50
-> -- 12
+            464 strings with 3842 characters,
+and the built_in function-call counts, 633 in all, are:
+= -- 58
+> -- 16
 < -- 1
-+ -- 5
-- -- 3
-* -- 29
-:= -- 80
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 2
++ -- 7
+- -- 4
+* -- 30
+:= -- 97
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 27
-empty$ -- 49
-format.name$ -- 3
-if$ -- 118
+cite$ -- 3
+duplicate$ -- 32
+empty$ -- 67
+format.name$ -- 4
+if$ -- 146
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 3
 missing$ -- 2
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 4
+newline$ -- 17
+num.names$ -- 3
+pop$ -- 11
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 19
+skip$ -- 23
 stack$ -- 0
 substring$ -- 38
-swap$ -- 11
+swap$ -- 12
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 6
-width$ -- 3
-write$ -- 24
+while$ -- 7
+width$ -- 4
+write$ -- 32
 (There was 1 error message)
