@@ -4,10 +4,8 @@ import math
 from joblib import Parallel, delayed
 x = 1
 p = 1
-a=[]
 b=[]
 c=[]
-d=[]
 s1=0
 s2=0
 s3=0
@@ -17,11 +15,11 @@ s3=0
 for t in np.arange(0,10,0.001):
     s1 = x*np.exp(t)
     s2 = p*np.exp(-t)
-    s3 = s2*s1
     b.append(s1)
     c.append(s2)
-data = np.column_stack((b,c))
-np.savetxt("test4.dat", data)    
 plt.plot(b,c)
+#plt.plot([1,1], [0,1])
 plt.xlim(0,6)
+plt.vlines(1,0,1)
+plt.fill_between(b,0,c, color="skyblue", alpha=0.5)
 plt.show()
