@@ -85,9 +85,16 @@
     So the the number of semiclassical states will be for Berry-Keating regularization 
     \begin{equation}
         \begin{split}
-            \mathcal {N}_{BK}(E) = \int_{l_{x}}^{\frac{E}{l_{p}}}  \,dx \int_{l_{p}}^{\frac{E}{x}}  \,dp + .......
+            \mathcal {N}_{BK}(E) &= \frac{1}{h}\int_{l_{x}}^{\frac{E}{l_{p}}}  \,dx \int_{l_{p}}^{\frac{E}{x}}  \,dp + ....... \\
+            &= \frac{1}{h}\left[\int_{l_{x}}^{\frac{E}{l_{p}}}  \,dx \left[\frac{E}{x} - l_{p}\right] \right]  \\
+            &= \frac{1}{h}\left[E\left[\ln x\right] ^{\frac{E}{l_{p}}} _{l_{x}} - l_{p}\left[\frac{E}{l_{p}} - l_{x}\right] \right]  \\
+            &= \frac{1}{h}\left[E\ln \frac{E}{l_{x}l_{p}}  - E - l_{x}l_{p} \right]  \\
+            &= \frac{1}{h}\left[E\ln \frac{E}{l_{x}l_{p}}  - E - h \right]  \\
+            &= \frac{E}{h}\left[\ln \frac{E}{l_{x}l_{p}}  - 1 \right]  + 1 \\
         \end{split}
     \end{equation}
+
+    adding Maslov phase $(-\frac{1}{8})$, it becomes
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
