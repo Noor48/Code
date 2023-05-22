@@ -48,7 +48,7 @@
         \hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})
     \end{equation}
 
-    Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{r1} Berry proposed the Quantum Chaos conjecture, according to 
+    Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{s1} Berry proposed the Quantum Chaos conjecture, according to 
     which the Riemann zeros are the spectrum of a Hamiltonian obstained by quantization of a classical chaotic hamiltonian, whose periodic orbits are labeled by the prime numbers.
     Connes took the adelic approach to introduce $H = xp $ \cite{s2}. He showed that using different semiclassical regularization, Riemann zeros appear as missing spectral lines in a continuum.
 
@@ -103,10 +103,31 @@
     The exact formula for the Riemann zeros, $\mathcal{N}_{R} (E)$ contains a fluctuation term which depends on the zeta funcion.\cite{s3}  
     \begin{equation}
         \begin{split}
-            \mathcal{N}_{R} (E) &= \left\langle \mathcal{N}\right\rangle + \mathcal{N}_{fl} (E)
-            \left\langle\mathcal{N} \right\rangle
+            \mathcal{N}_{R} (E) &= \left\langle \mathcal{N}\right\rangle + \mathcal{N}_{fl} (E) \\
+            \left\langle\mathcal{N} (E)\right\rangle &= \frac{1}{\pi} Im \ ln \left[\Gamma\frac{1}{2}\left(\frac{1}{2}-iE\right) \right] - \frac{E}{2 \pi} ln \pi + 1  \\
+            \mathcal {N} _{fl} (E) &= \frac{1}{\pi} Im \ ln \left[\zeta\left(\frac{1}{2} - iE \right)\right]
         \end{split}
     \end{equation}
+
+    Bery-Keatin took this result and analogies between formulae in Nunber Theory and Quantum Chaos, they pointed the quantization of classical chaotic Hamiltonian give
+    rise to the zeros as point like spectra.\cite{s1,s4} Whereas Connes found the number of semicassical states diverges in the limit where the cutoff $\Lambda$ goes to
+    infinity, and that therre us a finite size correction given by mins the average position of the Riemann zeros.
+
+    \begin{equation}
+        \begin{split}
+            \mathcal {N}_{c} (E) &= \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + \int_{\frac{E}{\Lambda}}^{\Lambda}  \,dx\int_{\frac{E}{x}}^{\frac{E}{\Lambda}}  \,dp   \right] \\ 
+             & = \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + \int_{\frac{E}{\Lambda}}^{\Lambda}  \,dx\left[\frac{E}{x} - \frac{E}{\Lambda}\right]   \right] \\ 
+             & = \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + E\left[ln \ x\right] _{\frac{E}{\Lambda}}^{\Lambda} - \frac{E}{\Lambda}\left[\Lambda - \frac{E}{\Lambda}\right]   \right] \\ 
+             & = \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + E\left[ln \ \frac{\Lambda ^{2}}{E}\right] - E + \left(\frac{E}{\Lambda}\right)^{2}\right]  \\ 
+             & = \frac{1}{h}\left[ E  + E\left[ln \ \frac{\Lambda ^{2}}{E}\right] \right]  \\ 
+             & = \frac{1}{h}\left[ E  + E\left[ln \ \frac{\Lambda ^{2}}{E}\frac{2\pi}{2\pi}\right] \right]  \\ 
+             & = \frac{E}{h} ln \ \frac{\Lambda ^{2}}{2\pi} - \frac{E}{h} \left[ln \ \frac{E}{2\pi} - 1\right]  \\
+             & = \frac{E}{2\pi} ln \ \frac{\Lambda ^{2}}{2\pi} - \frac{E}{2\pi} \left[ln \ \frac{E}{2\pi} - 1\right] \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   [taking \ \ \hbar=1] \\
+        \end{split} 
+    \end{equation}
+
+    This result les to the missing spectral interpretation of the Riemann zeros, according to which there is a continuum of eginstates (represented by the term $\frac{E}{\pi}
+     ln \ \Lambda$ in $\mathcal {N} (E)$) where states asscoiated with Riemann zeros are missing.
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
