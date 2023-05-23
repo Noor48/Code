@@ -1,5 +1,6 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage{bbold}
+\usepackage{dsfont}
 \usepackage{indentfirst}
 \usepackage{amsmath, amssymb}
 \usepackage[T1]{fontenc}
@@ -167,16 +168,16 @@
 
         \begin{equation}
             \begin{split}
-                n_{+} &:= d_{\lambda}  = dim \ \mathcal{R} (T-\overline{\lambda}I)^{\perp }  \ \ \ \    Im \ \lambda > 0 \\
-                n_{-} &:= d_{\lambda}  = dim \ \mathcal{R} (T-\overline{\lambda}I)^{\perp }  \ \ \ \    Im \ \lambda < 0 
+                n_{+} &:= d_{\lambda}  = dim \ \mathcal{R} (T-\overline{\lambda}\mathds{1})^{\perp }  \ \ \ \    Im \ \lambda > 0 \\
+                n_{-} &:= d_{\lambda}  = dim \ \mathcal{R} (T-\overline{\lambda}\mathds{1})^{\perp }  \ \ \ \    Im \ \lambda < 0 
             \end{split}
         \end{equation}
 
         If T is densly defined and symmetric, then T is closable, and by formula $\mathcal{N}(T^{*}) = \mathcal{R}(T)^{\perp}$
         \begin{equation}
             \begin{split}
-                n_{+} &:= dim \ \mathcal{N} (T^{*}-iI)  = dim \ \mathcal{N} (T^{*}-\lambda I)  \ \ \ \    Im \ \lambda > 0 \\
-                n_{-} &:= dim \ \mathcal{N} (T^{*}+iI)  = dim \ \mathcal{N} (T^{*}+\lambda I)  \ \ \ \    Im \ \lambda < 0 
+                n_{+} &:= dim \ \mathcal{N} (T^{*}-i\mathds{1})  = dim \ \mathcal{N} (T^{*}-\lambda \mathds{1})  \ \ \ \    Im \ \lambda > 0 \\
+                n_{-} &:= dim \ \mathcal{N} (T^{*}+i\mathds{1})  = dim \ \mathcal{N} (T^{*}+\lambda \mathds{1})  \ \ \ \    Im \ \lambda < 0 
             \end{split}
         \end{equation}
 
@@ -185,8 +186,8 @@
         Again if T is a symmetric operator, then
         \begin{equation}
             \begin{split}
-                K_{+} &= ker \ (i-T^{*}) = Ran \ (i + T) ^{\perp} \\
-                K_{-} &= ker \ (i+T^{*}) = Ran \ (-i + T) ^{\perp} \\ 
+                K_{+} &= ker \ (i\mathds{1}-T^{*}) = Ran \ (i\mathds{1} + T) ^{\perp} \\
+                K_{-} &= ker \ (i \mathds{1} +T^{*}) = Ran \ (-i\mathds{1} + T) ^{\perp} \\ 
             \end{split}
         \end{equation}
         
@@ -195,9 +196,24 @@
 
         von Neumann Theorem for deficiency indices states that if T an closed operator woth deficiency indices $n_{+}$ and $n_{-}$. Then \\ 
         \\
-         (1) T is symmetric if and only if $n_{+} = n_{-} = 0$ ann self adjoint if $\mathcal{D}(T)=\mathcal{D}(T^{*})$
+         (1) T is symmetric if and only if $n_{+} = n_{-} = 0$ ann self adjoint if $\mathcal{D}(T)=\mathcal{D}(T^{*})$ \\ 
+         \\ 
+         (2) T is symmetric adn self adjoint and also has many self adjoint extensions if and only if $n_{+}=n_{-}\neq 0$ and  $\mathcal{D}(T)=\mathcal{D}(T^{*})$.
+         There is one-one correspondence between self adjoint extensions of T and unitary maps from $K_{+}$ onto $K_{-}$ \\ 
+         \\ 
+         (3) If either $n_{+}=0 \neq n_{-}$ or $n_{-}=0 \neq n_{+}$ then T is not symmetric and has no nontrivial self adjoint extension (such operators are called 
+         maximal symmetric operator). \\
+         \\
+        So this indices counts the number of solutions of the equation, which comes from the deficiency spaces for subsystem T
 
-         (2) T 
+        \begin{equation}
+            n_{\pm} = ker \left(-H_{0}^{\dagger} - \mp i \mathds{1}\right)
+        \end{equation}
+
+        which leads to find the solution of the equation.
+        \begin{equation}
+            H_{0} ^{\dagger} \psi_{\pm} = \pm i \hbar \lambda \psi_{\pm}
+        \end{equation}
 
     \bibliographystyle{plain}
     \bibliography{ref.bib}
