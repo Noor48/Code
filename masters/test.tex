@@ -215,6 +215,31 @@
             H_{0} ^{\dagger} \psi_{\pm} = \pm i \hbar \lambda \psi_{\pm}
         \end{equation}
 
+        belonging to the domain og $H_{0}^{\dagger}(\lambda>0)$. If $n=n_{+}=n_{-}>0$, there are infinitely many self-adoint extensions of $H_{0}$ parameterized by a 
+        unitary $n\times n$ matrix. Stone's theorem states that if $U(t)$ be a strongly continuous one parameter unitary group on a Hilbert space $\mathcal{H}$. 
+        Then, there is a self-adjoint operator A on $\mathcal{H}$ so that $U(t) = e^{itA}$. The solution of the equation () is 
+
+        \begin{align*}
+            &H_{0}^{\dagger} \psi_{\pm} = \pm i \hbar \lambda \psi_{\pm} \\ 
+            &\implies H_{0} \psi_{\pm} = \pm i \hbar \lambda \psi_{\pm} \ \ \ \ \ [becuase\ H_{0} \ is \ self-adjoint] \\
+            &\implies \left(-i\hbar \sqrt{x} \frac{d}{dx}\sqrt{x}\right)\psi_{\pm} = \pm i \hbar \lambda \psi _{\pm} \\
+            &\implies -i\hbar \sqrt{x} \frac{d}{dx}\left(\sqrt{x}\psi_{\pm}\right) = \pm i \hbar \lambda \psi _{\pm} \\
+            &\implies -\sqrt{x} \frac{d}{dx}\left(\sqrt{x}\psi_{\pm}\right) = \pm \lambda \psi _{\pm} \\
+            &\implies -x\frac{d}{dx}\psi_{\pm} - \sqrt{x}\frac{1}{2\sqrt{x}} \frac{d}{dx}\psi_{\pm} = \pm \lambda \psi _{\pm} \\
+            &\implies -x\frac{d}{dx}\psi_{\pm} = \left(\pm \lambda + \frac{1}{2}\right) \psi _{\pm} \\
+            &\implies \frac{d}{dx}\psi_{\pm} = -\frac{1}{x}\left(\pm \lambda + \frac{1}{2}\right) \psi _{\pm} \\
+            &\implies \frac{d\psi_{\pm}}{\psi_{\pm}} = -\frac{dx}{x}\left(\pm \lambda + \frac{1}{2}\right) \\
+            &\implies ln \ \psi_{\pm} = -\left(ln \ x\right)\left(\pm \lambda + \frac{1}{2}\right) + ln \ C\\
+            &\implies \psi_{\pm} =  Cx^{- \frac{1}{2}\mp \lambda}\\
+        \end{align*}
+
+        whose norm in the interval (a,b) is
+        \begin{align*}
+            \left\langle \psi_{\pm} | \psi_{\pm} \right\rangle &= \int_{a}^{b} C^{2} x^{-1\mp \lambda} \,dx \\
+            &= \mp \frac{C^{2}}{2\lambda}\left(b^{\mp 2\lambda} - a^{\mp 2\lambda}\right) \\  
+            &= \pm \frac{C^{2}}{2\lambda}\left(a^{\mp 2\lambda} - b^{\mp 2\lambda}\right) 
+        \end{align*}
+        The deficiency indices correponding to the four intervals cosidered above are collecte in Table 2 
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
