@@ -140,11 +140,65 @@
 
         Here we construst a self adjoint operator $H_{0}$ which acts on a Hilbert space $L^{2}(a,b)$ of square integrable function in the interval $(a,b)$. Taking $x\geqslant 0$
         , there are four possible intervals: $a=0,l_{x}$ and $b=\Lambda, \infty $ where $l_{x}$ and $\Lambda$ were introduced (we shall take $l_{x}$ and $\Lambda = N > 1$).
-        Berry-KEating defined the quantnum Hamiltonian $H_{0}$ as the normal ordered expresion 
+        Berry-Keating defined the quantnum Hamiltonian $H_{0}$ as the normal ordered expresion 
 
         \begin{equation}
             H_{0} = \frac{1}{2}(xp + px)
         \end{equation}
+
+        where $p = -i\hbar \frac{d}{dx}$. If $x\geqslant 0$, Eq. () is equivalent to
+
+        \begin{equation}
+            H_{0} = \sqrt{x} p \sqrt{x} = -i\hbar \sqrt{x} \frac{d}{dx} \sqrt{x}
+        \end{equation}
+
+        This is a symmetric operator acting on a certain domain of the Hilert space $L^{2}(a,b)$, By definition, if an operator is symmetric (or Hermitian)\cite{s5}
+
+        \begin{equation}
+            \left\langle\psi | H_{0}\phi \right\rangle = \left\langle\psi H_{0} |\phi \right\rangle
+        \end{equation}
+         or with limit,
+        \begin{equation}
+            \left\langle\psi | H_{0}\phi \right\rangle - \left\langle\psi H_{0} |\phi \right\rangle = i \hbar \left[a\psi ^{*}(a)\phi(a) - b\phi ^{*}(b)\psi(b)\right] = 0
+        \end{equation}
+        
+        which is satisfied if both $\psi (x)$ and $\phi (x)$ vanish at the points a, b. von Neumann Theorem of deficiancy indices states that, an operator in symmetric if its deficiency
+        indices $n_{\pm }$ are equal.\cite{s6}. Deficiency indices (or the defect numbers) of a closable symmetric operator T are cardinal number S
+
+        \begin{equation}
+            \begin{split}
+                n_{+} &:= d_{\lambda}  = dim \ \mathcal{R} (T-\overline{\lambda}I)^{\perp }  \ \ \ \    Im \ \lambda > 0 \\
+                n_{-} &:= d_{\lambda}  = dim \ \mathcal{R} (T-\overline{\lambda}I)^{\perp }  \ \ \ \    Im \ \lambda < 0 
+            \end{split}
+        \end{equation}
+
+        If T is densly defined and symmetric, then T is closable, and by formula $\mathcal{N}(T^{*}) = \mathcal{R}(T)^{\perp}$
+        \begin{equation}
+            \begin{split}
+                n_{+} &:= dim \ \mathcal{N} (T^{*}-iI)  = dim \ \mathcal{N} (T^{*}-\lambda I)  \ \ \ \    Im \ \lambda > 0 \\
+                n_{-} &:= dim \ \mathcal{N} (T^{*}+iI)  = dim \ \mathcal{N} (T^{*}+\lambda I)  \ \ \ \    Im \ \lambda < 0 
+            \end{split}
+        \end{equation}
+
+        By definition $n_{\pm} (T) = dim \ \mathcal{N}(T^{*} \mp iT )$ 
+
+        Again if T is a symmetric operator, then
+        \begin{equation}
+            \begin{split}
+                K_{+} &= ker \ (i-T^{*}) = Ran \ (i + T) ^{\perp} \\
+                K_{-} &= ker \ (i+T^{*}) = Ran \ (-i + T) ^{\perp} \\ 
+            \end{split}
+        \end{equation}
+        
+        $K_{+}$ and $K_{-}$ are called the deficiency subspaces of T, The pair of numbers $n_{+}$, $n_{-}$ given by $n_{+}(T) = dim[K_{+}]$,$n_{-}(T) = dim[K_{-}]$ arre called
+        deficiency indices of T.
+
+        von Neumann Theorem for deficiency indices states that if T an closed operator woth deficiency indices $n_{+}$ and $n_{-}$. Then \\ 
+        \\
+         (1) T is symmetric if and only if $n_{+} = n_{-} = 0$ ann self adjoint if $\mathcal{D}(T)=\mathcal{D}(T^{*})$
+
+         (2) T 
+
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
