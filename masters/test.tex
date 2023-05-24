@@ -201,7 +201,7 @@
 
         so 
         \begin{equation}
-            H_{0} = \frac{1}{2}\left(xp + px\right)
+            H_{0} = \frac{1}{2}\left(xp + px\right) = -i\hbar\sqrt{x}\frac{d}{dx}\sqrt{x}
         \end{equation}
         
 
@@ -365,6 +365,49 @@
         The spectrum (16) agrees with the semiclassical result given in Table 1 for the S-regularization(recall that $l_{x} = 1, \Lambda = N, \hbar=1$)
         For the particular case where $\theta=\pi$, one observes that the energy spectrum is symmetric around zero, i.e, if $E_{n}$ is an eigenenergy so is $-E_{n}$.
         This result is obtained in working\cite{s10} with the inverse Hamiltonian $\frac{1}{H_{0}}$. We are reviewing that construction in next section.
+
+        \subsection{The inverse Hamiltonain $\frac{1}{H_{0}}$}
+
+        First, we take the expression at Eq(16) and take the formal inverse, i.e., $H_{0} ^{-1} = x^{1/2}p^{-1}x^{-1/2}$. The operator $p_{-1}$ is the one-dimensional
+        Green's function with matrix elements(definition of Green's function: Green's function is the kernel of and integral operator that represents the inverse
+        of a differential operator. Let 
+
+        \begin{equation}
+                Lu = f
+        \end{equation}
+
+        Here u and f are vectors and L is a square, invertible matrix. The inverse matrix exsits if $\lambda=0$ is not an eigenvalue of L, or when det $det L \neq 0$.
+        Now
+
+        \begin{equation}
+            u = L^{-1}f
+        \end{equation}
+
+        where $L_{-1}$ is the inverse operator of L. The inverse operator to be an integral operator of the form.
+
+        \begin{equation}
+            \left(L^{-1}f\right)(x) = \int_{a}^{b} g(x,\xi ) f(\xi) \,d\xi 
+        \end{equation}
+
+        with kernel G. If L exists, then the kernel fucntion $g(x,\xi)$ is called the Green's function associated with L.
+
+        So $p_{-1}$ operator will be
+        \begin{equation}
+            \begin{split}
+                \left\langle x\middle|p^{-1}\middle|x^{'}\right\rangle &= \left\langle x\middle| \frac{1}{-i\hbar\frac{d}{dx}}\middle| x^{'}\right\rangle \\ 
+                &= -i\hbar\left\langle x\middle| \frac{1}{\frac{d}{dx}}\middle| x^{'}\right\rangle \\
+                &= \frac{\hbar}{i}G(x,x^{'}) \\ 
+                &= \frac{\hbar}{2i} sign(x-x^{'})
+            \end{split}
+        \end{equation}
+
+        Here $sign(x-x^{'})$ is the sign function.\cite{s10}. The operator $H_{0}^{-1}$ is defined in the interval (1,N) by the continuous matrix,
+
+        \begin{equation}
+            H_{0} ^{-1} (x,x^{'}) = \frac{i}{2\hbar} \frac{sign(x-x^{'})}{\sqrt{x x^{'}}},  \ \ \ \ 1\leqslant x , x^{'} \leqslant N.
+        \end{equation}
+
+        
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
