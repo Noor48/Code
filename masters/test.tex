@@ -132,9 +132,21 @@
      ln \ \Lambda$ in $\mathcal {N} (E)$) where states asscoiated with Riemann zeros are missing.
 
     Finally, in the S-regularization the number of semiclasical states diverges as $\frac{E}{2\pi} \ ln \ \frac{\Lambda}{l_{x}}$ suggesting a continuum spectrum, ike in 
-    Connes's approach. But there is no finite size correction to that formula, and cosequently the possible connection to the Riemann zeros is lost.
+    Connes's approach. But there is no finite size correction to that formula, and cosequently the possible connection to the Riemann zeros is lost. \\ 
+    \\ 
+    \\
 
-    
+
+    \begin{longtable}[c]{c c c }
+        \caption{\\Three different regularizations of $H=xp$ and the corresponding number of semiclassical states in units $\hbar=1$\cite{s7} }\\
+        \hline
+         Type & Regularization & $\mathcal{N}(E)$\\
+         \hline 
+         BK & $|x| > l_{x}, |p| > l_{p}$ & $\frac{E}{2\pi}\left(ln \ \frac{E}{2\pi}-1\right)+1$  \\  
+         C & $|x| < \Lambda, |p| < \Lambda$ & $\frac{E}{2\pi}ln \ \frac{\Lambda^{2}}{2\pi} - \frac{E}{2\pi}\left(\ln \ \frac{E}{2\pi}-1\right)$   \\ 
+         S & $l_{x} < x < \Lambda$ & $\frac{E}{2\pi}ln \ \frac{\Lambda}{l_{x}}$   \\ 
+        \hline
+    \end{longtable}
     \section{Quantization of xp and $\frac{1}{xp}$}
     
     
@@ -208,7 +220,7 @@
         So this indices counts the number of solutions of the equation, which comes from the deficiency spaces for subsystem T
 
         \begin{equation}
-            n_{\pm} = ker \left(-H_{0}^{\dagger} - \mp i \mathds{1}\right)
+            K_{\pm} = ker \left(-H_{0}^{\dagger} - \mp i \mathds{1}\right)
         \end{equation}
 
         which leads to find the solution of the equation.
@@ -221,17 +233,17 @@
         Then, there is a self-adjoint operator A on $\mathcal{H}$ so that $U(t) = e^{itA}$. The solution of the equation () is 
 
         \begin{align*}
-            &H_{0}^{\dagger} \psi_{\pm} = \pm i \hbar \lambda \psi_{\pm} \\ 
-            &\implies H_{0} \psi_{\pm} = \pm i \hbar \lambda \psi_{\pm} \ \ \ \ \ [becuase\ H_{0} \ is \ self-adjoint] \\
-            &\implies \left(-i\hbar \sqrt{x} \frac{d}{dx}\sqrt{x}\right)\psi_{\pm} = \pm i \hbar \lambda \psi _{\pm} \\
-            &\implies -i\hbar \sqrt{x} \frac{d}{dx}\left(\sqrt{x}\psi_{\pm}\right) = \pm i \hbar \lambda \psi _{\pm} \\
-            &\implies -\sqrt{x} \frac{d}{dx}\left(\sqrt{x}\psi_{\pm}\right) = \pm \lambda \psi _{\pm} \\
-            &\implies -x\frac{d}{dx}\psi_{\pm} - \sqrt{x}\frac{1}{2\sqrt{x}} \frac{d}{dx}\psi_{\pm} = \pm \lambda \psi _{\pm} \\
-            &\implies -x\frac{d}{dx}\psi_{\pm} = \left(\pm \lambda + \frac{1}{2}\right) \psi _{\pm} \\
-            &\implies \frac{d}{dx}\psi_{\pm} = -\frac{1}{x}\left(\pm \lambda + \frac{1}{2}\right) \psi _{\pm} \\
-            &\implies \frac{d\psi_{\pm}}{\psi_{\pm}} = -\frac{dx}{x}\left(\pm \lambda + \frac{1}{2}\right) \\
-            &\implies ln \ \psi_{\pm} = -\left(ln \ x\right)\left(\pm \lambda + \frac{1}{2}\right) + ln \ C\\
-            &\implies \psi_{\pm} =  Cx^{- \frac{1}{2}\mp \lambda}\\
+            H_{0}^{\dagger} \psi_{\pm} &= \pm i \hbar \lambda \psi_{\pm} \\ 
+            \implies H_{0} \psi_{\pm} &= \pm i \hbar \lambda \psi_{\pm} \ \ \ \ \ [becuase\ H_{0} \ is \ self-adjoint] \\
+            \implies \left(-i\hbar \sqrt{x} \frac{d}{dx}\sqrt{x}\right)\psi_{\pm} &= \pm i \hbar \lambda \psi _{\pm} \\
+            \implies -i\hbar \sqrt{x} \frac{d}{dx}\left(\sqrt{x}\psi_{\pm}\right) &= \pm i \hbar \lambda \psi _{\pm} \\
+            \implies -\sqrt{x} \frac{d}{dx}\left(\sqrt{x}\psi_{\pm}\right) &= \pm \lambda \psi _{\pm} \\
+            \implies -x\frac{d}{dx}\psi_{\pm} - \sqrt{x}\frac{1}{2\sqrt{x}} \frac{d}{dx}\psi_{\pm} &= \pm \lambda \psi _{\pm} \\
+            \implies -x\frac{d}{dx}\psi_{\pm} &= \left(\pm \lambda + \frac{1}{2}\right) \psi _{\pm} \\
+            \implies \frac{d}{dx}\psi_{\pm} &= -\frac{1}{x}\left(\pm \lambda + \frac{1}{2}\right) \psi _{\pm} \\
+            \implies \frac{d\psi_{\pm}}{\psi_{\pm}} &= -\frac{dx}{x}\left(\pm \lambda + \frac{1}{2}\right) \\
+            \implies ln \ \psi_{\pm} &= -\left(ln \ x\right)\left(\pm \lambda + \frac{1}{2}\right) + ln \ C\\
+            \implies \psi_{\pm} &=  Cx^{- \frac{1}{2}\mp \lambda}\\
         \end{align*}
 
         whose norm in the interval (a,b) is
@@ -266,13 +278,52 @@
         boundary condition of the functions belonging to the self-adjoint domain.\cite{s7}
 
         \begin{equation}
-             \mathcal{D}(H_{0,\theta}) = {\psi, H_{0}\psi \in  L^{2} (1, N), e^{i\theta}\psi(1) = \sqrt(N)\psi(N)}
+             \mathcal{D}(H_{0,\theta}) = \left\{\psi, H_{0}\psi \in  L^{2} (1, N), e^{i\theta}\psi(1) = \sqrt{N}\psi(N)\right\}
         \end{equation}
 
         The eigenfunction of $H_{0}$ 
 
         \begin{equation}
+            H_{0}\psi_{E} = E \psi_{E},
         \end{equation}
+
+        are given by \cite{s1}
+
+        \begin{equation}
+            \psi _{E} (x) = \frac{C}{x^{\frac{1}{2}-iE\hbar}} , \ \ \ \ E \in \mathbb{R} 
+        \end{equation}
+
+        where C is a normalization constant. In the half line $\mathbb{R}_{+}$ there are no further restriction on E, hence the spectrum of $H_{0}$ is continuous 
+        and covers the whole real line $\mathbb{R}$. In this case the normalization constant is chosen as $C = \frac{1}{\sqrt{2\pi\hbar}}$ which gurantees the standard 
+        normalization
+        \begin{equation}
+            \left\langle\psi_{E}|\psi_{E^{'}}\right\rangle = C^{2} \int_{0}^{\infty} \frac{dx}{x} x^{-i(E-E^{'})/\hbar} = \delta (E-E^{'}) 
+        \end{equation}
+
+        In the case where $H_{0}$ is defined in ther interval, the boundary condition (21) yeilds the quantization condition for E, namely
+
+        \begin{equation*}
+            \begin{split}
+                e^{i\theta} \psi(1) & = \sqrt{N}\psi(N) \\ 
+                \implies e^{i\theta} \frac{C}{1^{\frac{1}{2}-iE\hbar}}&= \sqrt{N}\frac{C}{N^{\frac{1}{2}-iE\hbar}} \\ 
+                \implies e^{i\theta} & = N^{-iE\hbar} \\ 
+                \implies i\theta & = (\frac{-iE}{\hbar})ln \ N \\
+                \implies E & = \frac{\hbar\theta}{ln \ N} \\
+                \implies E & = \frac{2\pi\hbar}{ln \ N}( \frac{\theta}{2\pi}) \\
+            \end{split}
+        \end{equation*}
+
+        \begin{equation}
+            \implies E_{n}  = \frac{2\pi\hbar}{ln \ N}(n+\frac{\theta}{2\pi})  \ \ \ \ n \in \mathbb{N}\\
+        \end{equation}
+        Hence the spectrum of $H_{0}$ is dscrete, with a level spacing decreasing for largerm values of N. The normalization constant of the wave function is now 
+        $C = \frac{1}{\sqrt{ln \ N}}$ which gives,
+
+        \begin{equation}
+            \left\langle\psi_{E_{n}}|\psi_{E_{n'}}\right\rangle = C^{2} \int_{1}^{N} \frac{dx}{x} x^{-i(E_{n}-E_{n'})/\hbar} = \delta_{n,n^{'}}
+        \end{equation}
+        
+        The spectrum (16) agrees with the semiclassical result given in Table 1 for the S-regularization(recall that $l_{x} = 1, \Lambda = N, \hbar=1$)
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
