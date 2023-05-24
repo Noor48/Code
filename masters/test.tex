@@ -160,11 +160,50 @@
             H_{0} = \frac{1}{2}(xp + px)
         \end{equation}
 
-        where $p = -i\hbar \frac{d}{dx}$. If $x\geqslant 0$, Eq. () is equivalent to
+        where $p = -i\hbar \frac{d}{dx}$. If $x\geqslant 0$, Eq. (11) is equivalent to
 
         \begin{equation}
-            H_{0} = \sqrt{x} p \sqrt{x} = -i\hbar \sqrt{x} \frac{d}{dx} \sqrt{x}
+            \begin{split}
+                H_{0} &= \sqrt{x} p \sqrt{x} = -i\hbar \sqrt{x} \frac{d}{dx} \sqrt{x}\\ 
+                &= -i\hbar\left(x\frac{d}{dx}+\frac{d}{dx}x\right)
+            \end{split}
         \end{equation}
+
+        We know that the canonical commutation relation is 
+        
+        \begin{equation}
+            \left[\hat{x},\hat{p}\right] = i\hbar
+        \end{equation}
+        
+        or, (dropping hat cause we're dealing with quantum system and operators)
+        \begin{equation}
+            \begin{split}
+                \left[x,p\right] &= i\hbar \\ 
+                \implies \left[x,-i\hbar\frac{d}{dx}\right] &= i\hbar \\
+                \implies -i\hbar\left[x,\frac{d}{dx}\right] &= i\hbar \\
+                \implies \left[x,\frac{d}{dx}\right] &= -1 \\
+                \implies x\frac{d}{dx} - \frac{d}{dx}x &= -1 \\
+                \implies  \frac{d}{dx}x &= x\frac{d}{dx} + 1 \\
+            \end{split}
+        \end{equation}
+
+        Taking this value to R.H.S of Eq(12)
+
+        \begin{equation}
+            \begin{split}
+                -i\hbar\left(x\frac{d}{dx} + \frac{d}{dx}\right)f &= -i\hbar\left[2x\frac{d}{dx}+1\right] \\ 
+                & = -i\hbar2x\left[\frac{d}{dx}+\frac{1}{x}\frac{1}{2}\right]f \\ 
+                & =  -i\hbar\frac{1}{\sqrt{x}}\frac{d}{dx}\left(\sqrt{x}f\right) \\ 
+                & =  -i\hbar\frac{1}{\sqrt{x}}\frac{d}{dx}\left(\sqrt{x}f\right) \\ 
+                & =  \frac{1}{\sqrt{x}}\left(-i\hbar\frac{d}{dx}\right)\sqrt{x}f \\ 
+            \end{split}
+        \end{equation}
+
+        so 
+        \begin{equation}
+            H_{0} = \frac{1}{2}\left(xp + px\right)
+        \end{equation}
+        
 
         This is a symmetric operator acting on a certain domain of the Hilert space $L^{2}(a,b)$, By definition, if an operator is symmetric (or Hermitian)\cite{s5}
 
