@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{s1}
 Michael~V Berry and Jonathan~P Keating.
@@ -44,5 +44,11 @@ Germ{\'a}n Sierra.
 J~Twamley and GJ~Milburn.
 \newblock The quantum mellin transform.
 \newblock {\em New Journal of Physics}, 8(12):328, 2006.
+
+\bibitem{s10}
+Germ{\'a}n Sierra.
+\newblock The riemann zeros and the cyclic renormalization group.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2005(12):P12006, 2005.
 
 \end{thebibliography}
