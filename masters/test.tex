@@ -407,7 +407,40 @@
             H_{0} ^{-1} (x,x^{'}) = \frac{i}{2\hbar} \frac{sign(x-x^{'})}{\sqrt{x x^{'}}},  \ \ \ \ 1\leqslant x , x^{'} \leqslant N.
         \end{equation}
 
-        
+        It's spectrum is found solving the Schr$\ddot{o}$dinger equation. 
+
+        \begin{equation}
+            \begin{split}
+                &H_{0}(x,x^{'}) \psi(x^{'}) = E \psi(x) \\ 
+                & \implies H_{0} ^{-1}(x,x^{'}) \psi(x^{'}) = E^{-1} \psi(x) \\ 
+                & \implies \frac{i}{2\hbar} \int _{1}^{N} dx^{'}\frac{sign(x-x^{'})}{\sqrt{x x^{'}}} \psi(x^{'}) = E^{-1} \psi(x) \\ 
+            \end{split}
+        \end{equation}
+
+        for the eigenvalue $E^{-1}$, which must not be singular for $H_{0}^{-1}$ to be invertible. Define a new wave function 
+    
+        \begin{equation}
+            \phi (x) = \frac{\psi (x)}{\sqrt{x}}
+        \end{equation}
+
+        which satisfies 
+        \begin{equation}
+            \frac{iE}{2\hbar} \int _{1}^{N} dx^{'}sign(x-x^{'})\phi(x^{'})= x\phi(x)
+        \end{equation}
+
+        Taking derivative with respect to x 
+        \begin{equation}
+            \begin{split}
+                &\frac{d}{dx}\left(\frac{iE}{2\hbar} \int _{1}^{N} dx^{'}sign(x-x^{'})\phi(x^{'})\right)= \frac{d}{dx}\left( x\phi(x) \right) \\ 
+                &\implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'}2\delta(x-x^{'})\phi(x^{'}) = \phi(x) + x \frac{d}{dx} \phi(x)  \\
+                &\implies \frac{iE}{\hbar} \phi(x) = \phi(x) + x \frac{d}{dx} \phi(x)  \\
+                &\implies x \frac{d}{dx} \phi(x) = \left(1 - \frac{iE}{\hbar}\right) \phi(x)   \\
+                &\implies \frac{d\phi(x)}{\phi(x)} = \left(1 - \frac{iE}{\hbar}\right) \frac{dx}{x}   \\
+                &\implies ln \ \phi(x) = \left(1 - \frac{iE}{\hbar}\right) ln \ x + ln \ C   \\
+                &\implies \phi(x) = \frac{C}{x^{1 - \frac{iE}{\hbar}}}    \\
+                &\implies \psi(x) = \frac{C}{x^{1/2 - \frac{iE}{\hbar}}}    \\
+            \end{split}
+        \end{equation}
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
