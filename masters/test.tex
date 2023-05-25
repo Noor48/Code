@@ -497,7 +497,11 @@
 
         where $<\cdot \cdot \cdot >$ represents the thermal average. W(t) and V(t) are operators as time in t in the Heisenberg representation. The OTOC, first introduced
         in a calculation of a vertex correction of a current for a superconductor\cite{s12}, was recently turned out to be considered as a measure of the magnitude of 
-        quantum chaos. A naive argument for the relation between the OTOC and chaos is as follows
+        quantum chaos. A naive argument for the relation between the OTOC and chaos is as follows\cite{s13}. Consider poistion and momentum operators, x(t) and p(t), in a
+        quantum system. We can define an OTOC as $C_{T} = - \left\langle\left[x(t),p(0)\right]^{2}\right\rangle$. Taking a naive semiclassical limit, we would be able to 
+        replace the commutator $\left[x(t),p(0)\right]$ by the Poissoin bracket $i\hbar\{x(t),p(0)\}_{PB} = i\hbar\frac{\delta x(t)}{\delta x(0)}$. For a classically 
+        chaotic system with a Lyapunov exponent $\lambda$, we have $\frac{\delta x(t)}{\delta x(0)}\thicksim  e^{\lambda t}$ because of sensiitivity to initial condition.
+        
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
