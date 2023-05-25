@@ -438,9 +438,66 @@
                 &\implies \frac{d\phi(x)}{\phi(x)} = \left(1 - \frac{iE}{\hbar}\right) \frac{dx}{x}   \\
                 &\implies ln \ \phi(x) = \left(1 - \frac{iE}{\hbar}\right) ln \ x + ln \ C   \\
                 &\implies \phi(x) = \frac{C}{x^{1 - \frac{iE}{\hbar}}}    \\
-                &\implies \psi(x) = \frac{C}{x^{1/2 - \frac{iE}{\hbar}}}    \\
             \end{split}
         \end{equation}
+
+        \begin{equation}
+            \psi(x) = \frac{C}{x^{1/2 - \frac{iE}{\hbar}}}    \\
+        \end{equation}
+
+        with $C=\frac{1}{\sqrt{ln \  N}}$ as in Eq(30). Eq(40) fixes the functional form of $\psi(x)$. To find the spectrum we impose (38) at one point , say $x=1$, 
+        obtaining,
+
+        \begin{equation}
+            \begin{split}
+                &\frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \phi(x^{'}) = \phi(1) \\ 
+                & \implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \frac{C}{x^{' 1/2 - iE/\hbar}} = \frac{C}{1^{1/2 - iE/\hbar}} \\
+                & \implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \frac{1}{x^{' 1/2 - iE/\hbar}} = 1\\
+            \end{split}
+        \end{equation}
+
+        we know that sign function
+        \[ sign(1-x^{'}) = \begin{cases} 
+            1 & 1-x^{'} > 0  \implies 1 > x^{'} \\
+            0 & 1-x^{'} = 0 \implies 1=x^{'} \\
+            -1 & 1-x^{'} < 0 \implies 1<x^{'} 
+         \end{cases}
+      \]
+
+        Therefore
+
+        \begin{align*}
+            &\frac{-iE}{2\hbar}\int _{1}^{N} dx^{'} x^{' -1+iE/\hbar} = 1 \\
+            &\frac{-iE}{2\hbar} \left[\frac{x^{'iE/\hbar}}{iE/\hbar}\right] _{1} ^{N} = 1 \\
+            &\frac{1}{2} \left[N^{iE/\hbar} - 1^{iE/\hbar}\right] = 1 \\
+            &N^{iE/\hbar} - 1 = -2 \\ 
+            &N^{iE/\hbar} = -1 \\ 
+            &N^{iE/\hbar} = e^{i\pi} \\ 
+            &\frac{iE}{\hbar}ln\ N = i\pi \\ 
+            &E = \frac{\pi\hbar}{ln\ N} \\ 
+            &E = \frac{2\pi\hbar}{ln\ N}\frac{1}{2} \\  
+        \end{align*}
+
+        \begin{equation}
+            \therefore E_{n} = \frac{2\pi\hbar}{ln\ N}\left[n + \frac{1}{2}\right] 
+        \end{equation}
+
+        This sprectrum coincides with (29) for $\theta=\pi$, so that the eigenstates come in pairs $\{E_{n}, -E_{n}\}$ as corresponds to an Hermitian antisymmetric
+        operator. Including a BCS coupling in (35), related to $\theta$ yields the spectrum (29)\cite{s9}
+
+        We take this spectrum and wavefunction to calculate OTOC(out of time order correlator)
+
+    \section{Out-of-Time-Order Correlator of $H=xp$}
+        
+        The out-of-time-order correlator (OTOC) is typically defined by \cite{s11}
+
+        \begin{equation}
+            C_{T} \equiv  - \left\langle\left[W(t),V(0)\right]^{2}\right\rangle
+        \end{equation}
+
+        where $<\cdot \cdot \cdot >$ represents the thermal average. W(t) and V(t) are operators as time in t in the Heisenberg representation. The OTOC, first introduced
+        in a calculation of a vertex correction of a current for a superconductor\cite{s12}, was recently turned out to be considered as a measure of the magnitude of 
+        quantum chaos. A naive argument for the relation between the OTOC and chaos is as follows
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
