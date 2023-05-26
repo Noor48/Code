@@ -508,8 +508,34 @@
         OTOC does not grow eternally but saturates at the Ehrenfest time $t_{E}$. The Ehrenfest time is defined by the time scale beyond which the wave function spreads
         over the whole system. It is roughly characterized as a boundary between a particle-like behavior and a wave-like behavior of the wave function.
 
-        In the definition of OTOC, we consider the thermal average of $- \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$. The thermal average is especially important
-        
+        In the definition of OTOC, we consider the thermal average of $- \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$. When we take thermal average, we need to 
+        consider the four point operator $\left\langle\left[W(t),V(0)\right]^{2}\right\rangle$ instead of two point operator $\left\langle\left[W(t),V(0)\right]\right\rangle$.
+        The reason is as follows. Assuming that we can replace the commutator by Poission bracket by semiclassical limit, $\left\langle\left[W(t),V(0)\right]\right\rangle$
+        would also show the exponential growth $\thicksim  e^{\lambda t}$. However, its coefficient can be both positive and negetive. By taking the thermal average, their
+        contributions would be canceled. From the quantum theory point of view, $\left\langle\left[W(t),V(0)\right]\right\rangle$ measures the correlation between W(t)
+        and V(0). Therefore, the two point function decays as $t \rightarrow \infty$ and cannot show the chaotic behavior.
+
+        First we formulate how to calculate the OTOC for generic quauntum mechanics. In particular, by the reason described above, we choose $W = x$ and $V = p$ to measure
+        a possible indication of quantum chaos. We consider the out-of-time-order correlator (OTOC) defined by
+
+        \begin{equation}
+            C_{T} \equiv  - \left\langle\left[x(t),p(0)\right]^{2}\right\rangle
+        \end{equation}
+
+        where $\left\langle \mathcal{O} \right\rangle \equiv \frac{tr\left[e^{-\beta H \mathcal{O}}\right]}{tr \ e^{-\beta H}}$. Here we define $\frac{1}{\beta}$ with 
+        the temperature of the system T. We will omit the argument of Heisenberg operators for $t=0$; $\mathcal{O} \equiv \mathcal{O}(0)$. Taking energy eigenstates as 
+        the basis of the Hilber space, we can rewrite the OTOC as 
+
+        \begin{equation}
+            \C_{T}(t) = \frac{1}{Z} \sum _{n} e^{-\beta E_{n}} c_{n}(T)
+        \end{equation}
+
+        \begin{equation}
+            c_{n} \equiv \left\langle \middle|\left[x(t),p(0)\right]^{2}\middle|\right\rangle
+        \end{equation}
+
+        where $H|n>=E_{n}|n>$. We will refer the OTOC for a fixed energy eigenstate, c_{n}(t),as a microcanonical OTOC. On the other hand, we will refer $C_{T}(t)$ as a
+        thermal OTOC. Once we compute microcanonical OTOCs, we can obtain the thermal OTOC bu taking their thermal average 
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
