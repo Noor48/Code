@@ -585,6 +585,27 @@
         \begin{equation}
             \therefore [H,x] = -2ip
         \end{equation}
+
+        Applying $<m|\cdot \cdot \cdot|n>$ to the both sides of the equation, we obtain
+        \begin{align*}
+            &<m|[H,x]|n> = <m|-2ip|n> \\ 
+            &<m|(Hx-xH)|n> = -2i<m|p|n> \\ 
+            &<m|(E_{m}x-xE_{n})|n> = -2ip_{mn} \\ 
+            &E_{mn}x_{mn} = -2ip_{mn} \\ 
+            &p_{mn} = \frac{i}{2}E_{mn}x_{mn} \\  
+        \end{align*}
+
+        Substituting this expression into (49) we have 
+
+        \begin{equation*}
+            b_{nm}(t) = \frac{-i i}{2}\sum_{k} (e^{i E _{nk}t}x_{nk}E_{km}x_{km} - e^{iE_{km}t}E_{nk}x_{nk}x_{km}) 
+        \end{equation*}
+        
+        \begin{equation}
+            b_{nm}(t) = \frac{1}{2}\sum_{k} x_{nk}x_{km}(E_{km}e^{i E _{nk}t} - E_{nk}e^{iE_{km}t}) 
+        \end{equation}
+        
+        Now we can take this equation to calculate OTOC of Berry-Keating Hamiltonian from (40) and (42).
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
