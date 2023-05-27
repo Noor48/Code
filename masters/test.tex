@@ -522,20 +522,69 @@
             C_{T} \equiv  - \left\langle\left[x(t),p(0)\right]^{2}\right\rangle
         \end{equation}
 
-        where $\left\langle \mathcal{O} \right\rangle \equiv \frac{tr\left[e^{-\beta H \mathcal{O}}\right]}{tr \ e^{-\beta H}}$. Here we define $\frac{1}{\beta}$ with 
+        where $\left\langle \mathcal{O} \right\rangle \equiv \frac{tr\left[e^{-\beta H }\mathcal{O}\right]}{tr \ e^{-\beta H}}$. Here we define $\frac{1}{\beta}$ with 
         the temperature of the system T. We will omit the argument of Heisenberg operators for $t=0$; $\mathcal{O} \equiv \mathcal{O}(0)$. Taking energy eigenstates as 
         the basis of the Hilber space, we can rewrite the OTOC as 
 
         \begin{equation}
-            \C_{T}(t) = \frac{1}{Z} \sum _{n} e^{-\beta E_{n}} c_{n}(T)
+            C_{T}(t) = \frac{1}{Z} \sum _{n} e^{-\beta E_{n}} c_{n}(T)
         \end{equation}
 
         \begin{equation}
-            c_{n} \equiv \left\langle \middle|\left[x(t),p(0)\right]^{2}\middle|\right\rangle
+            c_{n} \equiv -\left\langle n \middle|\left[x(t),p(0)\right]^{2}\middle| n\right\rangle
         \end{equation}
 
-        where $H|n>=E_{n}|n>$. We will refer the OTOC for a fixed energy eigenstate, c_{n}(t),as a microcanonical OTOC. On the other hand, we will refer $C_{T}(t)$ as a
-        thermal OTOC. Once we compute microcanonical OTOCs, we can obtain the thermal OTOC bu taking their thermal average 
+        where $H|n>=E_{n}|n>$. We will refer the OTOC for a fixed energy eigenstate, $c_{n}(t)$,as a microcanonical OTOC. On the other hand, we will refer $C_{T}(t)$ as a
+        thermal OTOC. Once we compute microcanonical OTOCs, we can obtain the thermal OTOC bu taking their thermal average. Let us rewrite the microcanonical OTOC using 
+        matrix element of x and p for numerical calculations. Using the completeness relation $1 = \sum_{m} |m><m|$, we rewrite the microcanonical OTOC as 
+
+        \begin{equation}
+            c_{n}(t) = \sum_{m} b_{nm}(t) b_{nm} ^{*} (t)  
+        \end{equation}
+        
+        \begin{equation}
+            b_{nm}(t) \equiv   -i\left\langle n \middle|\left[x(t),p(0)\right]\middle| m\right\rangle
+        \end{equation}
+
+        Note that $b_{nm}(t)$ is Hermitian: $b_{nm}(t) = b_{nm} ^{*} (t)$. Substituting $x(t) = e^{iHt}xe^{-iHt}$ and inserting the completeness relation again, we obtain
+
+        \begin{align*}
+            b_{nm}(t) &= -i\left\langle n \middle|\left[e^{iHt}xe^{-iHt},p\right]\middle| m\right\rangle \\
+            &= -i\left\langle n \middle|\left[e^{iHt}xe^{-iHt}p - pe^{iHt}xe^{-iHt}\right]\middle| m\right\rangle \\
+            &= -i\left[\sum_{k}\left\langle n \middle|e^{iHt}xe^{-iHt} \middle| k\right\rangle\left\langle k \middle| p \middle| m \right\rangle - \sum_{k}\left\langle n \middle| p \middle| k \right\rangle\left\langle k \middle|e^{iHt}xe^{-iHt} \middle | m\right\rangle\right] \\
+            &= -i\left[\sum_{k}\left\langle n \middle|e^{iE_{n}t}xe^{-iE_{k}t} \middle| k\right\rangle\left\langle k \middle| p \middle| m \right\rangle - \sum_{k}\left\langle n \middle| p \middle| k \right\rangle\left\langle k \middle|e^{iE_{k}t}xe^{-iE_{m}t} \middle | m\right\rangle\right] \\
+            &= -i \sum_{k}\left[e^{iE_{nk}t}x_{nk}p_{km} - e^{iE_{km}t}p_{nk}x_{km} \right] \\
+        \end{align*}
+
+        \begin{equation}
+            \therefore b_{nm}(t) = -i \sum_{k}\left[e^{iE_{nk}t}x_{nk}p_{km} - e^{iE_{km}t}p_{nk}x_{km} \right]
+        \end{equation}
+
+        where $E = E_{n} - E_{m}$, $x_{nm} \equiv <n|x|m>$ $p_{nm} \equiv <n|p|m>$. In this expression, there are matrix components of p. They are not desirable since
+        numerical derivatives of wave fuincitons lose the numerical accuracy. For a natural Hamiltonian with the form, 
+
+        \begin{equation}
+            H = \sum_{i=1} ^{N} p_{i}^{2} + U(x_{1}, \cdot \cdot \cdot ,  x_{N})
+        \end{equation}
+
+        we can express $p_{nm}$using $x_{nm}$. We know from canonical commutation relation 
+
+        \begin{equation}
+            [x,p] = i \tag{$\hbar=1$}
+        \end{equation}
+
+        Therefore
+
+        \begin{align*}
+            [H,x] &= [p^{2} + U(x) , x] \\
+            &= [p^{2},x] + [U(x), x] \\
+            &= p[p,x] + [p,x]p  \\
+            &= -ip -ip  \\
+        \end{align*}
+
+        \begin{equation}
+            \therefore [H,x] = -2ip
+        \end{equation}
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}
