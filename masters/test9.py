@@ -4,18 +4,22 @@ import math
 from joblib import Parallel, delayed
 import cmath
 
-s1 = 0
-s2 = 0
+
 a = []
 b = []
-r = 10
+r = 11
 T = 40
 N = 10
+x = []
+d = []
+e = []
 def E(n, m):
-    return (2*math.pi)
+    return (2*math.pi*(n-m))/(math.log(N))
 
 def x(n, m):
-    return (1/1-np.imag(E(n,m)))(N**(1-np.imag((0,E(n,m))))-1)/(math.sqrt(math.log(N)))
+    a = (1/1-(2j*math.pi*(n-m)/math.log(N)))/(math.sqrt(math.log(N)))
+    b = (N**(1-(2j*math.pi*(n-m)/math.log(N)))-1)
+    return a*b
 
 def compute_s2(t):
     C = 0
@@ -30,6 +34,8 @@ def compute_s2(t):
 
         Z += cmath.exp(-E(n,0)/T)
         C += (cmath.exp(-E(n,0)/T)*c)
+    if n==5:
+        x.append(C/Z)
     return C/Z
     
 
@@ -39,9 +45,16 @@ results = Parallel(n_jobs=-1)(delayed(compute_s2)(t) for t in np.arange(0, 1, 0.
 
 a = np.arange(0, 1, 0.001)
 b = results
+#x = np.array([res[0] for res in results])
+#p1 = np.array([res[0] for res in results])
+#q = np.array([res[1] for res in results])
+#s = np.array([res[2] for res in results])
+#data = np.column_stack((a,p,q,s))
+#np.savetxt('test.dat', data, delimiter='  ')
 
-data = np.column_stack((a, b))
-np.savetxt('test.dat', data, delimiter='  ')
-
-plt.plot(a, b)
+plt.plot(a,b,label='n=10')
+plt.plot(a,x,label='n=2')
+#plt.plot(a,s,label='n=5')
+#plt.plot(a,p1,label='n=1')
+plt.legend()
 plt.show()
