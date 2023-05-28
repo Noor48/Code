@@ -1,33 +1,14 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import math 
 import cmath
 
-s1 = 0
-s2 = 0
-a = []
-b = []
-c=[]
-d=[]
-e=[]
-r = 11
-T = 40
-N = 10
-def E(n, m):
-    return (2*math.pi*(n-m))/(math.log(N))
-
-def x(n, m):
-    a = (1/1-(2j*math.pi*(n-m)/math.log(N)))/(math.sqrt(math.log(N)))
-    b = (N**(1-(2j*math.pi*(n-m)/math.log(N)))-1)
-    return a*b
-
+# Define the values of n you want to extract
 n_values = [2, 5, 10, 20]
 
 # Initialize the arrays for each n value
 arrays = {n: [] for n in n_values}
 
 # Existing code
-r = 20  # Assuming r is defined somewhere
+r = 100  # Assuming r is defined somewhere
 T = 1.0  # Assuming T is defined somewhere
 
 for t in np.arange(0, 1, 0.001):
@@ -63,6 +44,3 @@ for t in np.arange(0, 1, 0.001):
 for n, arr in arrays.items():
     filename = f'test_n{n}.dat'
     np.savetxt(filename, np.column_stack((np.arange(0, len(arr) * 0.001, 0.001), arr)), delimiter='  ')
-
-
-

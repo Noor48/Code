@@ -7,7 +7,7 @@ s1 = 0
 s2 = 0
 a = []
 b = []
-r=11
+r=5
 N=10
 T=40
 def E(n, m):
@@ -33,7 +33,7 @@ for t in np.arange(0,1,0.001):
     C += (cmath.exp(-E(n,0)/T)*s2)
     s3=C/Z
     a.append(t)
-    b.append(s2)
+    b.append(s3)
 data = np.column_stack((a, b))
 np.savetxt('test.dat', data , delimiter='  ')
 
