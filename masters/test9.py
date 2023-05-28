@@ -24,6 +24,10 @@ def x(n, m):
 def compute_s2(t):
     C = 0
     Z = 0
+    b1 = np.array([])
+    c1 = np.array([])
+    d = np.array([])
+    e = np.array([])
     for n in range(0, r):
         c = 0
         for m in range(0, r):
@@ -34,9 +38,16 @@ def compute_s2(t):
 
         Z += cmath.exp(-E(n,0)/T)
         C += (cmath.exp(-E(n,0)/T)*c)
-    if n==5:
-        x.append(C/Z)
-    return C/Z
+
+        if n == 1:
+            c1 = np.append(c1, C/Z)
+
+        if n == 2:
+            d = np.append(d, C/Z)
+
+        if n == 5:
+            e = np.append(e, C/Z)
+    return C/Z,c,d,e
     
 
 
@@ -44,17 +55,16 @@ def compute_s2(t):
 results = Parallel(n_jobs=-1)(delayed(compute_s2)(t) for t in np.arange(0, 1, 0.001))
 
 a = np.arange(0, 1, 0.001)
-b = results
-#x = np.array([res[0] for res in results])
-#p1 = np.array([res[0] for res in results])
-#q = np.array([res[1] for res in results])
-#s = np.array([res[2] for res in results])
+#b1 = np.array([res[0] for res in results])
+c1 = np.array([res[0] for res in results])
+d = np.array([res[1] for res in results])
+e = np.array([res[2] for res in results])
 #data = np.column_stack((a,p,q,s))
 #np.savetxt('test.dat', data, delimiter='  ')
 
-plt.plot(a,b,label='n=10')
-plt.plot(a,x,label='n=2')
-#plt.plot(a,s,label='n=5')
-#plt.plot(a,p1,label='n=1')
+#plt.plot(a,b,label='n=10')
+plt.plot(a,c1,label='n=1')
+plt.plot(a,d,label='n=2')
+plt.plot(a,e,label='n=5')
 plt.legend()
 plt.show()
