@@ -7,9 +7,10 @@ s1 = 0
 s2 = 0
 a = []
 b = []
-r=5
+r=11
 N=10
 T=40
+
 def E(n, m):
     return (2*math.pi*(n-m))/(math.log(N))
 

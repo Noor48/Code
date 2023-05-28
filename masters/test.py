@@ -20,6 +20,7 @@ def E(n,m):
 
 for t in np.arange(0,1,0.001):
     for n in range(0,100,1):
+        s1=0
         for m in range(0,100,1):
             s2=0
             for k in range(0,100,1):

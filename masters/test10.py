@@ -28,7 +28,7 @@ arrays = {n: [] for n in n_values}
 
 # Existing code
 r = 20  # Assuming r is defined somewhere
-T = 1.0  # Assuming T is defined somewhere
+T = 40.0  # Assuming T is defined somewhere
 
 for t in np.arange(0, 1, 0.001):
     Z = 0
@@ -58,11 +58,16 @@ for t in np.arange(0, 1, 0.001):
     # Check if all desired n values have been collected
     if all(len(arr) > 0 for arr in arrays.values()):
         break
+    
+    a.append(t)
 
 # Save the arrays to separate files
-for n, arr in arrays.items():
-    filename = f'test_n{n}.dat'
-    np.savetxt(filename, np.column_stack((np.arange(0, len(arr) * 0.001, 0.001), arr)), delimiter='  ')
+#for n, arr in arrays.items():
+#    filename = f'test_n{n}.dat'
+#    np.savetxt(filename, np.column_stack((np.arange(0, len(arr) * 0.001, 0.001), arr)), delimiter='  ')
 
-
-
+plt.plot(a,arrays[2],label="2")
+plt.plot(a,arrays[5],label="5")
+plt.plot(a,arrays[10],label="10")
+plt.legend()
+plt.show()
