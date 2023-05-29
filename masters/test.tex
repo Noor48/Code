@@ -17,7 +17,36 @@
 \usepackage{authblk} 
 \usepackage{setspace}
 \usepackage{longtable}
+\usepackage{listings}
+\usepackage{xcolor}
 \newcommand*{\1}{\hspace{1pt}}
+
+            \definecolor{codegreen}{rgb}{0,0.6,0}
+            \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+            \definecolor{codepurple}{rgb}{0.58,0,0.82}
+            \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+            \lstdefinestyle{mystyle}{
+                backgroundcolor=\color{backcolour},   
+                commentstyle=\color{codegreen},
+                keywordstyle=\color{magenta},
+                numberstyle=\tiny\color{codegray},
+                stringstyle=\color{codepurple},
+                basicstyle=\ttfamily\footnotesize,
+                breakatwhitespace=false,         
+                breaklines=true,                 
+                captionpos=b,                    
+                keepspaces=true,                 
+                numbers=left,                    
+                numbersep=5pt,                  
+                showspaces=false,                
+                showstringspaces=false,
+                showtabs=false,                  
+                tabsize=2
+            }
+
+            \lstset{style=mystyle}
+
 
 \begin{document}
     
@@ -605,7 +634,53 @@
             b_{nm}(t) = \frac{1}{2}\sum_{k} x_{nk}x_{km}(E_{km}e^{i E _{nk}t} - E_{nk}e^{iE_{km}t}) 
         \end{equation}
         
-        Now we can take this equation to calculate OTOC of Berry-Keating Hamiltonian from (40) and (42).
+        Now we can take this equation to calculate OTOC of Berry-Keating Hamiltonian from (40) and (42). The spectrum is 
+
+        \begin{equation}
+            E_{n} = \frac{2\pi\hbar}{ln\ N}\left[n + \frac{1}{2}\right] 
+        \end{equation}
+        
+        and the wavefunction 
+        
+        \begin{equation}
+            \psi(x) = \frac{C}{x^{1/2 - \frac{iE}{\hbar}}}
+        \end{equation}
+
+        from here we can evaluate $x_{nm} = <n|x|m>$ value
+
+        \begin{align*}
+            \left\langle\psi_{E}| x |\psi_{E^{'}}\right\rangle &= C^{2} \int_{1}^{N} \frac{dx}{x} x^{-i(E-E^{'})/\hbar} x \\ 
+            &= C^{2} \int_{1}^{N} dx x^{-i(E-E^{'})/\hbar} \\
+            &= C^{2} \left[\frac{x^{1-i(E-E^{'})/\hbar}}{1-i(E-E^{'})/\hbar}\right]_{1}^{N} \\
+            &= C^{2} \frac{1}{1-i(E-E^{'})/\hbar}\left[N^{1-i(E-E^{'})/\hbar} - 1\right] \\
+            &= C^{2} \frac{1}{1-i(E-E^{'})/\hbar}\left[N^{1-i(E-E^{'})/\hbar} - 1\right] \\
+        \end{align*}
+
+        Therefore, $<n|x|m>=x_{nm}$ is
+
+        \begin{align}
+            <n|x|m> &= \frac{1}{ln \ N} \frac{1}{1-i\frac{2\pi \hbar}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})/\hbar}\left[N^{1-i\frac{2\pi \hbar}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})/\hbar} - 1\right] \\
+            x_{nm}&= \frac{1}{ln \ N} \frac{1}{1-i\frac{2\pi}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})}\left[N^{1-i\frac{2\pi}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})} - 1\right]
+        \end{align}
+
+        putting these values on Eq(52)
+        \begin{equation*}
+            b_{nm}(t) = \frac{1}{2}\sum_{k} x_{nk}x_{km}(E_{km}e^{i E _{nk}t} - E_{nk}e^{iE_{km}t}) 
+        \end{equation*}
+
+        and calculate OTOC analytically. cause carry out the summation of $x_{nm}$ and energy eigenstates makes things little complicated. The graph and codes are given below.
+
+        \begin{adjustbox}{center,caption={},label={microcanocnial OTOC},nofloat=figure,}
+            \includegraphics[width=0.6\textwidth]{pic1}
+        \end{adjustbox}
+
+        \begin{adjustbox}{center,caption={},label={microcanocnial OTOC},nofloat=figure,}
+            \includegraphics[width=0.6\textwidth]{pic2}
+        \end{adjustbox}
+
+        Here microcanonical OTOC and thermal OTOC are same with different temperatures.
+
+        \lstinputlisting[language=Python, caption=Python example]{test14.py}
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}

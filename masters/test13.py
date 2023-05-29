@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+a = np.genfromtxt("test1.dat",dtype='complex')
+b = np.genfromtxt("test2.dat",dtype='complex')
+c = np.genfromtxt("test5.dat",dtype='complex')
+d = np.genfromtxt("test10.dat",dtype='complex')
+
+f = plt.figure()
+f.set_figwidth(10)
+f.set_figheight(8)
+#plt.plot(a[:,0], a[:,1], label='n=1')
+#plt.plot(a[:,0], b[:,1], label='n=2')
+plt.plot(a[:,0], c[:,1], label='n=5')
+#plt.plot(a[:,0], d[:,1], label='n=10')
+plt.ylabel('$c_{n}(t)$',fontsize='xx-large')
+plt.xlabel('t',fontsize='xx-large')
+plt.legend()
+plt.show()
+
+f = plt.figure()
+f.set_figwidth(10)
+f.set_figheight(8)
+#plt.plot(a[:,0], a[:,1], label='n=1')
+#plt.plot(a[:,0], b[:,1], label='n=2')
+plt.plot(a[:,0], c[:,1], label='n=5')
+#plt.plot(a[:,0], d[:,1], label='n=10')
+plt.ylabel('$c_{n}(t)$',fontsize='xx-large')
+plt.xlabel('t',fontsize='xx-large')
+plt.legend()
+plt.savefig("test2.png")

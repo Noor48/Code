@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import math 
 import cmath
 
-a = []
+a = [] #initialize some list to plot data
 b = []
 r=11    # matrix dimension number
 N=10    #Higest interval in the spectrum
@@ -37,18 +37,8 @@ for t in np.arange(0,1,0.001):
     a.append(t)
     b.append(s3)
 
-#data = np.column_stack((a, b))
-#np.savetxt('test1.dat', data , delimiter='  ')
-#for plot
-f = plt.figure()
-f.set_figwidth(10)
-f.set_figheight(8)
-plt.plot(a, b, label='n=10', color='mediumvioletred')
-plt.ylabel('$c_{n}(t)$',fontsize='xx-large')
-plt.xlabel('t',fontsize='xx-large')
-plt.legend()
-plt.show()
 
+#for plot
 f = plt.figure()
 f.set_figwidth(10)
 f.set_figheight(8)
