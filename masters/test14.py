@@ -5,7 +5,7 @@ import cmath
 
 a = [] #initialize some list to plot data
 b = []
-r=11    # matrix dimension number
+r=6    # matrix dimension number
 N=10    #Higest interval in the spectrum
 T=40    #temperature
 
@@ -42,8 +42,9 @@ for t in np.arange(0,1,0.001):
 f = plt.figure()
 f.set_figwidth(10)
 f.set_figheight(8)
-plt.plot(a, b, label='n=10', color='mediumvioletred')
+plt.plot(a, b, label='n=5', color='green')
 plt.ylabel('$c_{n}(t)$',fontsize='xx-large')
 plt.xlabel('t',fontsize='xx-large')
+plt.axhline(0,ls='--',alpha=0.5,c='grey')
 plt.legend()
 plt.savefig('test.png')
