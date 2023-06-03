@@ -47,12 +47,28 @@
 
             \lstset{style=mystyle}
 
+\title{\Huge{Out-of-Time-Order-Correlator of $H=\frac{1}{2}(xp+px)$}}
+\author{Noor E Mustafa Ferdous}
 
 \begin{document}
     
-
+    \maketitle
+    %\doublespacing
     \bibliographystyle{unsrt}
-    \section{Out of Time Order Correlator of $H=xp$ model}
+    \begin{abstract}
+        Bery-Keating Hamiltonian $H_{0}=\frac{1}{2}(xp+px)$ resembles the Hilber-P$\acute{o}$lya 
+        cojectue of Riemnan Hypothesis, shows quantum chaotic behaviour. In this paper we first 
+        quantize xp and adding boundary condition evalute spectrum with proper eigenfucntion.
+        Then we quantutize 1/xp and achieve same spectrum with minor phase addition. We observes
+        OTOC of the hamiltonian, which gauge the quantum chaotic behaviour of it.
+    \end{abstract}
+
+    \newpage
+
+    \tableofcontents
+
+    \newpage
+    \section{Introduction}
 
     The Riemann hypothesis states that non-trivial zeros of the classical zeta function have real part equal to 1/2. The classical zeta function defined by
 
@@ -71,9 +87,9 @@
 
     Zeros of Riemann zeta function are two different types. Trivial zeros of zeta / Riemann zeta function occurs at all negetive integers (for $s = -2, -4, -6, .......$). 
     For complex s (=$\sigma + it $) (with real part between zero and one) , zeta fucntion becomes nontrivial ones. And the Riemann hypothesis is for $s=\frac{1}{2}-iE$
-    zeta funtion becomes zero $\zeta(\frac{1}{2}-it) = 0$. Hilbert-P$\acute{o}$lya conjecture suggests that the imaginary parts of the nontrivial zeros are the eiogenvalues 
+    zeta funtion becomes zero $\zeta(\frac{1}{2}-it) = 0$. Hilbert-P$\acute{o}$lya conjecture suggests that the imaginary parts of the nontrivial zeros are the eigenvalues 
     of a self-adjoint hamiltonian operator $\hat{H}$. It is also one of the aprroach to proving the Riemann hypothesis. Berry-Keating conjectured that the hamiltonian operator
-    of the Hilbert-P$\acute{o}$lya  cinjecture should take the form\cite{s1} 
+    of the Hilbert-P$\acute{o}$lya  conjecture should take the form\cite{s1} 
 
     \begin{equation}
         \hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})
@@ -83,6 +99,10 @@
     which the Riemann zeros are the spectrum of a Hamiltonian obstained by quantization of a classical chaotic hamiltonian, whose periodic orbits are labeled by the prime numbers.
     Connes took the adelic approach to introduce $H = xp $ \cite{s2}. He showed that using different semiclassical regularization, Riemann zeros appear as missing spectral lines in a continuum.
 
+    Then we look into Out-of-Time-Order-Correlator (OTOC).OTOC is defined by $C_{T} \equiv  - \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$, which were deduced 
+    for calculating vertex correction of superconductor\cite{s12}. Eventually it turned out to be a measurement of quantum chaos. Here $<\cdot \cdot \cdot>$  means thermal
+    average of W(t) and V(0) operators. Then we formulate a relation between thermal and microcanonical OTOCs. Then we perform OTOC calculation to see the
+    quantum chaotic behaviour of Berry-Keating Hamiltonian.
     Now we look into the Berry-Keating and Connes semiclassical approaches to $H=xp$
 
     \section{Semiclassical approach}
@@ -323,7 +343,7 @@
             \end{split}
         \end{equation}
         The deficiency indices correponding to the four intervals cosidered above are collecte in Table\cite{s8}. We find the deficency indices by observing different intervals.
-        For BK intervals$(1,\infty)$ only $\psi_{+}$ belongs to hilbert space ($\psi_{-}$ blows out. or putting intervals in Eq. (20) and testing whether it belongs to
+        For BK intervals$(1,\infty)$ only $\psi_{+}$ belongs to Hilbert space ($\psi_{-}$ blows out. or putting intervals in Eq. (20) and testing whether it belongs to
         the Hilbert space)\cite{s7}. And the rest are given below
         
         \begin{longtable}[c]{c c c c c}
@@ -395,7 +415,7 @@
         For the particular case where $\theta=\pi$, one observes that the energy spectrum is symmetric around zero, i.e, if $E_{n}$ is an eigenenergy so is $-E_{n}$.
         This result is obtained in working\cite{s10} with the inverse Hamiltonian $\frac{1}{H_{0}}$. We are reviewing that construction in next section.
 
-        \subsection{The inverse Hamiltonain $\frac{1}{H_{0}}$}
+        \subsection{The inverse Hamiltonain $1/H_{0}$}
 
         First, we take the expression at Eq(16) and take the formal inverse, i.e., $H_{0} ^{-1} = x^{1/2}p^{-1}x^{-1/2}$. The operator $p_{-1}$ is the one-dimensional
         Green's function with matrix elements(definition of Green's function: Green's function is the kernel of and integral operator that represents the inverse
@@ -412,7 +432,7 @@
             u = L^{-1}f
         \end{equation}
 
-        where $L_{-1}$ is the inverse operator of L. The inverse operator to be an integral operator of the form.
+        where $L^{-1}$ is the inverse operator of L. The inverse operator to be an integral operator of the form.
 
         \begin{equation}
             \left(L^{-1}f\right)(x) = \int_{a}^{b} g(x,\xi ) f(\xi) \,d\xi 
@@ -420,7 +440,7 @@
 
         with kernel G. If L exists, then the kernel fucntion $g(x,\xi)$ is called the Green's function associated with L.
 
-        So $p_{-1}$ operator will be
+        So $p^{-1}$ operator will be
         \begin{equation}
             \begin{split}
                 \left\langle x\middle|p^{-1}\middle|x^{'}\right\rangle &= \left\langle x\middle| \frac{1}{-i\hbar\frac{d}{dx}}\middle| x^{'}\right\rangle \\ 
@@ -480,8 +500,8 @@
         \begin{equation}
             \begin{split}
                 &\frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \phi(x^{'}) = \phi(1) \\ 
-                & \implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \frac{C}{x^{' 1/2 - iE/\hbar}} = \frac{C}{1^{1/2 - iE/\hbar}} \\
-                & \implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \frac{1}{x^{' 1/2 - iE/\hbar}} = 1\\
+                & \implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \frac{C}{x^{' 1 - iE/\hbar}} = \frac{C}{1^{1 - iE/\hbar}} \\
+                & \implies \frac{iE}{2\hbar} \int _{1}^{N} dx^{'} sign(1-x^{'}) \frac{1}{x^{' 1 - iE/\hbar}} = 1\\
             \end{split}
         \end{equation}
 
@@ -685,7 +705,14 @@
         \section{Conclusions}
 
         In this paper, we discussed what is Riemann hypothesis is, and why it is important to the field to Quantum mechanics. The imaginary part of Hamiltonian proposed by 
-        Berry-keating Hamiltonian $H_{0} = \frac{1}{2}(xp+px)$ shows the self-adjoint and quanutm chaos. We took Si
+        Berry-keating Hamiltonian $H_{0} = \frac{1}{2}(xp+px)$ shows the self-adjoint and quanutm chaos. We look at Sierra regularization of Berry-Keating Hamiltonian, and 
+        their intervals $l_{x}=1, \Lambda=1$ and evaluated the spectrum $E_{n} = \frac{2\pi \hbar}{ln \ N}(n+\frac{\theta}{2\pi})$ of $\psi_{E}(x) = \frac{C}{x^{\frac{1}{2}-iE\hbar}}$
+        eigenfunction. Then we look at the quantization of inverse Hamiltonian $H_{0}^{-1} = x^{-1/2}p^{-1}x^{1/2} $ and obtained the spectrum $E_{n} = \frac{2\pi \hbar}{ln \ N}(n+\frac{1}{2})$
+        which is reckon to be $E_{n} = \frac{2\pi \hbar}{ln \ N}(n+\frac{\theta}{2\pi})$ with $\theta = \pi$
+
+        We discussed OTOC in quantum mehcanics and it thermal and microcanonical relation between them. We input the spccetrum and position operator of inverse Hamiltonaian 
+        and calculate its quantum chaos analytically. We see that microcanonical OTOC settles at value greater than zero while the thermal OTOC displays the same behaviour
+        of microcanonical OTOC.
     \bibliographystyle{plain}
     \bibliography{ref.bib}
 \end{document}

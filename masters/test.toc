@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{}%
+\contentsline {section}{\numberline {2}Semiclassical approach}{4}{}%
+\contentsline {section}{\numberline {3}Quantization of xp and $\frac {1}{xp}$}{7}{}%
+\contentsline {subsection}{\numberline {3.1}The Hamitoninan $H_{0} = xp$}{7}{}%
+\contentsline {subsection}{\numberline {3.2}The inverse Hamiltonain $1/H_{0}$}{13}{}%
+\contentsline {section}{\numberline {4}Out-of-Time-Order Correlator of $H=xp$}{16}{}%
+\contentsline {section}{\numberline {5}Conclusions}{23}{}%
