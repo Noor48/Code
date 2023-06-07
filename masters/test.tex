@@ -14,11 +14,14 @@
 \usepackage{svg}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{authblk} 
+\usepackage{authblk}
+%\usepackage[dvipsnames]{xcolor}
 \usepackage{setspace}
 \usepackage{longtable}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+%\usepackage[dvipsnames]{xcolor}
 \newcommand*{\1}{\hspace{1pt}}
 
             \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -70,8 +73,8 @@
     \tableofcontents
 
     \newpage
+    \begin{mdframed}[hidealllines=true,backgroundcolor=blue!20]
     \section{Introduction}
-
     The Riemann hypothesis states that non-trivial zeros of the classical zeta function have real part equal to 1/2. The classical zeta function converges at
     Re $s > 1$ . By the fundamental theorem of arithmatic, which is also equivalent to the Euler product over primes where p are all the prime numbers. So zeta 
     can describe all the prime numbers.Also the zeros of Riemann zeta function are two different types. Trivial zeros of zeta / Riemann zeta function occurs at all negetive integers (for $s = -2, -4, -6, .......$). 
@@ -82,14 +85,45 @@
     of the Hilbert-P$\acute{o}$lya  conjecture should take the form\cite{s1}$\hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})$.
     The classical versus quantum version of primes and the zeros is also at the heart of so-called quantum chaos approach to the RH.
 
-    Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{s1} Berry proposed the Quantum Chaos conjecture, according to 
-    which the Riemann zeros are the spectrum of a Hamiltonian obstained by quantization of a classical chaotic hamiltonian, whose periodic orbits are labeled by the prime numbers.
-    Connes took the adelic approach to introduce $H = xp $ \cite{s2}. He showed that using different semiclassical regularization, Riemann zeros appear as missing spectral lines in a continuum.
+    Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{s1}
+    In 1999, Berry and Keating\cite{s1,s15} on the one hand and Connes\cite{s3} on the other claimed that the classical Hamiltonian H = xp, 
+    where x and p are the location and momenta of a 1D particle, is strongly connected to the Riemann zeros. This startling 
+    hypothesis was based on a semiclassical analysis of H = xp, which led these authors to very different conclusions about 
+    the probable spectral interpretation of the Riemann zeros. The source of the dispute is the use of distinct 
+    regularizations of H = xp. Berry and Keating used a Planck cell regularization, in which the smooth component of the
+    Riemann zeros is represented semiclassically as discrete energy levels. Connes, on the other hand, chose an upper 
+    cutoff for the position and momenta, resulting in a semiclassical continuous spectrum devoid of smooth zeros.
+    All of these semiclassical solutions are heuristic, and there is no consistent quantum version as of yet.
 
-    Then we look into Out-of-Time-Order-Correlator (OTOC).OTOC is defined by $C_{T} \equiv  - \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$, which were deduced 
-    for calculating vertex correction of superconductor\cite{s12}. Eventually it turned out to be a measurement of quantum chaos. Here $<\cdot \cdot \cdot>$  means thermal
-    average of W(t) and V(0) operators. Then we formulate a relation between thermal and microcanonical OTOCs. Then we perform OTOC calculation to see the
-    quantum chaotic behaviour of Berry-Keating Hamiltonian.
+
+
+    The out-of-time-order correlator (OTOC) is typically defined by \cite{s11}
+
+    \begin{equation}
+        C_{T} \equiv  - \left\langle\left[W(t),V(0)\right]^{2}\right\rangle
+    \end{equation}
+
+    where $<\cdot \cdot \cdot >$ represents the thermal average. W(t) and V(t) are operators as time in t in the Heisenberg representation. The OTOC, first introduced
+    in a calculation of a vertex correction of a current for a superconductor\cite{s12}, was recently turned out to be considered as a measure of the magnitude of 
+    quantum chaos. A naive argument for the relation between the OTOC and chaos is as follows\cite{s13}. Consider poistion and momentum operators, x(t) and p(t), in a
+    quantum system. We can define an OTOC as $C_{T} = - \left\langle\left[x(t),p(0)\right]^{2}\right\rangle$. Taking a naive semiclassical limit, we would be able to 
+    replace the commutator $\left[x(t),p(0)\right]$ by the Poissoin bracket $i\hbar\{x(t),p(0)\}_{PB} = i\hbar\frac{\delta x(t)}{\delta x(0)}$. For a classically 
+    chaotic system with a Lyapunov exponent $\lambda$, we have $\frac{\delta x(t)}{\delta x(0)}\thicksim  e^{\lambda t}$ because of sensiitivity to initial condition.
+    Thus, the OTOC should grow as $\thicksim \hbar^{2}e^{2\lambda t}$ and we can read off the quatnum Lyapunov exponent $\lambda$ form it. The quantization of a 
+    classically chaotic system may provide a positive quanutm Lyapunov exponent of the OTOC. Historically, the nearest neighbour distribution (NND) for the energy
+    level spectrum has been used to quantify quantum chaos \cite{s14}. For integrable and non-integrable systems, it is considered that NNDs are given by Poission
+    and Wigner distributions. The OTOC is expected to be another measure of qauntum chaos. A possible distinction from the classical chaotic system is that the 
+    OTOC does not grow eternally but saturates at the Ehrenfest time $t_{E}$. The Ehrenfest time is defined by the time scale beyond which the wave function spreads
+    over the whole system. It is roughly characterized as a boundary between a particle-like behavior and a wave-like behavior of the wave function.
+
+    In the definition of OTOC, we consider the thermal average of $- \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$. When we take thermal average, we need to 
+    consider the four point operator $\left\langle\left[W(t),V(0)\right]^{2}\right\rangle$ instead of two point operator $\left\langle\left[W(t),V(0)\right]\right\rangle$.
+    The reason is as follows. Assuming that we can replace the commutator by Poission bracket by semiclassical limit, $\left\langle\left[W(t),V(0)\right]\right\rangle$
+    would also show the exponential growth $\thicksim  e^{\lambda t}$. However, its coefficient can be both positive and negetive. By taking the thermal average, their
+    contributions would be canceled. From the quantum theory point of view, $\left\langle\left[W(t),V(0)\right]\right\rangle$ measures the correlation between W(t)
+    and V(0). Therefore, the two point function decays as $t \rightarrow \infty$ and cannot show the chaotic behavior.
+
+    \end{mdframed}
     Now we look into the Berry-Keating and Connes semiclassical approaches to $H=xp$
 
     \section{Semiclassical approach}
@@ -525,32 +559,6 @@
 
     \section{Out-of-Time-Order Correlator of $H=xp$}
         
-        The out-of-time-order correlator (OTOC) is typically defined by \cite{s11}
-
-        \begin{equation}
-            C_{T} \equiv  - \left\langle\left[W(t),V(0)\right]^{2}\right\rangle
-        \end{equation}
-
-        where $<\cdot \cdot \cdot >$ represents the thermal average. W(t) and V(t) are operators as time in t in the Heisenberg representation. The OTOC, first introduced
-        in a calculation of a vertex correction of a current for a superconductor\cite{s12}, was recently turned out to be considered as a measure of the magnitude of 
-        quantum chaos. A naive argument for the relation between the OTOC and chaos is as follows\cite{s13}. Consider poistion and momentum operators, x(t) and p(t), in a
-        quantum system. We can define an OTOC as $C_{T} = - \left\langle\left[x(t),p(0)\right]^{2}\right\rangle$. Taking a naive semiclassical limit, we would be able to 
-        replace the commutator $\left[x(t),p(0)\right]$ by the Poissoin bracket $i\hbar\{x(t),p(0)\}_{PB} = i\hbar\frac{\delta x(t)}{\delta x(0)}$. For a classically 
-        chaotic system with a Lyapunov exponent $\lambda$, we have $\frac{\delta x(t)}{\delta x(0)}\thicksim  e^{\lambda t}$ because of sensiitivity to initial condition.
-        Thus, the OTOC should grow as $\thicksim \hbar^{2}e^{2\lambda t}$ and we can read off the quatnum Lyapunov exponent $\lambda$ form it. The quantization of a 
-        classically chaotic system may provide a positive quanutm Lyapunov exponent of the OTOC. Historically, the nearest neighbour distribution (NND) for the energy
-        level spectrum has been used to quantify quantum chaos \cite{14}. For integrable and non-integrable systems, it is considered that NNDs are given by Poission
-        and Wigner distributions. The OTOC is expected to be another measure of qauntum chaos. A possible distinction from the classical chaotic system is that the 
-        OTOC does not grow eternally but saturates at the Ehrenfest time $t_{E}$. The Ehrenfest time is defined by the time scale beyond which the wave function spreads
-        over the whole system. It is roughly characterized as a boundary between a particle-like behavior and a wave-like behavior of the wave function.
-
-        In the definition of OTOC, we consider the thermal average of $- \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$. When we take thermal average, we need to 
-        consider the four point operator $\left\langle\left[W(t),V(0)\right]^{2}\right\rangle$ instead of two point operator $\left\langle\left[W(t),V(0)\right]\right\rangle$.
-        The reason is as follows. Assuming that we can replace the commutator by Poission bracket by semiclassical limit, $\left\langle\left[W(t),V(0)\right]\right\rangle$
-        would also show the exponential growth $\thicksim  e^{\lambda t}$. However, its coefficient can be both positive and negetive. By taking the thermal average, their
-        contributions would be canceled. From the quantum theory point of view, $\left\langle\left[W(t),V(0)\right]\right\rangle$ measures the correlation between W(t)
-        and V(0). Therefore, the two point function decays as $t \rightarrow \infty$ and cannot show the chaotic behavior.
-
         First we formulate how to calculate the OTOC for generic quauntum mechanics. In particular, by the reason described above, we choose $W = x$ and $V = p$ to measure
         a possible indication of quantum chaos. We consider the out-of-time-order correlator (OTOC) defined by
 
