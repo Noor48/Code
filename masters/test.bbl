@@ -11,20 +11,35 @@ Michael~V Berry and Jonathan~P Keating.
 \newblock The riemann zeros and eigenvalue asymptotics.
 \newblock {\em SIAM review}, 41(2):236--266, 1999.
 
-\bibitem{s2}
-Alain Connes.
-\newblock Trace formula in noncommutative geometry and the zeros of the riemann
-  zeta function.
-\newblock {\em Selecta Mathematica}, 5(1):29, 1999.
+\bibitem{s3}
+Edwards HM Riemanns~Zeta Function.
+\newblock Academic press new york, 1974.
+
+\bibitem{s11}
+Koji Hashimoto, Keiju Murata, and Ryosuke Yoshii.
+\newblock Out-of-time-order correlators in quantum mechanics.
+\newblock {\em Journal of High Energy Physics}, 2017(10):1--31, 2017.
 
 \bibitem{s12}
 Anatoly~I Larkin and Yu~N Ovchinnikov.
 \newblock Quasiclassical method in the theory of superconductivity.
 \newblock {\em Sov Phys JETP}, 28(6):1200--1205, 1969.
 
-\bibitem{s3}
-Edwards HM Riemanns~Zeta Function.
-\newblock Academic press new york, 1974.
+\bibitem{s13}
+Juan Maldacena, Stephen~H Shenker, and Douglas Stanford.
+\newblock A bound on chaos.
+\newblock {\em Journal of High Energy Physics}, 2016(8):1--17, 2016.
+
+\bibitem{s14}
+Fritz Haake.
+\newblock {\em Quantum signatures of chaos}.
+\newblock Springer, 1991.
+
+\bibitem{s2}
+Alain Connes.
+\newblock Trace formula in noncommutative geometry and the zeros of the riemann
+  zeta function.
+\newblock {\em Selecta Mathematica}, 5(1):29, 1999.
 
 \bibitem{s4}
 Michael~V Berry and Jonathan~P Keating.
@@ -60,15 +75,5 @@ Germ{\'a}n Sierra.
 \newblock The riemann zeros and the cyclic renormalization group.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2005(12):P12006, 2005.
-
-\bibitem{s11}
-Koji Hashimoto, Keiju Murata, and Ryosuke Yoshii.
-\newblock Out-of-time-order correlators in quantum mechanics.
-\newblock {\em Journal of High Energy Physics}, 2017(10):1--31, 2017.
-
-\bibitem{s13}
-Juan Maldacena, Stephen~H Shenker, and Douglas Stanford.
-\newblock A bound on chaos.
-\newblock {\em Journal of High Energy Physics}, 2016(8):1--17, 2016.
 
 \end{thebibliography}
