@@ -54,6 +54,8 @@
     
     \maketitle
     %\doublespacing
+    \newpage
+    \section*{Out-of-Time-Order-Correlator of $H=\frac{1}{2}(xp+px)$}
     \bibliographystyle{unsrt}
     \begin{abstract}
         Bery-Keating Hamiltonian $H_{0}=\frac{1}{2}(xp+px)$ resembles the Hilber-P$\acute{o}$lya 
@@ -70,30 +72,15 @@
     \newpage
     \section{Introduction}
 
-    The Riemann hypothesis states that non-trivial zeros of the classical zeta function have real part equal to 1/2. The classical zeta function defined by
-
-    \begin{equation}
-        \zeta (s) = \sum_{n = 1}^{\infty} n^{s} 
-    \end{equation}
-
-    for Re $s > 1$. 
-    By the fundamental theorem of arithmatic, which is also equivalent to the Euler product over primes
-
-    \begin{equation}
-        \zeta (s) = \prod _{p} (1-p) ^{-1}
-    \end{equation}
-
-    where p are all the prime numbers.
-
-    Zeros of Riemann zeta function are two different types. Trivial zeros of zeta / Riemann zeta function occurs at all negetive integers (for $s = -2, -4, -6, .......$). 
+    The Riemann hypothesis states that non-trivial zeros of the classical zeta function have real part equal to 1/2. The classical zeta function converges at
+    Re $s > 1$ . By the fundamental theorem of arithmatic, which is also equivalent to the Euler product over primes where p are all the prime numbers. So zeta 
+    can describe all the prime numbers.Also the zeros of Riemann zeta function are two different types. Trivial zeros of zeta / Riemann zeta function occurs at all negetive integers (for $s = -2, -4, -6, .......$). 
     For complex s (=$\sigma + it $) (with real part between zero and one) , zeta fucntion becomes nontrivial ones. And the Riemann hypothesis is for $s=\frac{1}{2}-iE$
-    zeta funtion becomes zero $\zeta(\frac{1}{2}-it) = 0$. Hilbert-P$\acute{o}$lya conjecture suggests that the imaginary parts of the nontrivial zeros are the eigenvalues 
+    zeta funtion becomes zero. If the Riemann hypothesis is true the statistical distribution of the primes will be constrained 
+    in the most favourable way. Hilbert-P$\acute{o}$lya conjecture suggests that the imaginary parts of the nontrivial zeros are the eigenvalues 
     of a self-adjoint hamiltonian operator $\hat{H}$. It is also one of the aprroach to proving the Riemann hypothesis. Berry-Keating conjectured that the hamiltonian operator
-    of the Hilbert-P$\acute{o}$lya  conjecture should take the form\cite{s1} 
-
-    \begin{equation}
-        \hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})
-    \end{equation}
+    of the Hilbert-P$\acute{o}$lya  conjecture should take the form\cite{s1}$\hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})$.
+    The classical versus quantum version of primes and the zeros is also at the heart of so-called quantum chaos approach to the RH.
 
     Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{s1} Berry proposed the Quantum Chaos conjecture, according to 
     which the Riemann zeros are the spectrum of a Hamiltonian obstained by quantization of a classical chaotic hamiltonian, whose periodic orbits are labeled by the prime numbers.
@@ -166,7 +153,7 @@
 
     \begin{equation}
         \begin{split}
-            \mathcal {N}_{c} (E) &= \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + \int_{\frac{E}{\Lambda}}^{\Lambda}  \,dx\int_{\frac{E}{x}}^{\frac{E}{\Lambda}}  \,dp   \right] \\ 
+            \mathcal {N}_{c} (E) &= \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + \int_{\frac{E}{\Lambda}}^{\Lambda}  \,dx\int^{\frac{E}{x}}_{\frac{E}{\Lambda}}  \,dp   \right] \\ 
              & = \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + \int_{\frac{E}{\Lambda}}^{\Lambda}  \,dx\left[\frac{E}{x} - \frac{E}{\Lambda}\right]   \right] \\ 
              & = \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + E\left[ln \ x\right] _{\frac{E}{\Lambda}}^{\Lambda} - \frac{E}{\Lambda}\left[\Lambda - \frac{E}{\Lambda}\right]   \right] \\ 
              & = \frac{1}{h}\left[ 2E - \left(\frac{E}{\Lambda} \right)^{2} + E\left[ln \ \frac{\Lambda ^{2}}{E}\right] - E + \left(\frac{E}{\Lambda}\right)^{2}\right]  \\ 
