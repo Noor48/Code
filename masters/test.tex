@@ -78,7 +78,7 @@
     The classical zeta/ Riemann zeta function defined as $\zeta(s) = \sum _{n=1}^{\infty} \frac{1}{n^{s}}$\cite{s3}, where s is $s=\sigma + it$ and n is the integers. If the real part of s is greater
     than 1 (Re $s > 1$), the zeta function converges. But at real part equal to 1 (Re $s = 1$) it becomes the harmonic series$\zeta(1) = 1 + \frac{1}{2} + \frac{1}{3} + 
     \frac{1}{4} + ....$ and diverges. So there begs the question where does the zeta fucntion goes to zero. It was found that there are two types of condition that make 
-    the Riemann zeta function which is called Riemann zero or Zeta zero. For negetive integers($s=-2,-4,-6$) in the Riemann zeta function becomes zero. These types of zeros are called
+    the Riemann zeta function which is called Riemann zero or Zeta zero. For negetive integers($n=-2,-4,-6$) in the Riemann zeta function becomes zero. These types of zeros are called
     Trivial zeros. And the other kind of zeros, which are called Non-Trivial zeros, lie between real part of s in Re $0<s<1$. Riemann hypothesize that all the non-trivial zeros
     lie at $s=\frac{1}{2}$. This is the famous Riemann hypothesis. Euler showed that the existing classical zeta function has a connection to the product of all prime numbers.
     He proved that $\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^{s}} = \prod _{p} \frac{1}{1-p^{-s}}$ where p is the primes. So if anyone can prove the Riemann hypothesis, they
@@ -86,29 +86,20 @@
     zeros will be a self-adjoint oprator. So the s will more look like as $s=\sigma - iE_{n}$. Berry-Keating took this suggestion and proposed that the self-adjoint operator, which 
     is $E_{n}$, will be a Hamiltonian which is $\hat{H} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})$. Berry-Keating also proposed that this Hamiltonian shows quantum chaotic behaviour.
     One can tell if any object is in chaos or chaotic behavoiur is sensitive dependece of initial condition, or we can say that a particle forget its memory about its initial condition.
-    
-    The Riemann hypothesis states that non-trivial zeros of the classical zeta function have real part equal to 1/2. The classical zeta function converges at
-    Re $s > 1$ . By the fundamental theorem of arithmatic, which is also equivalent to the Euler product over primes where p are all the prime numbers. So zeta 
-    can describe all the prime numbers.Also the zeros of Riemann zeta function are two different types. Trivial zeros of zeta / Riemann zeta function occurs at all negetive integers (for $s = -2, -4, -6, .......$). 
-    For complex s (=$\sigma + it $) (with real part between zero and one) , zeta fucntion becomes nontrivial ones. And the Riemann hypothesis is for $s=\frac{1}{2}-iE$
-    zeta funtion becomes zero. If the Riemann hypothesis is true the statistical distribution of the primes will be constrained 
-    in the most favourable way. Hilbert-P$\acute{o}$lya conjecture suggests that the imaginary parts of the nontrivial zeros are the eigenvalues 
-    of a self-adjoint hamiltonian operator $\hat{H}$. It is also one of the aprroach to proving the Riemann hypothesis. Berry-Keating conjectured that the hamiltonian operator
-    of the Hilbert-P$\acute{o}$lya  conjecture should take the form\cite{s1}$\hat{H} _{BK} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})$.
-    The classical versus quantum version of primes and the zeros is also at the heart of so-called quantum chaos approach to the RH.
+    If a equation of a system is non-linear ODE, the system is chaotic or in chaos. Which can be describe in the following statement. Let there are two partiticle at a distance 
+    seperated by $\delta x$ at time $t=0$ or  $\delta x(0)$ and after some time $t$ the distance between the particle $\delta x(t)$, the relation of the initial and the final posotion 
+    of a chaotic system is $|\delta x(t)| \thickapprox e^{t\lambda} |\delta x(0)|$, where t is time and $\lambda$ is the Lyapunov exponent. Lyapunov exponent measures the sensitivity if initial 
+    condition.
 
-    Here x and p are position and momentum operators. This 1d classical Hamiltonian ($H = xp$) related to the Riemann zeros.\cite{s1}
-    In 1999, Berry and Keating\cite{s1,s15} on the one hand and Connes\cite{s3} on the other claimed that the classical Hamiltonian H = xp, 
-    where x and p are the location and momenta of a 1D particle, is strongly connected to the Riemann zeros. This startling 
-    hypothesis was based on a semiclassical analysis of H = xp, which led these authors to very different conclusions about 
-    the probable spectral interpretation of the Riemann zeros. The source of the dispute is the use of distinct 
-    regularizations of H = xp. Berry and Keating used a Planck cell regularization, in which the smooth component of the
-    Riemann zeros is represented semiclassically as discrete energy levels. Connes, on the other hand, chose an upper 
-    cutoff for the position and momenta, resulting in a semiclassical continuous spectrum devoid of smooth zeros.
-    All of these semiclassical solutions are heuristic, and there is no consistent quantum version as of yet.
+    In this paper we took the Berry-Keating Hamiltonian and also look at the Connes approach to the same Hamiltonian for evaluation of semiclassical states.\cite{s1,s15,s3}
+    And also we look at German Sierra approach.\cite{s13}Berry and Keating used a Planck cell regularization, in which the smooth component 
+    of the Riemann zeros is represented semiclassically as discrete energy levels. Connes, on the other hand, chose an upper 
+    cutoff for the position and momenta, resulting in a semiclassical continuous spectrum devoid of smooth zeros, which all include in the paper.
+    They both consider x and are the 1D location and momentum of the particle. German Sierra took both of the regularization, Berry-Keating and Connes regularization 
+    and took assumption only on x or bounds x and excludes p.
 
-
-
+    Out-of-Time-Order Correlator is the mesurement of chaos  of quantum system. It was first introduced in a calculation of a vertex correction of a current for a 
+    superconductor\cite{s12}.
     The out-of-time-order correlator (OTOC) is typically defined by \cite{s11}
 
     \begin{equation}
