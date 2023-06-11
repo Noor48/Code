@@ -2,12 +2,15 @@
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,blindingoffset=6mm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead{}
+%\fancyhead{}
 \fancyhead[RO,LE]{\thepage}
-\fancyfoot{}
-\fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,CE]{Chapter \thechapter}
-\fancyfoot[CO,RE]{Author Name}
+%\fancyfoot[LE,RO]{\thepage}
+%\fancyfoot{}
+%\fancyfoot[LO,CE]{Chapter \thechapter}
+%\fancyfoot[CO,RE]{Author Name}
+%\pagenumbering{gobble}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0.4pt}
 \usepackage{bbold}
 \usepackage{dsfont}
 \usepackage{indentfirst}
@@ -64,9 +67,10 @@
 \author{}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    linkcolor=black,
+    filecolor=cyan,      
+    urlcolor=magenta,
+    citecolor=magenta,
     pdftitle={Overleaf Example},
     pdfpagemode=FullScreen,
     }
