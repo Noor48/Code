@@ -1,4 +1,13 @@
-\documentclass[12pt, letterpaper]{report}
+\documentclass[12pt,twoside]{report}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,blindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO,LE]{\thepage}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Chapter \thechapter}
+\fancyfoot[CO,RE]{Author Name}
 \usepackage{bbold}
 \usepackage{dsfont}
 \usepackage{indentfirst}
