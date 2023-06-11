@@ -1,4 +1,4 @@
-\documentclass[12pt, letterpaper]{article}
+\documentclass[12pt, letterpaper]{report}
 \usepackage{bbold}
 \usepackage{dsfont}
 \usepackage{indentfirst}
@@ -114,13 +114,12 @@
     \newpage
     %\section*{Out-of-Time-Order-Correlator of $H=xp$}
     \bibliographystyle{unsrt}
-    \begin{abstract}
+    \chapter*{Abstract}
         Berry-Keating Hamiltonian $H_{0}=\frac{1}{2}(xp+px)$ resembles the Hilber-P$\acute{o}$lya 
         cojectue of Riemnan Hypothesis, shows quantum chaotic behaviour. In this paper we first 
         quantize xp and adding boundary condition evalute spectrum with proper eigenfucntion.
         Then we quantutize 1/xp and achieve same spectrum with minor phase addition. We observes
         OTOC of the hamiltonian, which gauge the quantum chaotic behaviour of it.
-    \end{abstract}
 
     \newpage
 %\addcontentsline{toc}{section}{\textbf{TABLE OF CONTENTS}}
@@ -130,8 +129,8 @@
 
     \newpage
     %\begin{mdframed}[hidealllines=true,backgroundcolor=green!20]
-    \section{Introduction}
-    \label{sec:Introduction}
+    \chapter{Introduction}
+    %\label{sec:Introduction}
     The classical zeta/ Riemann zeta function defined as $\zeta(s) = \sum _{n=1}^{\infty} \frac{1}{n^{s}}$\cite{s3}, where s is $s=\sigma + it$ and n is the integers. If the real part of s is greater
     than 1 (Re $s > 1$), the zeta function converges. But at real part equal to 1 (Re $s = 1$) it becomes the harmonic series$\zeta(1) = 1 + \frac{1}{2} + \frac{1}{3} + 
     \frac{1}{4} + ....$ and diverges. So there begs the question where does the zeta fucntion goes to zero. It was found that there are two types of condition that make 
@@ -291,10 +290,10 @@
     \end{longtable}
 
     \newpage
-    \section{Quantization of xp and $\frac{1}{xp}$}
+    \chapter{Quantization of xp and $\frac{1}{xp}$}
     
     
-    \subsection{The Hamitoninan $H_{0} = xp$}
+    \section{The Hamitoninan $H_{0} = xp$}
 
         Here we construst a self adjoint operator $H_{0}$ which acts on a Hilbert space $L^{2}(a,b)$ of square integrable function in the interval $(a,b)$. Taking $x\geqslant 0$
         , there are four possible intervals: $a=0,l_{x}$ and $b=\Lambda, \infty $ where $l_{x}$ and $\Lambda$ were introduced (we shall take $l_{x}$ and $\Lambda = N > 1$).
@@ -510,7 +509,7 @@
         For the particular case where $\theta=\pi$, one observes that the energy spectrum is symmetric around zero, i.e, if $E_{n}$ is an eigenenergy so is $-E_{n}$.
         This result is obtained in working\cite{s10} with the inverse Hamiltonian $\frac{1}{H_{0}}$. We are reviewing that construction in next section.
 
-        \subsection{The inverse Hamiltonain $1/H_{0}$}
+        \section{The inverse Hamiltonain $1/H_{0}$}
 
         First, we take the expression at Eq(16) and take the formal inverse, i.e., $H_{0} ^{-1} = x^{1/2}p^{-1}x^{-1/2}$. The operator $p_{-1}$ is the one-dimensional
         Green's function with matrix elements(definition of Green's function: Green's function is the kernel of and integral operator that represents the inverse
@@ -634,7 +633,7 @@
     \newpage
 
 
-    \section{Out-of-Time-Order Correlator of $H=xp$}
+    \chapter{Out-of-Time-Order Correlator of $H=xp$}
         
         First we formulate how to calculate the OTOC for generic quauntum mechanics. In particular, by the reason described above, we choose $W = x$ and $V = p$ to measure
         a possible indication of quantum chaos. We consider the out-of-time-order correlator (OTOC) defined by
@@ -776,7 +775,7 @@
         
         \newpage
 
-        \section{Conclusions}
+        \chapter{Conclusions}
 
         In this paper, we discussed what is Riemann hypothesis is, and why it is important to the field to Quantum mechanics. The imaginary part of Hamiltonian proposed by 
         Berry-keating Hamiltonian $H_{0} = \frac{1}{2}(xp+px)$ shows the self-adjoint and quanutm chaos. We look at Sierra regularization of Berry-Keating Hamiltonian, and 
