@@ -4,6 +4,26 @@
 Edwards HM Riemanns~Zeta Function.
 \newblock Academic press new york, 1974.
 
+\bibitem{s27}
+Edwards HM Riemanns~Zeta Function.
+\newblock Academic press new york, 1974.
+
+\bibitem{s28}
+Edward~Charles Titchmarsh, David~Rodney Heath-Brown, Edward Charles~Titchmarsh
+  Titchmarsh, et~al.
+\newblock {\em The theory of the Riemann zeta-function}.
+\newblock Oxford university press, 1986.
+
+\bibitem{s29}
+Enrico Bombieri.
+\newblock Problems of the millennium: The riemann hypothesis.
+\newblock {\em Clay Mathematics Institute}, 2000.
+
+\bibitem{s30}
+Peter Sarnak.
+\newblock Problems of the millennium: The riemann hypothesis (2004).
+\newblock {\em P{\`a}gina web de la fundaci{\'o} Clay}, 2004.
+
 \bibitem{s1}
 Michael~V Berry and Jonathan~P Keating.
 \newblock H= xp and the riemann zeros.
@@ -15,25 +35,84 @@ Michael~V Berry and Jonathan~P Keating.
 \newblock The riemann zeros and eigenvalue asymptotics.
 \newblock {\em SIAM review}, 41(2):236--266, 1999.
 
-\bibitem{s11}
-Koji Hashimoto, Keiju Murata, and Ryosuke Yoshii.
-\newblock Out-of-time-order correlators in quantum mechanics.
-\newblock {\em Journal of High Energy Physics}, 2017(10):1--31, 2017.
+\bibitem{s13}
+Juan Maldacena, Stephen~H Shenker, and Douglas Stanford.
+\newblock A bound on chaos.
+\newblock {\em Journal of High Energy Physics}, 2016(8):1--17, 2016.
 
 \bibitem{s12}
 Anatoly~I Larkin and Yu~N Ovchinnikov.
 \newblock Quasiclassical method in the theory of superconductivity.
 \newblock {\em Sov Phys JETP}, 28(6):1200--1205, 1969.
 
-\bibitem{s13}
-Juan Maldacena, Stephen~H Shenker, and Douglas Stanford.
-\newblock A bound on chaos.
-\newblock {\em Journal of High Energy Physics}, 2016(8):1--17, 2016.
+\bibitem{s11}
+Koji Hashimoto, Keiju Murata, and Ryosuke Yoshii.
+\newblock Out-of-time-order correlators in quantum mechanics.
+\newblock {\em Journal of High Energy Physics}, 2017(10):1--31, 2017.
 
 \bibitem{s14}
 Fritz Haake.
 \newblock {\em Quantum signatures of chaos}.
 \newblock Springer, 1991.
+
+\bibitem{s16}
+Juan Maldacena.
+\newblock The large-n limit of superconformal field theories and supergravity.
+\newblock {\em International journal of theoretical physics}, 38(4):1113--1133,
+  1999.
+
+\bibitem{s17}
+Juan Maldacena, Stephen~H Shenker, and Douglas Stanford.
+\newblock A bound on chaos.
+\newblock {\em Journal of High Energy Physics}, 2016(8):1--17, 2016.
+
+\bibitem{s18}
+Stephen~H Shenker and Douglas Stanford.
+\newblock Black holes and the butterfly effect.
+\newblock {\em Journal of High Energy Physics}, 2014(3):1--25, 2014.
+
+\bibitem{s19}
+Stephen~H Shenker and Douglas Stanford.
+\newblock Multiple shocks.
+\newblock {\em Journal of High Energy Physics}, 2014(12):1--20, 2014.
+
+\bibitem{s20}
+Stefan Leichenauer.
+\newblock Disrupting entanglement of black holes.
+\newblock {\em Physical Review D}, 90(4):046009, 2014.
+
+\bibitem{s21}
+Alexei Kitaev.
+\newblock Hidden correlations in the hawking radiation and thermal noise.
+\newblock In {\em Talk given at the Fundamental Physics Prize Symposium},
+  volume~10, 2014.
+
+\bibitem{s22}
+Stephen~H Shenker and Douglas Stanford.
+\newblock Stringy effects in scrambling.
+\newblock {\em Journal of High Energy Physics}, 2015(5):1--34, 2015.
+
+\bibitem{s23}
+Steven Jackson, Lauren McGough, and Herman Verlinde.
+\newblock Conformal bootstrap, universality and gravitational scattering.
+\newblock {\em Nuclear Physics B}, 901:382--429, 2015.
+
+\bibitem{s24}
+Joseph Polchinski.
+\newblock Chaos in the black hole s-matrix.
+\newblock {\em arXiv preprint arXiv:1505.08108}, 2015.
+
+\bibitem{s25}
+Subir Sachdev and Jinwu Ye.
+\newblock Gapless spin-fluid ground state in a random quantum heisenberg
+  magnet.
+\newblock {\em Physical review letters}, 70(21):3339, 1993.
+
+\bibitem{s26}
+A~Kitaev.
+\newblock A simple model of quantum holography, talks given at the kavli
+  institute for theoretical physics (kitp).
+\newblock {\em University of California, Santa Barbara, USA}, 7, 2015.
 
 \bibitem{s2}
 Alain Connes.

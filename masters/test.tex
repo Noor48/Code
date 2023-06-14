@@ -1,5 +1,5 @@
-\documentclass[12pt,twoside]{report}
-\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,blindingoffset=6mm]{geometry}
+\documentclass[12pt]{report}
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,blindingoffset=6mm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 %\fancyhead{}
@@ -34,6 +34,8 @@
 \usepackage{xcolor}
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{hyperref}
+\usepackage{setspace}
+%\setstretch{2}
 %\usepackage[dvipsnames]{xcolor}
 \newcommand*{\1}{\hspace{1pt}}
 
@@ -77,6 +79,7 @@
 
 \begin{document}
     
+    \baselineskip=18pt
     %\begin{center}
     %    \centering
     %    \thispagestyle{empty}
@@ -123,41 +126,44 @@
         \large\begin{center}\bf{Dhaka - 1000}\end{center}
     \end{center}
     %\maketitle
-    %\doublespacing
+    \doublespacing
     \newpage
     %\section*{Out-of-Time-Order-Correlator of $H=xp$}
     \bibliographystyle{unsrt}
-    \chapter*{Abstract}
-        Berry-Keating Hamiltonian $H_{0}=\frac{1}{2}(xp+px)$ resembles the Hilber-P$\acute{o}$lya 
-        cojectue of Riemnan Hypothesis, shows quantum chaotic behaviour. In this paper we first 
-        quantize xp and adding boundary condition evalute spectrum with proper eigenfucntion.
-        Then we quantutize 1/xp and achieve same spectrum with minor phase addition. We observes
-        OTOC of the hamiltonian, which gauge the quantum chaotic behaviour of it.
-
+    \begin{abstract}
+        Berry-Keating Hamiltonian $H_{0}=\frac{1}{2}(xp+px)$ resembles the Hilbert-Pólya
+        conjecture of Riemann Hypothesis shows quantum chaotic behavior. In
+        this paper we first quantize xp and $1/xp$ and achieve the same spectrum
+        with minor phase addition. We observe quantize $xp$ and add boundary
+        conditions to evaluate the spectrum with proper eigenfunction. Then we measured the
+        Out-of-Time-Order Correlator (OTOC) of the Hamiltonian,to measure the quantum chaos of the Hamiltonian.
+    \end{abstract}
     \newpage
 %\addcontentsline{toc}{section}{\textbf{TABLE OF CONTENTS}}
 \renewcommand\contentsname{Table of Contents}
 
     \tableofcontents
 
+    %\setstrech{2}
     \newpage
     %\begin{mdframed}[hidealllines=true,backgroundcolor=green!20]
     \chapter{Introduction}
     %\label{sec:Introduction}
     The classical zeta/ Riemann zeta function defined as $\zeta(s) = \sum _{n=1}^{\infty} \frac{1}{n^{s}}$\cite{s3}, where s is $s=\sigma + it$ and n is the integers. If the real part of s is greater
-    than 1 (Re $s > 1$), the zeta function converges. But at real part equal to 1 (Re $s = 1$) it becomes the harmonic series$\zeta(1) = 1 + \frac{1}{2} + \frac{1}{3} + 
+    than 1 (Re $s > 1$), the zeta function converges. But at real part equal to 1 (Re $s = 1$) it becomes the harmonic series $\zeta(1) = 1 + \frac{1}{2} + \frac{1}{3} + 
     \frac{1}{4} + ....$ and diverges. So there begs the question where does the zeta fucntion goes to zero. It was found that there are two types of condition that make 
-    the Riemann zeta function which is called Riemann zero or Zeta zero. For negetive integers($n=-2,-4,-6$) in the Riemann zeta function becomes zero. These types of zeros are called
+    the Riemann zeta function which is called Riemann zero or Zeta zero. For negetive integers($n=-2,-4,-6,.......$) in the Riemann zeta function becomes zero. These types of zeros are called
     Trivial zeros. And the other kind of zeros, which are called Non-Trivial zeros, lie between real part of s in Re $0<s<1$. Riemann hypothesize that all the non-trivial zeros
     lie at $s=\frac{1}{2}$. This is the famous Riemann hypothesis. Euler showed that the existing classical zeta function has a connection to the product of all prime numbers.
     He proved that $\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^{s}} = \prod _{p} \frac{1}{1-p^{-s}}$ where p is the primes. So if anyone can prove the Riemann hypothesis, they
-    can also prove that all the prime numbers must be lies the line of Re$ s = \frac{1}{2}$. Hilbert-P$\acute{o}$lya sugested that the imaginary part of the s in the Non-Trivial
+    can also prove that all the prime numbers must be lies the line of Re $ s = \frac{1}{2}$.It is generally agreed upon that the Riemann Hypothesis is the single most important topic in 
+    Analytic Number Theory\cite{s27,s28,s29,s30}.Hilbert-P$\acute{o}$lya sugested that the imaginary part of the s in the Non-Trivial
     zeros will be a self-adjoint oprator. So the s will more look like as $s=\sigma - iE_{n}$. Berry-Keating took this suggestion and proposed that the self-adjoint operator, which 
     is $E_{n}$, will be a Hamiltonian which is $\hat{H} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})$. Berry-Keating also proposed that this Hamiltonian shows quantum chaotic behaviour.
     One can tell if any object is in chaos or chaotic behavoiur is sensitive dependece of initial condition, or we can say that a particle forget its memory about its initial condition.
     If a equation of a system is non-linear ODE, the system is chaotic or in chaos. Which can be describe in the following statement. Let there are two partiticle at a distance 
     seperated by $\delta x$ at time $t=0$ or  $\delta x(0)$ and after some time $t$ the distance between the particle $\delta x(t)$, the relation of the initial and the final posotion 
-    of a chaotic system is $|\delta x(t)| \thickapprox e^{t\lambda} |\delta x(0)|$, where t is time and $\lambda$ is the Lyapunov exponent. Lyapunov exponent measures the sensitivity if initial 
+    of a chaotic system is $|\delta x(t)| \thickapprox e^{t\lambda} |\delta x(0)|$, where t is time and $\lambda$ is the Lyapunov exponent. Lyapunov exponent measures the sensitivity of initial 
     condition.
 
     In this paper we took the Berry-Keating Hamiltonian and also look at the Connes approach to the same Hamiltonian for evaluation of semiclassical states.\cite{s1,s15,s3}
@@ -180,13 +186,18 @@
     quantum chaos. A naive argument for the relation between the OTOC and chaos is as follows\cite{s13}. Consider poistion and momentum operators, x(t) and p(t), in a
     quantum system. We can define an OTOC as $C_{T} = - \left\langle\left[x(t),p(0)\right]^{2}\right\rangle$. Taking a naive semiclassical limit, we would be able to 
     replace the commutator $\left[x(t),p(0)\right]$ by the Poissoin bracket $i\hbar\{x(t),p(0)\}_{PB} = i\hbar\frac{\delta x(t)}{\delta x(0)}$. For a classically 
-    chaotic system with a Lyapunov exponent $\lambda$, we have $\frac{\delta x(t)}{\delta x(0)}\thicksim  e^{\lambda t}$ because of sensiitivity to initial condition.
+    chaotic system with a Lyapunov exponent $\lambda$, we have $\frac{\delta x(t)}{\delta x(0)}\thicksim  e^{\lambda t}$ because of sensitivity to initial condition.
     Thus, the OTOC should grow as $\thicksim \hbar^{2}e^{2\lambda t}$ and we can read off the quatnum Lyapunov exponent $\lambda$ form it. The quantization of a 
     classically chaotic system may provide a positive quanutm Lyapunov exponent of the OTOC. Historically, the nearest neighbour distribution (NND) for the energy
     level spectrum has been used to quantify quantum chaos \cite{s14}. For integrable and non-integrable systems, it is considered that NNDs are given by Poission
-    and Wigner distributions. The OTOC is expected to be another measure of qauntum chaos. A possible distinction from the classical chaotic system is that the 
+    and Wigner distributions. The OTOC is expected to be another measure of quantum chaos. A possible distinction from the classical chaotic system is that the 
     OTOC does not grow eternally but saturates at the Ehrenfest time $t_{E}$. The Ehrenfest time is defined by the time scale beyond which the wave function spreads
     over the whole system. It is roughly characterized as a boundary between a particle-like behavior and a wave-like behavior of the wave function.
+
+    In the context of AdS/CFT correspondence \cite{s16} or quantum gravity, the OTOC has gained prominence in recent years as a crucial observable. In \cite{s17}, 
+    an upper bound of 2kB T / was proposed for the qua- ntum Lyapunov exponent. Black hole horizon quantum information is where the bound was first proposed \cite{s18,s19} (see
+    also references \cite{s20,s21,s22,s23,s24}). Infinitely long range dis-order interactions between Majorana fermions in the quantum mechanics of the Sachdev-Ye-Kitaev (SYK) model 
+    \cite{s25,s26} saturate the Lyapunov bound. The SYK model depicts a quantum black hole through the AdS/CFT correspondence after the quantum Lyapunov constraint is saturated.
 
     In the definition of OTOC, we consider the thermal average of $- \left\langle\left[W(t),V(0)\right]^{2}\right\rangle$. When we take thermal average, we need to 
     consider the four point operator $\left\langle\left[W(t),V(0)\right]^{2}\right\rangle$ instead of two point operator $\left\langle\left[W(t),V(0)\right]\right\rangle$.
@@ -199,7 +210,7 @@
     Now we look into the Berry-Keating and Connes semiclassical approaches to $H=xp$
 
     \newpage
-    \section{Semiclassical approach}
+    \chapter{Semiclassical approach}
 
     The classical Berry-Keating-Connes (BKC) Hamiltonian is\cite{s1,s2}
 
@@ -230,11 +241,11 @@
 
     %\begin{mdframed}[hidealllines=true,backgroundcolor=green!20]
     \begin{adjustbox}{center,caption={Berry-Keating Regularization},label={microcanocnial OTOC},nofloat=figure,}
-        \includegraphics[width=0.6\textwidth]{pic4}
+        \includegraphics[width=\textwidth]{pic4}
     \end{adjustbox}
 
     \begin{adjustbox}{center,caption={Connes Regularization},label={microcanocnial OTOC},nofloat=figure,}
-        \includegraphics[width=0.6\textwidth]{pic3}
+        \includegraphics[width=\textwidth]{pic3}
     \end{adjustbox}
     %\end{mdframed}
 
@@ -285,7 +296,7 @@
     This result les to the missing spectral interpretation of the Riemann zeros, according to which there is a continuum of eginstates (represented by the term $\frac{E}{\pi}
      ln \ \Lambda$ in $\mathcal {N} (E)$) where states asscoiated with Riemann zeros are missing.
 
-    Finally, in the S-regularization the number of semiclasical states diverges as $\frac{E}{2\pi} \ ln \ \frac{\Lambda}{l_{x}}$ suggesting a continuum spectrum, ike in 
+    Finally, in the S-regularization the number of semiclasical states diverges as $\frac{E}{2\pi} \ ln \ \frac{\Lambda}{l_{x}}$ suggesting a continuum spectrum, like in 
     Connes's approach. But there is no finite size correction to that formula, and cosequently the possible connection to the Riemann zeros is lost. \\ 
     \\ 
     \\
@@ -310,7 +321,7 @@
 
         Here we construst a self adjoint operator $H_{0}$ which acts on a Hilbert space $L^{2}(a,b)$ of square integrable function in the interval $(a,b)$. Taking $x\geqslant 0$
         , there are four possible intervals: $a=0,l_{x}$ and $b=\Lambda, \infty $ where $l_{x}$ and $\Lambda$ were introduced (we shall take $l_{x}$ and $\Lambda = N > 1$).
-        Berry-Keating defined the quantnum Hamiltonian $H_{0}$ as the normal ordered expresion 
+        Berry-Keating defined the quantum Hamiltonian $H_{0}$ as the normal ordered expresion 
 
         \begin{equation}
             H_{0} = \frac{1}{2}(xp + px)
@@ -524,7 +535,7 @@
 
         \section{The inverse Hamiltonain $1/H_{0}$}
 
-        First, we take the expression at Eq(16) and take the formal inverse, i.e., $H_{0} ^{-1} = x^{1/2}p^{-1}x^{-1/2}$. The operator $p_{-1}$ is the one-dimensional
+        First, we take the expression at Eq(16) and take the formal inverse, i.e., $H_{0} ^{-1} = x^{1/2}p^{-1}x^{1/2}$. The operator $p^{-1}$ is the one-dimensional
         Green's function with matrix elements(definition of Green's function: Green's function is the kernel of and integral operator that represents the inverse
         of a differential operator. Let 
 
@@ -667,9 +678,9 @@
             c_{n} \equiv -\left\langle n \middle|\left[x(t),p(0)\right]^{2}\middle| n\right\rangle
         \end{equation}
 
-        where $H|n>=E_{n}|n>$. We will refer the OTOC for a fixed energy eigenstate, $c_{n}(t)$,as a microcanonical OTOC. On the other hand, we will refer $C_{T}(t)$ as a
+        where $H\ket{n}=E_{n}\ket{n}$. We will refer the OTOC for a fixed energy eigenstate, $c_{n}(t)$,as a microcanonical OTOC. On the other hand, we will refer $C_{T}(t)$ as a
         thermal OTOC. Once we compute microcanonical OTOCs, we can obtain the thermal OTOC bu taking their thermal average. Let us rewrite the microcanonical OTOC using 
-        matrix element of x and p for numerical calculations. Using the completeness relation $1 = \sum_{m} |m><m|$, we rewrite the microcanonical OTOC as 
+        matrix element of x and p for numerical calculations. Using the completeness relation $1 = \sum_{m} \ket{m}\bra{m}$, we rewrite the microcanonical OTOC as 
 
         \begin{equation}
             c_{n}(t) = \sum_{m} b_{nm}(t) b_{nm} ^{*} (t)  
@@ -693,7 +704,7 @@
             \therefore b_{nm}(t) = -i \sum_{k}\left[e^{iE_{nk}t}x_{nk}p_{km} - e^{iE_{km}t}p_{nk}x_{km} \right]
         \end{equation}
 
-        where $E = E_{n} - E_{m}$, $x_{nm} \equiv <n|x|m>$ $p_{nm} \equiv <n|p|m>$. In this expression, there are matrix components of p. They are not desirable since
+        where $E = E_{n} - E_{m}$, $x_{nm} \equiv \bra{n}x\ket{m}$ $p_{nm} \equiv \bra{n}p\ket{m}$. In this expression, there are matrix components of p. They are not desirable since
         numerical derivatives of wave fuincitons lose the numerical accuracy. For a natural Hamiltonian with the form, 
 
         \begin{equation}
@@ -719,11 +730,11 @@
             \therefore [H,x] = -2ip
         \end{equation}
 
-        Applying $<m|\cdot \cdot \cdot|n>$ to the both sides of the equation, we obtain
+        Applying $\bra{m}\cdot \cdot \cdot\ket{n}$ to the both sides of the equation, we obtain
         \begin{align*}
-            &<m|[H,x]|n> = <m|-2ip|n> \\ 
-            &<m|(Hx-xH)|n> = -2i<m|p|n> \\ 
-            &<m|(E_{m}x-xE_{n})|n> = -2ip_{mn} \\ 
+            &\bra{m}[H,x]\ket{n} = \bra{m}-2ip\ket{n} \\ 
+            &\bra{m}(Hx-xH)\ket{n} = -2i\bra{m}p\ket{n} \\ 
+            &\bra{m}(E_{m}x-xE_{n})\ket{n} = -2ip_{mn} \\ 
             &E_{mn}x_{mn} = -2ip_{mn} \\ 
             &p_{mn} = \frac{i}{2}E_{mn}x_{mn} \\  
         \end{align*}
@@ -750,7 +761,7 @@
             \psi(x) = \frac{C}{x^{1/2 - \frac{iE}{\hbar}}}
         \end{equation}
 
-        from here we can evaluate $x_{nm} = <n|x|m>$ value
+        from here we can evaluate $x_{nm} = \bra{n}x\ket{m}$ value
 
         \begin{align*}
             \left\langle\psi_{E}| x |\psi_{E^{'}}\right\rangle &= C^{2} \int_{1}^{N} \frac{dx}{x} x^{-i(E-E^{'})/\hbar} x \\ 
@@ -760,10 +771,10 @@
             &= C^{2} \frac{1}{1-i(E-E^{'})/\hbar}\left[N^{1-i(E-E^{'})/\hbar} - 1\right] \\
         \end{align*}
 
-        Therefore, $<n|x|m>=x_{nm}$ is
+        Therefore, $\bra{n}x\ket{m}=x_{nm}$ is
 
         \begin{align}
-            <n|x|m> &= \frac{1}{ln \ N} \frac{1}{1-i\frac{2\pi \hbar}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})/\hbar}\left[N^{1-i\frac{2\pi \hbar}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})/\hbar} - 1\right] \\
+            \bra{n}x\ket{m} &= \frac{1}{ln \ N} \frac{1}{1-i\frac{2\pi \hbar}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})/\hbar}\left[N^{1-i\frac{2\pi \hbar}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})/\hbar} - 1\right] \\
             x_{nm}&= \frac{1}{ln \ N} \frac{1}{1-i\frac{2\pi}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})}\left[N^{1-i\frac{2\pi}{\ln \ N}(n + \frac{1}{2}-m-\frac{1}{2})} - 1\right]
         \end{align}
 
@@ -775,11 +786,11 @@
         and calculate OTOC analytically. cause carry out the summation of $x_{nm}$ and energy eigenstates makes things little complicated. The graph and codes are given below.
 
         \begin{adjustbox}{center,caption={},label={microcanocnial OTOC},nofloat=figure,}
-            \includegraphics[width=0.6\textwidth]{pic1}
+            \includegraphics[width=\textwidth]{pic1}
         \end{adjustbox}
 
         \begin{adjustbox}{center,caption={},label={microcanocnial OTOC},nofloat=figure,}
-            \includegraphics[width=0.6\textwidth]{pic2}
+            \includegraphics[width=\textwidth]{pic2}
         \end{adjustbox}
 
         Here microcanonical OTOC and thermal OTOC are same with different temperatures.
@@ -790,8 +801,8 @@
 
         \chapter{Conclusions}
 
-        In this paper, we discussed what is Riemann hypothesis is, and why it is important to the field to Quantum mechanics. The imaginary part of Hamiltonian proposed by 
-        Berry-keating Hamiltonian $H_{0} = \frac{1}{2}(xp+px)$ shows the self-adjoint and quanutm chaos. We look at Sierra regularization of Berry-Keating Hamiltonian, and 
+        In this paper, we discussed what is Riemann hypothesis is, and why it is important to the field to quantum mechanics. The imaginary part of Hamiltonian proposed by 
+        Berry-Keating Hamiltonian $H_{0} = \frac{1}{2}(xp+px)$ shows the self-adjoint and quanutm chaos. We look at Sierra regularization of Berry-Keating Hamiltonian, and 
         their intervals $l_{x}=1, \Lambda=1$ and evaluated the spectrum $E_{n} = \frac{2\pi \hbar}{ln \ N}(n+\frac{\theta}{2\pi})$ of $\psi_{E}(x) = \frac{C}{x^{\frac{1}{2}-iE\hbar}}$
         eigenfunction. Then we look at the quantization of inverse Hamiltonian $H_{0}^{-1} = x^{-1/2}p^{-1}x^{1/2} $ and obtained the spectrum $E_{n} = \frac{2\pi \hbar}{ln \ N}(n+\frac{1}{2})$
         which is reckon to be $E_{n} = \frac{2\pi \hbar}{ln \ N}(n+\frac{\theta}{2\pi})$ with $\theta = \pi$
