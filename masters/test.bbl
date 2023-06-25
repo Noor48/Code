@@ -186,4 +186,15 @@ Germ{\'a}n Sierra.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2005(12):P12006, 2005.
 
+\bibitem{s37}
+Masanori Hanada and So~Matsuura.
+\newblock {\em MCMC from Scratch: A Practical Introduction to Markov Chain
+  Monte Carlo}.
+\newblock Springer Nature, 2022.
+
+\bibitem{s38}
+Masanori Hanada.
+\newblock Markov chain monte carlo for dummies.
+\newblock {\em arXiv preprint arXiv:1808.08490}, 2018.
+
 \end{thebibliography}

@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022/CVE-2023-32700 patched)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: test.aux
 The style file: unsrt.bst
-Illegal, another \bibstyle command---line 112 of file test.aux
+Illegal, another \bibstyle command---line 114 of file test.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
@@ -10,45 +10,45 @@ Database file #1: ref.bib
 Warning--empty journal in s7
 Warning--empty year in s7
 Warning--empty journal in s5
-You've used 36 entries,
+You've used 38 entries,
             1791 wiz_defined-function locations,
-            635 strings with 7167 characters,
-and the built_in function-call counts, 7186 in all, are:
-= -- 665
-> -- 226
+            645 strings with 7383 characters,
+and the built_in function-call counts, 7479 in all, are:
+= -- 689
+> -- 238
 < -- 4
-+ -- 94
-- -- 58
-* -- 459
-:= -- 1128
-add.period$ -- 103
-call.type$ -- 36
-change.case$ -- 34
++ -- 99
+- -- 61
+* -- 467
+:= -- 1178
+add.period$ -- 109
+call.type$ -- 38
+change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 332
-empty$ -- 768
-format.name$ -- 58
-if$ -- 1589
+cite$ -- 41
+duplicate$ -- 350
+empty$ -- 801
+format.name$ -- 61
+if$ -- 1656
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 35
-newline$ -- 178
-num.names$ -- 35
-pop$ -- 91
+int.to.str$ -- 38
+missing$ -- 38
+newline$ -- 188
+num.names$ -- 37
+pop$ -- 101
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 150
+skip$ -- 156
 stack$ -- 0
 substring$ -- 510
-swap$ -- 56
+swap$ -- 58
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 80
-width$ -- 38
-write$ -- 376
+while$ -- 82
+width$ -- 40
+write$ -- 396
 (There was 1 error message)
