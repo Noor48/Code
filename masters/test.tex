@@ -65,7 +65,7 @@
 
             \lstset{style=mystyle}
 
-\title{\Huge{Out-of-Time-Order-Correlator of Berry-Keating model}}
+\title{\Huge{Out-of-Time-Order Correlator of Berry-Keating model}}
 \author{}
 \hypersetup{
     colorlinks=true,
@@ -103,7 +103,7 @@
         \centering
         \thispagestyle{empty}
         \begin{center}\setstretch{1.7}{
-        \fontsize{19}{0}\bf {Out-of-Time-Order-Correlator of Berry-Keating model }}
+        \fontsize{19}{0}\bf {Out-of-Time-Order Correlator of Berry-Keating model }}
         \end{center}
         \large\begin{center}Thesis Submission\end{center}
         \large\begin{center}for fulfilment of the requirements for the degree of\end{center}
@@ -164,7 +164,7 @@
     the two. This link is made possible by the Selberg trace formula, which has a striking resemblance to the Riemann explicit formula. Another significant clue was 
     provided in 1973 by the work of Montgomery, who, on the assumption that the RH was true, demonstrated that the Riemann zeros are distributed in accordance with 
     the Gaussian Unitary Ensemble statistics of random matrix models \cite{s35}. This was a very helpful piece of information. In the 1980s, Odlyzko obtained some very
-    spectacular numerical discoveries, which supported the conclusions that Montgomery had drawn cite{s36}.  Berry-Keating took this suggestion 
+    spectacular numerical discoveries, which supported the conclusions that Montgomery had drawn \cite{s36}.  Berry-Keating took this suggestion 
     and proposed that the self-adjoint operator, which 
     is $E_{n}$, will be a Hamiltonian which is $\hat{H} = \frac{1}{2}(\hat{x}\hat{p} + \hat{p}\hat{x})$. Berry-Keating also proposed that this Hamiltonian shows quantum chaotic behaviour.
     One can tell if any object is in chaos or chaotic behavoiur is sensitive dependece of initial condition, or we can say that a particle forget its memory about its initial condition.
@@ -804,6 +804,19 @@
 
         \lstinputlisting[language=Python, caption=Python example]{test14.py}
         
+        We also used Hybrid Monte Carlo Method/Hamiltonian Monte Carlo Method and obtained same result. The graph and codes are given below.
+
+
+        \begin{adjustbox}{center,caption={},label={},nofloat=figure,}
+            \includegraphics[width=\textwidth]{plot}
+        \end{adjustbox}
+
+        \lstinputlisting[language=C++, caption=matrix.h]{matrix.h}
+        \lstinputlisting[language=C++, caption=box.h]{box.h}
+        \lstinputlisting[language=C++, caption=hamiltonian.h]{hamiltonian.h}
+        \lstinputlisting[language=C++, caption=force.h]{force.h}
+        \lstinputlisting[language=C++, caption=molecular.h]{molecular.h}
+        \lstinputlisting[language=C++, caption=main.cpp]{main2.cpp}
         \newpage
 
         \chapter{Conclusions}
