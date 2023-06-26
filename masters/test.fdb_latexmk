@@ -1,16 +1,16 @@
 # Fdb version 4
-["bibtex test"] 1687678528 "test.aux" "test.bbl" "test" 1687678528 2
+["bibtex test"] 1687746827 "test.aux" "test.bbl" "test" 1687746827 2
   "./ref.bib" 1687678519 8211 191867556349458c846ee19fb97e2ecd ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1684972800 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1684972800 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "test.aux" 1687678528 6366 3c10ddd142ebc9db699a8a1442ecaf31 "pdflatex"
+  "test.aux" 1687746827 6497 1f4db93033b5c10afb1a31a50c4cc921 "pdflatex"
   (generated)
   "test.bbl"
   "test.blg"
   (rewritten before read)
-["pdflatex"] 1687678527 "/home/nooremf/Code/masters/test.tex" "test.pdf" "test" 1687678528 0
+["pdflatex"] 1687746826 "/home/nooremf/Code/masters/test.tex" "test.pdf" "test" 1687746827 0
   "/home/nooremf/.texlive2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1683994080 6471140 280fb0acc7df5896e5c677f18d6ee1a8 ""
-  "/home/nooremf/Code/masters/test.tex" 1687678525 47963 3efd072a6f7a6be8c782530caf6c08c4 ""
+  "/home/nooremf/Code/masters/test.tex" 1687746821 48031 b657faa8a7fe4051dee34005a7bc1dee ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -262,11 +262,12 @@
   "pic3.png" 1686282339 42763 f9568b06daddd05f6dde9c8b8eb841b5 ""
   "pic4.png" 1686282339 35968 d17b0e003969ede694d4b7120e80a9a4 ""
   "plot.pdf" 1687675015 14181 2f54a56a44257c664e4b20b72a4e4e55 ""
-  "test.aux" 1687678528 6366 3c10ddd142ebc9db699a8a1442ecaf31 "pdflatex"
-  "test.bbl" 1687678528 6239 74b3505e5bb1625b61180b78561aa840 "bibtex test"
-  "test.out" 1687678528 1203 d83f028bc404a605d9b6164a59ce792c "pdflatex"
-  "test.tex" 1687678525 47963 3efd072a6f7a6be8c782530caf6c08c4 ""
-  "test.toc" 1687678528 594 6ec5788665ffb38c669bb36bbb4befcc "pdflatex"
+  "plot.py" 1685288012 717 6f89d076fd70308e09b1fa517c1bd792 ""
+  "test.aux" 1687746827 6497 1f4db93033b5c10afb1a31a50c4cc921 "pdflatex"
+  "test.bbl" 1687746827 6239 74b3505e5bb1625b61180b78561aa840 "bibtex test"
+  "test.out" 1687746827 1203 d83f028bc404a605d9b6164a59ce792c "pdflatex"
+  "test.tex" 1687746821 48031 b657faa8a7fe4051dee34005a7bc1dee ""
+  "test.toc" 1687746827 594 c03340af66c4ba0e0a70ae0abec3b21a "pdflatex"
   "test14.py" 1686282339 1476 036b32e5c5e30b15797b5eeedd20f74b ""
   (generated)
   "test.aux"
