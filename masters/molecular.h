@@ -4,11 +4,15 @@
 #include<~/box.h>
 #include<~/force.h>
 #include<~/hamiltonian.h>
+
+
+
 /*
     Molecular dynamics part
 */
 double molecular(complex<double> (&phi)[n][n], complex<double> (&P)[n][n], double& hi, double& hf)
 {
+    
     double p, q, r1, r2,nt=10; 
 
     complex<double>  dt=0.001, dh[n][n] = {0};

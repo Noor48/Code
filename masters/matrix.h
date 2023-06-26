@@ -1,8 +1,14 @@
 #ifndef MATRIX
 #define MATRIX
+
+
 #include<complex>
 using namespace std;
+
+//matrix dimension
 const int n=10;
+
+
 /* 
     Declaring a function for easily calling a matrix, it 2nd, 3rd, 4th order terms, and their traces.
 */

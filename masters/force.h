@@ -7,6 +7,7 @@
 /* 
     Calculating force (dH/d phi = dS/d phi) term = p
 */
+
 double force(complex<double> A[n][n], complex<double> (&dh)[n][n])
 {
     // calculating force matrix
@@ -14,6 +15,7 @@ double force(complex<double> A[n][n], complex<double> (&dh)[n][n])
     {
         for(int j=0; j<n; j+=1)
         {
+            // dh = dH/dphi
             dh[i][j] = (A[i][j]); 
         }
     }

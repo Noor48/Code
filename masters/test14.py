@@ -9,9 +9,11 @@ r=6    # matrix dimension number
 N=10    #Higest interval in the spectrum
 T=40    #temperature
 
+
 #function for spetrum E_{nm}
 def E(n, m):
     return (2*math.pi*(n-m))/(math.log(N))
+
 
 #function for position x_{nm}
 def x(n, m):
@@ -19,21 +21,34 @@ def x(n, m):
     b = (N**(1-(2j*math.pi*(n-m)/math.log(N)))-1)
     return a*b
 
-#calculating Thermal OTOC
+
+#calculating Thermal OTOC C_{T}
 for t in np.arange(0,1,0.001):
     Z=0  
     C=0 
     s3=0
+
     for n in range(0,r):
         s2 = 0
+
         for m in range(0,r):
             s1=0
+
             for k in range(0,r):
                 s1 += (1/2.0)*x(n,k)*x(k,m)*(E(k,m)*cmath.exp(1j*E(n,k)*t) - E(n,k)*cmath.exp(1j*E(k,m)*t))
+
             s2 += s1*np.conjugate(s1)
-    Z += cmath.exp(-E(n,0)/T)   #partition function
-    C += (cmath.exp(-E(n,0)/T)*s2)  #e^{-\beta E_n} O
-    s3=C/Z  #expectation value or Thermal OTOC
+
+    #partition function
+    Z += cmath.exp(-E(n,0)/T)
+    
+    #e^{-\beta E_n} O
+    C += (cmath.exp(-E(n,0)/T)*s2)
+    
+    #expectation value or Thermal OTOC
+    s3=C/Z
+
+
     a.append(t)
     b.append(s3)
 
@@ -47,6 +62,8 @@ plt.ylabel('$c_{n}(t)$',fontsize=30)
 plt.xlabel('t',fontsize=30)
 plt.legend()
 plt.show()
+
+
 
 f = plt.figure()
 f.set_figwidth(10)
