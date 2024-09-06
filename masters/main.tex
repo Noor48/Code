@@ -1,0 +1,219 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{tensor}
+\usepackage{stix}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage[paperheight=6in,
+%   paperwidth=5in,
+%   top=10mm,
+%   bottom=20mm,
+%   left=10mm,
+%   right=10mm]{geometry}
+\newcommand*{\1}{\hspace{1pt}}
+\title{Solution to Problem Sheet 1}
+\author{Noor E Mustafa Ferdous}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solve for problem no. 1}
+Given \\ 
+\begin{align*}
+    \eta \indices{_{\mu \nu}} x^{\mu} x^{\nu} &=  \eta _{\mu \nu} x^{\prime \mu} x^{\prime \nu} \\
+    &= \eta_{\mu \nu} \varLambda \indices{^{\mu} _{\sigma}} x^{\sigma} \varLambda \indices{^{\nu} _{\tau}} x^{\tau} \\
+    &= \eta_{\mu \nu} \varLambda \indices{^{\mu}_{\sigma}} \varLambda \indices{^{\nu} _{\tau}} x^{\sigma} x^{\tau} \\ 
+    &= \eta_{\sigma \tau} \varLambda \indices{^{\sigma} _{\mu}} \varLambda \indices{^{\tau} _{\nu}} x^{\mu} x^{\nu} \tag{$\sigma \to \mu, \tau \to \nu$}\\
+\end{align*}
+
+Therefore,
+\begin{equation}
+    \eta _{\mu \nu} = \eta_{\sigma \tau} \varLambda \indices{^{\sigma} _{\mu}} \varLambda \indices{^{\tau} _{\nu}}
+\end{equation}
+
+Again, given
+
+\begin{equation}
+    \varLambda ^{\mu} _{\nu} = \delta \indices{^{\mu} _{\nu}} + \omega \indices{^{\mu} _{\nu}}
+\end{equation}
+
+putting this into eqn(1)
+
+\begin{align*}
+    \eta _{\mu \nu} &= \eta_{\sigma \tau} (\delta \indices{^{\sigma} _{\mu}} + \omega \indices{^{\sigma} _{\mu}})(\delta \indices{^{\tau} _{\nu}} + \omega \indices{^{\tau} _{\nu}}) \\ 
+    &= \eta_{\sigma \tau}(\delta \indices{^{\sigma} _{\mu}} \delta \indices{^{\tau} _{\nu}} + \delta \indices{^{\sigma} _{\mu}} \omega \indices{^{\tau} _{\nu}} + \delta \indices{^{\tau} _{\nu}} \omega\indices{^{\sigma} _{\mu}}) \ \ \ \ \ \ \  [ignoring \  higher \   order \   \omega] \\
+    &= \eta _{\mu \nu} \eta _{\mu \tau} \omega \indices{^{\tau} _{\nu}} + \eta _{\sigma \nu} \omega\indices{^{\sigma} _{\mu}} \\
+    &= \eta _{\mu \nu} + \omega _{\mu \nu} + \omega _{\nu \mu} \\ 
+    &= \eta _{\mu \nu} \ \ \ \ \ \ \  [ \omega _{\mu \nu} = - \omega _{\nu \mu}] \\
+\end{align*}
+
+Therefore infinitesimal transformation around identity of the form of eqn(2) is a Lorentz transformation.
+
+\section*{Solve for problem no. 2}
+For real scalar field $\phi$ the Euler-Langrange eqn will be 
+
+\begin{equation}
+    \frac{\partial \mathcal{L}}{\partial \phi} - \partial _{\mu} \frac{\partial \mathcal{L}}{\partial ( \partial _{\mu} \phi)} = 0
+\end{equation}
+putting 
+
+\begin{equation}
+    \mathcal{L} = \partial _{\mu} \phi ^{*} \partial ^{\mu} \phi - m^{2} \phi ^{*} \phi - \frac{\lambda ^{2}}{2} (\phi ^{*} \phi) ^{2}
+\end{equation}
+in eqn (3), we get,
+
+\begin{align*}
+    -m ^{2} \phi ^{*} - \partial _{\mu} \partial ^{\mu} \phi ^{*} &= 0 \\
+    (\partial _{\mu} \partial ^{\mu} + m ^{2} + \lambda ^{2} \phi^{*} \phi]) \phi ^{*} &= 0
+\end{align*}
+And for complex scalar field $\phi ^{*}$ the Euler-Langrange eqn will be
+
+\begin{equation}
+    \frac{\partial \mathcal{L}}{\partial \phi ^{*}} - \partial _{\mu} \frac{\partial \mathcal{L}}{\partial ( \partial _{\mu} \phi ^{*})} = 0
+\end{equation}
+ putting eqn (4) in eqn (5) wiil be
+
+\begin{align*}
+    -m ^{2} \phi - \partial _{\mu} \partial ^{\mu} \phi &= 0 \\
+    (\partial _{\mu} \partial ^{\mu} + m ^{2} + \lambda ^{2} \phi ^{*} \phi) \phi &= 0
+\end{align*}
+
+For deriving Noether theorem of given Langrangian. The infinitesimal tranformation of the fields are 
+
+\begin{align*}
+    \phi (x) \to \phi ^{\prime} (x) &= e ^{i \alpha} \phi (x) \\
+    \phi ^{\dagger} (x) \to \phi ^{ \prime \dagger} (x) &= \phi ^{\dagger} (x) e ^{-i \alpha}
+\end{align*}
+
+where $\theta$ is a real constant parameter of a transformation (a global transformation). Such a transformation is not a space-time symmetry transformation since the space-time coordinates are not changed by this transformation, such a transformation is known as an internal symmetry transformation, Infinitesimally, the transformation takes the form of 
+
+\begin{align*}
+    \delta \phi (x) &= \phi ^{\prime} (x) - \phi (x) = i \alpha \phi \\
+    \delta \phi ^{\dagger} (x) &= \phi ^{\prime \dagger} (x) - \phi ^{\dagger} (x) = -i \alpha \phi ^{\dagger} \\ 
+    x ^{\mu} &= x^{\prime \mu} \\ 
+\end{align*}
+
+so the least action principle will be
+\begin{align*}
+    \delta S &= 0\\
+    \implies \int d ^{4} x^{\prime} \mathcal{L} (\phi ^{\prime} (x ^{\prime}), \partial ^{\dagger} _{\mu} \phi ^{\prime} (x^{\prime}), \phi ^{\prime \dagger} (x^{\prime}), \partial ^{\dagger} _{\mu}  \phi ^{\prime \dagger} (x^{\prime})) &-  \int d ^{4} x \mathcal{L} (\phi (x), \partial _{\mu} \phi  (x), \phi ^{ \dagger} (x), \partial _{\mu}  \phi ^{\dagger} (x)) = 0 \\
+    \implies \int d ^{4} x \mathcal{L} (\phi ^{\prime} (x), \partial _{\mu} \phi ^{\prime} (x), \phi ^{\prime \dagger} (x), \partial ^{\dagger} _{\mu}  \phi ^{\prime \dagger} (x)) &-  \int d ^{4} x \mathcal{L} (\phi (x), \partial _{\mu} \phi  (x), \phi ^{ \dagger} (x), \partial _{\mu}  \phi ^{\dagger} (x)) = 0 \\ 
+\end{align*}
+\begin{equation}
+    \implies \mathcal{L} (\phi ^{\prime} (x), \partial _{\mu} \phi ^{\prime} (x), \phi ^{\prime \dagger} (x), \partial ^{\dagger} _{\mu}  \phi ^{\prime \dagger} (x)) -  \mathcal{L} (\phi (x), \partial _{\mu} \phi  (x), \phi ^{ \dagger} (x), \partial _{\mu}  \phi ^{\dagger} (x)) = K ^{\mu} 
+\end{equation}
+
+For internal symmetry $K^{\mu} = 0 $ 
+And
+
+\begin{align*}
+    \delta (\partial _{\mu} \phi(x) &= \partial _{\mu} \phi ^{\prime} (x) - \partial _{\mu} \phi (x) \\
+    &= \partial _{\mu} \delta \phi (x) \\ 
+    \delta (\partial ^{\dagger} _{\mu} \phi(x) &= \partial _{\mu} \phi ^{\prime \dagger} (x) - \partial _{\mu} \phi (x) \\
+    &= \partial _{\mu} \delta \phi ^{\dagger} (x) \\ 
+\end{align*}
+
+Therefore 
+\begin{align*}
+    \mathcal{L} &(\phi ^{\prime} (x), \partial _{\mu} \phi ^{\prime} (x), \phi ^{\prime \dagger} (x), \partial ^{\dagger} _{\mu}  \phi ^{\prime \dagger} (x)) -  \mathcal{L} (\phi (x), \partial _{\mu} \phi  (x), \phi ^{ \dagger} (x), \partial _{\mu}  \phi ^{\dagger} (x)) \\
+    &= \mathcal{L} (\phi (x), \partial _{\mu} \phi  (x), \phi ^{ \dagger} (x), \partial _{\mu}  \phi ^{\dagger} (x)) + \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \phi (x)} + \delta(\partial _{\mu} \phi (x)) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} \\ &+ \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial \phi ^{\dagger} (x)} + \delta(\partial _{\mu} \phi ^{\dagger} (x)) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi ^{\dagger} (x)} -\mathcal{L} (\phi (x), \partial _{\mu} \phi  (x), \phi ^{ \dagger} (x), \partial _{\mu}  \phi ^{\dagger} (x)) \\ 
+    &= \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \phi (x)} + \partial _{\mu} (\delta \phi (x)) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial \phi ^{\dagger} (x)} + \partial _{\mu} (\delta \phi ^{\dagger} (x)) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi ^{\dagger} (x)} \\
+\end{align*}
+\begin{equation}
+    = \partial _{\mu} \left(\ \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi ^{\dagger} (x)} \right)
+\end{equation}
+Comparing eqn (6) eqn (7) we get, 
+
+\begin{align}
+    &\partial _{\mu} \left(\ \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi ^{\dagger} (x)} \right) = \partial K_{\mu} \\
+    & \partial _{\mu} \left(\ \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial  \partial _{\mu} \phi ^{\dagger} (x)} - K_{\mu} \right) = 0 = \partial _{\mu} J^{\mu}
+\end{align}
+
+Which is Noether current. Because $K_{\mu} = 0$, we get
+\begin{align}
+    &\partial _{\mu} \left(\ \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial  \partial _{\mu} \phi ^{\dagger} (x)} \right) = \partial _{\mu} J^{\mu}
+\end{align}
+\begin{align}
+     \delta \phi (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi ^{\dagger} (x)}  = J^{\mu}
+\end{align}
+
+Now
+\begin{align*}
+     \delta \phi (x) & \frac{\partial \mathcal{L}}{\partial \partial _{\mu}\phi (x)} + \delta \phi ^{\dagger} (x) \frac{\partial \mathcal{L}}{\partial \partial _{\mu} \phi ^{\dagger} (x)}  \\ 
+    &= i \alpha \phi(x) \partial ^{\mu} \phi ^{\dagger} (x) - i \alpha \phi ^{\dagger} (x) \partial ^{\mu} \phi (x) \\ 
+    &= i \alpha \left(\phi(x) \partial ^{\mu} \phi ^{\dagger} (x) - \phi ^{\dagger} (x) 
+    \partial ^{\mu} \phi (x)  \right)\\
+\end{align*}
+\begin{equation}
+   J ^{\mu} = i \alpha \phi (x) \overleftrightarrow{\partial _{\mu}} \phi ^{\dagger}
+\end{equation}
+
+Given Langrangian is
+\begin{equation}
+    \mathcal{L} = \partial _{\mu} \phi ^{*} \partial ^{\mu} \phi - m^{2} \phi ^{*} \phi - \frac{\lambda ^{2}}{2} (\phi ^{*} \phi) ^{2}
+\end{equation}
+where 
+\begin{align}
+    \phi (x) &= \frac{1}{\sqrt{2}} (\phi _{1} (x) + i\phi _{2} (x)) \\ 
+    \phi (x) &= \frac{1}{\sqrt{2}} (\phi _{1} (x) - i\phi _{2} (x))
+\end{align}
+
+putting these in eqn (13), we get
+
+\begin{align*}
+    \mathcal{L} &= \frac{1}{2}\partial _{\mu} \left(\phi _{1} + i \phi _{2} \right)  \frac{1}{2}\partial ^{\mu} \left(\phi _{1} - i \phi _{2} \right) - \frac{m^{2}}{2} \left(\phi _{1} + i \phi _{2} \right)\left(\phi _{1} - i \phi _{2} \right) - \frac{\lambda ^{2}}{4} (\left(\phi _{1} + i \phi _{2} \right) \left(\phi _{1} - i \phi _{2} \right)) ^{2} 
+\end{align*}
+
+Therefore 
+\begin{equation}
+    \mathcal{L} = \frac{1}{2}\partial _{\mu}\phi _{1}\partial ^{\mu}\phi _{1} - \frac{m^{2}}{2} \phi _{1} ^{2} - \frac{\lambda ^{2}}{4} \phi _{1} ^{4} + \frac{1}{2}\partial _{\mu}\phi _{2}\partial ^{\mu}\phi _{2} - \frac{m^{2}}{2} \phi _{2} ^{2}  - \frac{\lambda ^{2}}{4} \phi _{2} ^{4}
+\end{equation}
+
+\section*{Solve for problem no. 3}
+From Wick's theory we know that
+
+\begin{equation}
+    T(\phi _{1} \phi _{2} ....... \phi _{n}) = N(\phi _{1} \phi _{2} ....... \phi _{n}) + \ all \ possible \ contractions  
+\end{equation}
+
+Wick's thoery for three scalar product will be
+
+\begin{align*}
+    T(\phi (x_{1})\phi (x_{2})\phi (x_{3})) &= :\phi (x_{1})\phi (x_{2})\phi (x_{3}): + \overbracket{\phi (x_{1})\phi} (x_{2}):\phi (x_{3}): + \overbracket{\phi (x_{2})\phi} (x_{3}):\phi (x_{1}): \\ 
+    & + \overbracket{\phi (x_{3})\phi} (x_{1}):\phi (x_{2}):
+\end{align*}
+And we know 
+
+\begin{equation}
+    \overbracket{\phi (x_{1})\phi} (x_{2}) = \Delta _{F} (x_{1} - x_{2}) = \overbracket{\phi (x_{2})\phi} (x_{1})
+\end{equation}
+Therefore 
+\begin{align}
+\begin{split}
+    T(\phi (x_{1})\phi (x_{2})\phi (x_{3})) &= :\phi (x_{1})\phi (x_{2})\phi (x_{3}): + \Delta _{F} (x_{1} - x_{2}):\phi (x_{3}): + \Delta _{F} (x_{2} - x_{3}):\phi (x_{1}): \\ 
+    & + \Delta _{F} (x_{3} - x_{1}):\phi (x_{2}):
+\end{split}
+\end{align}
+
+Wick's theorem for four scalar product
+
+\begin{align*}
+    T(\phi (x_{1})\phi (x_{2})\phi (x_{3})\phi (x_{4})) &= :\phi (x_{1})\phi (x_{2})\phi (x_{3})\phi (x_{4}): + \overbracket{\phi (x_{1})\phi} (x_{2}):\phi (x_{3})\phi (x_{4}): \\ & + \overbracket{\phi (x_{2})\phi} (x_{3}):\phi (x_{1})\phi (x_{4}): 
+    + \overbracket{\phi (x_{3})\phi} (x_{4}):\phi (x_{2})\phi (x_{1}):\\ 
+    & + \overbracket{\phi (x_{4})\phi} (x_{1}):\phi (x_{2})\phi (x_{3}): + \overbracket{\phi (x_{1})\phi} (x_{3}):\phi (x_{2})\phi (x_{4}): \\ 
+    & + \overbracket{\phi (x_{2})\phi} (x_{4}):\phi (x_{1})\phi (x_{3}): + \overbracket{\phi (x_{1})\phi} (x_{2})\overbracket{\phi (x_{3})\phi} (x_{4}) \\
+    & + \overbracket{\phi (x_{1})\phi} (x_{3})\overbracket{\phi (x_{2})\phi} (x_{4}) + \overbracket{\phi (x_{1})\phi} (x_{4})\overbracket{\phi (x_{2})\phi} (x_{3}) \\
+\end{align*}
+
+\begin{align}
+\begin{split}
+    \therefore \  \ \ T(\phi (x_{1})\phi (x_{2})\phi (x_{3})\phi (x_{4})) & = :\phi (x_{1})\phi (x_{2})\phi (x_{3})\phi (x_{4}): + \Delta _{F} (x_{1} - x_{2}):\phi (x_{3})\phi (x_{4}): \\ 
+    & + \Delta _{F} (x_{2} - x_{3}):\phi (x_{1})\phi (x_{4}): 
+    + \Delta _{F} (x_{3} - x_{4}):\phi (x_{1})\phi (x_{2}):\\ 
+    & + \Delta _{F} (x_{4} - x_{1}):\phi (x_{2})\phi (x_{3}): + \Delta _{F} (x_{1} - x_{3}):\phi (x_{2})\phi (x_{4}): \\ 
+    & + \Delta _{F} (x_{2} - x_{4}):\phi (x_{1})\phi (x_{3}): + \Delta _{F} (x_{1} - x_{2})\Delta _{F} (x_{3} - x_{4}) \\
+    & + \Delta _{F} (x_{1} - x_{3})\Delta _{F} (x_{2} - x_{4}) + \Delta _{F} (x_{1} - x_{4})\Delta _{F} (x_{2} - x_{3})
+\end{split}
+\end{align}
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{tensor}
+\usepackage{stix}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage[paperheight=6in,
+%   paperwidth=5in,
+%   top=10mm,
+%   bottom=20mm,
+%   left=10mm,
+%   right=10mm]{geometry}
+\newcommand*{\1}{\hspace{1pt}}
+\title{Solution to Problem Sheet 2}
+\author{Noor E Mustafa Ferdous}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solve for problem no. 1}
+Given
+
+\begin{equation}
+    \left\{ \gamma ^{\mu}, \gamma ^{\nu} \right\} = 2 \eta ^{\mu \nu}    
+\end{equation}
+
+From L.H.S. 
+
+\begin{align*}
+    \left[ \gamma ^{\kappa} \gamma ^{\lambda}, \gamma ^{\mu} \gamma ^{\nu} \right] &= \gamma ^{\kappa} \left[ \gamma ^{\lambda}, \gamma ^{\mu} \gamma ^{\nu}\right] + \left[\gamma ^{\kappa}, \gamma ^{\mu} \gamma ^{\nu}\right] \gamma ^{\lambda} \\ 
+    &= \gamma ^{\kappa} \left( \gamma ^{\lambda}\gamma ^{\mu} \gamma ^{\nu} - \gamma ^{\mu} \gamma ^{\nu}\gamma ^{\lambda}\right) + \left(\gamma ^{\kappa}\gamma ^{\mu} \gamma ^{\nu} - \gamma ^{\mu} \gamma ^{\nu} \gamma ^{\kappa}\right)\gamma ^{\lambda} \\ 
+    &= \gamma ^{\kappa} \left( \left(\gamma ^{\lambda}\gamma ^{\mu} + \gamma ^{\mu}\gamma ^{\lambda}\right) \gamma ^{\nu} - \gamma ^{\mu} \left( \gamma ^{\lambda} \gamma ^{\nu} + \gamma ^{\nu} \gamma ^{\lambda} \right) + \left( \left(\gamma ^{\kappa}\gamma ^{\mu} +\gamma ^{\mu}\gamma ^{\kappa}\right) \gamma ^{\nu} - \gamma ^{\mu} \left(\gamma ^{\nu} \gamma ^{\kappa} + \gamma ^{\kappa} \gamma ^{\nu} \right) \right)\gamma ^{\lambda}\right) \\
+    &= \gamma ^{\kappa} \left(\left( \left\{ \gamma ^{\lambda}, \gamma ^{\mu} \right\} \gamma ^{\nu} - \gamma ^{\mu} \left\{ \gamma ^{\lambda}, \gamma ^{\nu} \right\} \right) + \left( \left\{ \gamma ^{\kappa}, \gamma ^{\mu} \right\} \gamma ^{\nu} - \gamma ^{\mu} \left\{\gamma ^{\nu}, \gamma ^{\kappa} \right\} \right)\gamma ^{\lambda}\right) \\
+   \left[ \gamma ^{\kappa} \gamma ^{\lambda}, \gamma ^{\mu} \gamma ^{\nu} \right] &= 2\eta ^{\lambda \mu} \gamma ^{\kappa} \gamma ^{\nu} - 2\eta ^{\lambda \nu} \gamma ^{\kappa} \gamma \mu + 2\eta ^{\kappa \mu} \gamma ^{\nu} \gamma ^{\lambda} - 2\eta ^{\nu \kappa} \gamma ^{\mu} \gamma ^{\lambda} \tag{Showed}
+\end{align*}
+
+
+\begin{align*}
+	(a) \ Tr(\gamma ^{\mu}) &= Tr(\gamma ^{\mu} \gamma _{5} \gamma _{5}) \tag{[because $(\gamma _{5})^{2} = 1]$} \\
+	&= - Tr(\gamma _{5} \gamma ^{\mu} \gamma _{5}) = - Tr(\gamma _{5} \gamma ^{\mu} \gamma _{5}) \\ 
+	\implies  Tr(\gamma ^{\mu} \gamma _{5} \gamma _{5}) &= - Tr(\gamma _{5} \gamma ^{\mu} \gamma _{5}) = Tr(\gamma _{5} \gamma ^{\mu} \gamma _{5}) \\ 
+	 Tr(\gamma ^{\mu} \gamma _{5} \gamma _{5}) &= 0 \\
+	 \implies Tr(\gamma ^{\mu}) = 0
+\end{align*}
+
+\begin{align*}
+    (b) \ Tr(\gamma ^{\mu} \gamma ^{\nu}) &= \frac{1}{2}\left(Tr(\gamma ^{\mu} \gamma ^{\nu}) + Tr(\gamma ^{\mu} \gamma ^{\nu}) \right) \\ 
+    &= \frac{1}{2}\left(Tr(\gamma ^{\mu} \gamma ^{\nu}) + Tr(\gamma ^{\nu} \gamma ^{\mu}) \right) \\
+    &= \frac{1}{2}\left(Tr(\gamma ^{\mu} \gamma ^{\nu} + \gamma ^{\nu} \gamma ^{\mu}) \right) \\
+    &= \frac{1}{2} Tr \left\{ \gamma ^{\mu}, \gamma ^{\nu}\right\} \\ 
+    &= \frac{1}{2} Tr 2 \eta ^{\mu \nu} \\ 
+    &= \frac{1}{2} 2 \eta ^{\mu \nu} Tr(\mathbb{1}) \\
+    &= 4 \eta ^{\mu \nu}
+\end{align*}
+
+\begin{align*}
+    (d) \ (\gamma ^{5}) ^{2} &= i \gamma _{0} \gamma _{1} \gamma _{2} \gamma _{3} \cdot i \gamma _{0} \gamma _{1} \gamma _{2} \gamma _{3} \\
+    &= - (-1) \gamma _{0} \gamma _{0} \gamma _{1} \gamma _{2} \gamma _{3} \gamma _{1} \gamma _{2} \gamma _{3} \\ 
+    &= \gamma _{1} \gamma _{2} \gamma _{3}\gamma _{1} \gamma _{2} \gamma _{3} \\ 
+    &= \gamma _{1} \gamma _{1} \gamma _{2} \gamma _{3} \gamma _{2} \gamma _{3} 
+    &= - \gamma _{2} \gamma _{3}\gamma _{2} \gamma _{3} \\ 
+    &= \gamma _{2} \gamma _{2} \gamma _{3}\gamma _{3} \\ 
+    &= 1
+\end{align*}
+
+\begin{align*}
+    (e) \ Tr (\gamma ^{5}) &= Tr (\gamma ^{5} \gamma ^{0} \gamma ^{0}) \tag{$(\gamma ^{0})^{2} = 1$} \\
+    &= - Tr(\gamma ^{0} \gamma ^{5} \gamma {0}) = Tr(\gamma ^{0} \gamma ^{5} \gamma {0}) = 0
+\end{align*}
+\end{document}
