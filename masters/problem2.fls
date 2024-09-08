@@ -323,6 +323,7 @@ INPUT problem2.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathbb.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb

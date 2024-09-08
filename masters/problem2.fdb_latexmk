@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1725795965.42704 "/home/nooremf/Code/masters/problem2.tex" "problem2.pdf" "problem2" 1725795965.69494 0
-  "/home/nooremf/Code/masters/problem2.tex" 1725795965.21291 4096 9299fd4bac5eebb9d38d077356c048a6 ""
+["pdflatex"] 1725797908.61339 "/home/nooremf/Code/masters/problem2.tex" "problem2.pdf" "problem2" 1725797908.86913 0
+  "/home/nooremf/Code/masters/problem2.tex" 1725797908.20879 4927 a221604098623606305657b448018949 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc" 1388795362 7013 c55cc8669071ac14036c4a0c96c16202 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -21,6 +21,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb" 1388795362 250376 86937501504e07e9745bc88e006094b2 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb" 1388795362 547522 a9135ac84940b576091fbefc78a79500 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathbb.pfb" 1388795362 34312 93d172bb03d56a69a32b53ff723ce40b ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb" 1388795362 63697 54c53ee8b8c43f52d0718f669ed6fb5e ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb" 1388795362 26156 d6751631159a7cd0a5d264b2d10a82fe ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb" 1388795362 41474 772656494141d29334d3e80c9a859c10 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb" 1388795362 40662 35fc2ef7e5426524c472184c87cb4d57 ""
@@ -59,8 +60,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1714953600 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1723443611.29127 4602002 62dba5fc29055c16380d7393a2adb07a ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1723443436 7753326 1ca0770af28f0c92e0d4114b88885c75 ""
-  "problem2.aux" 1725795965.64692 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "problem2.tex" 1725795965.21291 4096 9299fd4bac5eebb9d38d077356c048a6 ""
+  "problem2.aux" 1725797908.8158 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "problem2.tex" 1725797908.20879 4927 a221604098623606305657b448018949 ""
   (generated)
   "problem2.aux"
   "problem2.log"
