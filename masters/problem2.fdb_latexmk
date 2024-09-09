@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1725815557.26375 "/home/nooremf/Code/masters/problem2.tex" "problem2.pdf" "problem2" 1725815557.54337 0
-  "/home/nooremf/Code/masters/problem2.tex" 1725815557.10214 13627 af3a82c97648ebf4b890eab833db9884 ""
+["pdflatex"] 1725884232.27766 "/home/nooremf/Code/masters/problem2.tex" "problem2.pdf" "problem2" 1725884232.54193 0
+  "/home/nooremf/Code/masters/problem2.tex" 1725884232.12297 13287 cb114d964433c1e986d8711a643e2830 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc" 1388795362 7013 c55cc8669071ac14036c4a0c96c16202 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -60,8 +60,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1714953600 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1723443611.29127 4602002 62dba5fc29055c16380d7393a2adb07a ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1723443436 7753326 1ca0770af28f0c92e0d4114b88885c75 ""
-  "problem2.aux" 1725815557.49515 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
-  "problem2.tex" 1725815557.10214 13627 af3a82c97648ebf4b890eab833db9884 ""
+  "problem2.aux" 1725884232.49598 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "problem2.tex" 1725884232.12297 13287 cb114d964433c1e986d8711a643e2830 ""
   (generated)
   "problem2.aux"
   "problem2.log"

@@ -114,24 +114,13 @@ Therefore eqn(4) will be
     &\left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} =  \\
     & \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \sum_{s = 1}^{2} \sum_{r = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}}\frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}}\bigg[ (2 \pi) ^{3} \delta ^{rs} \delta ^{(3)}(\overrightarrow{p} - \overrightarrow{p ^{\prime}}) u^{s} _{\alpha}(\overrightarrow{p})u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\
     & + (2 \pi) ^{3} \delta ^{rs} \delta ^{(3)}(\overrightarrow{p} - \overrightarrow{p ^{\prime}}) v^{s} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} +i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg] \\
-    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{6}} \frac{1}{{4 E _{\overrightarrow{p}}}} \bigg[ (2 \pi) ^{3} u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + (2 \pi) ^{3} v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
-    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{4 E _{\overrightarrow{p}}}} \bigg[ u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} +  v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{6}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ (2 \pi) ^{3} u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + (2 \pi) ^{3} v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ u _{\alpha}(\overrightarrow{p})\overline{u}^{\dagger} _{\beta} \gamma ^{0} _{\alpha \beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} +  v _{\alpha}(\overrightarrow{p})\overline{v}^{\dagger} _{\beta} \gamma ^{0} _{\alpha \beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma \cdot k + m)\gamma ^{0} ]_{\alpha \beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + [(\gamma \cdot k - m)\gamma ^{0} ]_{\alpha \beta} e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
 \end{align*}
 
-\begin{align}
-    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \frac{1}{2} \bigg[ u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p}) \delta ^{(3)} (\overrightarrow{x} - \overrightarrow{y}) +  v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p}) \delta ^{(3)} (\overrightarrow{x} - \overrightarrow{y})\bigg] \\
-\end{align}
-
-because 
-\begin{equation}
-    \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} = \delta ^{(3)} (\overrightarrow{x} - \overrightarrow{y})
-\end{equation}
-
-and for same spinors numbers 
-
-\begin{equation}
-    u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p}) = 1 = v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p}) \tag{if  \ $\alpha = \beta$}
-\end{equation}
+because
+beacause of antiparticle
 
 Therefore 
 \begin{align*}
