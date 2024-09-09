@@ -116,14 +116,17 @@ Therefore eqn(4) will be
     & + (2 \pi) ^{3} \delta ^{rs} \delta ^{(3)}(\overrightarrow{p} - \overrightarrow{p ^{\prime}}) v^{s} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} +i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg] \\
     &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{6}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ (2 \pi) ^{3} u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + (2 \pi) ^{3} v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
     &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ u _{\alpha}(\overrightarrow{p})\overline{u}^{\dagger} _{\beta} \gamma ^{0} _{\alpha \beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} +  v _{\alpha}(\overrightarrow{p})\overline{v}^{\dagger} _{\beta} \gamma ^{0} _{\alpha \beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
-    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma \cdot k + m)\gamma ^{0} ]_{\alpha \beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + [(\gamma \cdot k - m)\gamma ^{0} ]_{\alpha \beta} e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma \cdot p + m)\gamma ^{0} ]_{\alpha \beta}e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + [(\gamma \cdot p - m)\gamma ^{0} ]_{\alpha \beta} e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma ^{0} E _{p} -\gamma \cdot p + m)\gamma ^{0} ]_{\alpha \beta}e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + [(\gamma ^{0} E _{p} -\gamma \cdot p - m)\gamma ^{0} ]_{\alpha \beta} e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
 \end{align*}
 
-because
-beacause of antiparticle
+beacause of antiparticle second half of the eqn wil be  $ p \to -p$
 
-Therefore 
 \begin{align*}
-    &\left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} =  \delta _{\alpha \beta} \delta ^{(3)} (\overrightarrow{x} - \overrightarrow{y})
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma ^{0} E _{p} -\gamma \cdot p + m)\gamma ^{0} ]_{\alpha \beta} + [(\gamma ^{0} E _{p} +\gamma \cdot p - m)\gamma ^{0} ]_{\alpha \beta} \bigg]e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[  [ \gamma ^{0} E_{p} \gamma ^{0} ]_{\alpha \beta} + [\gamma ^{0} E _{p} \gamma ^{0} ]_{\alpha \beta} \bigg]e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \\
+    &= \int \frac{d ^{3} p}{(2 \pi) ^{3}} \delta _{\alpha \beta} e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \\
+    &\therefore \left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} = \delta _{\alpha \beta} \delta ^{(3)} (\overrightarrow{x} - \overrightarrow{y})
 \end{align*}
+
 \end{document}
