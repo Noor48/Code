@@ -200,4 +200,107 @@ Therefore
 \begin{equation}
    H = \sum _{s, s^{\prime} = 1} ^{2} \int d ^{3}p E_{\overrightarrow{p}}(b^{s \dagger} _{\overrightarrow{p}}b^{s} _{\overrightarrow{p}} c^{s \dagger} _{\overrightarrow{p}}c^{s} _{\overrightarrow{p}})
 \end{equation}
+
+\section*{Solve for problem no. 3}
+
+\begin{align*}
+    i \big[ S^{\rho \sigma}, \gamma ^{\mu} \big] &= i \frac{i}{4} \big[ \big[\gamma ^{\rho}, \gamma ^{\sigma}\big] \gamma ^{\mu} \big] \\
+    &= - \frac{1}{4} \big( \big[\gamma ^{\rho}, \gamma ^{\sigma}\big] \gamma ^{\mu} - \gamma ^{\mu} \big[\gamma ^{\rho}, \gamma ^{\sigma}\big] \big) \\
+    &= - \frac{1}{4} \big( \gamma ^{\rho} \gamma ^{\sigma} \gamma ^{\mu} - \gamma ^{\sigma} \gamma ^{\rho} \gamma ^{\mu} - \gamma ^{\mu} \gamma ^{\rho} \gamma ^{\sigma} + \gamma ^{\mu} \gamma ^{\sigma} \gamma ^{\rho} \big) \\
+    &= - \frac{1}{4} \big( \gamma ^{\rho} ( 2 \eta ^{\sigma \mu} - \gamma ^{\mu} \gamma ^{\sigma}) - \gamma ^{\sigma} ( 2 \eta ^{\rho \mu} - \gamma ^{\mu} \gamma ^{\rho}) + ( 2 \eta ^{\mu \sigma} - \gamma ^{\sigma} \gamma ^{\mu}) \gamma ^{\rho} - ( 2 \eta ^{\mu \rho} - \gamma ^{\rho} \gamma ^{\mu})\gamma ^{\sigma} \big)  \\
+    &= - \frac{1}{4} \big( 2 \eta ^{\sigma \mu} \gamma^{\rho} - 2 \eta ^{\rho \mu} \gamma^{\sigma} + 2 \eta ^{\mu \sigma} \gamma ^{\rho} - 2 \eta ^{\mu \rho} \gamma ^{\sigma} \big) \\ 
+    &= \eta ^{\rho \mu} \gamma ^{\sigma} - \eta ^{\sigma \mu} \gamma ^{\rho}
+\end{align*}
+
+
+Given,
+
+\begin{equation}
+    \psi (\overrightarrow{x} ) = \sum_{s = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \left[b^{s} _{\overrightarrow{p}}u^{s}(\overrightarrow{p}) e ^{i \overrightarrow{p} \cdot \overrightarrow{x}} + c^{s \dagger} _{\overrightarrow{p}}v^{s}(\overrightarrow{p}) e ^{ - i \overrightarrow{p} \cdot \overrightarrow{x}}\right]  
+\end{equation}
+
+And
+
+\begin{equation}
+    \psi ^{\dagger} (\overrightarrow{x} ) = \sum_{s = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \left[b^{s \dagger} _{\overrightarrow{p}}u^{s \dagger}(\overrightarrow{p}) e ^{-i \overrightarrow{p} \cdot \overrightarrow{x}} + c^{s} _{\overrightarrow{p}}v^{s \dagger}(\overrightarrow{p}) e ^{i \overrightarrow{p} \cdot \overrightarrow{x}}\right]  
+\end{equation}
+
+Now
+\begin{align*}
+	&\left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\}  \\
+	&= \bigg\{\sum_{\alpha = 1}^{4}\sum_{s = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}}\frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \left[b^{s} _{\overrightarrow{p}}u^{s} _{\alpha}(\overrightarrow{p}) e ^{i \overrightarrow{p} \cdot \overrightarrow{x}} + c^{s \dagger} _{\overrightarrow{p}}v^{s} _{\alpha}(\overrightarrow{p}) e ^{ - i \overrightarrow{p} \cdot \overrightarrow{x}}\right], \\
+    & \sum_{\beta = 1}^{4} \sum_{r = 1}^{2} \int \frac{d ^{3} p^{\prime}}{(2 \pi) ^{3}}\frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}} \left[b^{r \dagger} _{\overrightarrow {p ^{\prime}}}u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{-i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + c^{r} _{\overrightarrow{p ^{\prime}}}v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{i \overrightarrow{p ^{\prime}} \cdot \overrightarrow{y}}\right] \bigg\} \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \sum_{s = 1}^{2} \sum_{r = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}}\frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}}\bigg[b^{s} _{\overrightarrow{p}}u^{s} _{\alpha}(\overrightarrow{p})b^{r \dagger} _{\overrightarrow {p ^{\prime}}}u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + b^{s} _{\overrightarrow{p}}u^{s} _{\alpha}(\overrightarrow{p})c^{r} _{\overrightarrow{p ^{\prime}}}v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\
+    & + c^{s \dagger} _{\overrightarrow{p}}v^{s} _{\alpha}(\overrightarrow{p}) b^{r \dagger} _{\overrightarrow {p ^{\prime}}}u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})  e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + c^{s \dagger} _{\overrightarrow{p}}v^{s} _{\alpha}(\overrightarrow{p}) c^{r} _{\overrightarrow{p ^{\prime}}}v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{- i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + b^{r \dagger} _{\overrightarrow {p ^{\prime}}}u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) b^{s} _{\overrightarrow{p}}u^{s} _{\alpha}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\
+    & + c^{r} _{\overrightarrow{p ^{\prime}}}v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})b^{s} _{\overrightarrow{p}}u^{s} _{\alpha}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + b^{r \dagger} _{\overrightarrow {p ^{\prime}}}u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) c^{s \dagger} _{\overrightarrow{p}}v^{s} _{\alpha}(\overrightarrow{p}) e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + c^{s \dagger} _{\overrightarrow{p}}v^{s} _{\alpha}(\overrightarrow{p}) c^{r} _{\overrightarrow{p ^{\prime}}}v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} +i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg]\\ 
+\end{align*}
+\begin{align}
+    \begin{split}    
+    & = \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \sum_{s = 1}^{2} \sum_{r = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}}\bigg[ \big\{b^{s} _{\overrightarrow{p}}, b^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\} u^{s} _{\alpha}(\overrightarrow{p})u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\ 
+    &+ \big\{b^{s} _{\overrightarrow{p}}, c^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\}u^{s} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + \big\{c^{s} _{\overrightarrow{p}}, b^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\}v^{s} _{\alpha}(\overrightarrow{p})u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}}  \\ 
+    &+ \big\{c^{s} _{\overrightarrow{p}}, c^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\}v^{s} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg]
+    \end{split}
+\end{align}
+
+Given 
+
+\begin{equation}
+    \big\{b^{s} _{\overrightarrow{p}}, b^{r} _{\overrightarrow {p ^{\prime}}}\big\} = \big\{c^{s} _{\overrightarrow{p}}, c^{r } _{\overrightarrow {p ^{\prime}}}\big\} = \big\{c^{s} _{\overrightarrow{p}}, b^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\} = \big\{c^{s} _{\overrightarrow{p}}, b^{r} _{\overrightarrow {p ^{\prime}}}\big\} = ..... = 0
+\end{equation}
+
+\begin{equation}
+    \big\{b^{s} _{\overrightarrow{p}}, b^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\} = \big\{c^{s} _{\overrightarrow{p}}, c^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\} = (2 \pi) ^{3} \delta ^{rs} \delta ^{(3)}(\overrightarrow{p} - \overrightarrow{p ^{\prime}}) 
+\end{equation}
+
+Therefore eqn(14) will be 
+\begin{align*}
+    &\left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} =  \\
+    & \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \sum_{s = 1}^{2} \sum_{r = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}}\frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}}\bigg[ (2 \pi) ^{3} \delta ^{rs} \delta ^{(3)}(\overrightarrow{p} - \overrightarrow{p ^{\prime}}) u^{s} _{\alpha}(\overrightarrow{p})u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} -i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\
+    & + (2 \pi) ^{3} \delta ^{rs} \delta ^{(3)}(\overrightarrow{p} - \overrightarrow{p ^{\prime}}) v^{s} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{-i \overrightarrow{p} \cdot \overrightarrow{x} +i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{6}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ (2 \pi) ^{3} u _{\alpha}(\overrightarrow{p})u^{\dagger} _{\beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + (2 \pi) ^{3} v _{\alpha}(\overrightarrow{p})v^{\dagger} _{\beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ u _{\alpha}(\overrightarrow{p})\overline{u}^{\dagger} _{\beta} \gamma ^{0} _{\alpha \beta}(\overrightarrow{p})e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} +  v _{\alpha}(\overrightarrow{p})\overline{v}^{\dagger} _{\beta} \gamma ^{0} _{\alpha \beta}(\overrightarrow{p})e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma \cdot p + m)\gamma ^{0} ]_{\alpha \beta}e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + [(\gamma \cdot p - m)\gamma ^{0} ]_{\alpha \beta} e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma ^{0} E _{p} -\gamma \cdot p + m)\gamma ^{0} ]_{\alpha \beta}e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} + [(\gamma ^{0} E _{p} -\gamma \cdot p - m)\gamma ^{0} ]_{\alpha \beta} e ^{-i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \bigg] \\
+\end{align*}
+
+beacause of antiparticle second half of the eqn wil be  $ p \to -p$
+
+\begin{align*}
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[ [(\gamma ^{0} E _{p} -\gamma \cdot p + m)\gamma ^{0} ]_{\alpha \beta} + [(\gamma ^{0} E _{p} +\gamma \cdot p - m)\gamma ^{0} ]_{\alpha \beta} \bigg]e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \\
+    &= \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{1}{{2 E _{\overrightarrow{p}}}} \bigg[  [ \gamma ^{0} E_{p} \gamma ^{0} ]_{\alpha \beta} + [\gamma ^{0} E _{p} \gamma ^{0} ]_{\alpha \beta} \bigg]e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \\
+    &= \int \frac{d ^{3} p}{(2 \pi) ^{3}} \delta _{\alpha \beta} e ^{i \overrightarrow{p} \cdot (\overrightarrow{x} - \overrightarrow{y})} \\
+    &\therefore \left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} = \delta _{\alpha \beta} \delta ^{(3)} (\overrightarrow{x} - \overrightarrow{y})
+\end{align*}
+    
+\begin{align*}
+    \left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi _{\beta }(\overrightarrow{y})  \right\} =&\\
+    &= \bigg\{\sum_{\alpha = 1}^{4}\sum_{s = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}}\frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \left[b^{s} _{\overrightarrow{p}}u^{s} _{\alpha}(\overrightarrow{p}) e ^{i \overrightarrow{p} \cdot \overrightarrow{x}} + c^{s \dagger} _{\overrightarrow{p}}v^{s} _{\alpha}(\overrightarrow{p}) e ^{ - i \overrightarrow{p} \cdot \overrightarrow{x}}\right], \\
+    & \sum_{\beta = 1}^{4} \sum_{r = 1}^{2} \int \frac{d ^{3} p^{\prime}}{(2 \pi) ^{3}}\frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}} \left[b^{r} _{\overrightarrow {p ^{\prime}}}u^{r} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + c^{r \dagger} _{\overrightarrow{p ^{\prime}}}v^{r} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{-i \overrightarrow{p ^{\prime}} \cdot \overrightarrow{y}}\right] \bigg\} \\
+    & = \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \sum_{s = 1}^{2} \sum_{r = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}}\bigg[ \big\{b^{s} _{\overrightarrow{p}}, b^{r} _{\overrightarrow {p ^{\prime}}}\big\} u^{s} _{\alpha}(\overrightarrow{p})u^{r} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} +i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\ 
+    &+ \big\{b^{s} _{\overrightarrow{p}}, c^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\}u^{s} _{\alpha}(\overrightarrow{p})v^{r} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + \big\{c^{s \dagger} _{\overrightarrow{p}}, b^{r} _{\overrightarrow {p ^{\prime}}}\big\}v^{s} _{\alpha}(\overrightarrow{p})u^{r} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}}  \\
+    &+ \big\{c^{s} _{\overrightarrow{p}}, c^{r} _{\overrightarrow {p ^{\prime}}}\big\}v^{s} _{\alpha}(\overrightarrow{p})v^{r} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg]
+\end{align*}
+
+because of eqn(15) every term vanishes.
+
+Therefore 
+\begin{equation}
+    \left\{ \psi _{\alpha} (\overrightarrow{x}) , \psi _{\beta }(\overrightarrow{y})  \right\} = 0
+\end{equation}
+
+And 
+\begin{align*}
+    \left\{ \psi ^{\dagger} _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} =&\\
+    &= \bigg\{\sum_{\alpha = 1}^{4}\sum_{s = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}}\frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \left[b^{s \dagger} _{\overrightarrow{p}}u^{s \dagger} _{\alpha}(\overrightarrow{p}) e ^{-i \overrightarrow{p} \cdot \overrightarrow{x}} + c^{s} _{\overrightarrow{p}}v^{s \dagger} _{\alpha}(\overrightarrow{p}) e ^{ - i \overrightarrow{p} \cdot \overrightarrow{x}}\right], \\
+    & \sum_{\beta = 1}^{4} \sum_{r = 1}^{2} \int \frac{d ^{3} p^{\prime}}{(2 \pi) ^{3}}\frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}} \left[b^{r \dagger} _{\overrightarrow {p ^{\prime}}}u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{ - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + c^{r} _{\overrightarrow{p ^{\prime}}}v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}}) e ^{i \overrightarrow{p ^{\prime}} \cdot \overrightarrow{y}}\right] \bigg\} \\
+    & = \sum_{\alpha = 1}^{4}\sum_{\beta = 1}^{4} \sum_{s = 1}^{2} \sum_{r = 1}^{2} \int \frac{d ^{3} p}{(2 \pi) ^{3}} \frac{d ^{3} p ^{\prime}}{(2 \pi) ^{3}} \frac{1}{\sqrt{2 E _{\overrightarrow{p}}}} \frac{1}{\sqrt{2 E _{\overrightarrow{p^{\prime}}}}}\bigg[ \big\{b^{s \dagger} _{\overrightarrow{p}}, b^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\} u^{s \dagger} _{\alpha}(\overrightarrow{p})u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{ - i \overrightarrow{p} \cdot \overrightarrow{x} - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \\
+    &+ \big\{b^{s \dagger} _{\overrightarrow{p}}, c^{r} _{\overrightarrow {p ^{\prime}}}\big\}u^{s \dagger} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{- i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} + \big\{c^{s} _{\overrightarrow{p}}, b^{r \dagger} _{\overrightarrow {p ^{\prime}}}\big\}v^{s \dagger} _{\alpha}(\overrightarrow{p})u^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} - i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}}  \\ 
+    &+ \big\{c^{s} _{\overrightarrow{p}}, c^{r} _{\overrightarrow {p ^{\prime}}}\big\}v^{s \dagger} _{\alpha}(\overrightarrow{p})v^{r \dagger} _{\beta}(\overrightarrow{p ^{\prime}})e ^{i \overrightarrow{p} \cdot \overrightarrow{x} + i \overrightarrow{p^{\prime}} \cdot \overrightarrow{y}} \bigg]
+\end{align*}
+Also for eqn(15)
+
+\begin{equation}
+    \left\{ \psi ^{\dagger} _{\alpha} (\overrightarrow{x}) , \psi ^{\dagger} _{\beta }(\overrightarrow{y})  \right\} = 0
+\end{equation}
+
 \end{document} 
