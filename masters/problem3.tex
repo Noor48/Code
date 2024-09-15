@@ -26,10 +26,20 @@
 Given
 \begin{align*}
     \mathcal{L} &= -\frac{1}{4}F_{\mu \nu} F^{\mu \nu} - j^{\mu} A^{\mu} \\
-    &= -\frac{1}{4}(\partial_{mu}A_{nu} - \partial_{\nu}A_{\mu})(\partial^{\mu} A^{\nu} - \partial^{\mu} A^{\nu})
+    &= -\frac{1}{4}(\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu})(\partial^{\mu} A^{\nu} - \partial^{\mu} A^{\nu})  - j^{\mu} A^{\mu}\\
+    &= -\frac{1}{4}(\partial_{\mu} A_{\nu}(\partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu})  - \partial_{\nu} A_{\mu}(\partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu})) - j^{\mu} A^{\mu}\\
+    &= -\frac{1}{2}(\partial_{\mu} A_{\nu}(\partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu})) - j^{\mu} A^{\mu}
 \end{align*}
 
 (a)
-
-
+\begin{align*}
+    \frac{\partial \mathcal{L}}{\partial A_{\nu}} &= - j^{\nu} \\
+    \frac{\partial \mathcal{L}}{\partial (\partial _{\mu} A_{\nu})} &= -\frac{1}{2}(\partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu})) -\frac{1}{2}\partial^{\mu} A^{\nu} + \frac{1}{2}\partial^{\nu} A^{\mu} \\ 
+    &= -(\partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu})) = F^{\mu \nu}
+\end{align*}
+Therefore Euler-Langrangian is 
+\begin{align*}
+    \frac{\partial \mathcal{L}}{\partial A_{\nu}} - \frac{\partial \mathcal{L}}{\partial (\partial _{\mu} A_{\nu})} &= -j^{\nu} + \partial_{\mu} F^{\mu}{\nu} = 0 \\ 
+    \partial_{\mu} F^{\mu}{\nu} &= j^{\nu}  
+\end{align*}
 \end{document}
