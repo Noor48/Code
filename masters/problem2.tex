@@ -3,6 +3,7 @@
 \usepackage{tensor}
 \usepackage{stix}
 \usepackage{slashed}
+\usepackage{hyperref}
 \usepackage{graphicx} % Required for inserting images
 %\usepackage[paperheight=6in,
 %   paperwidth=5in,
@@ -12,7 +13,8 @@
 %   right=10mm]{geometry}
 \newcommand*{\1}{\hspace{1pt}}
 \title{Solution to Problem Sheet 2}
-\author{Noor E Mustafa Ferdous}
+\author{Noor E Mustafa Ferdous\\ email: \href{mailto:nooremf@gmail.com}{nooremf@gmail.com} }
+
 \date{}
 
 \begin{document}
@@ -212,7 +214,43 @@ Therefore
     &= \eta ^{\rho \mu} \gamma ^{\sigma} - \eta ^{\sigma \mu} \gamma ^{\rho}
 \end{align*}
 
+the Dirac Lagrangian is 
 
+\begin{equation*}
+    \mathcal{L} = \overline{\psi} (i \gamma ^{\mu} \partial _{\mu} - m) \psi
+\end{equation*}
+
+Under Lorentz transformation it wil be 
+
+\begin{align*}
+    \mathcal{L} &= \overline{\psi ^{\prime}} (i \gamma ^{\mu} \partial ^{\prime} _{\mu} - m) \psi ^{\prime} \\ 
+    &= \overline{\psi}L ^{-1}(\Lambda) (i \gamma ^{\mu} \partial _{\mu} - m) \psi L(\Lambda) \\
+    &= i\overline{\psi}L ^{-1}(\Lambda) \gamma ^{\mu}L(\Lambda)  \partial _{\mu} \psi -  m \overline{\psi}L ^{-1}(\Lambda) L(\Lambda) \psi
+    &= \overline{\psi} \Lambda ^{\mu} _{\nu} i \gamma ^{\nu}  \partial _{\mu} \psi -  m \overline{\psi} \psi
+\end{align*}
+
+where
+\begin{align*}
+    \Lambda ^{\mu} _{\nu} = \overline{\psi} \gamma ^{\mu} \psi = j ^{\mu}
+\end{align*}
+
+which is a current four vector transform or invariant under lorentz transformation.
+
+\begin{align*}
+    \partial _{\mu} j^{\mu} = 0
+\end{align*}
+
+L.H.S 
+
+\begin{align*}
+    [M^{\mu \nu}, M^{\rho \sigma}] &= \\ 
+    & [S^{\mu \nu}, S^{\rho \sigma}] \\ 
+    &= \frac{i}{4}\frac{i}{4}([[\gamma^{\mu}, \gamma^{nu}], [\gamma^{\rho}, \gamma^{\sigma}]]) \\
+    &= \frac{i}{4}[\gamma^{\mu}\gamma^{\nu}\gamma^{\rho}\gamma^{\sigma} - \gamma^{\mu}\gamma^{\nu}\gamma^{\sigma}\gamma^{\rho} - \gamma^{\nu}\gamma^{\mu}\gamma^{\rho}\gamma^{\sigma} + \gamma^{\mu}\gamma^{\nu}\gamma^{\sigma}\gamma^{\rho} \\
+    &- \gamma^{\rho}\gamma^{\sigma}\gamma^{\mu}\gamma^{\nu} + \gamma^{\rho}\gamma^{\sigma}\gamma^{\nu}\gamma^{\mu} - \gamma^{\sigma}\gamma^{\rho}\gamma^{\mu}\gamma^{\nu} + \gamma^{\sigma}\gamma^{\rho}\gamma^{\nu}\gamma^{\mu} \\
+    &= \frac{i}{4}[\gamma^{\mu} (2\eta ^{\nu\rho} - \gamma^{\rho}\gamma^{\nu})\gamma^{\sigma} - \gamma^{\sigma} (2\eta ^{\nu\rho} - \gamma^{\nu}\gamma^{\rho})\gamma^{\mu} -\gamma^{\nu} (2\eta ^{\mu\rho} - \gamma^{\rho}\gamma^{\mu})\gamma^{\sigma} +\gamma^{\sigma} (2\eta ^{\mu\rho} - \gamma^{\mu}\gamma^{\rho})\gamma^{\nu} \\ 
+    &+ \gamma^{\rho} (2\eta ^{\sigma\nu} - \gamma^{\nu}\gamma^{\sigma})\gamma^{\mu} - \gamma^{\mu} (2\eta ^{\nu\sigma} - \gamma^{\rho}\gamma^{\nu})\gamma^{\sigma} - \gamma^{\mu} (2\eta ^{\nu\rho} - \gamma^{\rho}\gamma^{\nu})\gamma^{\sigma} - \gamma^{\mu} (2\eta ^{\nu\rho} - \gamma^{\rho}\gamma^{\nu})\gamma^{\sigma} + \gamma^{\mu} (2\eta ^{\nu\rho} - \gamma^{\rho}\gamma^{\nu})\gamma^{\sigma}
+\end{align*}
 Given,
 
 \begin{equation}
