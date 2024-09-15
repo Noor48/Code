@@ -40,6 +40,58 @@ Given
 Therefore Euler-Langrangian is 
 \begin{align*}
     \frac{\partial \mathcal{L}}{\partial A_{\nu}} - \frac{\partial \mathcal{L}}{\partial (\partial _{\mu} A_{\nu})} &= -j^{\nu} + \partial_{\mu} F^{\mu}{\nu} = 0 \\ 
-    \partial_{\mu} F^{\mu}{\nu} &= j^{\nu}  
+    \partial_{\mu} F^{\mu \nu} &= j^{\nu}  
+\end{align*}
+
+(b) 
+taking $\mu = i$ and $\nu = 0$
+
+\begin{align*}
+    \partial _{i} F^{i 0} &= j^{0} \\ 
+    \implies \overrightarrow{\nabla} \cdot \overrightarrow{E} = \rho
+\end{align*}
+
+And taking $\nu = j$
+\begin{align*}
+    \partial _{\mu} F^{\mu j} &= j^{0} \\
+    \implies \partial_{0} F^{0 j} + \partial_{i} F^{ij} &= 0 \\
+    \implies \partial^{0} F_{0 j} + \partial^{i} F_{ij} &= 0 \\ \\
+    \implies \frac{\partial E_{j}}{\partial t} + \partial ^{i} (-\epsilon_{ijk}B_{k}) &= 0 \\
+    \implies \frac{\partial E_{j}}{\partial t} &= \partial ^{i} (-\epsilon_{ijk}B_{k}) \\
+    \implies \frac{\partial \boldsymbol{E}}{\partial t} &= \boldsymbol{\nabla} \times \boldsymbol{B} 
+\end{align*}
+
+\section*{Solve for problem no. 2}
+
+(a)
+Given 
+\begin{align*}
+    &\partial_{\alpha} F_{\beta \gamma} + \partial_{\beta} F_{\gamma \alpha} + \partial_{\gamma} F_{\alpha \beta} \\
+    &= \partial_{\alpha}(\partial_{\beta} A_{\gamma} - \partial_{\gamma} A_{\beta}) + \partial_{\beta}(\partial_{\gamma} A_{\alpha} - \partial_{\alpha} A_{\gamma}) + \partial_{\gamma}(\partial_{\alpha} A_{\beta} - \partial_{\beta} A_{\alpha}) \\ 
+    &= \partial_{\alpha} \partial_{\beta}A_{\gamma} - \partial_{\alpha} \partial_{\gamma}A_{\beta} + \partial_{\beta} \partial_{\gamma}A_{\alpha} - \partial_{\beta} \partial_{\alpha}A_{\gamma} + \partial_{\gamma} \partial_{\alpha}A_{\beta} - \partial_{\gamma} \partial_{\beta}A_{\alpha} \\ 
+    &= 0
+\end{align*}
+
+Given 
+\begin{equation}
+    \partial_{\alpha} F_{\beta \gamma} + \partial_{\beta} F_{\gamma \alpha} + \partial_{\gamma} F_{\alpha \beta} = 0
+\end{equation}
+
+taking $\alpha=1, \beta=2, \gamma=3$ 
+
+\begin{align*}
+    \partial_{\alpha} F_{\beta \gamma} + \partial_{\beta} F_{\gamma \alpha} + \partial_{\gamma} F_{\alpha \beta} &= 0\\
+    \implies \partial_{1} F_{23} + \partial_{2} F_{31} + \partial_{3} F_{12} &= 0\\
+    \implies \partial^{1} B^{1} + \partial^{2} B^{2} + \partial^{3} B^{3}  &= 0\\
+    \implies \boldsymbol{\nabla} \cdot \boldsymbol{B} &= 0
+\end{align*}
+
+Now taking $\alpha=0, \beta=i, \gamma=j (i\neq j)$
+\begin{align*}
+    \partial_{\alpha} F_{\beta \gamma} + \partial_{\beta} F_{\gamma \alpha} + \partial_{\gamma} F_{\alpha \beta} &= 0\\
+    \implies \partial^{0} F^{ij} + \partial^{j} F^{0i} + \partial^{i} F^{j0} &= 0\\
+    \implies -\frac{\partial \boldsymbol{B}}{\partial t} + \partial^{j} E^{i} - \partial^{i} E^{j} &= 0\\
+    \implies -\frac{\partial \boldsymbol{B}}{\partial t} &= \epsilon_{ijk} E^{k} \\
+    \implies -\frac{\partial \boldsymbol{B}}{\partial t} &= \boldsymbol{\nabla} \times \boldsymbol{E} \\
 \end{align*}
 \end{document}
