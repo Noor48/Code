@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage[compat=1.0.0]{tikz-feynman}
 \usepackage{feynmp-auto}
+\usepackage{float}
 \usepackage{graphicx} % Required for inserting images
 %\usepackage[paperheight=6in,
 %   paperwidth=5in,
@@ -28,18 +29,18 @@
 \begin{figure}[h]
 \[
     \feynmandiagram [horizontal=a to b] {
-        i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p_{2}\)] i2 [particle=\(\phi\)],
+        i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, reversed momentum'=\(p_{2}\)] i2 [particle=\(\phi\)],
         a -- [fermion] b,
-        f1 [particle=\(\psi\)] -- [anti fermion, momentum'=\(p_{3}\)] b -- [scalar, momentum'=\(p_{4}\)] f2 [particle=\(\phi\)],
+        f1 [particle=\(\psi\)] -- [anti fermion, reversed momentum'=\(p_{3}\)] b -- [scalar, momentum'=\(p_{4}\)] f2 [particle=\(\phi\)],
       };
     +
     \feynmandiagram [horizontal=a to b] {
-      i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p _{2}\)] i2 [particle=\(\phi\)],
+      i1 [particle=\(\phi\)] -- [scalar, momentum'=\(p_{1}\)] a -- [anti fermion, reversed momentum'=\(p _{2}\)] i2 [particle=\(\psi\)],
       a -- [fermion] b,
-      f1 [particle=\(\phi\)] -- [scalar, momentum'=\(p _{3}\)] b -- [fermion, momentum'=\(p _{4}\)] f2 [particle=\(\psi\)],
+      f1 [particle=\(\psi\)] -- [anti fermion, reversed momentum'=\(p _{3}\)] b -- [scalar, momentum'=\(p _{4}\)] f2 [particle=\(\phi\)],
     };
   \]
-  \caption{\label{fig:fi} Feynman diagram for $\psi\phi \to \psi\phi$.}
+  \caption{\label{fig:fi} Feynman diagram for $\psi\psi \to \psi\phi$.}
 \end{figure}
 
 Scattering amplitude for this diagram is 
@@ -48,61 +49,79 @@ Scattering amplitude for this diagram is
   &= (ig)^{2} i (2\pi)^{4} \delta ^{4} (p_{3} + p _{4} - p_{1} - p_{2}) \frac{1}{(p_{1} + p_{2})^{2} - M^{2} + i \epsilon}
 \end{align*}
 
-(b)
-\begin{figure}[h]
-\[
-    \feynmandiagram [horizontal=a to b] {
-        i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p_{2}\)] i2 [particle=\(\phi\)],
-        a -- [fermion] b,
-        f1 [particle=\(\psi\)] -- [anti fermion, momentum'=\(p_{3}\)] b -- [scalar, momentum'=\(p_{4}\)] f2 [particle=\(\phi\)],
-      };
-    +
-    \feynmandiagram [horizontal=a to b] {
-      i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p _{2}\)] i2 [particle=\(\phi\)],
-      a -- [fermion] b,
-      f1 [particle=\(\phi\)] -- [scalar, momentum'=\(p _{3}\)] b -- [fermion, momentum'=\(p _{4}\)] f2 [particle=\(\psi\)],
-    };
-  \]
-  \caption{\label{fig:fi} Feynman diagram for $\psi\psi^{\dagger} \to \phi\phi$.}
-\end{figure}
-
-
 %\begin{fmffile}{first-diagram}
 %  \begin{fmfgraph}(120,80)
 %    \fmfleft{i1,i2}
 %    \fmfright{o1,o2}
 %    \fmf{fermion}{i1,v1,o1}
 %    \fmf{fermion}{i2,v2,o2}
-%    \fmf{photon}{v1,v2}
+%    \fmf{fermion}{v1,v2}
 %  \end{fmfgraph}
 % \end{fmffile}
+(b)
+\begin{figure}[H]
+  \[
+      \feynmandiagram [horizontal=a to b] {
+          i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar,  reversed momentum'=\(p_{2}\)] i2 [particle=\(\phi\)],
+          a -- [fermion] b,
+          f1 [particle=\(\psi^{\dagger}\)] -- [fermion,  reversed momentum'=\(p_{3}\)] b -- [scalar, momentum'=\(p_{4}\)] f2 [particle=\(\phi\)],
+        };
+      +
+      \feynmandiagram [horizontal=a to b] {
+        i1 [particle=\(\phi\)] -- [scalar, momentum'=\(p_{1}\)] a -- [anti fermion, reversed momentum'=\(p _{2}\)] i2 [particle=\(\psi\)],
+        a -- [fermion] b,
+        f1 [particle=\(\psi^{\dagger}\)] -- [ fermion, reversed momentum'=\(p _{3}\)] b -- [scalar, momentum'=\(p _{4}\)] f2 [particle=\(\phi\)],
+    };
+    \]
+    \caption{\label{fig:fi} Feynman diagram for $\psi\psi^{\dagger} \to \phi\phi$.}
+  \end{figure}
 
-%\feynmandiagram [horizontal=a to b] {
-%    i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{+}\)],
-%    a -- [photon, edge label=\(\gamma\), momentum'=\(k\)] b,
-%    f1 [particle=\(e^{+}\)] -- [fermion] b -- [fermion] f2 [particle=\(e ^{-}\)],
-%  };
+The scattering amplitude will be
+\begin{align*}
+  i\mathcal{M} &= (-ig)^{2}\int \frac{d^{4} k}{(2\pi)^{4}}\frac{i (2\pi)^{8}}{k^{2}-M^{2}+i\epsilon}(\delta^{4}(p_{1} + p_{2} - k) \delta^{4}(k - p_{3} - p_{4})) \\
+  &= i(-ig)^{2} (2\pi)^{4} \delta^{4} (p_{1} + p_{2} - p_{3} - p_{4}) \frac{1}{(p_{1} + p_{2}^{2}-M^{2}+i\epsilon)}
+\end{align*}
 
-%\feynmandiagram [horizontal=f2 to f3] {
-%  f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
-%  f2 -- [photon] p1,
-%  f3 -- [photon] p2,
-%};
+\section*{Solve for problem no. 3}
+\begin{figure}[H]
+  \[
+          \feynmandiagram [vertical=f2 to f3] {
+          f1 [particle=\(e^{-}\)] -- [fermion, momentum'=\(p_{2}\)] f2 -- [fermion,  reversed momentum'=\(q\)] f3 -- [fermion, momentum'=\(p_{3}\)] f4 [particle=\(e^{-}\)],
+          f2 -- [photon, momentum'=\(p_{4}\)] p1,
+          f3 -- [photon,reversed momentum'=\(p_{1}\)] p2,
+          };
+          \feynmandiagram [horizontal=f2 to f3] {
+          f1 [particle=\(e^{-}\)] -- [fermion, momentum'=\(p_{1}\)] f2 -- [fermion, momentum'=\(q\)] f3 -- [fermion, momentum'=\(p_{4}\)] f4 [particle=\(e^{-}\)],
+          f2 -- [photon,reversed momentum'=\(p_{2}\)] p1,
+          f3 -- [photon,momentum'=\(p_{3}\)] p2,
+          };
+      \]
+      \caption{\label{fig:fi} Feynman diagram for $e^{-}\gamma \to e^{-}\gamma$}
+  \end{figure}
+Scattering amplitude will be 
+\begin{align*}
+  i\mathcal{M}_{1} &= (2\pi)^{4} \int d^{4} q \big[\overline{u}(p_4)(-ie\gamma^{\mu}\epsilon_{\mu}(p_{2}))\frac{i(\slashed{q} +m)}{q^{2}-m^{2}+i\epsilon}\epsilon^{*}_{\nu}(p_3)u(p_{1})\delta^{4}(p_{1} - p_{3} - q)\delta^{4}(p_{2}+q-p_{4})\big] \\
+  \mathcal{M}_{1} &= \frac{e^{2}}{(p_{1}-p_{3})^{2}-m^{2}+i\epsilon}\big[\overline{u}(p_{4})\gamma^{\mu}\epsilon_{\mu}(p_{2})\epsilon^{*}_{\mu}(p_{3})\gamma_{\mu}u(p_{1})\delta^{4}(p_{2}+p_{3}-p_{1}-p_{4}))\big]
+\end{align*}
+and 
+\begin{align*}
+  i\mathcal{M}_{2} &= (2\pi)^{4} \int d^{4} q \big[\overline{u}(p_4)(-ie\gamma^{\mu}\epsilon_{\mu}(p_{2}))\frac{i(\slashed{q} +m)}{q^{2}-m^{2}+i\epsilon}\epsilon^{*}_{\nu}(p_3)u(p_{1})\delta^{4}(p_{1} + p_{2} - q)\delta^{4}(p_{4}+p_{3}-q)\big] \\
+  \mathcal{M}_{2} &= \frac{e^{2}}{(p_{1}-p_{3})^{2}-m^{2}+i\epsilon}\big[\overline{u}(p_{4})\gamma^{\mu}\epsilon_{\mu}(p_{2})\epsilon^{*}_{\mu}(p_{3})\gamma_{\mu}u(p_{1})\delta^{4}(p_{4}+p_{3}-p_{1}-p_{2})\big]
+\end{align*}
+\begin{figure}[H]
+\[
+  \feynmandiagram [vertical=a to b] {
+      i1 [particle=\(e^{-}\)] -- [anti fermion] a -- [anti fermion] i2 [particle=\(e^{+}\)],
+      a -- [photon, edge label=\(\gamma\),  reversed momentum'=\(q\)] b,
+      f1 [particle=\(e^{+}\)] -- [anti fermion] b -- [anti fermion] f2 [particle=\(e ^{-}\)],
+    };
+    \feynmandiagram [horizontal=a to b] {
+      i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{-}\)],
+      a -- [photon, edge label=\(\gamma\), momentum'=\(q\)] b,
+      f1 [particle=\(e^{+}\)] -- [fermion] b -- [fermion] f2 [particle=\(e ^{+}\)],
+    };
+  \]
+      \caption{\label{fig:fi} Feynman diagram for $e^{-}e^{+} \to e^{-}e^{+}$}
+\end{figure}
 
-%\begin{figure}[h]
-%\[
-%        \feynmandiagram [vertical=f2 to f3] {
-%        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
-%        f2 -- [photon] p1,
-%        f3 -- [photon] p2,
-%        };
-%        \feynmandiagram [horizontal=f2 to f3] {
-%        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
-%        f2 -- [photon] p1,
-%        f3 -- [photon] p2,
-%        };
-%    \]
-%    \caption{\label{fig:fi} Semi inclusive COH + DIS + RES $\pi^0$ 
-%    production.}
-%\end{figure}
 \end{document}
