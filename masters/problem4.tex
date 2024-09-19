@@ -1,0 +1,38 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{tensor}
+\usepackage{stix}
+\usepackage{slashed}
+\usepackage{hyperref}
+\usepackage[compat=1.0.0]{tikz-feynman}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage[paperheight=6in,
+%   paperwidth=5in,
+%   top=10mm,
+%   bottom=20mm,
+%   left=10mm,
+%   right=10mm]{geometry}
+\newcommand*{\1}{\hspace{1pt}}
+\title{Solution to Problem Sheet 4}
+\author{Noor E Mustafa Ferdous\\ email: \href{mailto:nooremf@gmail.com}{nooremf@gmail.com} }
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solve for problem no. 1}
+
+\feynmandiagram [horizontal=a to b] {
+    i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{+}\)],
+    a -- [photon, edge label=\(\gamma\), momentum'=\(k\)] b,
+    f1 [particle=\(e^{+}\)] -- [fermion] b -- [fermion] f2 [particle=\(e ^{-}\)],
+  };
+
+\feynmandiagram [horizontal=f2 to f3] {
+  f1 -- [fermion] f2 -- [fermion] f3 -- [fermion] f4,
+  f2 -- [photon] p1,
+  f3 -- [photon] p2,
+};
+\end{document}
