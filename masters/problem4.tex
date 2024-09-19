@@ -5,6 +5,7 @@
 \usepackage{slashed}
 \usepackage{hyperref}
 \usepackage[compat=1.0.0]{tikz-feynman}
+\usepackage{feynmp-auto}
 \usepackage{graphicx} % Required for inserting images
 %\usepackage[paperheight=6in,
 %   paperwidth=5in,
@@ -23,33 +24,85 @@
 \maketitle
 
 \section*{Solve for problem no. 1}
-
-\feynmandiagram [horizontal=a to b] {
-    i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{+}\)],
-    a -- [photon, edge label=\(\gamma\), momentum'=\(k\)] b,
-    f1 [particle=\(e^{+}\)] -- [fermion] b -- [fermion] f2 [particle=\(e ^{-}\)],
-  };
-
-\feynmandiagram [horizontal=f2 to f3] {
-  f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
-  f2 -- [photon] p1,
-  f3 -- [photon] p2,
-};
-
+(a)
 \begin{figure}[h]
 \[
-        \feynmandiagram [vertical=f2 to f3] {
-        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
-        f2 -- [photon] p1,
-        f3 -- [photon] p2,
-        };
-        \feynmandiagram [horizontal=f2 to f3] {
-        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
-        f2 -- [photon] p1,
-        f3 -- [photon] p2,
-        };
-    \]
-    \caption{\label{fig:fi} Semi inclusive COH + DIS + RES $\pi^0$ 
-    production.}
+    \feynmandiagram [horizontal=a to b] {
+        i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p_{2}\)] i2 [particle=\(\phi\)],
+        a -- [fermion] b,
+        f1 [particle=\(\psi\)] -- [anti fermion, momentum'=\(p_{3}\)] b -- [scalar, momentum'=\(p_{4}\)] f2 [particle=\(\phi\)],
+      };
+    +
+    \feynmandiagram [horizontal=a to b] {
+      i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p _{2}\)] i2 [particle=\(\phi\)],
+      a -- [fermion] b,
+      f1 [particle=\(\phi\)] -- [scalar, momentum'=\(p _{3}\)] b -- [fermion, momentum'=\(p _{4}\)] f2 [particle=\(\psi\)],
+    };
+  \]
+  \caption{\label{fig:fi} Feynman diagram for $\psi\phi \to \psi\phi$.}
 \end{figure}
+
+Scattering amplitude for this diagram is 
+\begin{align*}
+  i \mathcal{M} &= \int \frac{d ^{4}k}{(2\pi)^{4}} \delta^{4} (p_{1} - p_{2} - k) \delta^{4} (p_{3} - p_{4} - k) \frac{i (2\pi)^{8}}{k^{2}-M^{2} + i \epsilon} \\
+  &= (ig)^{2} i (2\pi)^{4} \delta ^{4} (p_{3} + p _{4} - p_{1} - p_{2}) \frac{1}{(p_{1} + p_{2})^{2} - M^{2} + i \epsilon}
+\end{align*}
+
+(b)
+\begin{figure}[h]
+\[
+    \feynmandiagram [horizontal=a to b] {
+        i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p_{2}\)] i2 [particle=\(\phi\)],
+        a -- [fermion] b,
+        f1 [particle=\(\psi\)] -- [anti fermion, momentum'=\(p_{3}\)] b -- [scalar, momentum'=\(p_{4}\)] f2 [particle=\(\phi\)],
+      };
+    +
+    \feynmandiagram [horizontal=a to b] {
+      i1 [particle=\(\psi\)] -- [fermion, momentum'=\(p_{1}\)] a -- [scalar, momentum'=\(p _{2}\)] i2 [particle=\(\phi\)],
+      a -- [fermion] b,
+      f1 [particle=\(\phi\)] -- [scalar, momentum'=\(p _{3}\)] b -- [fermion, momentum'=\(p _{4}\)] f2 [particle=\(\psi\)],
+    };
+  \]
+  \caption{\label{fig:fi} Feynman diagram for $\psi\psi^{\dagger} \to \phi\phi$.}
+\end{figure}
+
+
+%\begin{fmffile}{first-diagram}
+%  \begin{fmfgraph}(120,80)
+%    \fmfleft{i1,i2}
+%    \fmfright{o1,o2}
+%    \fmf{fermion}{i1,v1,o1}
+%    \fmf{fermion}{i2,v2,o2}
+%    \fmf{photon}{v1,v2}
+%  \end{fmfgraph}
+% \end{fmffile}
+
+%\feynmandiagram [horizontal=a to b] {
+%    i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{+}\)],
+%    a -- [photon, edge label=\(\gamma\), momentum'=\(k\)] b,
+%    f1 [particle=\(e^{+}\)] -- [fermion] b -- [fermion] f2 [particle=\(e ^{-}\)],
+%  };
+
+%\feynmandiagram [horizontal=f2 to f3] {
+%  f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
+%  f2 -- [photon] p1,
+%  f3 -- [photon] p2,
+%};
+
+%\begin{figure}[h]
+%\[
+%        \feynmandiagram [vertical=f2 to f3] {
+%        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
+%        f2 -- [photon] p1,
+%        f3 -- [photon] p2,
+%        };
+%        \feynmandiagram [horizontal=f2 to f3] {
+%        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
+%        f2 -- [photon] p1,
+%        f3 -- [photon] p2,
+%        };
+%    \]
+%    \caption{\label{fig:fi} Semi inclusive COH + DIS + RES $\pi^0$ 
+%    production.}
+%\end{figure}
 \end{document}
