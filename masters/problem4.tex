@@ -31,8 +31,25 @@
   };
 
 \feynmandiagram [horizontal=f2 to f3] {
-  f1 -- [fermion] f2 -- [fermion] f3 -- [fermion] f4,
+  f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
   f2 -- [photon] p1,
   f3 -- [photon] p2,
 };
+
+\begin{figure}[h]
+\[
+        \feynmandiagram [vertical=f2 to f3] {
+        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
+        f2 -- [photon] p1,
+        f3 -- [photon] p2,
+        };
+        \feynmandiagram [horizontal=f2 to f3] {
+        f1 [particle=\(e^{-}\)] -- [fermion] f2 -- [fermion] f3 -- [fermion] f4 [particle=\(e^{-}\)],
+        f2 -- [photon] p1,
+        f3 -- [photon] p2,
+        };
+    \]
+    \caption{\label{fig:fi} Semi inclusive COH + DIS + RES $\pi^0$ 
+    production.}
+\end{figure}
 \end{document}
