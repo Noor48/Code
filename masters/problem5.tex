@@ -1,0 +1,132 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{tensor}
+\usepackage{stix}
+\usepackage{slashed}
+\usepackage{hyperref}
+\usepackage[compat=1.0.0]{tikz-feynman}
+\usepackage{feynmp-auto}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage[paperheight=6in,
+%   paperwidth=5in,
+%   top=10mm,
+%   bottom=20mm,
+%   left=10mm,
+%   right=10mm]{geometry}
+\newcommand*{\1}{\hspace{1pt}}
+\title{Solution to Problem Sheet 5}
+\author{Noor E Mustafa Ferdous\\ email: \href{mailto:nooremf@gmail.com}{nooremf@gmail.com} }
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solve for problem no. 1}
+
+Given
+\begin{align*}
+    \int \prod ^{N} _{i=1} dx^{i} exp\bigg(-\frac{1}{2}x^{T}Ax + J^{T}x\bigg) = \frac{(2\pi)^{N/2}}{\sqrt{det \ A}}exp\bigg(\frac{1}{2}J^{T}A^{-1}J\bigg)
+\end{align*}
+
+L.H.S 
+\begin{align*}
+    \int \prod ^{N} _{i=1} dx^{i} exp\bigg(-\frac{1}{2}x^{T}Ax + J^{T}x\bigg)
+\end{align*}
+
+where
+\begin{align*}
+    x &= (x_{1}, .....  , x_{n}) \  \epsilon \ \mathbb{R} ^{n} \\
+    J &= (J_{1}, .....  , J_{n}) \  \epsilon \ \mathbb{C} ^{n} \\
+    A &= 
+    \begin{pmatrix}
+        A_{11} & A_{12} &. &. & .\\
+        A_{21} & A_{22} & .& .& .\\
+        .& .& .& & &\\
+        .& .& & .& &\\
+        .& .& & & A_{nn}
+        \end{pmatrix}
+         \ \epsilon  \ \mathbb{R}^{n \times n}
+\end{align*}
+
+where A is symmetric and + ve definite.
+From L.H.S.
+\begin{align*}
+    \int \prod ^{N} _{i=1} dx^{i} exp\bigg(-\frac{1}{2}x^{T}Ax + J^{T}x\bigg)
+\end{align*}
+
+$x^{T}Ax$ is
+\begin{align*}
+    \sum^{n}_{i,j=1}x_{i}A_{ij}x_{j}
+\end{align*}
+which is 
+\begin{align*}
+    \sum^{n}_{i=1}\sum_{i<j} (x_{i}A_{ij}x_{j} + x_{j}A_{ji}x_{i}) + \sum^{n}_{i=1} A_{ii}x_{i}x_{i}
+\end{align*}
+Any anti symmetric term will drop out.
+Symmetric matrices are diagonalisable. 
+that is 
+\begin{align*}
+    \exists O \in O(n) &= {A \in \mathbb{R} ^{n \times n} | O^{T}O = I_{n}} \\
+    D &= diag(\lambda_{1}, ......., \lambda_{n}) \ ~ \lambda_{i} \ are \ the \ eigenvalues \ of \ A
+\end{align*}
+s.t.
+\begin{align*}
+    A &= O^{T}DO \\ 
+    x^{T}Ax &= x^{t}O^{T}DOx \\ 
+\end{align*}
+and 
+\begin{align*}
+    J^{T}x &=  J^{T}O^{T}(Ox) \\
+    &= (OJ)^{T}(Ox) \\
+\end{align*}
+
+Let 
+\begin{align*}
+    y &= Ox \\
+    y_{i} &= O_{ij}x_{j}
+\end{align*}
+
+And
+\begin{align*}
+    d^{n} y &= \big|\frac{\partial y}{\partial x}\big| d^{n}x \\
+    &= \big|det \ \frac{\partial y_{i}}{\partial x_{j}} | \\
+    &= |det \ O| \tag{$\frac{\partial y_{i}}{\partial x_{j}}= O_{ij}$}\\
+    &= 1
+\end{align*}
+
+and 
+\begin{align*}
+    D_{ij} = \lambda_{i}\delta_{ij}
+\end{align*}
+
+Now 
+\begin{align*}
+&\int _{\mathbb{R}} d^{n}y e^{-\frac{1}{2}y^{T}Dy+J^{\prime}y} \tag{$(OJ)^{T}=J^{\prime}$}\\ 
+&= \int _{\mathbb{R}} d^{n}y e^{-\frac{1}{2}\sum_{i}\sim{j}y_{i}\lambda_{i} \delta_{ij} y_{j} +\sum_{i}J^{\prime}_{i}y_{i}} \\
+&= \int _{\mathbb{R}} d^{n}y e^{\sum_{i}(-\frac{1}{2}\sim{j}y^{2}_{i}\lambda_{i} +J^{\prime}_{i}y_{i})}\\ 
+&= \prod_{i} \int _{\mathbb{R}} d^{n}y e^{-\frac{1}{2}\sim{j}y^{2}_{i}\lambda_{i} +J^{\prime}_{i}y_{i}} \\
+&= \prod_{i} \sqrt{\frac{2\pi}{\lambda_{i}}} e^{\frac{1}{2}\frac{J^{\prime}_{i}}{\lambda_{i}}}
+\end{align*}
+
+Now 
+\begin{align*}
+    D^{-1} _{ij} &= \frac{\delta_{ij}}{\lambda_{i}} \\
+    \frac{J^{\prime}_{i}}{\lambda_{i}} &= J^{\prime T} D^{-1} J^{\prime} \\ 
+    &= J O^{T} D^{-1} O J \\
+    &= M^{-1}
+\end{align*}
+
+therefore
+\begin{align*}
+    \int \prod ^{N} _{i=1} dx^{i} exp\bigg(-\frac{1}{2}x^{T}Ax + J^{T}x\bigg) = \sqrt{\frac{(2\pi)^{n}}{det \ M}} e^{\frac{1}{2}J^{T}M^{-1}J}
+\end{align*}
+\section*{Solve for problem no. 3}
+We know
+\begin{align*}
+    \langle 0 | T\phi(x_{1})\phi(x_{2}) | 0 \rangle &= \frac{1}{Z_{0}}\frac{\partial}{\partial J(x_{1})}\frac{\partial}{\partial J(x_{2})} exp\bigg[-\frac{1}{2}\int d^{4}x d^{4}y J(x)D_{F}(x-y) J(y) \bigg] Z[J] \bigg|_{J=0} \\
+\end{align*}
+\end{document}

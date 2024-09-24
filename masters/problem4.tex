@@ -98,6 +98,7 @@ The scattering amplitude will be
       \]
       \caption{\label{fig:fi} Feynman diagram for $e^{-}\gamma \to e^{-}\gamma$}
   \end{figure}
+(a)
 Scattering amplitude will be 
 \begin{align*}
   i\mathcal{M}_{1} &= (2\pi)^{4} \int d^{4} q \big[\overline{u}(p_4)(-ie\gamma^{\mu}\epsilon_{\mu}(p_{2}))\frac{i(\slashed{q} +m)}{q^{2}-m^{2}+i\epsilon}\epsilon^{*}_{\nu}(p_3)u(p_{1})\delta^{4}(p_{1} - p_{3} - q)\delta^{4}(p_{2}+q-p_{4})\big] \\
@@ -123,5 +124,31 @@ and
   \]
       \caption{\label{fig:fi} Feynman diagram for $e^{-}e^{+} \to e^{-}e^{+}$}
 \end{figure}
+(b)
+Scattering amplitudes will be 
+\begin{align*}
+  i \mathcal{M}_{1} &= \int \overline{u}(p_{3})(-ie\gamma^{\mu})u(p_{1})\frac{i \eta_{\mu\nu}}{q^{2}+i\epsilon}\overline{v}(p_{2})(-ie\gamma_{nu}) v(p_{4}) (2\pi)^{8}\delta^{4}(p_{1}-p_{3}-q)\delta^{4}(p_{2}+q-p_{4}) \frac{d^{4}q}{(2\pi)^4} \\
+  &= -\frac{ie^{2}}{(p_{1}-p_{3})^{2}+i\epsilon}\overline{u}(p_{3})\gamma^{\mu}u(p_{1})\overline{v}(p_{})\gamma_{\mu}v(p_{4})
+\end{align*}
+\begin{align*}
+ -i\mathcal{M}_{1} &= \frac{ie^{2}}{(p_{1}-p_{3})^{2}+i\epsilon}[\overline{u}(p_{3})\gamma^{\mu}u(p_{1})]^{\dagger}[\overline{v}(p_{2})\gamma_{\mu}v(p_{4})]^{\dagger} \\
+ &= \frac{ie^{2}}{(p_{1}-p_{3})^{2}+i\epsilon}\overline{u}(p_{1})\gamma^{\mu}u(p_{3})\overline{v}(p_{4})\gamma_{\mu}v(p_{2})
+\end{align*}
+
+\begin{align*}
+  i \mathcal{M}_{2} &= \int \overline{u}(p_{3})(-ie\gamma^{\mu})\overline{v}(p_{4})\frac{i \eta_{\mu\nu}}{q^{2}+i\epsilon}\overline{v}(p_{2})(-ie\gamma_{nu}) v(p_{4}) (2\pi)^{8}\delta^{4}(p_{1}+p_{2}-q)\delta^{4}(q-p_{3}-p_{4}) \frac{d^{4}q}{(2\pi)^4} \\
+  &= - \frac{ie^{2}}{(p_{1}+p_{2}+i\epsilon)}\overline{u}(p_{3})\gamma^{\mu}\overline{v}(p_{4})\overline{v}(p_{2})\gamma_{\mu}v(p_{4})
+\end{align*}
+
+\begin{align*}
+  -i \mathcal{M}_{2}&= \frac{ie^{2}}{(p_{1}+p_{2}+i\epsilon)}\overline{v}(p_{3})\gamma^{\mu}\overline{u}(p_{4})\overline{u}(p_{2})\gamma_{\mu}v(p_{4})
+\end{align*}
+
+\begin{align*}
+  |\mathcal{M}|^{2} &= \frac{e^{4}}{(p_{1}-p_{3})^{4}}Tr[\overline{u}(p_{3})u(p_{3}\gamma^{\mu}u_{p_{1}}\overline{u(p_{1})})]Tr[v(p_{2})\overline{v(p_{2})}\gamma^{\mu\prime}\overline{v(p_{4})}v(p_{4})] \\
+  &= \frac{e^{4}}{(p_{1}-p_{3})^{4}} [Tr(\slashed{p_{3}}\gamma^{\mu\prime}\slashed{p_{1}}\gamma^{\mu})+m^2Tr(\gamma^{\mu\prime}\gamma^{\mu})][Tr(\slashed{p_{2}}\gamma_{\mu\prime}\slashed{p_{4}}\gamma_{\mu})-m^2Tr(\gamma_{\mu\prime}\gamma_{\mu})] \\
+  &= \frac{e^{4}}{(p_{1}-p_{3})^{4}}[p^{\mu\prime}_{3}p_{1}-p_{3}p_{1}\eta^{\mu\mu\prime} + p^{\mu}_{3}p^{\mu\prime}_{1} + m^{2}\eta^{\mu\mu}]\times[p_{2\mu\prime}p_{4}-p_{2}p_{4}\eta_{\mu\mu\prime} + p_{2\mu}p_{4\mu\prime} - m^{2}\eta_{\mu\mu}]
+\end{align*}
+
 
 \end{document}
